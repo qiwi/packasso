@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "test": "concurrently 'npm:test:*(!test:.+:)'",
+    "test:jest": "jest"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0",
+    "jest": "29.3.1"
+  }
+}

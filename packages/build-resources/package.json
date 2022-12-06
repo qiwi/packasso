@@ -1,0 +1,76 @@
+{
+  "name": "packasso-build-resources",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "packasso": "workspace:*"
+  },
+  "main": "./target/cjs/index.cjs",
+  "devDependencies": {
+    "@swc/cli": "0.1.57",
+    "@swc/core": "1.3.21",
+    "@swc/helpers": "0.4.14",
+    "c8": "7.12.0",
+    "concurrently": "7.6.0",
+    "earljs": "0.2.3",
+    "eslint": "8.29.0",
+    "eslint-config-qiwi": "2.0.4",
+    "globby-cp": "1.1.2",
+    "prettier": "2.8.1",
+    "prettier-config-qiwi": "2.0.1",
+    "rimraf": "3.0.2",
+    "tsc-esm-fix": "2.20.7",
+    "tsm": "2.3.0",
+    "typescript": "4.9.4",
+    "uvu": "0.5.6"
+  },
+  "type": "module",
+  "module": "./target/esm/index.mjs",
+  "types": "./target/dts/index.d.ts",
+  "exports": {
+    ".": {
+      "development": "./src/main/ts/index.ts",
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "types": "./target/dts/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "target/resources",
+    "target/cjs",
+    "target/esm",
+    "target/dts"
+  ],
+  "scripts": {
+    "build": "concurrently 'npm:build:*(!build:.+:)'",
+    "build:swc": "concurrently 'npm:build:swc:cjs' 'npm:build:swc:esm' 'npm:build:swc:dts'",
+    "build:swc:swc": "concurrently 'npm:build:swc:cjs' 'npm:build:swc:esm'",
+    "build:swc:cjs": "yarn build:swc:cjs:del && yarn build:swc:cjs:swc && yarn build:swc:cjs:fix",
+    "build:swc:cjs:del": "rimraf target/cjs",
+    "build:swc:cjs:swc": "swc src -d target/cjs.tmp/src --source-maps --no-swcrc --config-file swc.cjs.json && globby-cp target/cjs.tmp/src/main/ts target/cjs && rimraf target/cjs.tmp",
+    "build:swc:cjs:fix": "tsc-esm-fix --target target/cjs --ext .cjs --fillBlank",
+    "build:swc:esm": "yarn build:swc:esm:del && yarn build:swc:esm:swc && yarn build:swc:esm:fix",
+    "build:swc:esm:del": "rimraf target/esm",
+    "build:swc:esm:swc": "swc src -d target/esm.tmp/src --source-maps --no-swcrc --config-file swc.esm.json && globby-cp target/esm.tmp/src/main/ts target/esm && rimraf target/esm.tmp",
+    "build:swc:esm:fix": "tsc-esm-fix --target target/esm --ext .mjs --fillBlank --forceDefaultExport",
+    "build:swc:dts": "yarn build:swc:dts:del && yarn build:swc:dts:tsc",
+    "build:swc:dts:del": "rimraf target/dts",
+    "build:swc:dts:tsc": "tsc -b tsconfig.dts.json",
+    "build:res": "yarn build:res:del && yarn build:res:run",
+    "build:res:del": "rimraf target/resources",
+    "build:res:run": "globby-cp src/main/resources target/resources",
+    "lint": "eslint src && prettier --check src",
+    "format": "eslint --fix src && prettier --write src",
+    "test": "concurrently 'npm:test:*(!test:.+:)'",
+    "test:uvu": "c8 -r html -r text -r lcov --include src/main uvu -r tsm -r earljs/uvu src/test"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-qiwi"
+  },
+  "prettier": "prettier-config-qiwi",
+  "release": {
+    "cmd": "yarn",
+    "changelog": "changelog"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "concurrently 'npm:test:*(!test:.+:)'",
+    "test:uvu": "yarn workspaces foreach -vip run test:uvu"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0"
+  }
+}

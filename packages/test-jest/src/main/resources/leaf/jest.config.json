@@ -1,0 +1,13 @@
+{
+  "testMatch": ["<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)"],
+  "collectCoverage": true,
+  "collectCoverageFrom": ["<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/node_modules",
+    "<rootDir>/coverage",
+    "<rootDir>/target"
+  ],
+  "transform": {
+    "^.+\\.[jt]sx?$": ["@swc/jest"]
+  }
+}

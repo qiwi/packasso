@@ -1,0 +1,6 @@
+{
+  "release": {
+    "cmd": "yarn",
+    "changelog": "changelog"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "main": "./target/cjs/index.cjs",
+  "module": "./target/esm/index.mjs",
+  "types": "./target/dts/index.d.ts",
+  "exports": {
+    ".": {
+      "development": "./src/main/ts/index.ts",
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "types": "./target/dts/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "target/resources"
+  ],
+  "scripts": {
+    "build": "concurrently 'npm:build:*(!build:.+:)'",
+    "build:res": "yarn build:res:del && yarn build:res:run",
+    "build:res:del": "rimraf target/resources",
+    "build:res:run": "globby-cp src/main/resources target/resources"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0",
+    "globby-cp": "1.1.2",
+    "rimraf": "3.0.2"
+  }
+}

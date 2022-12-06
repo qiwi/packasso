@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "concurrently 'npm:build:*(!build:.+:)'",
+    "build:tsc": "yarn build:tsc:del && yarn build:tsc:tsc && yarn build:tsc:fix",
+    "build:tsc:del": "yarn workspaces foreach -vip run build:tsc:del",
+    "build:tsc:tsc": "tsc -b tsconfig.esm.json tsconfig.cjs.json",
+    "build:tsc:fix": "yarn workspaces foreach -vip run build:tsc:fix"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0",
+    "typescript": "4.9.4"
+  }
+}
