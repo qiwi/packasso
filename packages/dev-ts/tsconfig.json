@@ -12,10 +12,10 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "packasso-dev-ts": [
+      "@qiwi/packasso-dev-ts": [
         "./src/main/ts"
       ],
-      "packasso": [
+      "@qiwi/packasso": [
         "../packasso/src/main/ts"
       ]
     }

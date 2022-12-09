@@ -12,10 +12,10 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "packasso-test-jest": [
+      "@qiwi/packasso-test-jest": [
         "./src/main/ts"
       ],
-      "packasso": [
+      "@qiwi/packasso": [
         "../packasso/src/main/ts"
       ]
     }

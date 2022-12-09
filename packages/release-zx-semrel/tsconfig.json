@@ -12,10 +12,10 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "packasso-release-zx-semrel": [
+      "@qiwi/packasso-release-zx-semrel": [
         "./src/main/ts"
       ],
-      "packasso": [
+      "@qiwi/packasso": [
         "../packasso/src/main/ts"
       ]
     }

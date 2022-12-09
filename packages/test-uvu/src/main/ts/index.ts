@@ -1,4 +1,10 @@
-import { copyFile, copyJson, copyText, Executor, resources } from 'packasso'
+import {
+  copyFile,
+  copyJson,
+  copyText,
+  Executor,
+  resources,
+} from '@qiwi/packasso'
 
 export const executor: Executor = ({ cwd, pkg }) => {
   const res = resources(import.meta.url, pkg)

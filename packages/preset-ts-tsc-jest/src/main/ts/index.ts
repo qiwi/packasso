@@ -1,12 +1,12 @@
-import { Executor, getPackage } from 'packasso'
+import { Executor, getPackage } from '@qiwi/packasso'
 
 const modules = [
-  'packasso-dev-ts',
-  'packasso-build-ts-tsc',
-  'packasso-build-resources',
-  'packasso-style-eslint-prettier',
-  'packasso-test-jest',
-  'packasso-release-zx-semrel',
+  '@qiwi/packasso-dev-ts',
+  '@qiwi/packasso-build-ts-tsc',
+  '@qiwi/packasso-build-resources',
+  '@qiwi/packasso-style-eslint-prettier',
+  '@qiwi/packasso-test-jest',
+  '@qiwi/packasso-release-zx-semrel',
 ]
 
 export const executor: Executor = async ({ cwd }) => {

@@ -500,6 +500,291 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@qiwi/packasso-build-resources@workspace:packages/build-resources":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-build-resources@workspace:packages/build-resources"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-build-ts-swc@workspace:packages/build-ts-swc":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-build-ts-swc@workspace:packages/build-ts-swc"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-build-ts-tsc@workspace:packages/build-ts-tsc":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-build-ts-tsc@workspace:packages/build-ts-tsc"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-dev-ts@workspace:packages/dev-ts":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-dev-ts@workspace:packages/dev-ts"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-preset-ts-swc-uvu@workspace:packages/preset-ts-swc-uvu":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-preset-ts-swc-uvu@workspace:packages/preset-ts-swc-uvu"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-preset-ts-tsc-jest@workspace:packages/preset-ts-tsc-jest":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-preset-ts-tsc-jest@workspace:packages/preset-ts-tsc-jest"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-release-zx-semrel@workspace:packages/release-zx-semrel":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-release-zx-semrel@workspace:packages/release-zx-semrel"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-style-eslint-prettier@workspace:packages/style-eslint-prettier":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-style-eslint-prettier@workspace:packages/style-eslint-prettier"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-test-jest@workspace:packages/test-jest":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-test-jest@workspace:packages/test-jest"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-test-uvu@workspace:packages/test-uvu":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-test-uvu@workspace:packages/test-uvu"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-workspaces@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-workspaces@workspace:."
+  dependencies:
+    concurrently: "npm:7.6.0"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso@workspace:*, @qiwi/packasso@workspace:packages/packasso":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso@workspace:packages/packasso"
+  dependencies:
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.21"
+    "@swc/helpers": "npm:0.4.14"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    cosmiconfig: "npm:8.0.0"
+    deepmerge: "npm:4.2.2"
+    dequal: "npm:2.0.3"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.4"
+    fast-glob: "npm:3.2.12"
+    find-up: "npm:6.3.0"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    read-pkg: "npm:7.1.0"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  bin:
+    packasso: ./target/esm/bin.mjs
+  languageName: unknown
+  linkType: soft
+
 "@swc/cli@npm:0.1.57":
   version: 0.1.57
   resolution: "@swc/cli@npm:0.1.57"
@@ -4572,291 +4857,6 @@ __metadata:
   checksum: 1b9a6b5d6f42a46e36f053ee737a72cbe8f7990ee65e0d7bc3f8f8324e233d5b5e790f9f660bcc44d93738a2b12108dec1f7a39c9650d276fd1f9d73d54d4f55
   languageName: node
   linkType: hard
-
-"packasso-build-resources@workspace:packages/build-resources":
-  version: 0.0.0-use.local
-  resolution: "packasso-build-resources@workspace:packages/build-resources"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-build-ts-swc@workspace:packages/build-ts-swc":
-  version: 0.0.0-use.local
-  resolution: "packasso-build-ts-swc@workspace:packages/build-ts-swc"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-build-ts-tsc@workspace:packages/build-ts-tsc":
-  version: 0.0.0-use.local
-  resolution: "packasso-build-ts-tsc@workspace:packages/build-ts-tsc"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-dev-ts@workspace:packages/dev-ts":
-  version: 0.0.0-use.local
-  resolution: "packasso-dev-ts@workspace:packages/dev-ts"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-preset-ts-swc-uvu@workspace:packages/preset-ts-swc-uvu":
-  version: 0.0.0-use.local
-  resolution: "packasso-preset-ts-swc-uvu@workspace:packages/preset-ts-swc-uvu"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-preset-ts-tsc-jest@workspace:packages/preset-ts-tsc-jest":
-  version: 0.0.0-use.local
-  resolution: "packasso-preset-ts-tsc-jest@workspace:packages/preset-ts-tsc-jest"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-release-zx-semrel@workspace:packages/release-zx-semrel":
-  version: 0.0.0-use.local
-  resolution: "packasso-release-zx-semrel@workspace:packages/release-zx-semrel"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-style-eslint-prettier@workspace:packages/style-eslint-prettier":
-  version: 0.0.0-use.local
-  resolution: "packasso-style-eslint-prettier@workspace:packages/style-eslint-prettier"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-test-jest@workspace:packages/test-jest":
-  version: 0.0.0-use.local
-  resolution: "packasso-test-jest@workspace:packages/test-jest"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-test-uvu@workspace:packages/test-uvu":
-  version: 0.0.0-use.local
-  resolution: "packasso-test-uvu@workspace:packages/test-uvu"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    globby-cp: "npm:1.1.2"
-    packasso: "workspace:*"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  languageName: unknown
-  linkType: soft
-
-"packasso-workspaces@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "packasso-workspaces@workspace:."
-  dependencies:
-    concurrently: "npm:7.6.0"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-  languageName: unknown
-  linkType: soft
-
-"packasso@workspace:*, packasso@workspace:packages/packasso":
-  version: 0.0.0-use.local
-  resolution: "packasso@workspace:packages/packasso"
-  dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
-    "@swc/helpers": "npm:0.4.14"
-    c8: "npm:7.12.0"
-    concurrently: "npm:7.6.0"
-    cosmiconfig: "npm:8.0.0"
-    deepmerge: "npm:4.2.2"
-    dequal: "npm:2.0.3"
-    earljs: "npm:0.2.3"
-    eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
-    fast-glob: "npm:3.2.12"
-    find-up: "npm:6.3.0"
-    globby-cp: "npm:1.1.2"
-    prettier: "npm:2.8.1"
-    prettier-config-qiwi: "npm:2.0.1"
-    read-pkg: "npm:7.1.0"
-    rimraf: "npm:3.0.2"
-    tsc-esm-fix: "npm:2.20.7"
-    tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
-    uvu: "npm:0.5.6"
-  bin:
-    packasso: ./target/esm/bin.mjs
-  languageName: unknown
-  linkType: soft
 
 "parent-module@npm:^1.0.0":
   version: 1.0.1

@@ -1,9 +1,9 @@
 {
-  "name": "packasso-test-uvu",
+  "name": "@qiwi/packasso-test-uvu",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "packasso": "workspace:*"
+    "@qiwi/packasso": "workspace:*"
   },
   "devDependencies": {
     "@swc/cli": "0.1.57",

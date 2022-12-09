@@ -1,9 +1,9 @@
 {
-  "name": "packasso-build-resources",
+  "name": "@qiwi/packasso-build-resources",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "packasso": "workspace:*"
+    "@qiwi/packasso": "workspace:*"
   },
   "main": "./target/cjs/index.cjs",
   "devDependencies": {

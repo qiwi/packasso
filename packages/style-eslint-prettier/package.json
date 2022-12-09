@@ -1,9 +1,9 @@
 {
-  "name": "packasso-style-eslint-prettier",
+  "name": "@qiwi/packasso-style-eslint-prettier",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "packasso": "workspace:*"
+    "@qiwi/packasso": "workspace:*"
   },
   "devDependencies": {
     "@swc/cli": "0.1.57",

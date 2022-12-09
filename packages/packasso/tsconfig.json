@@ -12,7 +12,7 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "packasso": [
+      "@qiwi/packasso": [
         "./src/main/ts"
       ]
     }

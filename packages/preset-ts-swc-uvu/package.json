@@ -1,9 +1,9 @@
 {
-  "name": "packasso-preset-ts-swc-uvu",
+  "name": "@qiwi/packasso-preset-ts-swc-uvu",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "packasso": "workspace:*"
+    "@qiwi/packasso": "workspace:*"
   },
   "devDependencies": {
     "@swc/cli": "0.1.57",
