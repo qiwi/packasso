@@ -52,7 +52,7 @@ export const copyJson = (
   const toJson = getJSON(toPath)
   const fromJson = getJSON(fromPath)
   const json = merge.all([toJson, fromJson, extra || {}], { arrayMerge })
-  writeFileSync(toPath, JSON.stringify(json, undefined, 2))
+  writeFileSync(toPath, [JSON.stringify(json, undefined, 2), ''].join('\n'))
   return json
 }
 
