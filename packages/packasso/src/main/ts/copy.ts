@@ -70,13 +70,16 @@ export const copyText = (
   const toText = getText(toPath)
   const fromText = getText(fromPath)
   const text = [toText, fromText, extra]
-    .join('')
+    .join('\n')
     .split('\n')
     .filter(
       (line, index, lines) =>
         /^\s*$/.test(line) || lines.indexOf(line) === index,
     )
     .join('\n')
+    .replaceAll(/^\n+/g, '')
+    .replaceAll(/\n{3}/g, '\n\n')
+    .replaceAll(/\n+$/g, '\n')
   writeFileSync(toPath, text)
   return text
 }

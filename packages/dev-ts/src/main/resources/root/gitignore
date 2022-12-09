@@ -5,5 +5,3 @@
 /.yarn/install-state.gz
 
 /node_modules
-
-/coverage
