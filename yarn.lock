@@ -506,13 +506,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -530,13 +530,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -554,13 +554,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -578,13 +578,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -602,13 +602,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -626,13 +626,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -650,13 +650,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -674,13 +674,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -698,13 +698,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -722,13 +722,13 @@ __metadata:
   dependencies:
     "@qiwi/packasso": "workspace:*"
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -746,7 +746,7 @@ __metadata:
   dependencies:
     concurrently: "npm:7.6.0"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     tsm: "npm:2.3.0"
@@ -759,7 +759,7 @@ __metadata:
   resolution: "@qiwi/packasso@workspace:packages/packasso"
   dependencies:
     "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.21"
+    "@swc/core": "npm:1.3.22"
     "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
@@ -768,7 +768,7 @@ __metadata:
     dequal: "npm:2.0.3"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.4"
+    eslint-config-qiwi: "npm:2.0.5"
     fast-glob: "npm:3.2.12"
     find-up: "npm:6.3.0"
     globby-cp: "npm:1.1.2"
@@ -806,90 +806,90 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-darwin-arm64@npm:1.3.21"
+"@swc/core-darwin-arm64@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-darwin-arm64@npm:1.3.22"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-darwin-x64@npm:1.3.21"
+"@swc/core-darwin-x64@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-darwin-x64@npm:1.3.22"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.21"
+"@swc/core-linux-arm-gnueabihf@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.22"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.21"
+"@swc/core-linux-arm64-gnu@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.22"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.21"
+"@swc/core-linux-arm64-musl@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.22"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.21"
+"@swc/core-linux-x64-gnu@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.22"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.21"
+"@swc/core-linux-x64-musl@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.22"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.21"
+"@swc/core-win32-arm64-msvc@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.22"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.21"
+"@swc/core-win32-ia32-msvc@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.22"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.21"
+"@swc/core-win32-x64-msvc@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.22"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:1.3.21":
-  version: 1.3.21
-  resolution: "@swc/core@npm:1.3.21"
+"@swc/core@npm:1.3.22":
+  version: 1.3.22
+  resolution: "@swc/core@npm:1.3.22"
   dependencies:
-    "@swc/core-darwin-arm64": "npm:1.3.21"
-    "@swc/core-darwin-x64": "npm:1.3.21"
-    "@swc/core-linux-arm-gnueabihf": "npm:1.3.21"
-    "@swc/core-linux-arm64-gnu": "npm:1.3.21"
-    "@swc/core-linux-arm64-musl": "npm:1.3.21"
-    "@swc/core-linux-x64-gnu": "npm:1.3.21"
-    "@swc/core-linux-x64-musl": "npm:1.3.21"
-    "@swc/core-win32-arm64-msvc": "npm:1.3.21"
-    "@swc/core-win32-ia32-msvc": "npm:1.3.21"
-    "@swc/core-win32-x64-msvc": "npm:1.3.21"
+    "@swc/core-darwin-arm64": "npm:1.3.22"
+    "@swc/core-darwin-x64": "npm:1.3.22"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.3.22"
+    "@swc/core-linux-arm64-gnu": "npm:1.3.22"
+    "@swc/core-linux-arm64-musl": "npm:1.3.22"
+    "@swc/core-linux-x64-gnu": "npm:1.3.22"
+    "@swc/core-linux-x64-musl": "npm:1.3.22"
+    "@swc/core-win32-arm64-msvc": "npm:1.3.22"
+    "@swc/core-win32-ia32-msvc": "npm:1.3.22"
+    "@swc/core-win32-x64-msvc": "npm:1.3.22"
   dependenciesMeta:
     "@swc/core-darwin-arm64":
       optional: true
@@ -913,7 +913,7 @@ __metadata:
       optional: true
   bin:
     swcx: run_swcx.js
-  checksum: e0a0503eac9f781ddca1963ee1837bec2ad2372e63e9defcfb4810702bd1ba1b59ecbd6a372019c4fc3b95f0904981440068795630fcf48e6e945cac08259f2d
+  checksum: 82068889361725f97e9c377dbc60134874a2402d934bf3f4e226a558d3ee5867e67ae1da174f5bbf7b2e5d8f04e69dacda7611f12117dfceeaeeb6ed26b0b478
   languageName: node
   linkType: hard
 
@@ -1068,7 +1068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.45.0":
+"@typescript-eslint/eslint-plugin@npm:^5.46.0":
   version: 5.46.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.46.0"
   dependencies:
@@ -1091,7 +1091,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.45.0":
+"@typescript-eslint/parser@npm:^5.46.0":
   version: 5.46.0
   resolution: "@typescript-eslint/parser@npm:5.46.0"
   dependencies:
@@ -2413,19 +2413,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-qiwi@npm:2.0.4":
-  version: 2.0.4
-  resolution: "eslint-config-qiwi@npm:2.0.4"
+"eslint-config-qiwi@npm:2.0.5":
+  version: 2.0.5
+  resolution: "eslint-config-qiwi@npm:2.0.5"
   dependencies:
-    "@typescript-eslint/eslint-plugin": "npm:^5.45.0"
-    "@typescript-eslint/parser": "npm:^5.45.0"
+    "@typescript-eslint/eslint-plugin": "npm:^5.46.0"
+    "@typescript-eslint/parser": "npm:^5.46.0"
     eslint-plugin-react: "npm:^7.31.11"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-sonarjs: "npm:^0.17.0"
     eslint-plugin-unicorn: "npm:^45.0.1"
   peerDependencies:
     eslint: "*"
-  checksum: 300a7ffae4735ecf2a78c59f61bb6107def5044ebf5602b5264f1ce8bd37f84839c1ff8d0277971ccd93577a1371b2415c471d420ce5a7f4be9fdeca0e980a60
+  checksum: 4b290774ecf00a636c94f4b4af003db2e163a1afb6c3fd8018435ba43015ea93b0fe66106647619420fb9b8c6ccfd2e1fafeb680f1da6607cb2a41ec45246de5
   languageName: node
   linkType: hard
 
