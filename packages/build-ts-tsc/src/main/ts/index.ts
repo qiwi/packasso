@@ -5,11 +5,9 @@ import {
   getDependencies,
   getReferences,
   getWorkspaces,
-  resources,
 } from '@qiwi/packasso'
 
-export const executor: Executor = ({ cwd, pkg }) => {
-  const res = resources(import.meta.url, pkg)
+export const executor: Executor = ({ cwd, res, pkg }) => {
   const dependencies = pkg.workspaces
     ? getWorkspaces(cwd, pkg)
     : getDependencies(cwd, pkg)

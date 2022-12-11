@@ -4,6 +4,7 @@
     "composite": true,
     "target": "es5",
     "module": "commonjs",
+    "lib": ["esnext"],
     "rootDir": "./src/main/ts",
     "outDir": "./target/cjs",
     "tsBuildInfoFile": "./target/cjs/.tsbuildinfo"

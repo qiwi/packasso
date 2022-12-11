@@ -1,7 +1,6 @@
-import { copyJson, copyText, Executor, resources } from '@qiwi/packasso'
+import { copyJson, copyText, Executor } from '@qiwi/packasso'
 
-export const executor: Executor = ({ cwd, pkg }) => {
-  const res = resources(import.meta.url, pkg)
+export const executor: Executor = ({ cwd, res }) => {
   copyText(res, cwd, '.gitignore')
   copyJson(res, cwd, 'package.json')
 }

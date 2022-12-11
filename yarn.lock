@@ -500,14 +500,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@qiwi/esm@npm:1.1.8":
+  version: 1.1.8
+  resolution: "@qiwi/esm@npm:1.1.8"
+  checksum: f9a30f162352b63596cde8b73b658c80a9922b33c3f6b1fc96e274ce1de02d4f5b8a6c754ae1755df37a8806cf4781a70892c1d287664981372199e90cb62e98
+  languageName: node
+  linkType: hard
+
 "@qiwi/packasso-build-resources@workspace:packages/build-resources":
   version: 0.0.0-use.local
   resolution: "@qiwi/packasso-build-resources@workspace:packages/build-resources"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -518,6 +522,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -529,9 +534,6 @@ __metadata:
   resolution: "@qiwi/packasso-build-ts-swc@workspace:packages/build-ts-swc"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -542,6 +544,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -553,9 +556,6 @@ __metadata:
   resolution: "@qiwi/packasso-build-ts-tsc@workspace:packages/build-ts-tsc"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -566,6 +566,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -577,9 +578,6 @@ __metadata:
   resolution: "@qiwi/packasso-dev-ts@workspace:packages/dev-ts"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -590,6 +588,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -601,9 +600,6 @@ __metadata:
   resolution: "@qiwi/packasso-preset-ts-swc-uvu@workspace:packages/preset-ts-swc-uvu"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -614,6 +610,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -625,9 +622,6 @@ __metadata:
   resolution: "@qiwi/packasso-preset-ts-tsc-jest@workspace:packages/preset-ts-tsc-jest"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -638,6 +632,29 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@qiwi/packasso-preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu":
+  version: 0.0.0-use.local
+  resolution: "@qiwi/packasso-preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu"
+  dependencies:
+    "@qiwi/packasso": "workspace:*"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.5"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -649,9 +666,6 @@ __metadata:
   resolution: "@qiwi/packasso-release-zx-semrel@workspace:packages/release-zx-semrel"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -662,6 +676,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -673,9 +688,6 @@ __metadata:
   resolution: "@qiwi/packasso-style-eslint-prettier@workspace:packages/style-eslint-prettier"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -686,6 +698,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -697,9 +710,6 @@ __metadata:
   resolution: "@qiwi/packasso-test-jest@workspace:packages/test-jest"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -710,6 +720,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -721,9 +732,6 @@ __metadata:
   resolution: "@qiwi/packasso-test-uvu@workspace:packages/test-uvu"
   dependencies:
     "@qiwi/packasso": "workspace:*"
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
@@ -734,6 +742,7 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -749,7 +758,6 @@ __metadata:
     eslint-config-qiwi: "npm:2.0.5"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
-    tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
   languageName: unknown
   linkType: soft
@@ -758,9 +766,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@qiwi/packasso@workspace:packages/packasso"
   dependencies:
-    "@swc/cli": "npm:0.1.57"
-    "@swc/core": "npm:1.3.22"
-    "@swc/helpers": "npm:0.4.14"
+    "@qiwi/esm": "npm:1.1.8"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     cosmiconfig: "npm:8.0.0"
@@ -772,11 +778,13 @@ __metadata:
     fast-glob: "npm:3.2.12"
     find-up: "npm:6.3.0"
     globby-cp: "npm:1.1.2"
+    minimist: "npm:1.2.7"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     read-pkg: "npm:7.1.0"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -784,147 +792,6 @@ __metadata:
     packasso: ./target/esm/bin.mjs
   languageName: unknown
   linkType: soft
-
-"@swc/cli@npm:0.1.57":
-  version: 0.1.57
-  resolution: "@swc/cli@npm:0.1.57"
-  dependencies:
-    commander: "npm:^7.1.0"
-    fast-glob: "npm:^3.2.5"
-    slash: "npm:3.0.0"
-    source-map: "npm:^0.7.3"
-  peerDependencies:
-    "@swc/core": ^1.2.66
-    chokidar: ^3.5.1
-  peerDependenciesMeta:
-    chokidar:
-      optional: true
-  bin:
-    spack: bin/spack.js
-    swc: bin/swc.js
-  checksum: bef2ebf226a4226a517a9dece07647901a9b7ca2e592fca80f2082c50c97e1c1360c8c57a14d5fdcd7db73cd0343d8710ec3d3684780f1c7aa9708145d92a33b
-  languageName: node
-  linkType: hard
-
-"@swc/core-darwin-arm64@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-darwin-arm64@npm:1.3.22"
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@swc/core-darwin-x64@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-darwin-x64@npm:1.3.22"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-arm-gnueabihf@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.22"
-  conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-arm64-gnu@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.22"
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-arm64-musl@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.22"
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-x64-gnu@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.22"
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-x64-musl@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.22"
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@swc/core-win32-arm64-msvc@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.22"
-  conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@swc/core-win32-ia32-msvc@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.22"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
-"@swc/core-win32-x64-msvc@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.22"
-  conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@swc/core@npm:1.3.22":
-  version: 1.3.22
-  resolution: "@swc/core@npm:1.3.22"
-  dependencies:
-    "@swc/core-darwin-arm64": "npm:1.3.22"
-    "@swc/core-darwin-x64": "npm:1.3.22"
-    "@swc/core-linux-arm-gnueabihf": "npm:1.3.22"
-    "@swc/core-linux-arm64-gnu": "npm:1.3.22"
-    "@swc/core-linux-arm64-musl": "npm:1.3.22"
-    "@swc/core-linux-x64-gnu": "npm:1.3.22"
-    "@swc/core-linux-x64-musl": "npm:1.3.22"
-    "@swc/core-win32-arm64-msvc": "npm:1.3.22"
-    "@swc/core-win32-ia32-msvc": "npm:1.3.22"
-    "@swc/core-win32-x64-msvc": "npm:1.3.22"
-  dependenciesMeta:
-    "@swc/core-darwin-arm64":
-      optional: true
-    "@swc/core-darwin-x64":
-      optional: true
-    "@swc/core-linux-arm-gnueabihf":
-      optional: true
-    "@swc/core-linux-arm64-gnu":
-      optional: true
-    "@swc/core-linux-arm64-musl":
-      optional: true
-    "@swc/core-linux-x64-gnu":
-      optional: true
-    "@swc/core-linux-x64-musl":
-      optional: true
-    "@swc/core-win32-arm64-msvc":
-      optional: true
-    "@swc/core-win32-ia32-msvc":
-      optional: true
-    "@swc/core-win32-x64-msvc":
-      optional: true
-  bin:
-    swcx: run_swcx.js
-  checksum: 82068889361725f97e9c377dbc60134874a2402d934bf3f4e226a558d3ee5867e67ae1da174f5bbf7b2e5d8f04e69dacda7611f12117dfceeaeeb6ed26b0b478
-  languageName: node
-  linkType: hard
-
-"@swc/helpers@npm:0.4.14":
-  version: 0.4.14
-  resolution: "@swc/helpers@npm:0.4.14"
-  dependencies:
-    tslib: "npm:^2.4.0"
-  checksum: 39441920bbc95a5d13538f2250af91ec0e32b65fe3c774bbfc8912199e6a92d77705b2c7b3f3e3cbbe1e6e58978637a5b9fc5f3908fda94a73f0ed998f3dea6d
-  languageName: node
-  linkType: hard
 
 "@tootallnate/once@npm:2":
   version: 2.0.0
@@ -1018,9 +885,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 18.11.12
-  resolution: "@types/node@npm:18.11.12"
-  checksum: 4b12f985ea2509f389f5d318677939b9d59bb3e03977512ac3e73aaa390c5a9524d1d762d215a6efbc457e7d70697b3dd25f50fe8ad6a0fa3490828a41b2bc9c
+  version: 18.11.13
+  resolution: "@types/node@npm:18.11.13"
+  checksum: 39f711d3d3d90aea6116e6f1b9be71333b4990cfb2dc8047a92bfaadacbc817bea5217abef6b40938c1e51e6006a26593ab07256fa138e5a47e1dcacf4eee2d3
   languageName: node
   linkType: hard
 
@@ -1775,13 +1642,6 @@ __metadata:
   bin:
     color-support: bin.js
   checksum: 8dc879a976be92306773276728e0bbb0925478b2373f133a98e563c497ccd58f220b9c30cea37c72678fe071627d7391b3751a1b92aaa5e872cd278b00b96b74
-  languageName: node
-  linkType: hard
-
-"commander@npm:^7.1.0":
-  version: 7.2.0
-  resolution: "commander@npm:7.2.0"
-  checksum: 1270a98c752348d62803dd6214bba584a13e5c80e0d32d590740f26c534209882a93daf471697326ad80b3f4f0417df31aca7b127e01efee58fe883b47c1a492
   languageName: node
   linkType: hard
 
@@ -2735,7 +2595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:3.2.12, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.5, fast-glob@npm:^3.2.9":
+"fast-glob@npm:3.2.12, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -4355,7 +4215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.1.1, minimist@npm:^1.2.0, minimist@npm:^1.2.6":
+"minimist@npm:1.2.7, minimist@npm:^1.1.1, minimist@npm:^1.2.0, minimist@npm:^1.2.6":
   version: 1.2.7
   resolution: "minimist@npm:1.2.7"
   checksum: 7bb50119bb59f48228a834e293a566c4b0e1b6c4648db83fb88830b4f932bfeaca72158bcdcc8a74130b339167eda92ec4cabb65faf07ab8d32542889a451676
@@ -5517,7 +5377,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slash@npm:3.0.0, slash@npm:^3.0.0":
+"slash@npm:^3.0.0":
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
   checksum: b88a0f1086e3cd20c8b61f50d8afff5fba83f95167a86432f54387565c9424e5d1970612371f768c128ed4b5b1c427120382bafc8c9edf0b3737eb226b733687
@@ -5619,13 +5479,6 @@ __metadata:
   version: 0.5.7
   resolution: "source-map@npm:0.5.7"
   checksum: fd1c3c795c360e43fed3f7e80ff227c2156dbe3c69d20a9bf9c4b299a1cbe412cb6f9561fc6f636496f1bf44a28a06edcc0fb4a16de17db903481a063683f45a
-  languageName: node
-  linkType: hard
-
-"source-map@npm:^0.7.3":
-  version: 0.7.4
-  resolution: "source-map@npm:0.7.4"
-  checksum: 97353dd6ffe747221f810400254a2c0110d745758aa094d3efe697d15c7697bb9bf49fea7028e88e97f973af53ac98cf69522ced606a4b46428fdd3e0d759280
   languageName: node
   linkType: hard
 
@@ -5967,17 +5820,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.4.1, tslib@npm:^2.1.0, tslib@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: a739a21e3ff059e62c7c3c0845333fbc9c081bcc91e015f2d246a31eeaf1fb0e29b10c0913c7d22f692b3203bb469fd60ca5288aa4f27d351a969df2d0714899
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 441af59dc42ad4ae57140e62cb362369620c6076845c2c2b0ecc863c1d719ce24fdbc301e9053433fef43075e061bf84b702318ff1204b496a5bba10baf9eb9f
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "tslib@npm:2.4.1"
-  checksum: a739a21e3ff059e62c7c3c0845333fbc9c081bcc91e015f2d246a31eeaf1fb0e29b10c0913c7d22f692b3203bb469fd60ca5288aa4f27d351a969df2d0714899
   languageName: node
   linkType: hard
 

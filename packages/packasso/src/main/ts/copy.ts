@@ -1,7 +1,6 @@
 import { copyFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { mkdirSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
 
 import merge, { Options } from 'deepmerge'
 import { dequal } from 'dequal'
@@ -13,10 +12,14 @@ const arrayMerge: Options['arrayMerge'] = (to, from) =>
       array.findIndex((comp) => dequal(comp, item)) === index,
   )
 
-export const resources = (url: string, pkg: PackageJson) => {
+export const resources = (
+  path: string,
+  pkg: PackageJson,
+  development?: boolean,
+) => {
   return resolve(
-    dirname(fileURLToPath(url)),
-    '..',
+    path,
+    ...(development ? ['src', 'main'] : ['target']),
     'resources',
     pkg.workspaces ? 'root' : 'leaf',
   )

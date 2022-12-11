@@ -5,11 +5,9 @@ import {
   Executor,
   getDependencies,
   getModuleNameMapper,
-  resources,
 } from '@qiwi/packasso'
 
-export const executor: Executor = ({ cwd, pkg }) => {
-  const res = resources(import.meta.url, pkg)
+export const executor: Executor = ({ cwd, res, pkg }) => {
   const dependencies = getDependencies(cwd, pkg)
   copyJson(res, cwd, 'package.json')
   copyJson(

@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "rootDir": "./"
+  },
+  "references": [
+    {
+      "path": "./packages/build-resources/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/build-ts-swc/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/build-ts-tsc/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/dev-ts/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/packasso/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/preset-ts-swc-uvu/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/preset-ts-tsc-jest/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/preset-ts-tsc-uvu/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/release-zx-semrel/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/style-eslint-prettier/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/test-jest/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/test-uvu/tsconfig.cjs.json"
+    }
+  ],
+  "files": []
+}

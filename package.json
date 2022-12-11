@@ -4,21 +4,21 @@
   "workspaces": [
     "packages/*"
   ],
-  "packasso": "@qiwi/packasso-preset-ts-swc-uvu",
+  "packasso": "@qiwi/packasso-preset-ts-tsc-uvu",
   "devDependencies": {
     "concurrently": "7.6.0",
     "eslint": "8.29.0",
     "eslint-config-qiwi": "2.0.5",
     "prettier": "2.8.1",
     "prettier-config-qiwi": "2.0.1",
-    "tsm": "2.3.0",
     "typescript": "4.9.4"
   },
   "scripts": {
     "build": "concurrently 'npm:build:*(!build:.+:)'",
-    "build:swc": "concurrently 'npm:build:swc:*(!build:swc:.+:)'",
-    "build:swc:swc": "yarn workspaces foreach -vip run build:swc:swc",
-    "build:swc:dts": "tsc -b tsconfig.dts.json",
+    "build:tsc": "yarn build:tsc:del && yarn build:tsc:tsc && yarn build:tsc:fix",
+    "build:tsc:del": "yarn workspaces foreach -vip run build:tsc:del",
+    "build:tsc:tsc": "tsc -b tsconfig.esm.json tsconfig.cjs.json",
+    "build:tsc:fix": "yarn workspaces foreach -vip run build:tsc:fix",
     "build:res": "yarn workspaces foreach -vip run build:res",
     "lint": "yarn workspaces foreach -vip run lint",
     "format": "yarn workspaces foreach -vip run format",

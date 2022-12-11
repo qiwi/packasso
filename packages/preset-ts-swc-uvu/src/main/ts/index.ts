@@ -1,4 +1,4 @@
-import { Executor, getPackage } from '@qiwi/packasso'
+import { execute, Executor } from '@qiwi/packasso'
 
 const modules = [
   '@qiwi/packasso-dev-ts',
@@ -9,9 +9,6 @@ const modules = [
   '@qiwi/packasso-release-zx-semrel',
 ]
 
-export const executor: Executor = async ({ cwd }) => {
-  for (const module of modules) {
-    const { executor } = await import(module)
-    await executor({ cwd, pkg: getPackage(cwd) })
-  }
+export const executor: Executor = async ({ cwd, development }) => {
+  await execute(cwd, modules, development)
 }

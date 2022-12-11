@@ -5,11 +5,9 @@ import {
   Executor,
   getDependencies,
   getPaths,
-  resources,
 } from '@qiwi/packasso'
 
-export const executor: Executor = ({ cwd, pkg }) => {
-  const res = resources(import.meta.url, pkg)
+export const executor: Executor = ({ cwd, res, pkg }) => {
   copyText(res, cwd, '.gitignore')
   copyJson(res, cwd, 'package.json')
   copyJson(res, cwd, 'tsconfig.json', {

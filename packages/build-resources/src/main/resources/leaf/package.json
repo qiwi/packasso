@@ -1,17 +1,4 @@
 {
-  "type": "module",
-  "main": "./target/cjs/index.cjs",
-  "module": "./target/esm/index.mjs",
-  "types": "./target/dts/index.d.ts",
-  "exports": {
-    ".": {
-      "development": "./src/main/ts/index.ts",
-      "require": "./target/cjs/index.cjs",
-      "import": "./target/esm/index.mjs",
-      "types": "./target/dts/index.d.ts"
-    },
-    "./package.json": "./package.json"
-  },
   "files": [
     "target/resources"
   ],
