@@ -4,7 +4,8 @@ import { dirname, join, resolve } from 'node:path'
 
 import merge, { Options } from 'deepmerge'
 import { dequal } from 'dequal'
-import { PackageJson } from 'read-pkg'
+
+import { getModulesDir, getPackage } from './package'
 
 const arrayMerge: Options['arrayMerge'] = (to, from) =>
   [...to, ...from].filter(
@@ -12,20 +13,24 @@ const arrayMerge: Options['arrayMerge'] = (to, from) =>
       array.findIndex((comp) => dequal(comp, item)) === index,
   )
 
-export const resources = (
-  path: string,
-  pkg: PackageJson,
+export const getResourcesDir = (
+  cwd: string,
+  module: string,
   development?: boolean,
+  root?: boolean,
 ) => {
+  const pkg = getPackage(cwd)
+  const dir = getModulesDir(cwd)
   return resolve(
-    path,
+    dir,
+    module,
     ...(development ? ['src', 'main'] : ['target']),
     'resources',
-    pkg.workspaces ? 'root' : 'leaf',
+    root ? 'root' : pkg.workspaces ? 'tree' : 'leaf',
   )
 }
 
-const getText = (path: string) => {
+const readText = (path: string) => {
   try {
     return readFileSync(path, { encoding: 'utf8' })
   } catch {
@@ -33,12 +38,20 @@ const getText = (path: string) => {
   }
 }
 
-const getJson = (path: string) => {
+const writeText = (path: string, text: string) => {
+  writeFileSync(path, [text, ''].join('\n'))
+}
+
+const readJson = (path: string) => {
   try {
-    return JSON.parse(getText(path))
+    return JSON.parse(readText(path))
   } catch {
     return {}
   }
+}
+
+const writeJson = (path: string, json: unknown) => {
+  writeText(path, JSON.stringify(json, undefined, 2))
 }
 
 export const copyJson = (
@@ -52,10 +65,10 @@ export const copyJson = (
     return
   }
   const toPath = join(to, file)
-  const toJson = getJson(toPath)
-  const fromJson = getJson(fromPath)
+  const toJson = readJson(toPath)
+  const fromJson = readJson(fromPath)
   const json = merge.all([toJson, fromJson, extra || {}], { arrayMerge })
-  writeFileSync(toPath, [JSON.stringify(json, undefined, 2), ''].join('\n'))
+  writeJson(toPath, json)
   return json
 }
 
@@ -70,8 +83,8 @@ export const copyText = (
     return
   }
   const toPath = join(to, file)
-  const toText = getText(toPath)
-  const fromText = getText(fromPath)
+  const toText = readText(toPath)
+  const fromText = readText(fromPath)
   const text = [toText, fromText, extra]
     .join('\n')
     .split('\n')
@@ -82,8 +95,8 @@ export const copyText = (
     .join('\n')
     .replaceAll(/^\n+/g, '')
     .replaceAll(/\n{3}/g, '\n\n')
-    .replaceAll(/\n+$/g, '\n')
-  writeFileSync(toPath, text)
+    .replaceAll(/\n+$/g, '')
+  writeText(toPath, text)
   return text
 }
 

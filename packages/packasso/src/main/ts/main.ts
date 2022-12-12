@@ -1,19 +1,15 @@
-import { join, resolve } from 'node:path'
+import { resolve } from 'node:path'
 
 import { getConfig } from './config'
-import { resources } from './copy'
-import {
-  getModulesDir,
-  getPackage,
-  getWorkspaces,
-  PackageJson,
-} from './package'
+import { getResourcesDir } from './copy'
+import { getPackage, getWorkspaces, PackageJson } from './package'
 
 export interface ExecutorArgs {
   cwd: string
   res: string
   pkg: Required<PackageJson>
   development?: boolean
+  root?: boolean
 }
 
 export interface Executor {
@@ -24,13 +20,13 @@ export const execute = async (
   cwd: string,
   modules: string[],
   development?: boolean,
+  root?: boolean,
 ) => {
-  const dir = getModulesDir(cwd)
   for (const module of modules) {
     const pkg = getPackage(cwd)
-    const res = resources(join(dir, module), pkg, development)
+    const res = getResourcesDir(cwd, module, development, root)
     const { executor } = await import(module)
-    await executor({ cwd, res, pkg, development })
+    await executor({ cwd, res, pkg, development, root })
   }
 }
 
@@ -48,20 +44,21 @@ export const main = async ({
     )
     await Promise.all(
       workspaces.map(
-        async (workspace) => await main({ cwd: workspace, development }),
+        async (workspace) =>
+          await execute(workspace, await getConfig(workspace), development),
       ),
     )
-    const modules = await Promise.all(
+    const awaitModules = await Promise.all(
       workspaces.map(async (workspace) => await getConfig(workspace)),
     )
-    await execute(
-      cwd,
-      modules
-        .flat()
-        .filter((config, index, configs) => configs.indexOf(config) === index),
-      development,
-    )
+    const modules = awaitModules
+      .flat()
+      .filter((config, index, configs) => configs.indexOf(config) === index)
+    await execute(cwd, modules, development, true)
+    await execute(cwd, modules, development)
   } else {
-    await execute(cwd, await getConfig(cwd), development)
+    const modules = await getConfig(cwd)
+    await execute(cwd, modules, development, true)
+    await execute(cwd, modules, development)
   }
 }

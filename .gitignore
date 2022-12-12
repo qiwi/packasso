@@ -1,8 +1,27 @@
+# misc
+
+.DS_Store
 /.idea
+
+# yarn
 
 /.pnp.*
 /.yarn/cache
 /.yarn/install-state.gz
+
+# open-ssl
+
+*.ca
+*.crt
+*.csr
+*.der
+*.kdb
+*.org
+*.p12
+*.pem
+*.rnd
+*.ssleay
+*.smime
 
 /node_modules
 
