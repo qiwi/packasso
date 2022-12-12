@@ -33,7 +33,7 @@ const getText = (path: string) => {
   }
 }
 
-const getJSON = (path: string) => {
+const getJson = (path: string) => {
   try {
     return JSON.parse(getText(path))
   } catch {
@@ -52,8 +52,8 @@ export const copyJson = (
     return
   }
   const toPath = join(to, file)
-  const toJson = getJSON(toPath)
-  const fromJson = getJSON(fromPath)
+  const toJson = getJson(toPath)
+  const fromJson = getJson(fromPath)
   const json = merge.all([toJson, fromJson, extra || {}], { arrayMerge })
   writeFileSync(toPath, [JSON.stringify(json, undefined, 2), ''].join('\n'))
   return json
