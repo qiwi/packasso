@@ -1,9 +1,15 @@
 {
-  "name": "@qiwi/packasso-preset-ts-tsc-jest",
+  "name": "@packasso/preset-ts-tsc-jest",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "@qiwi/packasso": "workspace:*"
+    "@packasso/build-resources": "workspace:*",
+    "@packasso/build-ts-tsc": "workspace:*",
+    "@packasso/core": "workspace:*",
+    "@packasso/dev-ts": "workspace:*",
+    "@packasso/release-zx-semrel": "workspace:*",
+    "@packasso/style-eslint-prettier": "workspace:*",
+    "@packasso/test-jest": "workspace:*"
   },
   "exports": {
     ".": {

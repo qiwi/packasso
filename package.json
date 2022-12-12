@@ -1,18 +1,10 @@
 {
-  "name": "@qiwi/packasso-workspaces",
+  "name": "@packasso/workspaces",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "packasso": "@qiwi/packasso-preset-ts-tsc-uvu",
-  "devDependencies": {
-    "concurrently": "7.6.0",
-    "eslint": "8.29.0",
-    "eslint-config-qiwi": "2.0.5",
-    "prettier": "2.8.1",
-    "prettier-config-qiwi": "2.0.1",
-    "typescript": "4.9.4"
-  },
+  "packasso": "@packasso/preset-ts-tsc-uvu",
   "scripts": {
     "build": "concurrently 'npm:build:*(!build:.+:)'",
     "build:tsc": "yarn build:tsc:del && yarn build:tsc:tsc && yarn build:tsc:fix",
@@ -24,6 +16,14 @@
     "format": "yarn workspaces foreach -vip run format",
     "test": "concurrently 'npm:test:*(!test:.+:)'",
     "test:uvu": "c8 -r html -r text -r lcov --include 'packages/*/src/main' uvu -r tsm -r earljs/uvu packages src/test -i src/main -i target/resources"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0",
+    "eslint": "8.29.0",
+    "eslint-config-qiwi": "2.0.5",
+    "prettier": "2.8.1",
+    "prettier-config-qiwi": "2.0.1",
+    "typescript": "4.9.4"
   },
   "eslintConfig": {
     "extends": "eslint-config-qiwi"

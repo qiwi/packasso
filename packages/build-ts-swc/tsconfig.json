@@ -12,11 +12,11 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@qiwi/packasso-build-ts-swc": [
+      "@packasso/build-ts-swc": [
         "./src/main/ts"
       ],
-      "@qiwi/packasso": [
-        "../packasso/src/main/ts"
+      "@packasso/core": [
+        "../core/src/main/ts"
       ]
     }
   },

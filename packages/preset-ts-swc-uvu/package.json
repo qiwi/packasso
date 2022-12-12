@@ -1,9 +1,15 @@
 {
-  "name": "@qiwi/packasso-preset-ts-swc-uvu",
+  "name": "@packasso/preset-ts-swc-uvu",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "@qiwi/packasso": "workspace:*"
+    "@packasso/build-resources": "workspace:*",
+    "@packasso/build-ts-swc": "workspace:*",
+    "@packasso/core": "workspace:*",
+    "@packasso/dev-ts": "workspace:*",
+    "@packasso/release-zx-semrel": "workspace:*",
+    "@packasso/style-eslint-prettier": "workspace:*",
+    "@packasso/test-uvu": "workspace:*"
   },
   "exports": {
     ".": {

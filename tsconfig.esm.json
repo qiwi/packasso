@@ -13,10 +13,13 @@
       "path": "./packages/build-ts-tsc/tsconfig.esm.json"
     },
     {
-      "path": "./packages/dev-ts/tsconfig.esm.json"
+      "path": "./packages/cli/tsconfig.esm.json"
     },
     {
-      "path": "./packages/packasso/tsconfig.esm.json"
+      "path": "./packages/core/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/dev-ts/tsconfig.esm.json"
     },
     {
       "path": "./packages/preset-ts-swc-uvu/tsconfig.esm.json"

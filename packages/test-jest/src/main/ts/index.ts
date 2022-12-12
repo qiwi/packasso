@@ -5,7 +5,7 @@ import {
   Executor,
   getDependencies,
   getModuleNameMapper,
-} from '@qiwi/packasso'
+} from '@packasso/core'
 
 export const executor: Executor = ({ cwd, res, pkg }) => {
   const dependencies = getDependencies(cwd, pkg)

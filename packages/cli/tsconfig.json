@@ -12,7 +12,7 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@packasso/test-uvu": [
+      "@packasso/cli": [
         "./src/main/ts"
       ],
       "@packasso/core": [

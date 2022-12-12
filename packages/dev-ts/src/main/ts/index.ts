@@ -5,7 +5,7 @@ import {
   Executor,
   getDependencies,
   getPaths,
-} from '@qiwi/packasso'
+} from '@packasso/core'
 
 export const executor: Executor = ({ cwd, res, pkg }) => {
   copyText(res, cwd, '.gitignore')

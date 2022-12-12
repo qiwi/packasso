@@ -16,7 +16,25 @@
   ],
   "references": [
     {
-      "path": "../packasso/tsconfig.cjs.json"
+      "path": "../build-resources/tsconfig.cjs.json"
+    },
+    {
+      "path": "../build-ts-tsc/tsconfig.cjs.json"
+    },
+    {
+      "path": "../core/tsconfig.cjs.json"
+    },
+    {
+      "path": "../dev-ts/tsconfig.cjs.json"
+    },
+    {
+      "path": "../release-zx-semrel/tsconfig.cjs.json"
+    },
+    {
+      "path": "../style-eslint-prettier/tsconfig.cjs.json"
+    },
+    {
+      "path": "../test-jest/tsconfig.cjs.json"
     }
   ]
 }

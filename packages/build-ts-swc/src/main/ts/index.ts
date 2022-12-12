@@ -5,7 +5,7 @@ import {
   getDependencies,
   getReferences,
   getWorkspaces,
-} from '@qiwi/packasso'
+} from '@packasso/core'
 
 export const executor: Executor = ({ cwd, res, pkg }) => {
   const dependencies = pkg.workspaces

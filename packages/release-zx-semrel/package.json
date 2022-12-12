@@ -1,9 +1,9 @@
 {
-  "name": "@qiwi/packasso-release-zx-semrel",
+  "name": "@packasso/release-zx-semrel",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "@qiwi/packasso": "workspace:*"
+    "@packasso/core": "workspace:*"
   },
   "exports": {
     ".": {

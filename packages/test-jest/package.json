@@ -1,9 +1,9 @@
 {
-  "name": "@qiwi/packasso-test-jest",
+  "name": "@packasso/test-jest",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "@qiwi/packasso": "workspace:*"
+    "@packasso/core": "workspace:*"
   },
   "exports": {
     ".": {

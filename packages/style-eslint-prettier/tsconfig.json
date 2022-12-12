@@ -12,11 +12,11 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@qiwi/packasso-style-eslint-prettier": [
+      "@packasso/style-eslint-prettier": [
         "./src/main/ts"
       ],
-      "@qiwi/packasso": [
-        "../packasso/src/main/ts"
+      "@packasso/core": [
+        "../core/src/main/ts"
       ]
     }
   },

@@ -1,9 +1,9 @@
 {
-  "name": "@qiwi/packasso-build-ts-tsc",
+  "name": "@packasso/build-ts-tsc",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "@qiwi/packasso": "workspace:*"
+    "@packasso/core": "workspace:*"
   },
   "exports": {
     ".": {
