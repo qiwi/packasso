@@ -7,7 +7,9 @@
 
 /.pnp.*
 /.yarn/cache
+/.yarn/unplugged
 /.yarn/install-state.gz
+/yarn-error.log
 
 # open-ssl
 
