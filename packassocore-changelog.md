@@ -1,3 +1,8 @@
+## [@packasso/core@0.1.2](https://github.com/qiwi/packasso/compare/2022.12.13-packasso.core.0.1.1-f0...2022.12.13-packasso.core.0.1.2-f0) (2022-12-13)
+
+### Fixes & improvements
+* docs: docs and license (#3) [6f25d89](https://github.com/qiwi/packasso/commit/6f25d89ef23c3d2aeaf22f6e96418d46fccad5c2)
+
 ## [@packasso/core@0.1.1](https://github.com/qiwi/packasso/compare/2022.12.13-packasso.core.0.1.0-f0...2022.12.13-packasso.core.0.1.1-f0) (2022-12-13)
 
 ### Fixes & improvements
