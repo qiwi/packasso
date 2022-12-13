@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "concurrently 'npm:build:*(!build:.+:)'",
+    "build:swc": "concurrently 'npm:build:swc:*(!build:swc:.+:)'",
+    "build:swc:swc": "yarn workspaces foreach -vip run build:swc:swc",
+    "build:swc:dts": "tsc -b tsconfig.dts.json"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0",
+    "typescript": "4.9.4"
+  }
+}

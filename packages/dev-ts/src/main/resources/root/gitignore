@@ -24,7 +24,3 @@
 *.rnd
 *.ssleay
 *.smime
-
-/node_modules
-
-/coverage

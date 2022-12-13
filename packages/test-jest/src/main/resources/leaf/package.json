@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "concurrently 'npm:test:*(!test:.+:)'",
+    "test:jest": "jest"
+  },
+  "devDependencies": {
+    "jest": "29.3.1",
+    "@types/jest": "29.2.4",
+    "@swc/core": "1.3.22",
+    "@swc/jest": "0.2.23"
+  }
+}

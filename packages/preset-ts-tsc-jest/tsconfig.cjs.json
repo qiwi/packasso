@@ -1,0 +1,40 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "esnext"
+    ],
+    "rootDir": "./src/main/ts",
+    "outDir": "./target/cjs",
+    "tsBuildInfoFile": "./target/cjs/.tsbuildinfo"
+  },
+  "include": [
+    "./src/main/ts"
+  ],
+  "references": [
+    {
+      "path": "../build-resources/tsconfig.cjs.json"
+    },
+    {
+      "path": "../build-ts-tsc/tsconfig.cjs.json"
+    },
+    {
+      "path": "../core/tsconfig.cjs.json"
+    },
+    {
+      "path": "../dev-ts/tsconfig.cjs.json"
+    },
+    {
+      "path": "../release-zx-semrel/tsconfig.cjs.json"
+    },
+    {
+      "path": "../style-eslint-prettier/tsconfig.cjs.json"
+    },
+    {
+      "path": "../test-jest/tsconfig.cjs.json"
+    }
+  ]
+}

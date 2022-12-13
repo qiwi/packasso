@@ -1,0 +1,75 @@
+{
+  "name": "@packasso/cli",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@packasso/core": "workspace:*"
+  },
+  "bin": {
+    "packasso": "./target/esm/index.mjs"
+  },
+  "exports": {
+    ".": {
+      "development": "./src/main/ts/index.ts",
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "types": "./target/esm/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@qiwi/esm": "1.1.8",
+    "c8": "7.12.0",
+    "concurrently": "7.6.0",
+    "earljs": "0.2.3",
+    "eslint": "8.29.0",
+    "eslint-config-qiwi": "2.0.5",
+    "globby-cp": "1.1.2",
+    "prettier": "2.8.1",
+    "prettier-config-qiwi": "2.0.1",
+    "rimraf": "3.0.2",
+    "tsc-esm-fix": "2.20.7",
+    "tslib": "2.4.1",
+    "tsm": "2.3.0",
+    "typescript": "4.9.4",
+    "uvu": "0.5.6"
+  },
+  "type": "module",
+  "main": "./target/cjs/index.cjs",
+  "module": "./target/esm/index.mjs",
+  "types": "./target/esm/index.d.ts",
+  "files": [
+    "target/cjs",
+    "target/esm",
+    "target/resources"
+  ],
+  "scripts": {
+    "build": "concurrently 'npm:build:*(!build:.+:)'",
+    "build:tsc": "concurrently 'npm:build:tsc:cjs' 'npm:build:tsc:esm'",
+    "build:tsc:cjs": "yarn build:tsc:cjs:del && yarn build:tsc:cjs:tsc && yarn build:tsc:cjs:fix",
+    "build:tsc:cjs:del": "rimraf target/cjs",
+    "build:tsc:cjs:tsc": "tsc -b tsconfig.cjs.json",
+    "build:tsc:cjs:fix": "tsc-esm-fix --target target/cjs --ext .cjs --fillBlank",
+    "build:tsc:esm": "yarn build:tsc:esm:del && yarn build:tsc:esm:tsc && yarn build:tsc:esm:fix",
+    "build:tsc:esm:del": "rimraf target/esm",
+    "build:tsc:esm:tsc": "tsc -b tsconfig.esm.json",
+    "build:tsc:esm:fix": "tsc-esm-fix --target target/esm --ext .mjs --fillBlank --forceDefaultExport",
+    "build:tsc:del": "concurrently 'npm:build:tsc:cjs:del' 'npm:build:tsc:esm:del'",
+    "build:tsc:fix": "concurrently 'npm:build:tsc:cjs:fix' 'npm:build:tsc:esm:fix'",
+    "build:res": "yarn build:res:del && yarn build:res:run",
+    "build:res:del": "rimraf target/resources",
+    "build:res:run": "globby-cp src/main/resources target/resources",
+    "lint": "eslint src && prettier --check src",
+    "format": "eslint --fix src && prettier --write src",
+    "test": "concurrently 'npm:test:*(!test:.+:)'",
+    "test:uvu": "c8 -r html -r text -r lcov --include src/main uvu -r tsm -r earljs/uvu src/test"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-qiwi"
+  },
+  "prettier": "prettier-config-qiwi",
+  "release": {
+    "cmd": "yarn",
+    "changelog": "changelog"
+  }
+}
