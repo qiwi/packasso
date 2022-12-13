@@ -1,19 +1,17 @@
-# packasso
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/aaced5b2261f8a59b7cd/maintainability)](https://codeclimate.com/github/qiwi/packasso/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/aaced5b2261f8a59b7cd/test_coverage)](https://codeclimate.com/github/qiwi/packasso/test_coverage)
-
+# @packasso
 <p align="center">
   <img alt="Pablo Picasso" src="https://raw.githubusercontent.com/qiwi/packasso/master/pablo-picasso-self-portrait-1972-06-30.webp" width="200" />&nbsp;
   <img alt="Pablo Picasso" src="https://raw.githubusercontent.com/qiwi/packasso/master/pablo-picasso-self-portrait-1972-07-02.webp" width="200" />&nbsp;
   <img alt="Pablo Picasso" src="https://raw.githubusercontent.com/qiwi/packasso/master/pablo-picasso-self-portrait-1972-07-03.webp" width="200" />&nbsp;
+  <br/><i>Impressive presets packages</i>
 </p>
 
+### 🚧 [![Release](https://github.com/qiwi/packasso/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/qiwi/packasso/actions/workflows/release.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aaced5b2261f8a59b7cd/maintainability)](https://codeclimate.com/github/qiwi/packasso/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/aaced5b2261f8a59b7cd/test_coverage)](https://codeclimate.com/github/qiwi/packasso/test_coverage)
+
 ## Quick Start
-
-Packasso config is one or set of modules.
-
-Add `packasso` field in `package.json`:
+Packasso config refers to one or more preset modules.
+Pick them as the `packasso` field in your `package.json`:
 
 ```json
 {
@@ -23,13 +21,13 @@ Add `packasso` field in `package.json`:
 }
 ```
 
-Run packasso.
+Then run packasso:
 
 ```shell
 npx @packasso/cli
 ```
 
-Enjoy your code!
+Get impressions.
 
 ## License
 
