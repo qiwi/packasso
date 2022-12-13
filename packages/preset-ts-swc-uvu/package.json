@@ -25,7 +25,7 @@
     "concurrently": "7.6.0",
     "earljs": "0.2.3",
     "eslint": "8.29.0",
-    "eslint-config-qiwi": "2.0.5",
+    "eslint-config-qiwi": "2.0.6",
     "globby-cp": "1.1.2",
     "prettier": "2.8.1",
     "prettier-config-qiwi": "2.0.1",

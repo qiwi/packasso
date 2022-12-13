@@ -509,7 +509,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -531,7 +531,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -553,7 +553,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -576,7 +576,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -602,7 +602,7 @@ __metadata:
     dequal: "npm:2.0.3"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     fast-glob: "npm:3.2.12"
     find-up: "npm:6.3.0"
     globby-cp: "npm:1.1.2"
@@ -628,7 +628,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -656,7 +656,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -684,7 +684,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -712,7 +712,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -734,7 +734,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -756,7 +756,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -778,7 +778,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -800,7 +800,7 @@ __metadata:
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     globby-cp: "npm:1.1.2"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -819,7 +819,7 @@ __metadata:
   dependencies:
     concurrently: "npm:7.6.0"
     eslint: "npm:8.29.0"
-    eslint-config-qiwi: "npm:2.0.5"
+    eslint-config-qiwi: "npm:2.0.6"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     typescript: "npm:4.9.4"
@@ -2313,9 +2313,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-qiwi@npm:2.0.5":
-  version: 2.0.5
-  resolution: "eslint-config-qiwi@npm:2.0.5"
+"eslint-config-qiwi@npm:2.0.6":
+  version: 2.0.6
+  resolution: "eslint-config-qiwi@npm:2.0.6"
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:^5.46.0"
     "@typescript-eslint/parser": "npm:^5.46.0"
@@ -2325,7 +2325,7 @@ __metadata:
     eslint-plugin-unicorn: "npm:^45.0.1"
   peerDependencies:
     eslint: "*"
-  checksum: 4b290774ecf00a636c94f4b4af003db2e163a1afb6c3fd8018435ba43015ea93b0fe66106647619420fb9b8c6ccfd2e1fafeb680f1da6607cb2a41ec45246de5
+  checksum: 44fba82435698169bd72c3b2935d9f394f9055afe1c26cea4522db8856b33a1dc8a9a1c98f1221243eeae9241a40a4f6f184d37b6e6c4ebe0b9427254b4a80e4
   languageName: node
   linkType: hard
 
