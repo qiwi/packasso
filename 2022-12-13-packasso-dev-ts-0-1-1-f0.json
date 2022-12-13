@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/dev-ts",
+  "hash": "6f25d89ef23c3d2aeaf22f6e96418d46fccad5c2",
+  "version": "0.1.1",
+  "dependencies": {
+    "@packasso/core": "0.1.2"
+  }
+}
