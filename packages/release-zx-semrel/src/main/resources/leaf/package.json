@@ -1,12 +1,4 @@
 {
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qiwi/packasso.git"
-  },
-  "bugs": {
-    "url": "https://github.com/qiwi/packasso/issues"
-  },
-  "homepage": "https://qiwi.github.io/packasso",
   "publishConfig": {
     "access": "public"
   },

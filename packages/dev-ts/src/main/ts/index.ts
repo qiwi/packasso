@@ -8,6 +8,7 @@ import {
 } from '@packasso/core'
 
 export const executor: Executor = ({ cwd, res, pkg }) => {
+  copyFile(res, cwd, 'LICENSE')
   copyText(res, cwd, '.gitignore')
   copyJson(res, cwd, 'package.json')
   copyJson(res, cwd, 'tsconfig.json', {
