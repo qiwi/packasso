@@ -5,6 +5,28 @@
 
 ![](./pablo-picasso-self-portrait-03-07-1972.jpg)
 
+## Quick Start
+
+Packasso config is one or set of modules.
+
+Add `packasso` field in `package.json`:
+
+```json
+{
+  "name": "pablo-picasso",
+  "version": "1972.07.03",
+  "packasso": "@packasso/preset-ts-tsc-uvu"
+}
+```
+
+Run packasso.
+
+```shell
+npx @packasso/cli
+```
+
+Enjoy your code!
+
 ## License
 
 [MIT](./LICENSE)
