@@ -595,6 +595,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/core@workspace:packages/core"
   dependencies:
+    "@types/lodash-es": "npm:4.17.6"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     cosmiconfig: "npm:8.0.0"
@@ -606,6 +607,7 @@ __metadata:
     fast-glob: "npm:3.2.12"
     find-up: "npm:6.3.0"
     globby-cp: "npm:1.1.2"
+    lodash-es: "npm:4.17.21"
     minimist: "npm:1.2.7"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
@@ -914,6 +916,22 @@ __metadata:
   version: 7.0.11
   resolution: "@types/json-schema@npm:7.0.11"
   checksum: 8e5c6dd393411418e3d803ab0a09862b4ed47f73e7ed990f3b907dd41cc4d2f2b4f7aed9a39c7fd2acaa80314ac1397a5e2e5e6c25a338f01bbfba708cc70d8e
+  languageName: node
+  linkType: hard
+
+"@types/lodash-es@npm:4.17.6":
+  version: 4.17.6
+  resolution: "@types/lodash-es@npm:4.17.6"
+  dependencies:
+    "@types/lodash": "npm:*"
+  checksum: 78b7a3b9626bce41ca3b04fce5df499a983cd2396c25bff0d86c1437de73f82d1bbe13ef025e1e9d1848233ba248d696b43f8c49e34cb14f68a44d93ae707d2c
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.14.191
+  resolution: "@types/lodash@npm:4.14.191"
+  checksum: e8762fec34eec79828b6b1e08243e25703bfad1b53a7032c0293b69f51d222c0a36ae08d3588ab8147c6a3f478096e02186a860b909cdbe29c7c745cefea2442
   languageName: node
   linkType: hard
 
@@ -4038,6 +4056,13 @@ __metadata:
   dependencies:
     p-locate: "npm:^6.0.0"
   checksum: 9d9c87be22cbfe0e5e258d7e8bb94954086b2a7f3a1acf15c716684cd9aa9ce0cc916a030e2fda0d7c02b1e0dbd996391af7880245adf165faeef93cb099fbde
+  languageName: node
+  linkType: hard
+
+"lodash-es@npm:4.17.21":
+  version: 4.17.21
+  resolution: "lodash-es@npm:4.17.21"
+  checksum: d1c3ee94118daeeee47c630ab5f91e94cc4e41ebe2452d837edbe599e853eb2d4be7edf82b4fe62f9fc74f27a8ed7f82fdbd9d301d0acef88f00941db64c4843
   languageName: node
   linkType: hard
 

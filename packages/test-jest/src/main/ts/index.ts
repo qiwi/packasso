@@ -1,29 +1,22 @@
-import {
-  copyFile,
-  copyJson,
-  copyText,
-  Executor,
-  getDependencies,
-  getModuleNameMapper,
-} from '@packasso/core'
+import { Executor } from '@packasso/core'
 
-export const executor: Executor = ({ cwd, res, pkg }) => {
-  const dependencies = getDependencies(cwd, pkg)
-  copyJson(res, cwd, 'package.json')
+export const executor: Executor = ({
+  pkg,
+  copyText,
+  copyJson,
+  copyMissedFile,
+  getModuleNameMapper,
+}) => {
+  copyJson('package.json')
   copyJson(
-    res,
-    cwd,
     'jest.config.json',
     pkg.workspaces
       ? {}
       : {
           displayName: pkg.name,
-          moduleNameMapper: {
-            [pkg.name]: '<rootDir>/src/main/ts',
-            ...getModuleNameMapper(dependencies),
-          },
+          moduleNameMapper: getModuleNameMapper(),
         },
   )
-  copyText(res, cwd, '.gitignore')
-  copyFile(res, cwd, 'src/test/ts/index.ts')
+  copyText('.gitignore')
+  copyMissedFile('src/test/ts/index.ts')
 }

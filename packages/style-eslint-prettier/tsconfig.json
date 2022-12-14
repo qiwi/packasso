@@ -12,9 +12,6 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@packasso/style-eslint-prettier": [
-        "./src/main/ts"
-      ],
       "@packasso/core": [
         "../core/src/main/ts"
       ]

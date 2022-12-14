@@ -1,19 +1,11 @@
 import { resolve } from 'node:path'
 
 import { getConfig } from './config'
-import { getResourcesDir } from './copy'
-import { getPackage, getWorkspaces, PackageJson } from './package'
-
-export interface ExecutorArgs {
-  cwd: string
-  res: string
-  pkg: Required<PackageJson>
-  development?: boolean
-  root?: boolean
-}
+import { Context, getContext } from './context'
+import { getPackage, getWorkspaces } from './package'
 
 export interface Executor {
-  (args: ExecutorArgs): unknown
+  (utils: Context): unknown
 }
 
 export const execute = async (
@@ -23,10 +15,8 @@ export const execute = async (
   root?: boolean,
 ) => {
   for (const module of modules) {
-    const pkg = getPackage(cwd)
-    const res = getResourcesDir(cwd, module, development, root)
     const { executor } = await import(module)
-    await executor({ cwd, res, pkg, development, root })
+    await executor(getContext(cwd, module, development, root))
   }
 }
 

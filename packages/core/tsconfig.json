@@ -11,11 +11,7 @@
     "removeComments": true,
     "importHelpers": true,
     "baseUrl": "./",
-    "paths": {
-      "@packasso/core": [
-        "./src/main/ts"
-      ]
-    }
+    "paths": {}
   },
   "exclude": [
     "./node_modules"

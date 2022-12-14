@@ -12,9 +12,6 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@packasso/build-ts-swc": [
-        "./src/main/ts"
-      ],
       "@packasso/core": [
         "../core/src/main/ts"
       ]

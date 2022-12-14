@@ -3,9 +3,10 @@ import { dirname, join, relative, resolve } from 'node:path'
 
 import fg from 'fast-glob'
 import { findUpSync } from 'find-up'
-import { PackageJson, readPackageSync } from 'read-pkg'
+import { NormalizedPackageJson, readPackageSync } from 'read-pkg'
 
-export const getPackage = (cwd: string) => readPackageSync({ cwd })
+export const getPackage: (cwd: string) => NormalizedPackageJson = (cwd) =>
+  readPackageSync({ cwd })
 
 export const getModulesDir = (cwd: string) => {
   return resolve(
@@ -14,7 +15,10 @@ export const getModulesDir = (cwd: string) => {
   )
 }
 
-export const getDependencies = (cwd: string, pkg: PackageJson) => {
+export const getDependencies: (
+  cwd: string,
+  pkg?: NormalizedPackageJson,
+) => Record<string, string> = (cwd, pkg = getPackage(cwd)) => {
   const modules = getModulesDir(cwd)
   return Object.fromEntries(
     Object.keys(pkg.dependencies || [])
@@ -34,7 +38,10 @@ export const getDependencies = (cwd: string, pkg: PackageJson) => {
   )
 }
 
-export const getWorkspaces = (cwd: string, pkg: PackageJson) =>
+export const getWorkspaces: (
+  cwd: string,
+  pkg?: NormalizedPackageJson,
+) => Record<string, string> = (cwd, pkg = getPackage(cwd)) =>
   Object.fromEntries(
     fg
       .sync(
@@ -47,5 +54,3 @@ export const getWorkspaces = (cwd: string, pkg: PackageJson) =>
       )
       .map((path) => [path, relative(cwd, dirname(path))]),
   )
-
-export type { PackageJson } from 'read-pkg'

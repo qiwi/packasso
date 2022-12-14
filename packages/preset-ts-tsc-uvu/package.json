@@ -2,15 +2,6 @@
   "name": "@packasso/preset-ts-tsc-uvu",
   "version": "0.0.0",
   "license": "MIT",
-  "dependencies": {
-    "@packasso/build-resources": "workspace:*",
-    "@packasso/build-ts-tsc": "workspace:*",
-    "@packasso/core": "workspace:*",
-    "@packasso/dev-ts": "workspace:*",
-    "@packasso/release-zx-semrel": "workspace:*",
-    "@packasso/style-eslint-prettier": "workspace:*",
-    "@packasso/test-uvu": "workspace:*"
-  },
   "exports": {
     ".": {
       "development": "./src/main/ts/index.ts",
@@ -21,6 +12,13 @@
     "./package.json": "./package.json"
   },
   "devDependencies": {
+    "@packasso/build-resources": "workspace:*",
+    "@packasso/build-ts-tsc": "workspace:*",
+    "@packasso/core": "workspace:*",
+    "@packasso/dev-ts": "workspace:*",
+    "@packasso/release-zx-semrel": "workspace:*",
+    "@packasso/style-eslint-prettier": "workspace:*",
+    "@packasso/test-uvu": "workspace:*",
     "c8": "7.12.0",
     "concurrently": "7.6.0",
     "earljs": "0.2.3",

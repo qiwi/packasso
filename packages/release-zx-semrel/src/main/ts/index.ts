@@ -1,5 +1,5 @@
-import { copyJson, Executor } from '@packasso/core'
+import { Executor } from '@packasso/core'
 
-export const executor: Executor = ({ cwd, res }) => {
-  copyJson(res, cwd, 'package.json')
+export const executor: Executor = ({ copyJson }) => {
+  copyJson('package.json')
 }
