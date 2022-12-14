@@ -1,6 +1,8 @@
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
 
+import { NormalizedPackageJson } from 'read-pkg'
+
 import { copyFile, copyJson, copyText, getResourcesDir } from './copy'
 import { execute } from './execute'
 import { getDependencies, getPackage, getWorkspaces } from './package'
@@ -8,6 +10,7 @@ import { getModuleNameMapper } from './test'
 import { getPaths, getReferences } from './tsconfig'
 
 export interface Utils {
+  pkg: NormalizedPackageJson
   execute: (modules: string[]) => void
   copyFile: (file: string, data?: object) => void
   copyMissedFile: (file: string, data?: object) => void
@@ -29,6 +32,7 @@ export const getUtils: (
   const pkg = getPackage(cwd)
   const res = getResourcesDir(cwd, module, development, root, pkg)
   return {
+    pkg,
     execute: (modules) => execute(cwd, root, development, modules),
     copyFile: (file, data) =>
       res.forEach((res) => copyFile(res, cwd, file, data)),
