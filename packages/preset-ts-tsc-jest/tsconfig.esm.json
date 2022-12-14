@@ -11,5 +11,27 @@
   "include": [
     "./src/main/ts"
   ],
-  "references": []
+  "references": [
+    {
+      "path": "../build-resources/tsconfig.esm.json"
+    },
+    {
+      "path": "../build-ts-tsc/tsconfig.esm.json"
+    },
+    {
+      "path": "../core/tsconfig.esm.json"
+    },
+    {
+      "path": "../dev-ts/tsconfig.esm.json"
+    },
+    {
+      "path": "../release-zx-semrel/tsconfig.esm.json"
+    },
+    {
+      "path": "../style-eslint-prettier/tsconfig.esm.json"
+    },
+    {
+      "path": "../test-jest/tsconfig.esm.json"
+    }
+  ]
 }

@@ -11,14 +11,16 @@
     },
     "./package.json": "./package.json"
   },
-  "devDependencies": {
+  "dependencies": {
     "@packasso/build-resources": "workspace:*",
     "@packasso/build-ts-tsc": "workspace:*",
     "@packasso/core": "workspace:*",
     "@packasso/dev-ts": "workspace:*",
     "@packasso/release-zx-semrel": "workspace:*",
     "@packasso/style-eslint-prettier": "workspace:*",
-    "@packasso/test-uvu": "workspace:*",
+    "@packasso/test-uvu": "workspace:*"
+  },
+  "devDependencies": {
     "c8": "7.12.0",
     "concurrently": "7.6.0",
     "earljs": "0.2.3",

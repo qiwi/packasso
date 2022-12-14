@@ -1,6 +1,6 @@
 import { Executor } from '@packasso/core'
 
-export const executor: Executor = ({
+export const executor: Executor = async ({
   copyFile,
   copyText,
   copyJson,

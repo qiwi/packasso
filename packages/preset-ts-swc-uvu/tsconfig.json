@@ -11,7 +11,29 @@
     "removeComments": true,
     "importHelpers": true,
     "baseUrl": "./",
-    "paths": {}
+    "paths": {
+      "@packasso/build-resources": [
+        "../build-resources/src/main/ts"
+      ],
+      "@packasso/build-ts-swc": [
+        "../build-ts-swc/src/main/ts"
+      ],
+      "@packasso/core": [
+        "../core/src/main/ts"
+      ],
+      "@packasso/dev-ts": [
+        "../dev-ts/src/main/ts"
+      ],
+      "@packasso/release-zx-semrel": [
+        "../release-zx-semrel/src/main/ts"
+      ],
+      "@packasso/style-eslint-prettier": [
+        "../style-eslint-prettier/src/main/ts"
+      ],
+      "@packasso/test-uvu": [
+        "../test-uvu/src/main/ts"
+      ]
+    }
   },
   "exclude": [
     "./node_modules"

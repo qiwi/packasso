@@ -1,18 +1,14 @@
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
 
-import { NormalizedPackageJson } from 'read-pkg'
-
 import { copyFile, copyJson, copyText, getResourcesDir } from './copy'
+import { execute } from './execute'
 import { getDependencies, getPackage, getWorkspaces } from './package'
 import { getModuleNameMapper } from './test'
 import { getPaths, getReferences } from './tsconfig'
 
-export interface Context {
-  cwd: string
-  development?: boolean
-  root?: boolean
-  pkg: NormalizedPackageJson
+export interface Utils {
+  execute: (modules: string[]) => void
   copyFile: (file: string, data?: object) => void
   copyMissedFile: (file: string, data?: object) => void
   copyJson: (file: string, data?: object) => void
@@ -24,28 +20,29 @@ export interface Context {
   getModuleNameMapper: () => Record<string, string>
 }
 
-export const getContext: (
+export const getUtils: (
   cwd: string,
+  root: string,
+  development: boolean,
   module: string,
-  development?: boolean,
-  root?: boolean,
-) => Context = (cwd, module, development, root) => {
+) => Utils = (cwd, root, development, module) => {
   const pkg = getPackage(cwd)
   const res = getResourcesDir(cwd, module, development, root, pkg)
   return {
-    cwd,
-    development,
-    root,
-    pkg,
-    copyFile: (file, data) => copyFile(res, cwd, file, data),
-    copyJson: (file, data) => copyJson(res, cwd, file, data),
-    copyText: (file, data) => copyText(res, cwd, file, data),
+    execute: (modules) => execute(cwd, root, development, modules),
+    copyFile: (file, data) =>
+      res.forEach((res) => copyFile(res, cwd, file, data)),
+    copyJson: (file, data) =>
+      res.forEach((res) => copyJson(res, cwd, file, data)),
+    copyText: (file, data) =>
+      res.forEach((res) => copyText(res, cwd, file, data)),
     getDependencies: () => getDependencies(cwd),
     getWorkspaces: () => getWorkspaces(cwd),
     getPaths: () => getPaths(cwd),
     getReferences: (tsconfig: string) => getReferences(cwd, tsconfig),
     getModuleNameMapper: () => getModuleNameMapper(cwd),
     copyMissedFile: (file, data) =>
-      !existsSync(join(cwd, file)) && copyFile(res, cwd, file, data),
+      !existsSync(join(cwd, file)) &&
+      res.forEach((res) => copyFile(res, cwd, file, data)),
   }
 }

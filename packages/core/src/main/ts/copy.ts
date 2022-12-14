@@ -18,18 +18,20 @@ const arrayMerge: Options['arrayMerge'] = (to, from) =>
 export const getResourcesDir: (
   cwd: string,
   module: string,
-  development?: boolean,
-  root?: boolean,
+  development: boolean,
+  root: string,
   pkg?: NormalizedPackageJson,
-) => string = (cwd, module, development, root, pkg = getPackage(cwd)) => {
-  const dir = getModulesDir(cwd)
-  return resolve(
-    dir,
+) => string[] = (cwd, module, development, root, pkg = getPackage(cwd)) => {
+  const res = resolve(
+    getModulesDir(cwd),
     module,
     ...(development ? ['src', 'main'] : ['target']),
     'resources',
-    root ? 'root' : pkg.workspaces ? 'tree' : 'leaf',
   )
+  return [
+    ...(root === cwd ? [join(res, 'root')] : []),
+    join(res, pkg.workspaces ? 'tree' : 'leaf'),
+  ]
 }
 
 const readText: (path: string) => string = (path) => {
