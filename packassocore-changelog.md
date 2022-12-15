@@ -1,3 +1,8 @@
+## [@packasso/core@0.2.0](https://github.com/qiwi/packasso/compare/2022.12.13-packasso.core.0.1.2-f0...2022.12.15-packasso.core.0.2.0-f0) (2022-12-15)
+
+### Features
+* feat: context (#4) [06e8e09](https://github.com/qiwi/packasso/commit/06e8e09822bb3a6dc75724ddfc37346e66738d81)
+
 ## [@packasso/core@0.1.2](https://github.com/qiwi/packasso/compare/2022.12.13-packasso.core.0.1.1-f0...2022.12.13-packasso.core.0.1.2-f0) (2022-12-13)
 
 ### Fixes & improvements
