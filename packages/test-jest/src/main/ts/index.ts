@@ -4,7 +4,6 @@ export const executor: Executor = async ({
   pkg,
   copyText,
   copyJson,
-  copyMissedFile,
   getModuleNameMapper,
 }) => {
   copyJson('package.json')
@@ -18,5 +17,5 @@ export const executor: Executor = async ({
         },
   )
   copyText('.gitignore')
-  copyMissedFile('src/test/ts/index.ts')
+  copyText('src/test/ts/index.ts')
 }

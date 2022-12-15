@@ -1,6 +1,6 @@
 import { resolve } from 'node:path'
 
-import { getConfig } from './config'
+import { getConfig, mergeConfigs } from './config'
 import { execute } from './execute'
 import { getPackage, getWorkspaces } from './package'
 
@@ -17,26 +17,17 @@ export const main = async ({
     const workspaces = Object.values(getWorkspaces(cwd, pkg)).map((workspace) =>
       resolve(cwd, workspace),
     )
-    await Promise.all(
-      workspaces.map(
-        async (workspace) =>
-          await execute(
-            workspace,
-            root,
-            development,
-            await getConfig(workspace),
-          ),
-      ),
-    )
-    const awaitModules = await Promise.all(
+    const configs = await Promise.all(
       workspaces.map(async (workspace) => await getConfig(workspace)),
     )
-    const modules = awaitModules
-      .flat()
-      .filter((config, index, configs) => configs.indexOf(config) === index)
-    await execute(cwd, root, development, modules)
+    await Promise.all(
+      workspaces.map(
+        async (workspace, index) =>
+          await execute(workspace, root, development, configs[index]),
+      ),
+    )
+    await execute(cwd, root, development, mergeConfigs(configs))
   } else {
-    const modules = await getConfig(cwd)
-    await execute(cwd, root, development, modules)
+    await execute(cwd, root, development, await getConfig(cwd))
   }
 }
