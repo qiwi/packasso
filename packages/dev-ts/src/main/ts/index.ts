@@ -1,13 +1,7 @@
 import { Executor } from '@packasso/core'
 
-export const executor: Executor = async ({
-  copyFile,
-  copyText,
-  copyJson,
-  copyMissedFile,
-  getPaths,
-}) => {
-  copyFile('LICENSE', {
+export const executor: Executor = async ({ copyText, copyJson, getPaths }) => {
+  copyText('LICENSE', {
     year: new Date().getFullYear(),
   })
   copyText('.gitignore')
@@ -17,5 +11,5 @@ export const executor: Executor = async ({
       paths: getPaths(),
     },
   })
-  copyMissedFile('src/main/ts/index.ts')
+  copyText('src/main/ts/index.ts')
 }

@@ -18,11 +18,13 @@
     "test:uvu": "c8 -r html -r text -r lcov --include 'packages/*/src/main' uvu -r tsm -r earljs/uvu packages src/test -i src/main -i target/resources"
   },
   "devDependencies": {
+    "@qiwi/esm": "1.1.8",
     "concurrently": "7.6.0",
     "eslint": "8.29.0",
     "eslint-config-qiwi": "2.0.6",
     "prettier": "2.8.1",
     "prettier-config-qiwi": "2.0.1",
+    "tsm": "2.3.0",
     "typescript": "4.9.4"
   },
   "eslintConfig": {

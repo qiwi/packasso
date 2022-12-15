@@ -1,3 +1,4 @@
+import { Config } from './config'
 import { getUtils, Utils } from './utils'
 
 export interface Executor {
@@ -8,10 +9,10 @@ export const execute: (
   cwd: string,
   root: string,
   development: boolean,
-  modules: string[],
-) => Promise<unknown> = async (cwd, root, development, modules) => {
-  for (const module of modules) {
-    const { executor } = (await import(module)) as { executor: Executor }
+  config: Config,
+) => Promise<unknown> = async (cwd, root, development, config) => {
+  for (const module of config.modules) {
+    const { executor } = (await import(module.name)) as { executor: Executor }
     await executor(getUtils(cwd, root, development, module))
   }
 }
