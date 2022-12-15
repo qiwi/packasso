@@ -1,7 +1,11 @@
-import { copyFile, copyJson, copyText, Executor } from '@packasso/core'
+import { Executor } from '@packasso/core'
 
-export const executor: Executor = ({ cwd, res }) => {
-  copyJson(res, cwd, 'package.json')
-  copyText(res, cwd, '.gitignore')
-  copyFile(res, cwd, 'src/test/ts/index.ts')
+export const executor: Executor = async ({
+  copyJson,
+  copyText,
+  copyMissedFile,
+}) => {
+  copyJson('package.json')
+  copyText('.gitignore')
+  copyMissedFile('src/test/ts/index.ts')
 }

@@ -1,14 +1,13 @@
 #!/usr/bin/env node
-import { dirname } from 'node:path'
 import { cwd, execArgv, exit } from 'node:process'
 
-import { getModulesDir, main } from '@packasso/core'
+import { getRootDir, main } from '@packasso/core'
 import minimist from 'minimist'
 
 const { conditions } = minimist(execArgv)
 
 main({
-  cwd: dirname(getModulesDir(cwd())),
+  cwd: getRootDir(cwd()),
   development: conditions === 'development',
 })
   .then(() => {

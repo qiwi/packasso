@@ -1,23 +1,21 @@
-import {
-  copyFile,
-  copyJson,
-  copyText,
-  Executor,
-  getDependencies,
-  getPaths,
-} from '@packasso/core'
+import { Executor } from '@packasso/core'
 
-export const executor: Executor = ({ cwd, res, pkg }) => {
-  copyFile(res, cwd, 'LICENSE')
-  copyText(res, cwd, '.gitignore')
-  copyJson(res, cwd, 'package.json')
-  copyJson(res, cwd, 'tsconfig.json', {
+export const executor: Executor = async ({
+  copyFile,
+  copyText,
+  copyJson,
+  copyMissedFile,
+  getPaths,
+}) => {
+  copyFile('LICENSE', {
+    year: new Date().getFullYear(),
+  })
+  copyText('.gitignore')
+  copyJson('package.json')
+  copyJson('tsconfig.json', {
     compilerOptions: {
-      paths: getPaths({
-        [pkg.name]: '.',
-        ...getDependencies(cwd, pkg),
-      }),
+      paths: getPaths(),
     },
   })
-  copyFile(res, cwd, 'src/main/ts/index.ts')
+  copyMissedFile('src/main/ts/index.ts')
 }

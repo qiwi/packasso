@@ -1,6 +1,6 @@
-import { copyJson, copyText, Executor } from '@packasso/core'
+import { Executor } from '@packasso/core'
 
-export const executor: Executor = ({ cwd, res }) => {
-  copyText(res, cwd, '.gitignore')
-  copyJson(res, cwd, 'package.json')
+export const executor: Executor = async ({ copyText, copyJson }) => {
+  copyText('.gitignore')
+  copyJson('package.json')
 }

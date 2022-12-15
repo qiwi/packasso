@@ -12,9 +12,6 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@packasso/cli": [
-        "./src/main/ts"
-      ],
       "@packasso/core": [
         "../core/src/main/ts"
       ]

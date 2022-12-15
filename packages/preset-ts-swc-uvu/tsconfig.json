@@ -12,9 +12,6 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@packasso/preset-ts-swc-uvu": [
-        "./src/main/ts"
-      ],
       "@packasso/build-resources": [
         "../build-resources/src/main/ts"
       ],

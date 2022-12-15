@@ -1,22 +1,16 @@
-import {
+import { Executor } from '@packasso/core'
+
+export const executor: Executor = async ({
   copyJson,
   copyText,
-  Executor,
-  getDependencies,
   getReferences,
-  getWorkspaces,
-} from '@packasso/core'
-
-export const executor: Executor = ({ cwd, res, pkg }) => {
-  const dependencies = pkg.workspaces
-    ? getWorkspaces(cwd, pkg)
-    : getDependencies(cwd, pkg)
-  copyText(res, cwd, '.gitignore')
-  copyJson(res, cwd, 'package.json')
-  copyJson(res, cwd, 'tsconfig.cjs.json', {
-    references: getReferences(cwd, dependencies, 'tsconfig.cjs.json'),
+}) => {
+  copyText('.gitignore')
+  copyJson('package.json')
+  copyJson('tsconfig.cjs.json', {
+    references: getReferences('tsconfig.cjs.json'),
   })
-  copyJson(res, cwd, 'tsconfig.esm.json', {
-    references: getReferences(cwd, dependencies, 'tsconfig.esm.json'),
+  copyJson('tsconfig.esm.json', {
+    references: getReferences('tsconfig.esm.json'),
   })
 }

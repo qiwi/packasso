@@ -1,20 +1,25 @@
 import { realpathSync } from 'node:fs'
-import { dirname, join, relative, resolve } from 'node:path'
+import { dirname, join, relative } from 'node:path'
 
+import { gitRootSync } from '@antongolub/git-root'
 import fg from 'fast-glob'
-import { findUpSync } from 'find-up'
-import { PackageJson, readPackageSync } from 'read-pkg'
+import { NormalizedPackageJson, readPackageSync } from 'read-pkg'
 
-export const getPackage = (cwd: string) => readPackageSync({ cwd })
+export const getPackage: (cwd: string) => NormalizedPackageJson = (cwd) =>
+  readPackageSync({ cwd })
 
-export const getModulesDir = (cwd: string) => {
-  return resolve(
-    dirname(findUpSync('yarn.lock', { type: 'file', cwd }) || ''),
-    'node_modules',
-  )
+export const getRootDir = (cwd: string) => {
+  return gitRootSync(cwd)?.toString() || cwd
 }
 
-export const getDependencies = (cwd: string, pkg: PackageJson) => {
+export const getModulesDir = (cwd: string) => {
+  return join(getRootDir(cwd), 'node_modules')
+}
+
+export const getDependencies: (
+  cwd: string,
+  pkg?: NormalizedPackageJson,
+) => Record<string, string> = (cwd, pkg = getPackage(cwd)) => {
   const modules = getModulesDir(cwd)
   return Object.fromEntries(
     Object.keys(pkg.dependencies || [])
@@ -34,7 +39,10 @@ export const getDependencies = (cwd: string, pkg: PackageJson) => {
   )
 }
 
-export const getWorkspaces = (cwd: string, pkg: PackageJson) =>
+export const getWorkspaces: (
+  cwd: string,
+  pkg?: NormalizedPackageJson,
+) => Record<string, string> = (cwd, pkg = getPackage(cwd)) =>
   Object.fromEntries(
     fg
       .sync(
@@ -47,5 +55,3 @@ export const getWorkspaces = (cwd: string, pkg: PackageJson) =>
       )
       .map((path) => [path, relative(cwd, dirname(path))]),
   )
-
-export type { PackageJson } from 'read-pkg'

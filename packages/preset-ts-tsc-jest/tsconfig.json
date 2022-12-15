@@ -12,17 +12,14 @@
     "importHelpers": true,
     "baseUrl": "./",
     "paths": {
-      "@packasso/preset-ts-tsc-jest": [
-        "./src/main/ts"
+      "@packasso/core": [
+        "../core/src/main/ts"
       ],
       "@packasso/build-resources": [
         "../build-resources/src/main/ts"
       ],
       "@packasso/build-ts-tsc": [
         "../build-ts-tsc/src/main/ts"
-      ],
-      "@packasso/core": [
-        "../core/src/main/ts"
       ],
       "@packasso/dev-ts": [
         "../dev-ts/src/main/ts"
