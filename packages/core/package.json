@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
+    "@antongolub/git-root": "1.5.8",
     "cosmiconfig": "8.0.0",
     "deepmerge": "4.2.2",
     "dequal": "2.0.3",

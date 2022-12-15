@@ -1,15 +1,15 @@
 import { realpathSync } from 'node:fs'
 import { dirname, join, relative } from 'node:path'
 
+import { gitRootSync } from '@antongolub/git-root'
 import fg from 'fast-glob'
-import { findUpSync } from 'find-up'
 import { NormalizedPackageJson, readPackageSync } from 'read-pkg'
 
 export const getPackage: (cwd: string) => NormalizedPackageJson = (cwd) =>
   readPackageSync({ cwd })
 
 export const getRootDir = (cwd: string) => {
-  return dirname(findUpSync('yarn.lock', { type: 'file', cwd }) || '')
+  return gitRootSync(cwd)?.toString() || cwd
 }
 
 export const getModulesDir = (cwd: string) => {
