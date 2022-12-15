@@ -1,3 +1,17 @@
+## [@packasso/preset-ts-swc-uvu@0.2.0](https://github.com/qiwi/packasso/compare/2022.12.13-packasso.preset-ts-swc-uvu.0.1.1-f0...2022.12.15-packasso.preset-ts-swc-uvu.0.2.0-f0) (2022-12-15)
+
+### Features
+* feat: context (#4) [06e8e09](https://github.com/qiwi/packasso/commit/06e8e09822bb3a6dc75724ddfc37346e66738d81)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.2.0
+* perf: @packasso/build-ts-swc updated to 0.2.0
+* perf: @packasso/core updated to 0.2.0
+* perf: @packasso/dev-ts updated to 0.2.0
+* perf: @packasso/release-zx-semrel updated to 0.2.0
+* perf: @packasso/style-eslint-prettier updated to 0.2.0
+* perf: @packasso/test-uvu updated to 0.2.0
+
 ## [@packasso/preset-ts-swc-uvu@0.1.1](https://github.com/qiwi/packasso/compare/2022.12.13-packasso.preset-ts-swc-uvu.0.1.0-f0...2022.12.13-packasso.preset-ts-swc-uvu.0.1.1-f0) (2022-12-13)
 
 ### Fixes & improvements
