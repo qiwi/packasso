@@ -1,3 +1,8 @@
+## [@packasso/core@0.3.0](https://github.com/qiwi/packasso/compare/2022.12.15-packasso.core.0.2.0-f0...2022.12.15-packasso.core.0.3.0-f0) (2022-12-15)
+
+### Features
+* feat: clean up unused (#5) [92c4bd1](https://github.com/qiwi/packasso/commit/92c4bd1174215a1de46b4361ef523d2885ef4090)
+
 ## [@packasso/core@0.2.0](https://github.com/qiwi/packasso/compare/2022.12.13-packasso.core.0.1.2-f0...2022.12.15-packasso.core.0.2.0-f0) (2022-12-15)
 
 ### Features
