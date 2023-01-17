@@ -1,13 +1,37 @@
 {
-  "testMatch": ["<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)"],
+  "testEnvironment": "jsdom",
+  "testMatch": [
+    "<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)"
+  ],
+  "testPathIgnorePatterns": [
+    "__mocks__",
+    "__snapshots__"
+  ],
   "collectCoverage": true,
-  "collectCoverageFrom": ["<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"],
+  "collectCoverageFrom": [
+    "<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"
+  ],
   "coveragePathIgnorePatterns": [
     "<rootDir>/node_modules",
     "<rootDir>/coverage",
     "<rootDir>/target"
   ],
   "transform": {
-    "^.+\\.[jt]sx?$": ["@swc/jest"]
+    "^.+\\.[jt]sx?$": [
+      "@swc/jest",
+      {
+        "jsc": {
+          "transform": {
+            "react": {
+              "runtime": "automatic"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/resources/__mocks__/file.js",
+    "\\.(css|less)$": "<rootDir>/src/test/resources/__mocks__/style.js"
   }
 }
