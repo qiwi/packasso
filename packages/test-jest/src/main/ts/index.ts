@@ -10,7 +10,11 @@ export const executor: Executor = async ({
   copyJson(
     'jest.config.json',
     pkg.workspaces
-      ? {}
+      ? {
+          projects: (Array.isArray(pkg.workspaces) ? pkg.workspaces : []).map(
+            (workspace) => `<rootDir>/${workspace}/jest.config.json`,
+          ),
+        }
       : {
           displayName: pkg.name,
           moduleNameMapper: getModuleNameMapper(),
