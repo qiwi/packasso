@@ -1,6 +1,9 @@
 {
-  "projects": ["<rootDir>/**/*/jest.config.json"],
   "collectCoverage": true,
-  "collectCoverageFrom": ["src/main/[jt]s/**/*.[jt]s?(x)"],
-  "coveragePathIgnorePatterns": ["<rootDir>/coverage"]
+  "collectCoverageFrom": [
+    "<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"
+  ],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/coverage"
+  ]
 }

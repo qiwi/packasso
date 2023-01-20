@@ -10,7 +10,11 @@ export const executor: Executor = async ({
   copyJson(
     'jest.config.json',
     pkg.workspaces
-      ? {}
+      ? {
+          projects: (Array.isArray(pkg.workspaces) ? pkg.workspaces : []).map(
+            (workspace) => `<rootDir>/${workspace}/jest.config.json`,
+          ),
+        }
       : {
           displayName: pkg.name,
           moduleNameMapper: getModuleNameMapper(),
@@ -18,4 +22,6 @@ export const executor: Executor = async ({
   )
   copyText('.gitignore')
   copyText('src/test/ts/index.ts')
+  copyText('src/test/resources/__mocks__/style.js')
+  copyText('src/test/resources/__mocks__/file.js')
 }
