@@ -1,3 +1,8 @@
+## [@packasso/test-jest@0.3.2](https://github.com/qiwi/packasso/compare/2023.1.20-packasso.test-jest.0.3.1-f0...2023.1.20-packasso.test-jest.0.3.2-f0) (2023-01-20)
+
+### Fixes & improvements
+* fix: jest-environment-jsdom [95e09a9](https://github.com/qiwi/packasso/commit/95e09a9399973e57868c2f68bb0e64c2104c6baf)
+
 ## [@packasso/test-jest@0.3.1](https://github.com/qiwi/packasso/compare/2022.12.15-packasso.test-jest.0.3.0-f0...2023.1.20-packasso.test-jest.0.3.1-f0) (2023-01-20)
 
 ### Fixes & improvements
