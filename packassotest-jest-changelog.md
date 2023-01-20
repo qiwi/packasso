@@ -1,3 +1,8 @@
+## [@packasso/test-jest@0.3.1](https://github.com/qiwi/packasso/compare/2022.12.15-packasso.test-jest.0.3.0-f0...2023.1.20-packasso.test-jest.0.3.1-f0) (2023-01-20)
+
+### Fixes & improvements
+* fix: improve jest config (#7) [91dccf0](https://github.com/qiwi/packasso/commit/91dccf022bdd524f6f9b8912e593e477cc722e84)
+
 ## [@packasso/test-jest@0.3.0](https://github.com/qiwi/packasso/compare/2022.12.15-packasso.test-jest.0.2.0-f0...2022.12.15-packasso.test-jest.0.3.0-f0) (2022-12-15)
 
 ### Features
