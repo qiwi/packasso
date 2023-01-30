@@ -1,6 +1,6 @@
 {
   "testEnvironment": "jsdom",
-  "testMatch": ["<rootDir>/src/test/[jt]s/**/*.(spec|test).[jt]s?(x)"],
+  "testMatch": ["<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)"],
   "testPathIgnorePatterns": ["__mocks__", "__snapshots__"],
   "collectCoverage": true,
   "collectCoverageFrom": ["<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"],
