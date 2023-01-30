@@ -1,8 +1,2 @@
 /node_modules
-
-/target/cjs
-/target/esm
-
-/target/resources
-
-/coverage
+/target

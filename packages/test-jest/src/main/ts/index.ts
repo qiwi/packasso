@@ -20,7 +20,6 @@ export const executor: Executor = async ({
           moduleNameMapper: getModuleNameMapper(),
         },
   )
-  copyText('.gitignore')
   copyText('src/test/resources/__mocks__/style.js')
   copyText('src/test/resources/__mocks__/file.js')
 }
