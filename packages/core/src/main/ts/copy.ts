@@ -3,19 +3,10 @@ import { mkdirSync, rmSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 
 import { diff as diffJson } from 'deep-object-diff'
-import merge, { Options } from 'deepmerge'
-import { dequal } from 'dequal'
-import { diffLines } from 'diff'
-import { template } from 'lodash-es'
+import { mergeWith, template } from 'lodash-es'
 import { NormalizedPackageJson } from 'read-pkg'
 
 import { getModulesDir, getPackage } from './package'
-
-const arrayMerge: Options['arrayMerge'] = (to, from) =>
-  [...to, ...from].filter(
-    (item, index, array) =>
-      array.findIndex((comp) => dequal(comp, item)) === index,
-  )
 
 export const getResourcesDir: (
   cwd: string,
@@ -36,6 +27,14 @@ export const getResourcesDir: (
   ]
 }
 
+const rm = (path: string) => {
+  try {
+    rmSync(path)
+  } catch {
+    //
+  }
+}
+
 const readText: (path: string) => string = (path) => {
   try {
     return readFileSync(path, { encoding: 'utf8' })
@@ -50,11 +49,7 @@ const writeText: (path: string, text: string) => void = (path, text) => {
   })
   const trimmed = text.replaceAll(/^\n+/g, '').replaceAll(/\n+$/g, '')
   if (trimmed.length === 0) {
-    try {
-      rmSync(path)
-    } catch {
-      //
-    }
+    rm(path)
   } else {
     writeFileSync(path, [trimmed, ''].join('\n'), {
       encoding: 'utf8',
@@ -75,24 +70,42 @@ const writeJson: (path: string, json: object) => void = (path, json) => {
   writeText(path, text === '{}' ? '' : text)
 }
 
+const mergeJson = (json1: object, json2: object) =>
+  mergeWith(json1, json2, (objValue, srcValue) => {
+    if (Array.isArray(objValue)) {
+      return [...objValue, ...srcValue]
+    }
+  })
+
 export const copyJson: (
   from: string,
   to: string,
   file: string,
   drop: boolean,
-  extra?: object,
-) => void = (from, to, file, drop, extra = {}) => {
+  data?: object,
+) => void = (from, to, file, drop, data = {}) => {
   const fromPath = join(from, file.replace(/^\./, ''))
   if (!existsSync(fromPath)) {
     return
   }
   const toPath = join(to, file)
   const toJson = readJson(toPath)
-  const fromJson = merge.all([readJson(fromPath), extra], { arrayMerge })
-  const json = drop
-    ? diffJson(fromJson, toJson)
-    : merge.all([toJson, fromJson], { arrayMerge })
-  writeJson(toPath, json)
+  const fromJson = mergeJson(readJson(fromPath), data)
+  if (drop) {
+    if (file === 'package.json') {
+      const json = diffJson(fromJson, toJson) as NormalizedPackageJson
+      // fix files: [ '2': '/target/...' ]
+      if (json.files && !Array.isArray(json.files)) {
+        json.files = Object.values(json.files)
+      }
+      writeJson(toPath, json)
+    } else {
+      rm(toPath)
+    }
+  } else {
+    const json = mergeJson(toJson, fromJson)
+    writeJson(toPath, json)
+  }
 }
 
 export const copyText: (
@@ -107,24 +120,12 @@ export const copyText: (
     return
   }
   const toPath = join(to, file)
-  const toExists = existsSync(toPath)
   const toText = readText(toPath)
-  const toEmpty = toText.trim().length === 0
   const fromText = template(readText(fromPath))(data)
-    .split('\n')
-    .filter((line) => drop || !line.startsWith('//') || !toExists || toEmpty)
-    .map((line) =>
-      line.startsWith('// ')
-        ? line.slice(3)
-        : line.startsWith('//')
-        ? line.slice(2)
-        : line,
-    )
-    .join('\n')
-  const lines = drop ? diffLines(fromText, toText) : diffLines(toText, fromText)
-  const text = lines
-    .map((line) => (drop && !line.added ? '' : line.value))
-    .join('\n')
-    .replaceAll(/\n{3,}/g, '\n\n')
-  writeText(toPath, text)
+  if (drop) {
+    rm(toPath)
+  } else {
+    const text = [toText, fromText].join('\n')
+    writeText(toPath, text)
+  }
 }

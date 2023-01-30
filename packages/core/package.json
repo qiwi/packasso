@@ -1,10 +1,9 @@
 {
   "name": "@packasso/core",
-  "version": "0.0.0",
-  "license": "MIT",
   "dependencies": {
     "@antongolub/git-root": "1.5.8",
     "cosmiconfig": "8.0.0",
+    "deep-diff": "1.0.2",
     "deep-object-diff": "1.1.9",
     "deepmerge": "4.2.2",
     "dequal": "2.0.3",
@@ -25,6 +24,7 @@
     "./package.json": "./package.json"
   },
   "devDependencies": {
+    "@types/deep-diff": "1.0.2",
     "@types/diff": "5.0.2",
     "@types/lodash-es": "4.17.6",
     "c8": "7.12.0",
@@ -42,6 +42,16 @@
     "typescript": "4.9.4",
     "uvu": "0.5.6"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "license": "MIT",
+  "version": "0.0.0",
   "type": "module",
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",
@@ -76,19 +86,11 @@
     "extends": "eslint-config-qiwi"
   },
   "prettier": "prettier-config-qiwi",
+  "publishConfig": {
+    "access": "public"
+  },
   "release": {
     "cmd": "yarn",
     "changelog": "changelog"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qiwi/packasso.git"
-  },
-  "bugs": {
-    "url": "https://github.com/qiwi/packasso/issues"
-  },
-  "homepage": "https://qiwi.github.io/packasso",
-  "publishConfig": {
-    "access": "public"
   }
 }
