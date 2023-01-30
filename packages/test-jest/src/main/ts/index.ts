@@ -21,7 +21,6 @@ export const executor: Executor = async ({
         },
   )
   copyText('.gitignore')
-  copyText('src/test/ts/index.ts')
   copyText('src/test/resources/__mocks__/style.js')
   copyText('src/test/resources/__mocks__/file.js')
 }

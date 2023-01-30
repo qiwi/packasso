@@ -1,7 +1,5 @@
 {
   "name": "@packasso/preset-ts-swc-uvu",
-  "version": "0.0.0",
-  "license": "MIT",
   "exports": {
     ".": {
       "development": "./src/main/ts/index.ts",
@@ -20,6 +18,16 @@
     "@packasso/style-eslint-prettier": "workspace:*",
     "@packasso/test-uvu": "workspace:*"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "license": "MIT",
+  "version": "0.0.0",
   "devDependencies": {
     "c8": "7.12.0",
     "concurrently": "7.6.0",
@@ -70,19 +78,11 @@
     "extends": "eslint-config-qiwi"
   },
   "prettier": "prettier-config-qiwi",
+  "publishConfig": {
+    "access": "public"
+  },
   "release": {
     "cmd": "yarn",
     "changelog": "changelog"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qiwi/packasso.git"
-  },
-  "bugs": {
-    "url": "https://github.com/qiwi/packasso/issues"
-  },
-  "homepage": "https://qiwi.github.io/packasso",
-  "publishConfig": {
-    "access": "public"
   }
 }

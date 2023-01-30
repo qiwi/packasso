@@ -11,5 +11,4 @@ export const executor: Executor = async ({ copyText, copyJson, getPaths }) => {
       paths: getPaths(),
     },
   })
-  copyText('src/main/ts/index.ts')
 }

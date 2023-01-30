@@ -607,11 +607,13 @@ __metadata:
   resolution: "@packasso/core@workspace:packages/core"
   dependencies:
     "@antongolub/git-root": "npm:1.5.8"
+    "@types/deep-diff": "npm:1.0.2"
     "@types/diff": "npm:5.0.2"
     "@types/lodash-es": "npm:4.17.6"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     cosmiconfig: "npm:8.0.0"
+    deep-diff: "npm:1.0.2"
     deep-object-diff: "npm:1.1.9"
     deepmerge: "npm:4.2.2"
     dequal: "npm:2.0.3"
@@ -834,13 +836,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
   dependencies:
-    "@qiwi/esm": "npm:1.1.8"
     concurrently: "npm:7.6.0"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
-    tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
   languageName: unknown
   linkType: soft
@@ -921,6 +921,13 @@ __metadata:
   dependencies:
     "@babel/types": "npm:^7.3.0"
   checksum: 78677b4e99554d5c68b60acfca185ca77e49b7abab908283c8731d9658a293bc3ebfbefa705fad2f2c33cd05f72447817bd46ec1846fd255fda86f66a70ef455
+  languageName: node
+  linkType: hard
+
+"@types/deep-diff@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@types/deep-diff@npm:1.0.2"
+  checksum: 3fe3f38bacaf62328ebd150da3fb72025dc1a5441a5c3f9bab2346077c61293c8ac4f18345ec8a53bee9c6faa8ca5551d2e39c86e11f3278d3e7a2886aa0073f
   languageName: node
   linkType: hard
 
@@ -1912,6 +1919,13 @@ __metadata:
   version: 0.2.2
   resolution: "decode-uri-component@npm:0.2.2"
   checksum: 470428dd2c9310a948f7a942a64e5e5005a992beba979a6ac0b3635ca1a3915753c7871e3e85d3fd21ea5a7b829f62b7b4c2b368fc8b7cc7455b4d7182807e72
+  languageName: node
+  linkType: hard
+
+"deep-diff@npm:1.0.2":
+  version: 1.0.2
+  resolution: "deep-diff@npm:1.0.2"
+  checksum: ea79936ddbcb908e2998e651bec945f349d8587b191f4c4e6bb42adbb73782b188952ceaeb0aacfcb50cb72de5a6697431988516005e18566192a484fc05f2e3
   languageName: node
   linkType: hard
 
