@@ -1,3 +1,8 @@
+## [@packasso/core@0.4.0](https://github.com/qiwi/packasso/compare/2022.12.15-packasso.core.0.3.0-f0...2023.1.30-packasso.core.0.4.0-f0) (2023-01-30)
+
+### Features
+* feat: drop all configs (#8) [5d003ac](https://github.com/qiwi/packasso/commit/5d003ac6bd4feb8d26207aaa594af03f79080c97)
+
 ## [@packasso/core@0.3.0](https://github.com/qiwi/packasso/compare/2022.12.15-packasso.core.0.2.0-f0...2022.12.15-packasso.core.0.3.0-f0) (2022-12-15)
 
 ### Features
