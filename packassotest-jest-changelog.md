@@ -1,3 +1,11 @@
+## [@packasso/test-jest@0.4.0](https://github.com/qiwi/packasso/compare/2023.1.20-packasso.test-jest.0.3.2-f0...2023.1.30-packasso.test-jest.0.4.0-f0) (2023-01-30)
+
+### Features
+* feat: drop all configs (#8) [5d003ac](https://github.com/qiwi/packasso/commit/5d003ac6bd4feb8d26207aaa594af03f79080c97)
+
+### Dependencies
+* perf: @packasso/core updated to 0.4.0
+
 ## [@packasso/test-jest@0.3.2](https://github.com/qiwi/packasso/compare/2023.1.20-packasso.test-jest.0.3.1-f0...2023.1.20-packasso.test-jest.0.3.2-f0) (2023-01-20)
 
 ### Fixes & improvements
