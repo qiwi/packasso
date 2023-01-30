@@ -1,3 +1,11 @@
+## [@packasso/style-eslint-prettier@0.4.0](https://github.com/qiwi/packasso/compare/2023.1.30-packasso.style-eslint-prettier.0.3.0-f0...2023.1.30-packasso.style-eslint-prettier.0.4.0-f0) (2023-01-30)
+
+### Features
+* feat: all to target (#9) [7226d37](https://github.com/qiwi/packasso/commit/7226d37332bcc2df4bf1236704f283b473f30bc3)
+
+### Dependencies
+* perf: @packasso/core updated to 0.5.0
+
 ## [@packasso/style-eslint-prettier@0.3.0](https://github.com/qiwi/packasso/compare/2022.12.15-packasso.style-eslint-prettier.0.2.1-f0...2023.1.30-packasso.style-eslint-prettier.0.3.0-f0) (2023-01-30)
 
 ### Features
