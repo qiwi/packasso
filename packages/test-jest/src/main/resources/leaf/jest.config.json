@@ -1,21 +1,11 @@
 {
   "testEnvironment": "jsdom",
-  "testMatch": [
-    "<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)"
-  ],
-  "testPathIgnorePatterns": [
-    "__mocks__",
-    "__snapshots__"
-  ],
+  "testMatch": ["<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)"],
+  "testPathIgnorePatterns": ["__mocks__", "__snapshots__"],
   "collectCoverage": true,
-  "collectCoverageFrom": [
-    "<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"
-  ],
-  "coveragePathIgnorePatterns": [
-    "<rootDir>/node_modules",
-    "<rootDir>/coverage",
-    "<rootDir>/target"
-  ],
+  "collectCoverageFrom": ["<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"],
+  "coverageDirectory": "<rootDir>/target/coverage",
+  "coveragePathIgnorePatterns": ["<rootDir>/node_modules", "<rootDir>/target"],
   "transform": {
     "^.+\\.[jt]sx?$": [
       "@swc/jest",

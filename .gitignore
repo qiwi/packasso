@@ -26,5 +26,4 @@
 *.smime
 
 /node_modules
-
-/coverage
+/target

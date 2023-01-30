@@ -1,11 +1,6 @@
 import { Executor } from '@packasso/core'
 
-export const executor: Executor = async ({
-  copyText,
-  copyJson,
-  getReferences,
-}) => {
-  copyText('.gitignore')
+export const executor: Executor = async ({ copyJson, getReferences }) => {
   copyJson('package.json')
   copyJson('swc.cjs.json')
   copyJson('swc.esm.json')
