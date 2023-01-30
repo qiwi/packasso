@@ -1,0 +1,15 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/preset-ts-tsc-uvu",
+  "hash": "7226d37332bcc2df4bf1236704f283b473f30bc3",
+  "version": "0.5.0",
+  "dependencies": {
+    "@packasso/build-resources": "0.4.0",
+    "@packasso/build-ts-tsc": "0.4.0",
+    "@packasso/core": "0.5.0",
+    "@packasso/dev-ts": "0.5.0",
+    "@packasso/release-zx-semrel": "0.4.0",
+    "@packasso/style-eslint-prettier": "0.4.0",
+    "@packasso/test-uvu": "0.5.0"
+  }
+}
