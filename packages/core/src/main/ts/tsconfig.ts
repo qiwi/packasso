@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import { join, sep } from 'node:path'
 
 import { NormalizedPackageJson } from 'read-pkg'
@@ -31,6 +32,8 @@ export const getReferences: (
     ? getWorkspaces(cwd, pkg)
     : getDependencies(cwd, pkg),
 ) =>
-  Object.values(dependencies).map((path) => ({
-    path: dotted(join(path, tsconfig)),
-  }))
+  Object.values(dependencies)
+    .map((path) => ({
+      path: dotted(join(path, tsconfig)),
+    }))
+    .filter((reference) => existsSync(join(cwd, reference.path)))

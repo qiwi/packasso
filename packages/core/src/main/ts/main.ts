@@ -1,8 +1,8 @@
-import { resolve } from 'node:path'
+import { topo } from '@semrel-extra/topo'
 
 import { Config, getConfig, mergeConfigs } from './config'
 import { execute } from './execute'
-import { getPackage, getWorkspaces } from './package'
+import { getPackage } from './package'
 
 const drop = (config: Config) => ({
   ...config,
@@ -21,17 +21,21 @@ export const main = async ({
 }) => {
   const root = cwd
   const pkg = getPackage(cwd)
-  if (pkg.workspaces) {
-    const workspaces = Object.values(getWorkspaces(cwd, pkg)).map((workspace) =>
-      resolve(cwd, workspace),
+  if (Array.isArray(pkg.workspaces)) {
+    const { queue, packages } = await topo({
+      workspaces: pkg.workspaces,
+      cwd,
+    })
+    const paths = Object.fromEntries(
+      Object.values(packages).map(({ name, absPath }) => [name, absPath]),
     )
     const configs = await Promise.all(
-      workspaces.map(async (workspace) => await getConfig(workspace)),
+      queue.map(async (name) => await getConfig(paths[name])),
     )
     await Promise.all(
-      workspaces.map(async (workspace, index) => {
-        await execute(workspace, root, development, drop(configs[index]))
-        return await execute(workspace, root, development, configs[index])
+      queue.map(async (name, index) => {
+        await execute(paths[name], root, development, drop(configs[index]))
+        return await execute(paths[name], root, development, configs[index])
       }),
     )
     await execute(cwd, root, development, drop(mergeConfigs(configs)))
