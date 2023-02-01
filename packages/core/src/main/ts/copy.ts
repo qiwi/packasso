@@ -3,6 +3,7 @@ import { mkdirSync, rmSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 
 import { diff as diffJson } from 'deep-object-diff'
+import fg from 'fast-glob'
 import { mergeWith, template } from 'lodash-es'
 import { NormalizedPackageJson } from 'read-pkg'
 
@@ -29,7 +30,9 @@ export const getResourcesDir: (
 
 const rm = (path: string) => {
   try {
-    rmSync(path)
+    rmSync(path, {
+      recursive: true,
+    })
   } catch {
     //
   }
@@ -128,4 +131,13 @@ export const copyText: (
     const text = [toText, fromText].join('\n')
     writeText(toPath, text)
   }
+}
+
+export const dropPath = (cwd: string, pattern: string | string[]) => {
+  fg.sync(pattern, {
+    cwd,
+    deep: 0,
+    onlyFiles: false,
+    onlyDirectories: false,
+  }).forEach((path) => rm(join(cwd, path)))
 }
