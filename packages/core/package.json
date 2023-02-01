@@ -2,6 +2,7 @@
   "name": "@packasso/core",
   "dependencies": {
     "@antongolub/git-root": "1.5.8",
+    "@semrel-extra/topo": "1.4.4",
     "cosmiconfig": "8.0.0",
     "deep-diff": "1.0.2",
     "deep-object-diff": "1.1.9",

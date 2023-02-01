@@ -607,6 +607,7 @@ __metadata:
   resolution: "@packasso/core@workspace:packages/core"
   dependencies:
     "@antongolub/git-root": "npm:1.5.8"
+    "@semrel-extra/topo": "npm:1.4.4"
     "@types/deep-diff": "npm:1.0.2"
     "@types/diff": "npm:5.0.2"
     "@types/lodash-es": "npm:4.17.6"
@@ -836,12 +837,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
   dependencies:
+    c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
+    tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
   languageName: unknown
   linkType: soft
 
@@ -887,6 +892,18 @@ __metadata:
     "@qiwi/substrate-types": "npm:1.55.1"
     tslib: "npm:^2.4.1"
   checksum: a8d630f03697a4e2880e1b4a8029ea0c5546c2c17be14c005554d58d9af38dd14bf83b2f799e8ddcc449b1ba079dd162caacf723a4b523df34512ea3c7663efc
+  languageName: node
+  linkType: hard
+
+"@semrel-extra/topo@npm:1.4.4":
+  version: 1.4.4
+  resolution: "@semrel-extra/topo@npm:1.4.4"
+  dependencies:
+    "@types/toposort": "npm:^2.0.3"
+    fast-glob: "npm:^3.2.12"
+    toposort: "npm:^2.0.2"
+    tslib: "npm:^2.4.1"
+  checksum: a3a03ecc9cf09ddc4445d54a1048f07cbfdfa5818e97cc88c86494ee7da5543ab468ff049646c96608ce5563558538106dd111d9df1357bec882ae162c8722cb
   languageName: node
   linkType: hard
 
@@ -1043,6 +1060,13 @@ __metadata:
   version: 2.0.1
   resolution: "@types/stack-utils@npm:2.0.1"
   checksum: a961a1d043517a2b6f7fc326fbce12cd3ba4a8dfc87b63ef2aa7cd991f6a8c7bc87942a51a792c3f922e34e3898d9de3139f2f6636a326a7ec4635389b822bd9
+  languageName: node
+  linkType: hard
+
+"@types/toposort@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@types/toposort@npm:2.0.3"
+  checksum: 27328a673bfb2ca09788477d14a4f3ecec1f1651a21c5731c28accab8d4c6809d83db9cc3905d2ecd55520510e492322a75614c4177ddf17ee09bbc78f6f16ff
   languageName: node
   linkType: hard
 
@@ -2736,7 +2760,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:3.2.12, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
+"fast-glob@npm:3.2.12, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -5924,6 +5948,13 @@ __metadata:
     regex-not: "npm:^1.0.2"
     safe-regex: "npm:^1.1.0"
   checksum: c1fa63f38c3fcfb9b5c0a50ca57cb29e46069ffd4428b6e32ad20e60b0c7af5dc8044641a554ad0a50ba9f262aacf9f9a3c290bdccb7c0bc0d47fc484f2a1c5b
+  languageName: node
+  linkType: hard
+
+"toposort@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "toposort@npm:2.0.2"
+  checksum: 83228761ab0c520d93ae1d6b5c3cebe0f2aa3e424dda49263d85b01cf7ff9838e2b57812fc5aa59fa28567cd9a03ab5b3cdfb4f9557b28c734c814f7898820c9
   languageName: node
   linkType: hard
 

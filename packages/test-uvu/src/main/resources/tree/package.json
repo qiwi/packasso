@@ -4,6 +4,10 @@
     "test:uvu": "c8 -o target/coverage -r html -r text -r lcov --include 'packages/*/src/main' uvu -r tsm -r earljs/uvu packages src/test -i src/main -i target/resources"
   },
   "devDependencies": {
-    "concurrently": "7.6.0"
+    "c8": "7.12.0",
+    "concurrently": "7.6.0",
+    "earljs": "0.2.3",
+    "tsm": "2.3.0",
+    "uvu": "0.5.6"
   }
 }
