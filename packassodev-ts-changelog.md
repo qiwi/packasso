@@ -1,3 +1,8 @@
+## [@packasso/dev-ts@0.6.1](https://github.com/qiwi/packasso/compare/2023.2.1-packasso.dev-ts.0.6.0-f0...2023.2.1-packasso.dev-ts.0.6.1-f0) (2023-02-01)
+
+### Fixes & improvements
+* fix: react-jsx [6a7fbad](https://github.com/qiwi/packasso/commit/6a7fbadc99a8ecd63612458e29cde8a437580f0a)
+
 ## [@packasso/dev-ts@0.6.0](https://github.com/qiwi/packasso/compare/2023.1.30-packasso.dev-ts.0.5.0-f0...2023.2.1-packasso.dev-ts.0.6.0-f0) (2023-02-01)
 
 ### Features
