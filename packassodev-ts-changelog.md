@@ -1,3 +1,11 @@
+## [@packasso/dev-ts@0.6.0](https://github.com/qiwi/packasso/compare/2023.1.30-packasso.dev-ts.0.5.0-f0...2023.2.1-packasso.dev-ts.0.6.0-f0) (2023-02-01)
+
+### Features
+* feat: topological (#10) [1b64d28](https://github.com/qiwi/packasso/commit/1b64d282a46318682bf500759d91c0fbdb8a95ab)
+
+### Dependencies
+* perf: @packasso/core updated to 0.6.0
+
 ## [@packasso/dev-ts@0.5.0](https://github.com/qiwi/packasso/compare/2023.1.30-packasso.dev-ts.0.4.0-f0...2023.1.30-packasso.dev-ts.0.5.0-f0) (2023-01-30)
 
 ### Features
