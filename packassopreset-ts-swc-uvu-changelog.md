@@ -1,3 +1,8 @@
+## [@packasso/preset-ts-swc-uvu@0.6.1](https://github.com/qiwi/packasso/compare/2023.2.1-packasso.preset-ts-swc-uvu.0.6.0-f0...2023.2.1-packasso.preset-ts-swc-uvu.0.6.1-f0) (2023-02-01)
+
+### Dependencies
+* perf: @packasso/dev-ts updated to 0.6.1
+
 ## [@packasso/preset-ts-swc-uvu@0.6.0](https://github.com/qiwi/packasso/compare/2023.1.30-packasso.preset-ts-swc-uvu.0.5.0-f0...2023.2.1-packasso.preset-ts-swc-uvu.0.6.0-f0) (2023-02-01)
 
 ### Features
