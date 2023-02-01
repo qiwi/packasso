@@ -136,8 +136,9 @@ export const copyText: (
 export const dropPath = (cwd: string, pattern: string | string[]) => {
   fg.sync(pattern, {
     cwd,
+    absolute: true,
     deep: 0,
     onlyFiles: false,
     onlyDirectories: false,
-  }).forEach((path) => rm(join(cwd, path)))
+  }).forEach((path) => rm(path))
 }
