@@ -1,3 +1,17 @@
+## [@packasso/preset-ts-swc-uvu@0.7.0](https://github.com/qiwi/packasso/compare/2023.2.1-packasso.preset-ts-swc-uvu.0.6.1-f0...2023.2.2-packasso.preset-ts-swc-uvu.0.7.0-f0) (2023-02-02)
+
+### Features
+* feat: drop path (#11) [c7d7379](https://github.com/qiwi/packasso/commit/c7d7379b08d310faffb1f1d60d5124f1aa2535cd)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.6.0
+* perf: @packasso/build-ts-swc updated to 0.7.0
+* perf: @packasso/core updated to 0.7.0
+* perf: @packasso/dev-ts updated to 0.7.0
+* perf: @packasso/release-zx-semrel updated to 0.6.0
+* perf: @packasso/style-eslint-prettier updated to 0.6.0
+* perf: @packasso/test-uvu updated to 0.7.0
+
 ## [@packasso/preset-ts-swc-uvu@0.6.1](https://github.com/qiwi/packasso/compare/2023.2.1-packasso.preset-ts-swc-uvu.0.6.0-f0...2023.2.1-packasso.preset-ts-swc-uvu.0.6.1-f0) (2023-02-01)
 
 ### Dependencies
