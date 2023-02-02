@@ -1,7 +1,7 @@
 import { NormalizedPackageJson } from 'read-pkg'
 
 import { Config, Module } from './config'
-import { copyJson, copyText, getResourcesDir } from './copy'
+import { copyJson, copyText, dropPath, getResourcesDir } from './copy'
 import { execute } from './execute'
 import { getDependencies, getPackage, getWorkspaces } from './package'
 import { getModuleNameMapper } from './test'
@@ -10,6 +10,7 @@ import { getPaths, getReferences } from './tsconfig'
 export interface Utils {
   pkg: NormalizedPackageJson
   execute: (config: Config) => void
+  dropPath: (name: string | string[]) => void
   copyJson: (file: string, data?: object) => void
   copyText: (file: string, data?: object) => void
   getDependencies: () => Record<string, string>
@@ -35,6 +36,7 @@ export const getUtils: (
         ...config,
         modules: config.modules.map((module) => ({ ...module, drop })),
       }),
+    dropPath: (name) => dropPath(cwd, name),
     copyJson: (file, data) =>
       res.forEach((res) => copyJson(res, cwd, file, drop, data)),
     copyText: (file, data) =>

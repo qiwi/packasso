@@ -4,8 +4,10 @@ export const executor: Executor = async ({
   pkg,
   copyText,
   copyJson,
+  dropPath,
   getModuleNameMapper,
 }) => {
+  dropPath(['jest.config.{js|ts|mjs|cjs}', 'tsconfig.test.json'])
   copyJson('package.json')
   copyJson(
     'jest.config.json',

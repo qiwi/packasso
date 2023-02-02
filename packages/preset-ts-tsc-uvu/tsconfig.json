@@ -3,6 +3,7 @@
     "module": "es2022",
     "target": "es2022",
     "moduleResolution": "node",
+    "jsx": "react-jsx",
     "strict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
