@@ -1,3 +1,8 @@
+## [@packasso/test-jest@0.7.1](https://github.com/qiwi/packasso/compare/2023.2.2-packasso.test-jest.0.7.0-f0...2023.2.2-packasso.test-jest.0.7.1-f0) (2023-02-02)
+
+### Fixes & improvements
+* fix: jest drop pattern [611edb4](https://github.com/qiwi/packasso/commit/611edb486f24fb90fd93c65275d136900d1e07a6)
+
 ## [@packasso/test-jest@0.7.0](https://github.com/qiwi/packasso/compare/2023.2.1-packasso.test-jest.0.6.0-f0...2023.2.2-packasso.test-jest.0.7.0-f0) (2023-02-02)
 
 ### Features
