@@ -1,3 +1,11 @@
+## [@packasso/style-eslint-prettier@0.6.0](https://github.com/qiwi/packasso/compare/2023.2.1-packasso.style-eslint-prettier.0.5.0-f0...2023.2.2-packasso.style-eslint-prettier.0.6.0-f0) (2023-02-02)
+
+### Features
+* feat: drop path (#11) [c7d7379](https://github.com/qiwi/packasso/commit/c7d7379b08d310faffb1f1d60d5124f1aa2535cd)
+
+### Dependencies
+* perf: @packasso/core updated to 0.7.0
+
 ## [@packasso/style-eslint-prettier@0.5.0](https://github.com/qiwi/packasso/compare/2023.1.30-packasso.style-eslint-prettier.0.4.0-f0...2023.2.1-packasso.style-eslint-prettier.0.5.0-f0) (2023-02-01)
 
 ### Features
