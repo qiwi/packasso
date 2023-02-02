@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/test-jest",
+  "hash": "611edb486f24fb90fd93c65275d136900d1e07a6",
+  "version": "0.7.1",
+  "dependencies": {
+    "@packasso/core": "0.7.0"
+  }
+}
