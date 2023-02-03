@@ -2,9 +2,17 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { mkdirSync, rmSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 
-import { diff as diffJson } from 'deep-object-diff'
 import fg from 'fast-glob'
-import { mergeWith, template } from 'lodash-es'
+import {
+  differenceWith,
+  isArray,
+  isEqual,
+  isNil,
+  isObject,
+  mergeWith,
+  template,
+  uniqWith,
+} from 'lodash-es'
 import { NormalizedPackageJson } from 'read-pkg'
 
 import { getModulesDir, getPackage } from './package'
@@ -74,11 +82,41 @@ const writeJson: (path: string, json: object) => void = (path, json) => {
 }
 
 const mergeJson = (json1: object, json2: object) =>
-  mergeWith(json1, json2, (objValue, srcValue) => {
-    if (Array.isArray(objValue)) {
-      return [...objValue, ...srcValue]
+  mergeWith(json1, json2, (value1, value2) => {
+    if (Array.isArray(value1) || Array.isArray(value2)) {
+      return uniqWith(
+        [
+          ...(Array.isArray(value1) ? value1 : [value1]),
+          ...(Array.isArray(value2) ? value2 : [value2]),
+        ],
+        isEqual,
+      ).filter((value) => !isNil(value))
     }
   })
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const diffJson = (json1: any, json2: any): any =>
+  Object.keys(json1).reduce((result, key) => {
+    if (isEqual(json1[key], json2[key])) {
+      return result
+    }
+    if (Array.isArray(json1[key]) && isArray(json2[key])) {
+      const d = differenceWith(json1, json2, isEqual)
+      if (d.length === 0) {
+        return result
+      }
+      return { ...result, [key]: d }
+    }
+    if (isObject(json1[key]) && isObject(json2[key])) {
+      const d = diffJson(json1[key], json2[key])
+      if (Object.keys(d).length === 0) {
+        return result
+      }
+      return { ...result, [key]: d }
+    }
+    return { ...result, [key]: json1[key] }
+  }, {})
 
 export const copyJson: (
   from: string,
@@ -96,11 +134,7 @@ export const copyJson: (
   const fromJson = mergeJson(readJson(fromPath), data)
   if (drop) {
     if (file === 'package.json') {
-      const json = diffJson(fromJson, toJson) as NormalizedPackageJson
-      // fix files: [ '2': '/target/...' ]
-      if (json.files && !Array.isArray(json.files)) {
-        json.files = Object.values(json.files)
-      }
+      const json = diffJson(toJson, fromJson)
       writeJson(toPath, json)
     } else {
       rm(toPath)
