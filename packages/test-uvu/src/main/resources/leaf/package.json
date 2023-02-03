@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "concurrently 'npm:test:*(!test:.+:)'",
-    "test:uvu": "c8 -o target/coverage -r html -r text -r lcov --include src/main uvu -r tsm -r earljs/uvu src/test"
+    "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n 'src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target"
   },
   "devDependencies": {
     "c8": "7.12.0",
