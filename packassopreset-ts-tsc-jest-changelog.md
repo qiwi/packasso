@@ -1,3 +1,17 @@
+## [@packasso/preset-ts-tsc-jest@0.7.2](https://github.com/qiwi/packasso/compare/2023.2.2-packasso.preset-ts-tsc-jest.0.7.1-f0...2023.2.3-packasso.preset-ts-tsc-jest.0.7.2-f0) (2023-02-03)
+
+### Fixes & improvements
+* fix: deep json diff [2635ce0](https://github.com/qiwi/packasso/commit/2635ce0b9fed3b9271fd9b737cc5835dcbe27e2b)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.6.1
+* perf: @packasso/build-ts-tsc updated to 0.6.1
+* perf: @packasso/core updated to 0.7.1
+* perf: @packasso/dev-ts updated to 0.7.1
+* perf: @packasso/release-zx-semrel updated to 0.6.1
+* perf: @packasso/style-eslint-prettier updated to 0.6.1
+* perf: @packasso/test-jest updated to 0.7.2
+
 ## [@packasso/preset-ts-tsc-jest@0.7.1](https://github.com/qiwi/packasso/compare/2023.2.2-packasso.preset-ts-tsc-jest.0.7.0-f0...2023.2.2-packasso.preset-ts-tsc-jest.0.7.1-f0) (2023-02-02)
 
 ### Dependencies
