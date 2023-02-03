@@ -1,3 +1,8 @@
+## [@packasso/core@0.7.2](https://github.com/qiwi/packasso/compare/2023.2.3-packasso.core.0.7.1-f0...2023.2.3-packasso.core.0.7.2-f0) (2023-02-03)
+
+### Fixes & improvements
+* fix: jest projects [79aa239](https://github.com/qiwi/packasso/commit/79aa2391ea5ccfdb850e30873a3022a23f7c2ea8)
+
 ## [@packasso/core@0.7.1](https://github.com/qiwi/packasso/compare/2023.2.2-packasso.core.0.7.0-f0...2023.2.3-packasso.core.0.7.1-f0) (2023-02-03)
 
 ### Fixes & improvements
