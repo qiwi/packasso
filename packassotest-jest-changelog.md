@@ -1,3 +1,8 @@
+## [@packasso/test-jest@0.7.4](https://github.com/qiwi/packasso/compare/2023.2.3-packasso.test-jest.0.7.3-f0...2023.2.3-packasso.test-jest.0.7.4-f0) (2023-02-03)
+
+### Fixes & improvements
+* fix: jest units [4fd76c8](https://github.com/qiwi/packasso/commit/4fd76c85846c8354974e37d9f67cdcadf7d8de9f)
+
 ## [@packasso/test-jest@0.7.3](https://github.com/qiwi/packasso/compare/2023.2.3-packasso.test-jest.0.7.2-f0...2023.2.3-packasso.test-jest.0.7.3-f0) (2023-02-03)
 
 ### Fixes & improvements
