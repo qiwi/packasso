@@ -4,7 +4,7 @@ import { Config, Module } from './config'
 import { copyJson, copyText, dropPath, getResourcesDir } from './copy'
 import { execute } from './execute'
 import { getDependencies, getPackage, getWorkspaces } from './package'
-import { getModuleNameMapper } from './test'
+import { getModuleNameMapper, getProjects } from './test'
 import { getPaths, getReferences } from './tsconfig'
 
 export interface Utils {
@@ -17,6 +17,7 @@ export interface Utils {
   getWorkspaces: () => Record<string, string>
   getPaths: () => Record<string, string[]>
   getReferences: (tsconfig: string) => { path: string }[]
+  getProjects: () => string[]
   getModuleNameMapper: () => Record<string, string>
 }
 
@@ -45,6 +46,7 @@ export const getUtils: (
     getWorkspaces: () => getWorkspaces(cwd),
     getPaths: () => getPaths(cwd),
     getReferences: (tsconfig: string) => getReferences(cwd, tsconfig),
+    getProjects: () => getProjects(cwd),
     getModuleNameMapper: () => getModuleNameMapper(cwd),
   }
 }

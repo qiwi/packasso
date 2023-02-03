@@ -5,6 +5,7 @@ export const executor: Executor = async ({
   copyText,
   copyJson,
   dropPath,
+  getProjects,
   getModuleNameMapper,
 }) => {
   dropPath(['jest.config.{js,ts,mjs,cjs}', 'tsconfig.test.json'])
@@ -13,9 +14,7 @@ export const executor: Executor = async ({
     'jest.config.json',
     pkg.workspaces
       ? {
-          projects: (Array.isArray(pkg.workspaces) ? pkg.workspaces : []).map(
-            (workspace) => `<rootDir>/${workspace}/jest.config.json`,
-          ),
+          projects: getProjects(),
         }
       : {
           displayName: pkg.name,
