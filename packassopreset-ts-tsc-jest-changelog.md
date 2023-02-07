@@ -1,3 +1,17 @@
+## [@packasso/preset-ts-tsc-jest@0.7.7](https://github.com/qiwi/packasso/compare/2023.2.7-packasso.preset-ts-tsc-jest.0.7.6-f0...2023.2.7-packasso.preset-ts-tsc-jest.0.7.7-f0) (2023-02-07)
+
+### Fixes & improvements
+* fix: lint-format concurrently-sequentially [fecc017](https://github.com/qiwi/packasso/commit/fecc017dc284d6dd48c72c5084e99f0634d0223d)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.6.5
+* perf: @packasso/build-ts-tsc updated to 0.6.5
+* perf: @packasso/core updated to 0.7.5
+* perf: @packasso/dev-ts updated to 0.7.5
+* perf: @packasso/release-zx-semrel updated to 0.6.5
+* perf: @packasso/style-eslint-prettier updated to 0.6.5
+* perf: @packasso/test-jest updated to 0.7.7
+
 ## [@packasso/preset-ts-tsc-jest@0.7.6](https://github.com/qiwi/packasso/compare/2023.2.3-packasso.preset-ts-tsc-jest.0.7.5-f0...2023.2.7-packasso.preset-ts-tsc-jest.0.7.6-f0) (2023-02-07)
 
 ### Fixes & improvements
