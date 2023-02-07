@@ -632,6 +632,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@packasso/dev-license@workspace:*, @packasso/dev-license@workspace:packages/dev-license":
+  version: 0.0.0-use.local
+  resolution: "@packasso/dev-license@workspace:packages/dev-license"
+  dependencies:
+    "@packasso/core": "workspace:*"
+    c8: "npm:7.12.0"
+    concurrently: "npm:7.6.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.29.0"
+    eslint-config-qiwi: "npm:2.0.6"
+    globby-cp: "npm:1.1.2"
+    prettier: "npm:2.8.1"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tslib: "npm:2.4.1"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
 "@packasso/dev-ts@workspace:*, @packasso/dev-ts@workspace:packages/dev-ts":
   version: 0.0.0-use.local
   resolution: "@packasso/dev-ts@workspace:packages/dev-ts"
@@ -689,6 +711,7 @@ __metadata:
     "@packasso/build-resources": "workspace:*"
     "@packasso/build-ts-tsc": "workspace:*"
     "@packasso/core": "workspace:*"
+    "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
     "@packasso/release-zx-semrel": "workspace:*"
     "@packasso/style-eslint-prettier": "workspace:*"
@@ -717,6 +740,7 @@ __metadata:
     "@packasso/build-resources": "workspace:*"
     "@packasso/build-ts-tsc": "workspace:*"
     "@packasso/core": "workspace:*"
+    "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
     "@packasso/release-zx-semrel": "workspace:*"
     "@packasso/style-eslint-prettier": "workspace:*"

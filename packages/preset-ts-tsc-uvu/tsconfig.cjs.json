@@ -25,6 +25,9 @@
       "path": "../core/tsconfig.cjs.json"
     },
     {
+      "path": "../dev-license/tsconfig.cjs.json"
+    },
+    {
       "path": "../dev-ts/tsconfig.cjs.json"
     },
     {

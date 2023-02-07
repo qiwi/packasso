@@ -19,6 +19,9 @@
       "path": "./packages/core/tsconfig.esm.json"
     },
     {
+      "path": "./packages/dev-license/tsconfig.esm.json"
+    },
+    {
       "path": "./packages/dev-ts/tsconfig.esm.json"
     },
     {
