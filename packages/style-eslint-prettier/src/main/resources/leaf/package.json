@@ -1,7 +1,11 @@
 {
   "scripts": {
-    "lint": "eslint src && prettier --check src",
-    "format": "eslint --fix src && prettier --write src"
+    "lint": "concurrently -m 1 'npm:lint:*(!lint:.+:)'",
+    "lint:eslint": "eslint src",
+    "lint:prettier": "prettier --check src",
+    "format": "concurrently -m 1 'npm:format:*(!format:.+:)'",
+    "format:eslint": "eslint --fix src",
+    "format:prettier": "prettier --write src"
   },
   "eslintConfig": {
     "extends": "eslint-config-qiwi"

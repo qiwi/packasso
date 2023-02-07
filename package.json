@@ -13,7 +13,7 @@
     "build:tsc:tsc": "tsc -b tsconfig.esm.json tsconfig.cjs.json",
     "build:tsc:fix": "yarn workspaces foreach -vip run build:tsc:fix",
     "build:res": "yarn workspaces foreach -vip run build:res",
-    "lint": "yarn workspaces foreach -vip run lint",
+    "lint": "yarn workspaces foreach -tvip run lint",
     "format": "yarn workspaces foreach -vip run format",
     "test": "concurrently 'npm:test:*(!test:.+:)'",
     "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n '**/*/src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target"

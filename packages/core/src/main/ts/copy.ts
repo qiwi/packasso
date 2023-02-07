@@ -84,18 +84,13 @@ const writeJson: (path: string, json: object) => void = (path, json) => {
 const mergeJson = (json1: object, json2: object) =>
   mergeWith(json1, json2, (value1, value2) => {
     if (Array.isArray(value1) || Array.isArray(value2)) {
-      return uniqWith(
-        [
-          ...(Array.isArray(value1) ? value1 : [value1]),
-          ...(Array.isArray(value2) ? value2 : [value2]),
-        ],
-        isEqual,
-      ).filter((value) => !isNil(value))
+      return uniqWith([value1, value2].flat(), isEqual).filter(
+        (value) => !isNil(value),
+      )
     }
   })
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const diffJson = (json1: any, json2: any): any =>
   Object.keys(json1).reduce((result, key) => {
     if (isEqual(json1[key], json2[key])) {
