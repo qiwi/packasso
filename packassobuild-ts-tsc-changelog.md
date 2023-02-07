@@ -1,3 +1,11 @@
+## [@packasso/build-ts-tsc@0.6.4](https://github.com/qiwi/packasso/compare/2023.2.3-packasso.build-ts-tsc.0.6.3-f0...2023.2.7-packasso.build-ts-tsc.0.6.4-f0) (2023-02-07)
+
+### Fixes & improvements
+* fix: deps [f60f0e9](https://github.com/qiwi/packasso/commit/f60f0e977cd80dbe39fe5313fb4586da1f8a77d2)
+
+### Dependencies
+* perf: @packasso/core updated to 0.7.4
+
 ## [@packasso/build-ts-tsc@0.6.3](https://github.com/qiwi/packasso/compare/2023.2.3-packasso.build-ts-tsc.0.6.2-f0...2023.2.3-packasso.build-ts-tsc.0.6.3-f0) (2023-02-03)
 
 ### Fixes & improvements
