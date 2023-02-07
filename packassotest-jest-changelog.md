@@ -1,3 +1,11 @@
+## [@packasso/test-jest@0.7.7](https://github.com/qiwi/packasso/compare/2023.2.7-packasso.test-jest.0.7.6-f0...2023.2.7-packasso.test-jest.0.7.7-f0) (2023-02-07)
+
+### Fixes & improvements
+* fix: lint-format concurrently-sequentially [fecc017](https://github.com/qiwi/packasso/commit/fecc017dc284d6dd48c72c5084e99f0634d0223d)
+
+### Dependencies
+* perf: @packasso/core updated to 0.7.5
+
 ## [@packasso/test-jest@0.7.6](https://github.com/qiwi/packasso/compare/2023.2.3-packasso.test-jest.0.7.5-f0...2023.2.7-packasso.test-jest.0.7.6-f0) (2023-02-07)
 
 ### Fixes & improvements
