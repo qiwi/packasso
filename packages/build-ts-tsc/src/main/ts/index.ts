@@ -5,7 +5,14 @@ export const executor: Executor = async ({
   dropPath,
   getReferences,
 }) => {
-  dropPath('tsconfig.{es5,es6,mjs,esnext}.json')
+  dropPath([
+    'build',
+    'dist',
+    'lib',
+    'buildcache',
+    '.buildcache',
+    'tsconfig.{es5,es6,mjs,esnext,build}.json',
+  ])
   copyJson('package.json')
   copyJson('tsconfig.cjs.json', {
     references: getReferences('tsconfig.cjs.json'),

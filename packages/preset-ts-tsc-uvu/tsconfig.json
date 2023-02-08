@@ -22,6 +22,9 @@
       "@packasso/core": [
         "../core/src/main/ts"
       ],
+      "@packasso/dev-license": [
+        "../dev-license/src/main/ts"
+      ],
       "@packasso/dev-ts": [
         "../dev-ts/src/main/ts"
       ],

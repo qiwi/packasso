@@ -8,7 +8,7 @@ export const executor: Executor = async ({
   getProjects,
   getModuleNameMapper,
 }) => {
-  dropPath(['jest.config.{js,ts,mjs,cjs}', 'tsconfig.test.json'])
+  dropPath(['coverage', 'jest.config.{js,ts,mjs,cjs}', 'tsconfig.test.json'])
   copyJson('package.json')
   copyJson(
     'jest.config.json',

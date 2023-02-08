@@ -6,18 +6,7 @@ export const executor: Executor = async ({
   dropPath,
   getPaths,
 }) => {
-  dropPath([
-    'tsconfig.json',
-    'build',
-    'dist',
-    'lib',
-    'coverage',
-    'buildcache',
-    '.buildcache',
-  ])
-  copyText('LICENSE', {
-    year: new Date().getFullYear(),
-  })
+  dropPath('tsconfig.json')
   copyText('.gitignore')
   copyJson('package.json')
   copyJson('tsconfig.json', {

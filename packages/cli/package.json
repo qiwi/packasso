@@ -41,7 +41,6 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "license": "MIT",
-  "version": "0.0.0",
   "type": "module",
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",
@@ -80,6 +79,7 @@
     "extends": "eslint-config-qiwi"
   },
   "prettier": "prettier-config-qiwi",
+  "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
