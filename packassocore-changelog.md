@@ -1,3 +1,8 @@
+## [@packasso/core@0.8.0](https://github.com/qiwi/packasso/compare/2023.2.7-packasso.core.0.7.5-f0...2023.2.8-packasso.core.0.8.0-f0) (2023-02-08)
+
+### Features
+* feat: dev license (#13) [0f82ca5](https://github.com/qiwi/packasso/commit/0f82ca5b27772ab35e823c2e01f25794102675dc)
+
 ## [@packasso/core@0.7.5](https://github.com/qiwi/packasso/compare/2023.2.7-packasso.core.0.7.4-f0...2023.2.7-packasso.core.0.7.5-f0) (2023-02-07)
 
 ### Fixes & improvements
