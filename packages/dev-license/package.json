@@ -81,5 +81,6 @@
   "release": {
     "cmd": "yarn",
     "changelog": "changelog"
-  }
+  },
+  "license": "MIT"
 }
