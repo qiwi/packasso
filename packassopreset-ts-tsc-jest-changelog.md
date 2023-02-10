@@ -1,3 +1,8 @@
+## [@packasso/preset-ts-tsc-jest@0.8.1](https://github.com/qiwi/packasso/compare/2023.2.8-packasso.preset-ts-tsc-jest.0.8.0-f0...2023.2.10-packasso.preset-ts-tsc-jest.0.8.1-f0) (2023-02-10)
+
+### Dependencies
+* perf: @packasso/dev-license updated to 0.1.1
+
 ## [@packasso/preset-ts-tsc-jest@0.8.0](https://github.com/qiwi/packasso/compare/2023.2.7-packasso.preset-ts-tsc-jest.0.7.7-f0...2023.2.8-packasso.preset-ts-tsc-jest.0.8.0-f0) (2023-02-08)
 
 ### Features
