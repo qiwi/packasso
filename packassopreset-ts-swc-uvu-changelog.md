@@ -1,3 +1,8 @@
+## [@packasso/preset-ts-swc-uvu@0.8.1](https://github.com/qiwi/packasso/compare/2023.2.8-packasso.preset-ts-swc-uvu.0.8.0-f0...2023.2.10-packasso.preset-ts-swc-uvu.0.8.1-f0) (2023-02-10)
+
+### Fixes & improvements
+* fix: no license [0d685bb](https://github.com/qiwi/packasso/commit/0d685bbab60bbf07e9a365e7490433cbd3d12aa3)
+
 ## [@packasso/preset-ts-swc-uvu@0.8.0](https://github.com/qiwi/packasso/compare/2023.2.7-packasso.preset-ts-swc-uvu.0.7.5-f0...2023.2.8-packasso.preset-ts-swc-uvu.0.8.0-f0) (2023-02-08)
 
 ### Features
