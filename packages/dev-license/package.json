@@ -20,6 +20,7 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
+  "license": "MIT",
   "devDependencies": {
     "c8": "7.12.0",
     "concurrently": "7.6.0",
@@ -81,6 +82,5 @@
   "release": {
     "cmd": "yarn",
     "changelog": "changelog"
-  },
-  "license": "MIT"
+  }
 }

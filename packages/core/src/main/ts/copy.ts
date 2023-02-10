@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { mkdirSync, rmSync } from 'node:fs'
-import { dirname, join, resolve } from 'node:path'
+import { dirname, join } from 'node:path'
 
 import fg from 'fast-glob'
 import {
@@ -15,23 +15,30 @@ import {
 } from 'lodash-es'
 import { NormalizedPackageJson } from 'read-pkg'
 
-import { getModulesDir, getPackage } from './package'
+import { getPackage } from './package'
 
 export const getResourcesDir: (
   cwd: string,
+  root: string,
   module: string,
   development: boolean,
-  root: string,
   pkg?: NormalizedPackageJson,
-) => string[] = (cwd, module, development, root, pkg = getPackage(cwd)) => {
-  const res = resolve(
-    getModulesDir(cwd),
+) => string[] = (
+  cwd,
+  root,
+  module,
+  development,
+  pkg = getPackage(cwd, root),
+) => {
+  const res = join(
+    root,
+    'node_modules',
     module,
     ...(development ? ['src', 'main'] : ['target']),
     'resources',
   )
   return [
-    ...(root === cwd ? [join(res, 'root')] : []),
+    ...(cwd === '.' ? [join(res, 'root')] : []),
     join(res, pkg.workspaces ? 'tree' : 'leaf'),
   ]
 }

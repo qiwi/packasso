@@ -26,6 +26,7 @@
     "prettier": "2.8.1",
     "prettier-config-qiwi": "2.0.1",
     "rimraf": "3.0.2",
+    "tempy": "3.0.0",
     "tsc-esm-fix": "2.20.7",
     "tslib": "2.4.1",
     "tsm": "2.3.0",
