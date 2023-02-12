@@ -521,7 +521,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -543,7 +543,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -565,7 +565,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -588,7 +588,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -618,7 +618,7 @@ __metadata:
     eslint-config-qiwi: "npm:2.0.6"
     fast-glob: "npm:3.2.12"
     find-up: "npm:6.3.0"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     lodash-es: "npm:4.17.21"
     minimist: "npm:1.2.7"
     prettier: "npm:2.8.1"
@@ -643,7 +643,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -665,7 +665,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -693,7 +693,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -722,7 +722,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -751,7 +751,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -773,7 +773,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -795,7 +795,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -817,7 +817,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -839,7 +839,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -2900,17 +2900,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^10.1.0":
-  version: 10.1.0
-  resolution: "fs-extra@npm:10.1.0"
-  dependencies:
-    graceful-fs: "npm:^4.2.0"
-    jsonfile: "npm:^6.0.1"
-    universalify: "npm:^2.0.0"
-  checksum: c397c1bfbb8976afb6758a96b9d5781c179b01ec843caa9f6613b8d95d95e17229d1ba7132dd811e112df5f2537bce1f68a3c0a722decc345947f133921fa3b3
-  languageName: node
-  linkType: hard
-
 "fs-extra@npm:^11.0.0":
   version: 11.1.0
   resolution: "fs-extra@npm:11.1.0"
@@ -3111,17 +3100,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby-cp@npm:1.1.2":
-  version: 1.1.2
-  resolution: "globby-cp@npm:1.1.2"
+"globby-cp@npm:1.1.3":
+  version: 1.1.3
+  resolution: "globby-cp@npm:1.1.3"
   dependencies:
-    fs-extra: "npm:^10.1.0"
+    fs-extra: "npm:^11.0.0"
     globby: "npm:^13.1.2"
     minimist: "npm:^1.2.6"
   bin:
     gcp: src/main/js/cli.js
     globby-cp: src/main/js/cli.js
-  checksum: dda0f5167542c784e370ce437cded30d79790a8c3a2e74c49c100f528468ade43060b19ecb0cfc8d084b9b8f42cc0c72b2ac1994ec09ce2ca3b0e3d418b49109
+  checksum: a7cbde28a42968a254db03a40af6b39620f9e7e7d20942f06d80b2bb10c6aed59437c5188323b5f4cd6a335941b1a40acf81a54572fa51d422c859ab623918a4
   languageName: node
   linkType: hard
 
