@@ -1,3 +1,17 @@
+## [@packasso/preset-ts-swc-uvu@0.9.0](https://github.com/qiwi/packasso/compare/2023.2.10-packasso.preset-ts-swc-uvu.0.8.1-f0...2023.2.13-packasso.preset-ts-swc-uvu.0.9.0-f0) (2023-02-13)
+
+### Features
+* feat: via tmp dir (#14) [c43f830](https://github.com/qiwi/packasso/commit/c43f830df7c182f4b06a82e5f631fd0852d3adbd)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.8.0
+* perf: @packasso/build-ts-swc updated to 0.9.0
+* perf: @packasso/core updated to 0.9.0
+* perf: @packasso/dev-ts updated to 0.9.0
+* perf: @packasso/release-zx-semrel updated to 0.8.0
+* perf: @packasso/style-eslint-prettier updated to 0.8.0
+* perf: @packasso/test-uvu updated to 0.9.0
+
 ## [@packasso/preset-ts-swc-uvu@0.8.1](https://github.com/qiwi/packasso/compare/2023.2.8-packasso.preset-ts-swc-uvu.0.8.0-f0...2023.2.10-packasso.preset-ts-swc-uvu.0.8.1-f0) (2023-02-10)
 
 ### Fixes & improvements
