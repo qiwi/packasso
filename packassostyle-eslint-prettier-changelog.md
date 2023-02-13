@@ -1,3 +1,8 @@
+## [@packasso/style-eslint-prettier@0.8.4](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.style-eslint-prettier.0.8.3-f0...2023.2.13-packasso.style-eslint-prettier.0.8.4-f0) (2023-02-13)
+
+### Fixes & improvements
+* fix: no tree style [7882095](https://github.com/qiwi/packasso/commit/7882095ea08265778941b5a4d4ca93e145798ee4)
+
 ## [@packasso/style-eslint-prettier@0.8.3](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.style-eslint-prettier.0.8.2-f0...2023.2.13-packasso.style-eslint-prettier.0.8.3-f0) (2023-02-13)
 
 ### Dependencies
