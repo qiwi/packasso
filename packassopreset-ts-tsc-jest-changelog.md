@@ -1,3 +1,8 @@
+## [@packasso/preset-ts-tsc-jest@0.9.4](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.preset-ts-tsc-jest.0.9.3-f0...2023.2.13-packasso.preset-ts-tsc-jest.0.9.4-f0) (2023-02-13)
+
+### Dependencies
+* perf: @packasso/style-eslint-prettier updated to 0.8.4
+
 ## [@packasso/preset-ts-tsc-jest@0.9.3](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.preset-ts-tsc-jest.0.9.2-f0...2023.2.13-packasso.preset-ts-tsc-jest.0.9.3-f0) (2023-02-13)
 
 ### Dependencies
