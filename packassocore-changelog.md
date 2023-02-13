@@ -1,3 +1,8 @@
+## [@packasso/core@0.9.3](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.core.0.9.2-f0...2023.2.13-packasso.core.0.9.3-f0) (2023-02-13)
+
+### Fixes & improvements
+* fix: wrong topo queue [6a15a70](https://github.com/qiwi/packasso/commit/6a15a70dea55210f6b682e589075d575e1a98aea)
+
 ## [@packasso/core@0.9.2](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.core.0.9.1-f0...2023.2.13-packasso.core.0.9.2-f0) (2023-02-13)
 
 ### Fixes & improvements
