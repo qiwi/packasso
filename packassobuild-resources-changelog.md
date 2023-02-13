@@ -1,3 +1,8 @@
+## [@packasso/build-resources@0.8.2](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.build-resources.0.8.1-f0...2023.2.13-packasso.build-resources.0.8.2-f0) (2023-02-13)
+
+### Dependencies
+* perf: @packasso/core updated to 0.9.2
+
 ## [@packasso/build-resources@0.8.1](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.build-resources.0.8.0-f0...2023.2.13-packasso.build-resources.0.8.1-f0) (2023-02-13)
 
 ### Dependencies
