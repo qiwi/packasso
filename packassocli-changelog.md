@@ -1,3 +1,11 @@
+## [@packasso/cli@0.8.1](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.cli.0.8.0-f0...2023.2.13-packasso.cli.0.8.1-f0) (2023-02-13)
+
+### Fixes & improvements
+* fix: deps [cd50513](https://github.com/qiwi/packasso/commit/cd50513eb3b04a32bf724c5ad84c499f037b53ff)
+
+### Dependencies
+* perf: @packasso/core updated to 0.9.1
+
 ## [@packasso/cli@0.8.0](https://github.com/qiwi/packasso/compare/2023.2.8-packasso.cli.0.7.0-f0...2023.2.13-packasso.cli.0.8.0-f0) (2023-02-13)
 
 ### Features
