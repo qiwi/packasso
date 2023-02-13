@@ -20,13 +20,14 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
+  "license": "MIT",
   "devDependencies": {
     "c8": "7.12.0",
     "concurrently": "7.6.0",
     "earljs": "0.2.3",
     "eslint": "8.29.0",
     "eslint-config-qiwi": "2.0.6",
-    "globby-cp": "1.1.2",
+    "globby-cp": "1.1.3",
     "prettier": "2.8.1",
     "prettier-config-qiwi": "2.0.1",
     "rimraf": "3.0.2",
@@ -81,6 +82,5 @@
   "release": {
     "cmd": "yarn",
     "changelog": "changelog"
-  },
-  "license": "MIT"
+  }
 }

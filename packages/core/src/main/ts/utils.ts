@@ -1,3 +1,5 @@
+import { resolve } from 'node:path'
+
 import { NormalizedPackageJson } from 'read-pkg'
 
 import { Config, Module } from './config'
@@ -24,29 +26,49 @@ export interface Utils {
 export const getUtils: (
   cwd: string,
   root: string,
+  tmp: string,
   development: boolean,
   module: Module,
-) => Utils = (cwd, root, development, module) => {
-  const pkg = getPackage(cwd)
-  const res = getResourcesDir(cwd, module.name, development, root, pkg)
+) => Utils = (cwd, root, tmp, development, module) => {
+  const pkg = getPackage(cwd, root)
+  const res = getResourcesDir(cwd, root, module.name, development, pkg)
   const drop = module.drop
   return {
     pkg,
     execute: (config) =>
-      execute(cwd, root, development, {
+      execute(cwd, root, tmp, development, {
         ...config,
         modules: config.modules.map((module) => ({ ...module, drop })),
       }),
-    dropPath: (name) => dropPath(cwd, name),
+    dropPath: (name) => dropPath(resolve(root, cwd), name),
     copyJson: (file, data) =>
-      res.forEach((res) => copyJson(res, cwd, file, drop, data)),
+      res.forEach((res) =>
+        copyJson(
+          res,
+          drop && file !== 'package.json'
+            ? resolve(root, cwd)
+            : resolve(tmp, cwd),
+          file,
+          drop,
+          data,
+        ),
+      ),
     copyText: (file, data) =>
-      res.forEach((res) => copyText(res, cwd, file, drop, data)),
-    getDependencies: () => getDependencies(cwd),
-    getWorkspaces: () => getWorkspaces(cwd),
-    getPaths: () => getPaths(cwd),
-    getReferences: (tsconfig: string) => getReferences(cwd, tsconfig),
-    getProjects: () => getProjects(cwd),
-    getModuleNameMapper: () => getModuleNameMapper(cwd),
+      res.forEach((res) =>
+        copyText(
+          res,
+          drop ? resolve(root, cwd) : resolve(tmp, cwd),
+          file,
+          drop,
+          data,
+        ),
+      ),
+    getDependencies: () => getDependencies(cwd, root),
+    getWorkspaces: () => getWorkspaces(cwd, root),
+    getPaths: () => getPaths(cwd, root),
+    getReferences: (tsconfig: string) =>
+      getReferences(cwd, root, tmp, tsconfig),
+    getProjects: () => getProjects(cwd, root, tmp),
+    getModuleNameMapper: () => getModuleNameMapper(cwd, root),
   }
 }

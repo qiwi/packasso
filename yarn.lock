@@ -521,7 +521,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -543,7 +543,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -565,7 +565,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -588,10 +588,11 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
+    tempy: "npm:3.0.0"
     tsc-esm-fix: "npm:2.20.7"
     tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
@@ -617,7 +618,7 @@ __metadata:
     eslint-config-qiwi: "npm:2.0.6"
     fast-glob: "npm:3.2.12"
     find-up: "npm:6.3.0"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     lodash-es: "npm:4.17.21"
     minimist: "npm:1.2.7"
     prettier: "npm:2.8.1"
@@ -642,7 +643,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -664,7 +665,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -692,7 +693,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -721,7 +722,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -750,7 +751,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -772,7 +773,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -794,7 +795,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -816,7 +817,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -838,7 +839,7 @@ __metadata:
     earljs: "npm:0.2.3"
     eslint: "npm:8.29.0"
     eslint-config-qiwi: "npm:2.0.6"
-    globby-cp: "npm:1.1.2"
+    globby-cp: "npm:1.1.3"
     prettier: "npm:2.8.1"
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
@@ -1890,6 +1891,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"crypto-random-string@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "crypto-random-string@npm:4.0.0"
+  dependencies:
+    type-fest: "npm:^1.0.1"
+  checksum: 09e72f97ce1ca5fd3128b30265e7b86c9eb5d119fb5617e3eca439fde8804631d0f6989555fb4181136db64aac03076a675aeb0f893aa18a10a27557e33db145
+  languageName: node
+  linkType: hard
+
 "date-fns@npm:^2.29.1":
   version: 2.29.3
   resolution: "date-fns@npm:2.29.3"
@@ -2890,17 +2900,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^10.1.0":
-  version: 10.1.0
-  resolution: "fs-extra@npm:10.1.0"
-  dependencies:
-    graceful-fs: "npm:^4.2.0"
-    jsonfile: "npm:^6.0.1"
-    universalify: "npm:^2.0.0"
-  checksum: c397c1bfbb8976afb6758a96b9d5781c179b01ec843caa9f6613b8d95d95e17229d1ba7132dd811e112df5f2537bce1f68a3c0a722decc345947f133921fa3b3
-  languageName: node
-  linkType: hard
-
 "fs-extra@npm:^11.0.0":
   version: 11.1.0
   resolution: "fs-extra@npm:11.1.0"
@@ -3101,17 +3100,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby-cp@npm:1.1.2":
-  version: 1.1.2
-  resolution: "globby-cp@npm:1.1.2"
+"globby-cp@npm:1.1.3":
+  version: 1.1.3
+  resolution: "globby-cp@npm:1.1.3"
   dependencies:
-    fs-extra: "npm:^10.1.0"
+    fs-extra: "npm:^11.0.0"
     globby: "npm:^13.1.2"
     minimist: "npm:^1.2.6"
   bin:
     gcp: src/main/js/cli.js
     globby-cp: src/main/js/cli.js
-  checksum: dda0f5167542c784e370ce437cded30d79790a8c3a2e74c49c100f528468ade43060b19ecb0cfc8d084b9b8f42cc0c72b2ac1994ec09ce2ca3b0e3d418b49109
+  checksum: a7cbde28a42968a254db03a40af6b39620f9e7e7d20942f06d80b2bb10c6aed59437c5188323b5f4cd6a335941b1a40acf81a54572fa51d422c859ab623918a4
   languageName: node
   linkType: hard
 
@@ -3691,6 +3690,13 @@ __metadata:
   version: 1.1.0
   resolution: "is-stream@npm:1.1.0"
   checksum: e04ef26bd08243470b82d5e2dd923663b24bd48313e662c678f9623e67174a19e2cb957bb895f1d1ecbe8b2157946c512b1cf64817da8bdc85a981ed3b51eab3
+  languageName: node
+  linkType: hard
+
+"is-stream@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-stream@npm:3.0.0"
+  checksum: 9cb18df7e094ff4907395e27527c6615cd7f48343d71c17af79079df642710a72c5f8d2090512d738c5b05989f124be0a6e031f8c459bb8d2f512e503d54695b
   languageName: node
   linkType: hard
 
@@ -5861,6 +5867,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"temp-dir@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "temp-dir@npm:2.0.0"
+  checksum: 0b97706876e9982bb5f2bf8c1e040d087ec48051f7d91fe9f460bd8e5a1c833de89c6039e2e402b7388f4096c896392193082f5d78b8d4c89976edead9a88ce0
+  languageName: node
+  linkType: hard
+
+"tempy@npm:3.0.0":
+  version: 3.0.0
+  resolution: "tempy@npm:3.0.0"
+  dependencies:
+    is-stream: "npm:^3.0.0"
+    temp-dir: "npm:^2.0.0"
+    type-fest: "npm:^2.12.2"
+    unique-string: "npm:^3.0.0"
+  checksum: 427b16960ca0541707a31255e3a41513530f400645bdfebfb2746dc43d37a2231b042d2bf6b7aa05e56fd129cc3d249763d5bdd471e5bd06b999232f616e1d6a
+  languageName: node
+  linkType: hard
+
 "test-exclude@npm:^6.0.0":
   version: 6.0.0
   resolution: "test-exclude@npm:6.0.0"
@@ -6047,7 +6072,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^2.0.0, type-fest@npm:^2.13.0, type-fest@npm:^2.5.0":
+"type-fest@npm:^1.0.1":
+  version: 1.4.0
+  resolution: "type-fest@npm:1.4.0"
+  checksum: 214ce322fc969854349a65a66b891003636ad844de5fd1738e4015e8b71151b8a774121443b1e6dd7792e1bdd9fad1771826244559111c78feb7519f31fa7692
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^2.0.0, type-fest@npm:^2.12.2, type-fest@npm:^2.13.0, type-fest@npm:^2.5.0":
   version: 2.19.0
   resolution: "type-fest@npm:2.19.0"
   checksum: d63c7c5fd7583cc6d35ccd23e96686eeb1e6f387c83a858625734ea2cf974c6be38bcbc43663da5e10469a1b4119089def1e8def03bf2aee540f0ad4fcd25902
@@ -6120,6 +6152,15 @@ __metadata:
   dependencies:
     imurmurhash: "npm:^0.1.4"
   checksum: ae31bb1d8126400e512385ec239b3ca40f6a8790af9d6dedb0842b340b3ecc0a7de413ff270f3ea3dae1565c6f745ab6e28363387cd32ecddbe0fc72ee247303
+  languageName: node
+  linkType: hard
+
+"unique-string@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "unique-string@npm:3.0.0"
+  dependencies:
+    crypto-random-string: "npm:^4.0.0"
+  checksum: 673e9f8d5b119d035e91962e72791e7532b73c789295272cced09d05243099693647170190e62e605524def3cb54cd9eb35d2403108b656f5a088a1f9513c84c
   languageName: node
   linkType: hard
 

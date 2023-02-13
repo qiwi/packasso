@@ -7,14 +7,16 @@ import { getDependencies, getPackage, getWorkspaces } from './package'
 
 export const getModuleNameMapper: (
   cwd: string,
+  root: string,
   pkg?: NormalizedPackageJson,
   dependencies?: Record<string, string>,
 ) => Record<string, string> = (
   cwd,
-  pkg = getPackage(cwd),
-  dependencies = getDependencies(cwd, pkg),
-) => {
-  return Object.fromEntries(
+  root,
+  pkg = getPackage(cwd, root),
+  dependencies = getDependencies(cwd, root, pkg),
+) =>
+  Object.fromEntries(
     Object.entries(dependencies)
       .map(([dependency, path]) => [
         dependency,
@@ -22,18 +24,21 @@ export const getModuleNameMapper: (
       ])
       .map(([dependency, path]) => [dependency, `<rootDir>${sep}${path}`]),
   )
-}
 
 export const getProjects: (
   cwd: string,
+  root: string,
+  tmp: string,
   pkg?: NormalizedPackageJson,
   dependencies?: Record<string, string>,
 ) => string[] = (
   cwd,
-  pkg = getPackage(cwd),
-  workspaces = getWorkspaces(cwd, pkg),
+  root,
+  tmp,
+  pkg = getPackage(cwd, root),
+  workspaces = getWorkspaces(cwd, root, pkg),
 ) =>
   Object.values(workspaces)
     .map((path) => join(path, 'jest.config.json'))
-    .filter((path) => existsSync(join(cwd, path)))
-    .map((path) => `<rootDir>/${path}`)
+    .filter((path) => existsSync(join(tmp, cwd, path)))
+    .map((path) => `<rootDir>${sep}${path}`)

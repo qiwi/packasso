@@ -1,32 +1,32 @@
 import { realpathSync } from 'node:fs'
-import { dirname, join, relative } from 'node:path'
+import { dirname, join, relative, resolve } from 'node:path'
 
 import { gitRootSync } from '@antongolub/git-root'
 import fg from 'fast-glob'
 import { NormalizedPackageJson, readPackageSync } from 'read-pkg'
 
-export const getPackage: (cwd: string) => NormalizedPackageJson = (cwd) =>
-  readPackageSync({ cwd })
+export const getPackage: (
+  cwd: string,
+  root?: string,
+) => NormalizedPackageJson = (cwd, root = cwd) =>
+  readPackageSync({ cwd: resolve(root, cwd) })
 
 export const getRootDir = (cwd: string) => {
   return gitRootSync(cwd)?.toString() || cwd
 }
 
-export const getModulesDir = (cwd: string) => {
-  return join(getRootDir(cwd), 'node_modules')
-}
-
 export const getDependencies: (
   cwd: string,
+  root: string,
   pkg?: NormalizedPackageJson,
-) => Record<string, string> = (cwd, pkg = getPackage(cwd)) => {
-  const modules = getModulesDir(cwd)
-  return Object.fromEntries(
-    Object.keys(pkg.dependencies || [])
-      .map((dependency) => {
-        const path = join(modules, dependency)
+) => Record<string, string> = (cwd, root, pkg = getPackage(cwd, root)) =>
+  Object.fromEntries(
+    Object.entries(pkg.dependencies || [])
+      .filter(([_, version]) => version === 'workspace:*')
+      .map(([dependency]) => {
+        const path = join(root, 'node_modules', dependency)
         const realPath = realpathSync(path)
-        const relativePath = relative(cwd, realPath)
+        const relativePath = relative(join(root, cwd), realPath)
         return {
           dependency,
           path,
@@ -37,12 +37,12 @@ export const getDependencies: (
       .filter(({ path, realPath }) => path !== realPath)
       .map(({ dependency, relativePath }) => [dependency, relativePath]),
   )
-}
 
 export const getWorkspaces: (
   cwd: string,
+  root: string,
   pkg?: NormalizedPackageJson,
-) => Record<string, string> = (cwd, pkg = getPackage(cwd)) =>
+) => Record<string, string> = (cwd, root, pkg = getPackage(cwd, root)) =>
   Object.fromEntries(
     fg
       .sync(
@@ -50,8 +50,8 @@ export const getWorkspaces: (
           join(workspace, 'package.json'),
         ),
         {
-          cwd,
+          cwd: join(root, cwd),
         },
       )
-      .map((path) => [path, relative(cwd, dirname(path))]),
+      .map((path) => [path, relative(join(root, cwd), dirname(path))]),
   )

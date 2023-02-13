@@ -10,8 +10,13 @@ const dotted = (path: string) =>
 
 export const getPaths: (
   cwd: string,
+  root: string,
   dependencies?: Record<string, string>,
-) => Record<string, string[]> = (cwd, dependencies = getDependencies(cwd)) =>
+) => Record<string, string[]> = (
+  cwd,
+  root,
+  dependencies = getDependencies(cwd, root),
+) =>
   Object.fromEntries(
     Object.entries(dependencies).map(([dependency, path]) => [
       dependency,
@@ -21,19 +26,23 @@ export const getPaths: (
 
 export const getReferences: (
   cwd: string,
+  root: string,
+  tmp: string,
   tsconfig?: string,
   pkg?: NormalizedPackageJson,
   dependencies?: Record<string, string>,
 ) => { path: string }[] = (
   cwd,
+  root,
+  tmp,
   tsconfig = 'tsconfig.json',
-  pkg = getPackage(cwd),
+  pkg = getPackage(cwd, root),
   dependencies = pkg.workspaces
-    ? getWorkspaces(cwd, pkg)
-    : getDependencies(cwd, pkg),
+    ? getWorkspaces(cwd, root, pkg)
+    : getDependencies(cwd, root, pkg),
 ) =>
   Object.values(dependencies)
     .map((path) => ({
       path: dotted(join(path, tsconfig)),
     }))
-    .filter((reference) => existsSync(join(cwd, reference.path)))
+    .filter((reference) => existsSync(join(tmp, cwd, reference.path)))
