@@ -1,3 +1,8 @@
+## [@packasso/core@0.9.1](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.core.0.9.0-f0...2023.2.13-packasso.core.0.9.1-f0) (2023-02-13)
+
+### Fixes & improvements
+* fix: deps [cd50513](https://github.com/qiwi/packasso/commit/cd50513eb3b04a32bf724c5ad84c499f037b53ff)
+
 ## [@packasso/core@0.9.0](https://github.com/qiwi/packasso/compare/2023.2.8-packasso.core.0.8.0-f0...2023.2.13-packasso.core.0.9.0-f0) (2023-02-13)
 
 ### Features
