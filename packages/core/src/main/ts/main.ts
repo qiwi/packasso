@@ -33,18 +33,12 @@ export const main = async ({
       workspaces: pkg.workspaces,
       cwd: tmp,
     })
-    const paths = Object.fromEntries(
-      Object.values(packages).map(({ name, relPath }) => [name, relPath]),
-    )
-    const configs = await Promise.all(
-      queue.map(async (name) => await getConfig(paths[name])),
-    )
-    await Promise.all(
-      queue.map(
-        async (name, index) =>
-          await execute(paths[name], cwd, tmp, development, configs[index]),
-      ),
-    )
+    const configs = []
+    for (const name of queue) {
+      const config = await getConfig(packages[name].relPath)
+      await execute(packages[name].relPath, cwd, tmp, development, config)
+      configs.push(config)
+    }
     await execute('.', cwd, tmp, development, mergeConfigs(configs))
   } else {
     await execute('.', cwd, tmp, development, await getConfig(cwd))
