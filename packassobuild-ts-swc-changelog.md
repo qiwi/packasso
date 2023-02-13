@@ -1,3 +1,11 @@
+## [@packasso/build-ts-swc@0.9.0](https://github.com/qiwi/packasso/compare/2023.2.8-packasso.build-ts-swc.0.8.0-f0...2023.2.13-packasso.build-ts-swc.0.9.0-f0) (2023-02-13)
+
+### Features
+* feat: via tmp dir (#14) [c43f830](https://github.com/qiwi/packasso/commit/c43f830df7c182f4b06a82e5f631fd0852d3adbd)
+
+### Dependencies
+* perf: @packasso/core updated to 0.9.0
+
 ## [@packasso/build-ts-swc@0.8.0](https://github.com/qiwi/packasso/compare/2023.2.7-packasso.build-ts-swc.0.7.5-f0...2023.2.8-packasso.build-ts-swc.0.8.0-f0) (2023-02-08)
 
 ### Features
