@@ -1,0 +1,15 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/preset-ts-swc-uvu",
+  "hash": "69c105c7acf685b9ed0bd264acfa6c83c4397959",
+  "version": "0.9.5",
+  "dependencies": {
+    "@packasso/build-resources": "0.8.4",
+    "@packasso/build-ts-swc": "0.9.4",
+    "@packasso/core": "0.9.4",
+    "@packasso/dev-ts": "0.9.4",
+    "@packasso/release-zx-semrel": "0.8.4",
+    "@packasso/style-eslint-prettier": "0.8.5",
+    "@packasso/test-uvu": "0.9.4"
+  }
+}
