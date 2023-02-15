@@ -13,7 +13,9 @@ export const execute: (
   config: Config,
 ) => Promise<unknown> = async (cwd, root, tmp, development, config) => {
   for (const module of config.modules) {
-    const { executor } = (await import(module.name)) as { executor: Executor }
+    const { executor } = (await import(module.name)) as {
+      executor: Executor
+    }
     await executor(getUtils(cwd, root, tmp, development, module))
   }
 }

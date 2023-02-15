@@ -1,9 +1,9 @@
-import { topo } from '@semrel-extra/topo'
+import { join } from 'node:path'
+
 import { copy } from 'globby-cp'
 
-import { getConfig, mergeConfigs } from './config'
 import { execute } from './execute'
-import { getPackage } from './package'
+import { getExtraTopo } from './topo'
 
 export const main = async ({
   cwd,
@@ -14,35 +14,29 @@ export const main = async ({
   tmp: string
   development: boolean
 }) => {
-  const pkg = getPackage(cwd)
+  const { root, queue, packages } = await getExtraTopo({
+    cwd,
+  })
   await copy({
-    from: 'package.json',
+    from: join(root.absPath, 'package.json'),
     to: tmp,
   })
-  if (Array.isArray(pkg.workspaces)) {
-    await Promise.all(
-      pkg.workspaces.map(
-        async (workspace) =>
-          await copy({
-            from: `${cwd}/${workspace}/package.json`,
-            to: tmp,
-          }),
-      ),
-    )
-    const { queue, packages } = await topo({
-      workspaces: pkg.workspaces,
-      cwd: tmp,
+  for (const name of queue) {
+    await copy({
+      from: join(packages[name].absPath, 'package.json'),
+      to: tmp,
     })
-    const configs = []
-    for (const name of queue) {
-      const config = await getConfig(packages[name].relPath)
-      await execute(packages[name].relPath, cwd, tmp, development, config)
-      configs.push(config)
-    }
-    await execute('.', cwd, tmp, development, mergeConfigs(configs))
-  } else {
-    await execute('.', cwd, tmp, development, await getConfig(cwd))
   }
+  for (const name of queue) {
+    await execute(
+      packages[name].relPath,
+      cwd,
+      tmp,
+      development,
+      packages[name].config,
+    )
+  }
+  await execute('.', cwd, tmp, development, root.config)
   await copy({
     from: tmp,
     to: cwd,

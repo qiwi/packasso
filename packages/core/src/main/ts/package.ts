@@ -22,7 +22,9 @@ export const getDependencies: (
 ) => Record<string, string> = (cwd, root, pkg = getPackage(cwd, root)) =>
   Object.fromEntries(
     Object.entries(pkg.dependencies || [])
-      .filter(([_, version]) => version === 'workspace:*')
+      .filter(
+        ([dependency, version]) => dependency && version === 'workspace:*',
+      )
       .map(([dependency]) => {
         const path = join(root, 'node_modules', dependency)
         const realPath = realpathSync(path)
