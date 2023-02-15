@@ -1,3 +1,11 @@
+## [@packasso/cli@0.8.4](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.cli.0.8.3-f0...2023.2.15-packasso.cli.0.8.4-f0) (2023-02-15)
+
+### Fixes & improvements
+* fix: imprs [69c105c](https://github.com/qiwi/packasso/commit/69c105c7acf685b9ed0bd264acfa6c83c4397959)
+
+### Dependencies
+* perf: @packasso/core updated to 0.9.4
+
 ## [@packasso/cli@0.8.3](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.cli.0.8.2-f0...2023.2.13-packasso.cli.0.8.3-f0) (2023-02-13)
 
 ### Dependencies
