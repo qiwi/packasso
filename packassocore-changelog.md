@@ -1,3 +1,8 @@
+## [@packasso/core@0.9.4](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.core.0.9.3-f0...2023.2.15-packasso.core.0.9.4-f0) (2023-02-15)
+
+### Fixes & improvements
+* fix: imprs [69c105c](https://github.com/qiwi/packasso/commit/69c105c7acf685b9ed0bd264acfa6c83c4397959)
+
 ## [@packasso/core@0.9.3](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.core.0.9.2-f0...2023.2.13-packasso.core.0.9.3-f0) (2023-02-13)
 
 ### Fixes & improvements
