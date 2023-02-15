@@ -1,3 +1,8 @@
+## [@packasso/build-ts-tsc@0.8.4](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.build-ts-tsc.0.8.3-f0...2023.2.15-packasso.build-ts-tsc.0.8.4-f0) (2023-02-15)
+
+### Dependencies
+* perf: @packasso/core updated to 0.9.4
+
 ## [@packasso/build-ts-tsc@0.8.3](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.build-ts-tsc.0.8.2-f0...2023.2.13-packasso.build-ts-tsc.0.8.3-f0) (2023-02-13)
 
 ### Dependencies
