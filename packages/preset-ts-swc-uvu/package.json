@@ -13,6 +13,7 @@
     "@packasso/build-resources": "workspace:*",
     "@packasso/build-ts-swc": "workspace:*",
     "@packasso/core": "workspace:*",
+    "@packasso/dev-license": "workspace:*",
     "@packasso/dev-ts": "workspace:*",
     "@packasso/release-zx-semrel": "workspace:*",
     "@packasso/style-eslint-prettier": "workspace:*",
