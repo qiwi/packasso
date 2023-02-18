@@ -1,3 +1,11 @@
+## [@packasso/preset-ts-swc-uvu@0.9.6](https://github.com/qiwi/packasso/compare/2023.2.15-packasso.preset-ts-swc-uvu.0.9.5-f0...2023.2.18-packasso.preset-ts-swc-uvu.0.9.6-f0) (2023-02-18)
+
+### Fixes & improvements
+* fix: deps [94878ea](https://github.com/qiwi/packasso/commit/94878eabe2017603100fd00bf5a6db235bf6df22)
+
+### Dependencies
+* perf: @packasso/dev-license updated to 0.2.4
+
 ## [@packasso/preset-ts-swc-uvu@0.9.5](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.preset-ts-swc-uvu.0.9.4-f0...2023.2.15-packasso.preset-ts-swc-uvu.0.9.5-f0) (2023-02-15)
 
 ### Dependencies
