@@ -1,18 +1,24 @@
 #!/usr/bin/env node
-import { error } from 'node:console'
-import { cwd, execArgv, exit } from 'node:process'
+import { error, log } from 'node:console'
+import { argv, exit } from 'node:process'
 
-import { getRootDir, main } from '@packasso/core'
-import minimist from 'minimist'
-import { temporaryDirectory } from 'tempy'
+import { execute as install } from './install'
+import { execute as uninstall } from './uninstall'
 
-const { conditions } = minimist(execArgv)
+const commands = { install, uninstall }
 
-main({
-  cwd: getRootDir(cwd()),
-  tmp: temporaryDirectory(),
-  development: conditions === 'development',
-})
+type Command = keyof typeof commands
+
+const execute: (command: Command) => Promise<unknown> = async (command) => {
+  if (!commands[command]) {
+    throw `i can't... you can't... no one can ${command}!`
+  }
+  log(`trying to ${command}...`)
+  await commands[command]()
+  log(`seems to be a success!`)
+}
+
+execute(argv[2] as Command)
   .then(() => {
     exit(0)
   })

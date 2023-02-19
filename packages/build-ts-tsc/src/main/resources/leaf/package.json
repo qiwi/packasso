@@ -12,11 +12,11 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "target/cjs",
-    "target/esm"
+    "target/cjs/**/*",
+    "target/esm/**/*"
   ],
   "scripts": {
-    "build": "yarn build:tsc",
+    "build": "concurrently 'npm:build:*(!build:.+:)'",
     "build:tsc": "concurrently 'npm:build:tsc:cjs' 'npm:build:tsc:esm'",
     "build:tsc:cjs": "yarn build:tsc:cjs:del && yarn build:tsc:cjs:tsc && yarn build:tsc:cjs:fix",
     "build:tsc:cjs:del": "rimraf target/cjs",

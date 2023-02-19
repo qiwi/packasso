@@ -34,7 +34,7 @@ Packasso config refers to one or more preset modules. Pick them as the `packasso
 Then run packasso:
 
 ```shell
-npx @packasso/cli
+npx @packasso/cli install
 ```
 
 Get impressions.
