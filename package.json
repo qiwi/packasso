@@ -13,12 +13,13 @@
     "tsm": "2.3.0",
     "uvu": "0.5.6"
   },
-  "license": "MIT",
   "scripts": {
+    "self:build": "node --conditions development --loader tsm packages/cli/src/main/ts/index.ts build",
     "build": "packasso build",
     "lint": "yarn workspaces foreach -vip run lint",
     "format": "yarn workspaces foreach -vip run format",
     "test": "concurrently 'npm:test:*(!test:.+:)'",
     "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n '**/*/src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target"
-  }
+  },
+  "license": "MIT"
 }
