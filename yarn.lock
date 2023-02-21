@@ -734,7 +734,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu":
+"@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu, @packasso/preset-ts-tsc-uvu@workspaces:*":
   version: 0.0.0-use.local
   resolution: "@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu"
   dependencies:
@@ -855,11 +855,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
   dependencies:
+    "@packasso/preset-ts-tsc-uvu": "workspaces:*"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     tsm: "npm:2.3.0"
-    typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
   languageName: unknown
   linkType: soft

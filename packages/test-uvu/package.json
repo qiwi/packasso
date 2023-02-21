@@ -20,7 +20,6 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
-  "license": "MIT",
   "devDependencies": {
     "c8": "7.12.0",
     "concurrently": "7.6.0",
@@ -37,6 +36,7 @@
     "typescript": "4.9.4",
     "uvu": "0.5.6"
   },
+  "license": "MIT",
   "type": "module",
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",
@@ -47,21 +47,7 @@
     "target/resources/**/*"
   ],
   "scripts": {
-    "build": "concurrently 'npm:build:*(!build:.+:)'",
-    "build:tsc": "concurrently 'npm:build:tsc:cjs' 'npm:build:tsc:esm'",
-    "build:tsc:cjs": "yarn build:tsc:cjs:del && yarn build:tsc:cjs:tsc && yarn build:tsc:cjs:fix",
-    "build:tsc:cjs:del": "rimraf target/cjs",
-    "build:tsc:cjs:tsc": "tsc -b tsconfig.cjs.json",
-    "build:tsc:cjs:fix": "tsc-esm-fix --target target/cjs --ext .cjs --fillBlank",
-    "build:tsc:esm": "yarn build:tsc:esm:del && yarn build:tsc:esm:tsc && yarn build:tsc:esm:fix",
-    "build:tsc:esm:del": "rimraf target/esm",
-    "build:tsc:esm:tsc": "tsc -b tsconfig.esm.json",
-    "build:tsc:esm:fix": "tsc-esm-fix --target target/esm --ext .mjs --fillBlank --forceDefaultExport",
-    "build:tsc:del": "concurrently 'npm:build:tsc:cjs:del' 'npm:build:tsc:esm:del'",
-    "build:tsc:fix": "concurrently 'npm:build:tsc:cjs:fix' 'npm:build:tsc:esm:fix'",
-    "build:res": "yarn build:res:del && yarn build:res:run",
-    "build:res:del": "rimraf target/resources",
-    "build:res:run": "globby-cp src/main/resources target/resources",
+    "build": "packasso build",
     "lint": "concurrently -m 1 'npm:lint:*(!lint:.+:)'",
     "lint:eslint": "eslint src",
     "lint:prettier": "prettier --check src",
