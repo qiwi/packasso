@@ -20,6 +20,7 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
+  "license": "MIT",
   "devDependencies": {
     "c8": "7.12.0",
     "concurrently": "7.6.0",
@@ -31,12 +32,10 @@
     "prettier-config-qiwi": "2.0.1",
     "rimraf": "3.0.2",
     "tsc-esm-fix": "2.20.7",
-    "tslib": "2.4.1",
     "tsm": "2.3.0",
     "typescript": "4.9.4",
     "uvu": "0.5.6"
   },
-  "license": "MIT",
   "type": "module",
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",

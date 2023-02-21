@@ -526,7 +526,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -548,7 +547,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -570,7 +568,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -594,7 +591,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -625,7 +621,6 @@ __metadata:
     read-pkg: "npm:7.1.0"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -647,7 +642,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -669,7 +663,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -698,7 +691,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -727,14 +719,13 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
   languageName: unknown
   linkType: soft
 
-"@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu, @packasso/preset-ts-tsc-uvu@workspaces:*":
+"@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu":
   version: 0.0.0-use.local
   resolution: "@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu"
   dependencies:
@@ -756,7 +747,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -778,7 +768,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -800,7 +789,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -822,7 +810,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -844,7 +831,6 @@ __metadata:
     prettier-config-qiwi: "npm:2.0.1"
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
-    tslib: "npm:2.4.1"
     tsm: "npm:2.3.0"
     typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
@@ -855,11 +841,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
   dependencies:
-    "@packasso/preset-ts-tsc-uvu": "workspaces:*"
     c8: "npm:7.12.0"
     concurrently: "npm:7.6.0"
     earljs: "npm:0.2.3"
     tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
     uvu: "npm:0.5.6"
   languageName: unknown
   linkType: soft
@@ -5967,17 +5953,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.4.1, tslib@npm:^2.1.0, tslib@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "tslib@npm:2.4.1"
-  checksum: a739a21e3ff059e62c7c3c0845333fbc9c081bcc91e015f2d246a31eeaf1fb0e29b10c0913c7d22f692b3203bb469fd60ca5288aa4f27d351a969df2d0714899
-  languageName: node
-  linkType: hard
-
 "tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 441af59dc42ad4ae57140e62cb362369620c6076845c2c2b0ecc863c1d719ce24fdbc301e9053433fef43075e061bf84b702318ff1204b496a5bba10baf9eb9f
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.1.0, tslib@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: a739a21e3ff059e62c7c3c0845333fbc9c081bcc91e015f2d246a31eeaf1fb0e29b10c0913c7d22f692b3203bb469fd60ca5288aa4f27d351a969df2d0714899
   languageName: node
   linkType: hard
 

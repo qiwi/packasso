@@ -28,7 +28,6 @@
     "prettier-config-qiwi": "2.0.1",
     "rimraf": "3.0.2",
     "tsc-esm-fix": "2.20.7",
-    "tslib": "2.4.1",
     "tsm": "2.3.0",
     "typescript": "4.9.4",
     "uvu": "0.5.6"
