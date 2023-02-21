@@ -7,7 +7,7 @@ const { conditions } = minimist(execArgv)
 
 export const execute: () => Promise<unknown> = async () => {
   const root = getRootDir(cwd())
-  const source = [conditions].flat().includes('source')
-  await install(root, source, true)
-  await install(root, source)
+  const development = [conditions].flat().includes('development')
+  await install(root, development, true)
+  await install(root, development)
 }

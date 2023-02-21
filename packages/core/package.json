@@ -12,7 +12,7 @@
   },
   "exports": {
     ".": {
-      "source": "./src/main/ts/index.ts",
+      "development": "./src/main/ts/index.ts",
       "require": "./target/cjs/index.cjs",
       "import": "./target/esm/index.mjs",
       "types": "./target/esm/index.d.ts"

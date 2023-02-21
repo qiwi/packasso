@@ -28,33 +28,33 @@ export interface InstallModule {
   (
     pkg: ExtraPackageEntry,
     root: string,
-    source: boolean,
+    development: boolean,
     uninstall: boolean,
   ): Promise<InstallModuleResult | void>
 }
 
 export const install: (
   root: string,
-  source: boolean,
+  development: boolean,
   uninstall?: boolean,
-) => Promise<unknown> = async (root, source, uninstall = false) => {
+) => Promise<unknown> = async (root, development, uninstall = false) => {
   const topo = await getExtraTopo({
     cwd: root,
   })
   for (const name of topo.queue) {
-    await installPackage(topo.packages[name], root, source, uninstall)
+    await installPackage(topo.packages[name], root, development, uninstall)
   }
-  await installPackage(topo.root, root, source, uninstall)
+  await installPackage(topo.root, root, development, uninstall)
 }
 
 export const installPackage = async (
   pkg: ExtraPackageEntry,
   root: string,
-  source: boolean,
+  development: boolean,
   uninstall: boolean,
 ) => {
   for (const module of pkg.modules) {
-    await installModule(module, pkg, root, source, uninstall)
+    await installModule(module, pkg, root, development, uninstall)
   }
 }
 
@@ -76,11 +76,11 @@ export const installModule = async (
   module: string,
   pkg: ExtraPackageEntry,
   root: string,
-  source: boolean,
+  development: boolean,
   uninstall: boolean,
 ) => {
   const { install } = await loadModule(module)
-  const res = getModuleResourcesDir(module, root, source)
+  const res = getModuleResourcesDir(module, root, development)
   let resources: InstallModuleResource[] = []
   types[pkg.type].forEach((type) => {
     const cwd = resolve(res, type)
@@ -97,7 +97,7 @@ export const installModule = async (
     })
   })
   if (install) {
-    const result = await install(pkg, root, source, uninstall)
+    const result = await install(pkg, root, development, uninstall)
     resources = [...resources, ...(result?.resources || [])]
     if (result?.remove) {
       result.remove.forEach((pattern) => {

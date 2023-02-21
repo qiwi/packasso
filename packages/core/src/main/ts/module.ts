@@ -14,12 +14,12 @@ export const loadModule: (name: string) => Promise<Module> = async (name) => {
 export const getModuleResourcesDir: (
   module: string,
   root: string,
-  source: boolean,
-) => string = (module, root, source) =>
+  development: boolean,
+) => string = (module, root, development) =>
   resolve(
     root,
     'node_modules',
     module,
-    ...(source ? ['src', 'main'] : ['target']),
+    ...(development ? ['src', 'main'] : ['target']),
     'resources',
   )

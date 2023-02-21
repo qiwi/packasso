@@ -10,8 +10,13 @@ const modules = [
   '@packasso/release-zx-semrel',
 ]
 
-export const install: InstallModule = async (pkg, root, source, uninstall) => {
+export const install: InstallModule = async (
+  pkg,
+  root,
+  development,
+  uninstall,
+) => {
   for (const module of modules) {
-    await installModule(module, pkg, root, source, uninstall)
+    await installModule(module, pkg, root, development, uninstall)
   }
 }
