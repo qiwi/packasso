@@ -1,3 +1,8 @@
+## [@packasso/preset-ts-tsc-jest@0.11.1](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.preset-ts-tsc-jest.0.11.0-f0...2023.2.21-packasso.preset-ts-tsc-jest.0.11.1-f0) (2023-02-21)
+
+### Fixes & improvements
+* fix: stranger things [1c99106](https://github.com/qiwi/packasso/commit/1c99106e6f555a6d1f252a631457aa85452e8d7e)
+
 ## [@packasso/preset-ts-tsc-jest@0.11.0](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.preset-ts-tsc-jest.0.10.0-f0...2023.2.21-packasso.preset-ts-tsc-jest.0.11.0-f0) (2023-02-21)
 
 ### Features
