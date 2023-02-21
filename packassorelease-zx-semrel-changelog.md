@@ -1,3 +1,11 @@
+## [@packasso/release-zx-semrel@0.9.0](https://github.com/qiwi/packasso/compare/2023.2.15-packasso.release-zx-semrel.0.8.4-f0...2023.2.21-packasso.release-zx-semrel.0.9.0-f0) (2023-02-21)
+
+### Features
+* feat: install (#15) [19c478d](https://github.com/qiwi/packasso/commit/19c478d82826dc83c47ded18ac6f21bd22d688df)
+
+### Dependencies
+* perf: @packasso/core updated to 0.10.0
+
 ## [@packasso/release-zx-semrel@0.8.4](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.release-zx-semrel.0.8.3-f0...2023.2.15-packasso.release-zx-semrel.0.8.4-f0) (2023-02-15)
 
 ### Dependencies
