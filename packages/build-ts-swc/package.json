@@ -42,9 +42,9 @@
   "module": "./target/esm/index.mjs",
   "types": "./target/esm/index.d.ts",
   "files": [
-    "target/cjs",
-    "target/esm",
-    "target/resources"
+    "target/cjs/**/*",
+    "target/esm/**/*",
+    "target/resources/**/*"
   ],
   "scripts": {
     "build": "concurrently 'npm:build:*(!build:.+:)'",

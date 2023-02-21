@@ -4,14 +4,22 @@ import {
   ITopoOptions,
   topo,
 } from '@semrel-extra/topo'
+import { isEqual, uniqWith } from 'lodash-es'
 
-import { Config, getConfig, mergeConfigs } from './config'
+import { getConfig } from './config'
 
-interface ExtraPackageEntry extends IPackageEntry {
-  config: Config
+export enum PackageType {
+  UNIT = 'unit',
+  LEAF = 'leaf',
+  TREE = 'tree',
 }
 
-interface ExtraTopoContext extends ITopoContext {
+export interface ExtraPackageEntry extends IPackageEntry {
+  modules: string[]
+  type: PackageType
+}
+
+export interface ExtraTopoContext extends ITopoContext {
   packages: Record<string, ExtraPackageEntry>
   root: ExtraPackageEntry
 }
@@ -28,18 +36,25 @@ export const getExtraTopo: (
         name,
         {
           ...pkg,
-          config: await getConfig(pkg.absPath),
+          type: PackageType.LEAF,
+          modules: await getConfig(pkg.absPath),
         },
       ]),
     ),
   )
-  const configs = Object.values(packages).map(({ config }) => config)
   const root = {
     ...context.root,
-    config:
-      configs.length > 0
-        ? mergeConfigs(configs)
-        : await getConfig(context.root.absPath),
+    relPath: '.',
+    type: context.root.manifest.workspaces
+      ? PackageType.TREE
+      : PackageType.UNIT,
+    modules: uniqWith(
+      [
+        ...Object.values(packages).flatMap(({ modules }) => modules),
+        ...(await getConfig(context.root.absPath)),
+      ],
+      isEqual,
+    ),
   }
   return {
     ...context,

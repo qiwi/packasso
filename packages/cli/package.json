@@ -2,8 +2,7 @@
   "name": "@packasso/cli",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "minimist": "1.2.7",
-    "tempy": "3.0.0"
+    "minimist": "1.2.7"
   },
   "bin": {
     "packasso": "./target/esm/index.mjs"
@@ -48,9 +47,9 @@
   "module": "./target/esm/index.mjs",
   "types": "./target/esm/index.d.ts",
   "files": [
-    "target/cjs",
-    "target/esm",
-    "target/resources"
+    "target/cjs/**/*",
+    "target/esm/**/*",
+    "target/resources/**/*"
   ],
   "scripts": {
     "build": "concurrently 'npm:build:*(!build:.+:)'",

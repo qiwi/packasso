@@ -28,17 +28,15 @@ export const getModuleNameMapper: (
 export const getProjects: (
   cwd: string,
   root: string,
-  tmp: string,
   pkg?: NormalizedPackageJson,
   dependencies?: Record<string, string>,
 ) => string[] = (
   cwd,
   root,
-  tmp,
   pkg = getPackage(cwd, root),
   workspaces = getWorkspaces(cwd, root, pkg),
 ) =>
   Object.values(workspaces)
     .map((path) => join(path, 'jest.config.json'))
-    .filter((path) => existsSync(join(tmp, cwd, path)))
+    .filter((path) => existsSync(join(root, cwd, path)))
     .map((path) => `<rootDir>${sep}${path}`)

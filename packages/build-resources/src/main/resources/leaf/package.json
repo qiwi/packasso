@@ -1,6 +1,6 @@
 {
   "files": [
-    "target/resources"
+    "target/resources/**/*"
   ],
   "scripts": {
     "build": "concurrently 'npm:build:*(!build:.+:)'",

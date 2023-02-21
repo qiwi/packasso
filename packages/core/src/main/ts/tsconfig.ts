@@ -27,14 +27,12 @@ export const getPaths: (
 export const getReferences: (
   cwd: string,
   root: string,
-  tmp: string,
   tsconfig?: string,
   pkg?: NormalizedPackageJson,
   dependencies?: Record<string, string>,
 ) => { path: string }[] = (
   cwd,
   root,
-  tmp,
   tsconfig = 'tsconfig.json',
   pkg = getPackage(cwd, root),
   dependencies = pkg.workspaces
@@ -45,4 +43,4 @@ export const getReferences: (
     .map((path) => ({
       path: dotted(join(path, tsconfig)),
     }))
-    .filter((reference) => existsSync(join(tmp, cwd, reference.path)))
+    .filter((reference) => existsSync(join(root, cwd, reference.path)))
