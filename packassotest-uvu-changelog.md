@@ -1,3 +1,11 @@
+## [@packasso/test-uvu@0.11.0](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.test-uvu.0.10.0-f0...2023.2.21-packasso.test-uvu.0.11.0-f0) (2023-02-21)
+
+### Features
+* feat: build (#16) [2437b4e](https://github.com/qiwi/packasso/commit/2437b4e5d325f104c642e1f383a73fa7ad21551b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.11.0
+
 ## [@packasso/test-uvu@0.10.0](https://github.com/qiwi/packasso/compare/2023.2.15-packasso.test-uvu.0.9.4-f0...2023.2.21-packasso.test-uvu.0.10.0-f0) (2023-02-21)
 
 ### Features
