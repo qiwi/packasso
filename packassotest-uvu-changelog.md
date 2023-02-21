@@ -1,3 +1,11 @@
+## [@packasso/test-uvu@0.11.1](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.test-uvu.0.11.0-f0...2023.2.21-packasso.test-uvu.0.11.1-f0) (2023-02-21)
+
+### Fixes & improvements
+* fix: yarn workspaces foreach run [952b121](https://github.com/qiwi/packasso/commit/952b121e5805963e691057832addf434c548fb72)
+
+### Dependencies
+* perf: @packasso/core updated to 0.11.1
+
 ## [@packasso/test-uvu@0.11.0](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.test-uvu.0.10.0-f0...2023.2.21-packasso.test-uvu.0.11.0-f0) (2023-02-21)
 
 ### Features
