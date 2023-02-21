@@ -1,3 +1,8 @@
+## [@packasso/core@0.10.0](https://github.com/qiwi/packasso/compare/2023.2.15-packasso.core.0.9.4-f0...2023.2.21-packasso.core.0.10.0-f0) (2023-02-21)
+
+### Features
+* feat: install (#15) [19c478d](https://github.com/qiwi/packasso/commit/19c478d82826dc83c47ded18ac6f21bd22d688df)
+
 ## [@packasso/core@0.9.4](https://github.com/qiwi/packasso/compare/2023.2.13-packasso.core.0.9.3-f0...2023.2.15-packasso.core.0.9.4-f0) (2023-02-15)
 
 ### Fixes & improvements
