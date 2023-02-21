@@ -1,9 +1,5 @@
 {
   "scripts": {
-    "build": "concurrently 'npm:build:*(!build:.+:)'",
-    "build:res": "yarn workspaces foreach -vip run build:res"
-  },
-  "devDependencies": {
-    "concurrently": "7.6.0"
+    "build": "packasso build"
   }
 }

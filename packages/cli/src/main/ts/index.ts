@@ -2,10 +2,11 @@
 import { error, log } from 'node:console'
 import { argv, exit } from 'node:process'
 
+import { execute as build } from './build'
 import { execute as install } from './install'
 import { execute as uninstall } from './uninstall'
 
-const commands = { install, uninstall }
+const commands = { install, uninstall, build }
 
 type Command = keyof typeof commands
 

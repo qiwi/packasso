@@ -7,3 +7,4 @@ export * from './config'
 export * from './module'
 
 export * from './install'
+export * from './build'
