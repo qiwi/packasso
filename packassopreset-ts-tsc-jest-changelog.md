@@ -1,3 +1,18 @@
+## [@packasso/preset-ts-tsc-jest@0.11.2](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.preset-ts-tsc-jest.0.11.1-f0...2023.2.21-packasso.preset-ts-tsc-jest.0.11.2-f0) (2023-02-21)
+
+### Fixes & improvements
+* fix: yarn workspaces foreach run [952b121](https://github.com/qiwi/packasso/commit/952b121e5805963e691057832addf434c548fb72)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.10.1
+* perf: @packasso/build-ts-tsc updated to 0.10.1
+* perf: @packasso/core updated to 0.11.1
+* perf: @packasso/dev-license updated to 0.4.1
+* perf: @packasso/dev-ts updated to 0.11.1
+* perf: @packasso/release-zx-semrel updated to 0.10.1
+* perf: @packasso/style-eslint-prettier updated to 0.10.1
+* perf: @packasso/test-jest updated to 0.11.1
+
 ## [@packasso/preset-ts-tsc-jest@0.11.1](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.preset-ts-tsc-jest.0.11.0-f0...2023.2.21-packasso.preset-ts-tsc-jest.0.11.1-f0) (2023-02-21)
 
 ### Fixes & improvements
