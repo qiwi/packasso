@@ -1,3 +1,8 @@
+## [@packasso/core@0.11.2](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.core.0.11.1-f0...2023.2.22-packasso.core.0.11.2-f0) (2023-02-22)
+
+### Fixes & improvements
+* fix: deps [155eac8](https://github.com/qiwi/packasso/commit/155eac85a256f001dd32181fc5925d7fdf12f079)
+
 ## [@packasso/core@0.11.1](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.core.0.11.0-f0...2023.2.21-packasso.core.0.11.1-f0) (2023-02-21)
 
 ### Fixes & improvements
