@@ -22,7 +22,13 @@
       "path": "./packages/dev-license/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/dev-packasso/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/dev-ts/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/preset-packasso/tsconfig.cjs.json"
     },
     {
       "path": "./packages/preset-ts-swc-uvu/tsconfig.cjs.json"

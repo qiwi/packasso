@@ -18,6 +18,15 @@
     },
     "./package.json": "./package.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "license": "MIT",
   "devDependencies": {
     "@types/lodash-es": "4.17.6",
     "c8": "7.12.0",
@@ -34,15 +43,6 @@
     "typescript": "4.9.4",
     "uvu": "0.5.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qiwi/packasso.git"
-  },
-  "bugs": {
-    "url": "https://github.com/qiwi/packasso/issues"
-  },
-  "homepage": "https://qiwi.github.io/packasso",
-  "license": "MIT",
   "type": "module",
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",
@@ -61,7 +61,8 @@
     "format:eslint": "eslint --fix src",
     "format:prettier": "prettier --write src",
     "test": "concurrently 'npm:test:*(!test:.+:)'",
-    "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n 'src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target"
+    "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n 'src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target",
+    "packasso": "node --conditions development --loader tsm ../cli/src/main/ts/index.ts"
   },
   "eslintConfig": {
     "extends": "eslint-config-qiwi"

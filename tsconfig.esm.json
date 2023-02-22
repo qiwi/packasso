@@ -22,7 +22,13 @@
       "path": "./packages/dev-license/tsconfig.esm.json"
     },
     {
+      "path": "./packages/dev-packasso/tsconfig.esm.json"
+    },
+    {
       "path": "./packages/dev-ts/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/preset-packasso/tsconfig.esm.json"
     },
     {
       "path": "./packages/preset-ts-swc-uvu/tsconfig.esm.json"

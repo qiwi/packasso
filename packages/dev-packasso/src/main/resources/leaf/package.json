@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "packasso": "node --conditions development --loader tsm ../cli/src/main/ts/index.ts"
+  },
+  "devDependencies": {
+    "tsm": "2.3.0"
+  }
+}
