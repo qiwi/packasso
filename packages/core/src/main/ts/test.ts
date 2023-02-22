@@ -1,42 +1,65 @@
-import { existsSync } from 'node:fs'
-import { join, sep } from 'node:path'
+import concurrently from 'concurrently'
 
-import { NormalizedPackageJson } from 'read-pkg'
+import { loadModule } from './module'
+import { getRootDir } from './package'
+import { ExtraPackageEntry, ExtraTopoContext, getExtraTopo } from './topo'
 
-import { getDependencies, getPackage, getWorkspaces } from './package'
+export interface TestModuleResult {
+  commands?: string[][]
+}
 
-export const getModuleNameMapper: (
-  cwd: string,
-  root: string,
-  pkg?: NormalizedPackageJson,
-  dependencies?: Record<string, string>,
-) => Record<string, string> = (
-  cwd,
-  root,
-  pkg = getPackage(cwd, root),
-  dependencies = getDependencies(cwd, root, pkg),
-) =>
-  Object.fromEntries(
-    Object.entries(dependencies)
-      .map(([dependency, path]) => [
-        dependency,
-        join(path, 'src', 'main', 'ts'),
-      ])
-      .map(([dependency, path]) => [dependency, `<rootDir>${sep}${path}`]),
+export interface TestModule {
+  (
+    pkg: ExtraPackageEntry,
+    included: ExtraPackageEntry[],
+  ): Promise<TestModuleResult | void>
+}
+
+export const test: (cwd: string) => Promise<unknown> = async (cwd) => {
+  const root = getRootDir(cwd)
+  const topo = await getExtraTopo({
+    cwd: root,
+  })
+  await testPackage(
+    Object.values(topo.packages).find(({ absPath }) => absPath === cwd) ||
+      topo.root,
+    topo,
   )
+}
 
-export const getProjects: (
-  cwd: string,
-  root: string,
-  pkg?: NormalizedPackageJson,
-  dependencies?: Record<string, string>,
-) => string[] = (
-  cwd,
-  root,
-  pkg = getPackage(cwd, root),
-  workspaces = getWorkspaces(cwd, root, pkg),
-) =>
-  Object.values(workspaces)
-    .map((path) => join(path, 'jest.config.json'))
-    .filter((path) => existsSync(join(root, cwd, path)))
-    .map((path) => `<rootDir>${sep}${path}`)
+export const testPackage = async (
+  pkg: ExtraPackageEntry,
+  topo: ExtraTopoContext,
+) => {
+  for (const module of pkg.modules) {
+    await testModule(
+      module,
+      pkg,
+      Object.values(topo.packages).filter(({ modules }) =>
+        modules.includes(module),
+      ),
+    )
+  }
+}
+
+export const testModule = async (
+  module: string,
+  pkg: ExtraPackageEntry,
+  included: ExtraPackageEntry[] = [],
+) => {
+  const { test } = await loadModule(module)
+  if (test) {
+    const result = await test(pkg, included)
+    if (result?.commands) {
+      for (const commands of result.commands) {
+        await concurrently(
+          commands.map((command) => ({
+            name: command.split(' ')[0],
+            command,
+          })),
+          { cwd: pkg.absPath },
+        ).result
+      }
+    }
+  }
+}
