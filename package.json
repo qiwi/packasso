@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "self:build": "node --conditions development --loader tsm packages/cli/src/main/ts/index.ts build",
+    "self": "node --conditions development --loader tsm packages/cli/src/main/ts/index.ts",
     "build": "packasso build",
     "lint": "yarn workspaces foreach -vip run lint",
     "format": "yarn workspaces foreach -vip run format",

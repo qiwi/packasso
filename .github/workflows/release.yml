@@ -20,7 +20,7 @@ jobs:
       - name: Install
         run: yarn install --immutable
       - name: Build
-        run: yarn self:build
+        run: yarn self build
       - name: Test
         run: yarn test
       - name: Release
