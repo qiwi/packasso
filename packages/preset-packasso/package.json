@@ -1,8 +1,5 @@
 {
-  "name": "@packasso/dev-license",
-  "dependencies": {
-    "@packasso/core": "workspace:*"
-  },
+  "name": "@packasso/preset-packasso",
   "exports": {
     ".": {
       "development": "./src/main/ts/index.ts",
@@ -11,6 +8,11 @@
       "types": "./target/esm/index.d.ts"
     },
     "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@packasso/core": "workspace:*",
+    "@packasso/dev-packasso": "workspace:*",
+    "@packasso/preset-ts-tsc-uvu": "workspace:*"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 {
-  "name": "@packasso/dev-license",
+  "name": "@packasso/dev-packasso",
   "dependencies": {
     "@packasso/core": "workspace:*"
   },

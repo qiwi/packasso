@@ -1,19 +1,19 @@
 {
   "name": "@packasso/workspaces",
   "private": true,
-  "packasso": "@packasso/preset-ts-tsc-uvu",
+  "packasso": "@packasso/preset-packasso",
   "workspaces": [
     "packages/*"
   ],
+  "license": "MIT",
   "scripts": {
-    "self": "node --conditions development --loader tsm packages/cli/src/main/ts/index.ts",
     "build": "packasso build",
     "lint": "yarn workspaces foreach -vip run lint",
     "format": "yarn workspaces foreach -vip run format",
     "test": "concurrently 'npm:test:*(!test:.+:)'",
-    "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n '**/*/src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target"
+    "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n '**/*/src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target",
+    "packasso": "node --conditions development --loader tsm packages/cli/src/main/ts/index.ts"
   },
-  "license": "MIT",
   "devDependencies": {
     "c8": "7.12.0",
     "concurrently": "7.6.0",
