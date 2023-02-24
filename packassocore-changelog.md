@@ -1,3 +1,8 @@
+## [@packasso/core@0.12.0](https://github.com/qiwi/packasso/compare/2023.2.22-packasso.core.0.11.2-f0...2023.2.24-packasso.core.0.12.0-f0) (2023-02-24)
+
+### Features
+* feat: packasso dev and preset (#17) [a8904b4](https://github.com/qiwi/packasso/commit/a8904b481020e6ca9a00a4b4c23b917fe5b92012)
+
 ## [@packasso/core@0.11.2](https://github.com/qiwi/packasso/compare/2023.2.21-packasso.core.0.11.1-f0...2023.2.22-packasso.core.0.11.2-f0) (2023-02-22)
 
 ### Fixes & improvements
