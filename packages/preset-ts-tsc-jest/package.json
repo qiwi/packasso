@@ -60,8 +60,7 @@
     "format": "concurrently -m 1 'npm:format:*(!format:.+:)'",
     "format:eslint": "eslint --fix src",
     "format:prettier": "prettier --write src",
-    "test": "concurrently 'npm:test:*(!test:.+:)'",
-    "test:uvu": "c8 -o target/coverage -r html -r text -r lcov -n 'src/main/{ts,js}' uvu -r tsm -r earljs/uvu . 'src/test/[jt]s/.*.(spec|test).[jt]sx?' -i target",
+    "test": "packasso test",
     "packasso": "node --conditions development --loader tsm ../cli/src/main/ts/index.ts"
   },
   "eslintConfig": {

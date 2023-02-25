@@ -2,10 +2,12 @@ import { resolve } from 'node:path'
 
 import { BuildModule } from './build'
 import { InstallModule } from './install'
+import { TestModule } from './test'
 
 export interface Module {
   install?: InstallModule
   build?: BuildModule
+  test?: TestModule
 }
 
 export const loadModule: (name: string) => Promise<Module> = async (name) => {

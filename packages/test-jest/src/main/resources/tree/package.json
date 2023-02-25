@@ -1,10 +1,8 @@
 {
   "scripts": {
-    "test": "concurrently 'npm:test:*(!test:.+:)'",
-    "test:jest": "jest"
+    "test": "packasso test"
   },
   "devDependencies": {
-    "concurrently": "7.6.0",
     "jest": "29.3.1"
   }
 }

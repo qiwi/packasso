@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: yarn packasso build
       - name: Test
-        run: yarn test
+        run: yarn packasso test
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}

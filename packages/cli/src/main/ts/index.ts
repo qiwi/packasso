@@ -4,9 +4,10 @@ import { argv, exit } from 'node:process'
 
 import { execute as build } from './build'
 import { execute as install } from './install'
+import { execute as test } from './test'
 import { execute as uninstall } from './uninstall'
 
-const commands = { install, uninstall, build }
+const commands = { install, uninstall, build, test }
 
 type Command = keyof typeof commands
 
