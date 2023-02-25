@@ -1,3 +1,11 @@
+## [@packasso/dev-packasso@0.2.0](https://github.com/qiwi/packasso/compare/2023.2.24-packasso.dev-packasso.0.1.0-f0...2023.2.25-packasso.dev-packasso.0.2.0-f0) (2023-02-25)
+
+### Features
+* feat: test (#18) [21007fe](https://github.com/qiwi/packasso/commit/21007fe63a3783002ae0198b8a7318221332ee23)
+
+### Dependencies
+* perf: @packasso/core updated to 0.13.0
+
 ## [@packasso/dev-packasso@0.1.0](https://github.com/qiwi/packasso/compare/undefined...2023.2.24-packasso.dev-packasso.0.1.0-f0) (2023-02-24)
 
 ### Features
@@ -5,5 +13,3 @@
 
 ### Dependencies
 * perf: @packasso/core updated to 0.12.0
-
-
