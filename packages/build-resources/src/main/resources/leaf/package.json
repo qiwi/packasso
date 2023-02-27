@@ -1,12 +1,5 @@
 {
   "files": [
     "target/resources/**/*"
-  ],
-  "scripts": {
-    "build": "packasso build"
-  },
-  "devDependencies": {
-    "globby-cp": "1.1.3",
-    "rimraf": "3.0.2"
-  }
+  ]
 }

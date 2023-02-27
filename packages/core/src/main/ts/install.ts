@@ -64,9 +64,22 @@ export const installModule = async (
   development: boolean,
   uninstall: boolean,
 ) => {
-  const { install } = await loadModule(module)
+  const { install, build, test, lint, format } = await loadModule(module)
   const res = getModuleResourcesDir(module, root, development)
-  let resources: ModuleInstallResource[] = []
+  let resources: ModuleInstallResource[] = development
+    ? []
+    : [
+        {
+          path: 'package.json',
+          data: {
+            scripts: Object.fromEntries(
+              Object.keys({ build, test, lint, format })
+                .filter(Boolean)
+                .map((command) => [command, `packasso ${command}`]),
+            ),
+          },
+        },
+      ]
   types[pkg.type].forEach((type) => {
     const cwd = resolve(res, type)
     fg.sync('**/*', {
