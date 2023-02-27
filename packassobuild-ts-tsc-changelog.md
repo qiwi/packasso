@@ -1,3 +1,11 @@
+## [@packasso/build-ts-tsc@0.13.0](https://github.com/qiwi/packasso/compare/2023.2.25-packasso.build-ts-tsc.0.12.0-f0...2023.2.27-packasso.build-ts-tsc.0.13.0-f0) (2023-02-27)
+
+### Features
+* feat: universal command (#19) [32b2e68](https://github.com/qiwi/packasso/commit/32b2e68963837b4b4debc039a65177ef238c538b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.14.0
+
 ## [@packasso/build-ts-tsc@0.12.0](https://github.com/qiwi/packasso/compare/2023.2.24-packasso.build-ts-tsc.0.11.0-f0...2023.2.25-packasso.build-ts-tsc.0.12.0-f0) (2023-02-25)
 
 ### Features
