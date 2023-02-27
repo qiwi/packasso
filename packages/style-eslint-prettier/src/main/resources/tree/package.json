@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "yarn workspaces foreach -vip run lint",
-    "format": "yarn workspaces foreach -vip run format"
+    "lint": "packasso lint",
+    "format": "packasso format"
   }
 }

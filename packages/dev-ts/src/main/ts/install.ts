@@ -1,6 +1,6 @@
-import { getPaths, InstallModule, PackageType } from '@packasso/core'
+import { getPaths, ModuleInstall, PackageType } from '@packasso/core'
 
-export const install: InstallModule = async (pkg, root) => {
+export const install: ModuleInstall = async (pkg, root) => {
   switch (pkg.type) {
     case PackageType.UNIT:
     case PackageType.LEAF: {

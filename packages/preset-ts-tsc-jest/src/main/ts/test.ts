@@ -1,9 +1,9 @@
-import { testModule, TestModule } from '@packasso/core'
+import { commandModule, ModuleCommand } from '@packasso/core'
 
 import { modules } from './modules'
 
-export const test: TestModule = async (pkg, included) => {
+export const test: ModuleCommand = async (pkg, pkgs) => {
   for (const module of modules) {
-    await testModule(module, pkg, included)
+    await commandModule('test', module, pkg, pkgs)
   }
 }

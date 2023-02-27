@@ -16,8 +16,8 @@
   "license": "MIT",
   "scripts": {
     "build": "packasso build",
-    "lint": "yarn workspaces foreach -vip run lint",
-    "format": "yarn workspaces foreach -vip run format",
+    "lint": "packasso lint",
+    "format": "packasso format",
     "test": "packasso test",
     "packasso": "node --conditions development --loader tsm packages/cli/src/main/ts/index.ts"
   }

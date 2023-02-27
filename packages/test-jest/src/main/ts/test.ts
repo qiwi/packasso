@@ -1,5 +1,5 @@
-import { TestModule } from '@packasso/core'
+import { ModuleCommand } from '@packasso/core'
 
-export const test: TestModule = async () => ({
-  commands: [['jest']],
+export const test: ModuleCommand = async (pkg) => ({
+  commands: [{ command: 'jest', cwd: pkg.absPath }],
 })

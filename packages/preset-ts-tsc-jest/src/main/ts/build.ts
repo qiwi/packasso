@@ -1,9 +1,9 @@
-import { buildModule, BuildModule } from '@packasso/core'
+import { commandModule, ModuleCommand } from '@packasso/core'
 
 import { modules } from './modules'
 
-export const build: BuildModule = async (pkg, include) => {
+export const build: ModuleCommand = async (pkg, pkgs) => {
   for (const module of modules) {
-    await buildModule(module, pkg, include)
+    await commandModule('build', module, pkg, pkgs)
   }
 }
