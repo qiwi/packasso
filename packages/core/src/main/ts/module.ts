@@ -1,13 +1,45 @@
 import { resolve } from 'node:path'
 
-import { BuildModule } from './build'
-import { InstallModule } from './install'
-import { TestModule } from './test'
+import { ConcurrentlyCommandInput } from 'concurrently'
+
+import { ExtraPackageEntry } from './topo'
+
+export interface ModuleInstallResource {
+  path: string
+  data: string | object
+}
+
+export interface ModuleInstallResult {
+  resources?: ModuleInstallResource[]
+  remove?: string[]
+}
+
+export interface ModuleInstall {
+  (
+    pkg: ExtraPackageEntry,
+    root: string,
+    development: boolean,
+    uninstall: boolean,
+  ): Promise<ModuleInstallResult | void>
+}
+
+export interface ModuleCommandResult {
+  commands?: (ConcurrentlyCommandInput | ConcurrentlyCommandInput[])[]
+}
+
+export interface ModuleCommand {
+  (
+    pkg: ExtraPackageEntry,
+    pkgs: ExtraPackageEntry[],
+  ): Promise<ModuleCommandResult | void>
+}
 
 export interface Module {
-  install?: InstallModule
-  build?: BuildModule
-  test?: TestModule
+  install?: ModuleInstall
+  build?: ModuleCommand
+  test?: ModuleCommand
+  lint?: ModuleCommand
+  format?: ModuleCommand
 }
 
 export const loadModule: (name: string) => Promise<Module> = async (name) => {

@@ -1,11 +1,11 @@
 import {
   getModuleNameMapper,
   getProjects,
-  InstallModule,
+  ModuleInstall,
   PackageType,
 } from '@packasso/core'
 
-export const install: InstallModule = async (pkg, root) => ({
+export const install: ModuleInstall = async (pkg, root) => ({
   remove: ['coverage', 'jest.config.{js,ts,mjs,cjs}', 'tsconfig.test.json'],
   resources: [
     {

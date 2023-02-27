@@ -1,18 +1,13 @@
 {
   "scripts": {
-    "lint": "concurrently -m 1 'npm:lint:*(!lint:.+:)'",
-    "lint:eslint": "eslint src",
-    "lint:prettier": "prettier --check src",
-    "format": "concurrently -m 1 'npm:format:*(!format:.+:)'",
-    "format:eslint": "eslint --fix src",
-    "format:prettier": "prettier --write src"
+    "lint": "packasso lint",
+    "format": "packasso format"
   },
   "eslintConfig": {
     "extends": "eslint-config-qiwi"
   },
   "prettier": "prettier-config-qiwi",
   "devDependencies": {
-    "concurrently": "7.6.0",
     "eslint": "8.29.0",
     "eslint-config-qiwi": "2.0.6",
     "prettier": "2.8.1",

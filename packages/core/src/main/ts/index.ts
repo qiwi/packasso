@@ -5,7 +5,5 @@ export * from './tsconfig'
 export * from './jest'
 export * from './config'
 export * from './module'
-
+export * from './command'
 export * from './install'
-export * from './build'
-export * from './test'

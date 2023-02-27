@@ -11,27 +11,12 @@ import {
   revertText,
   rmGlob,
 } from './copy'
-import { getModuleResourcesDir, loadModule } from './module'
+import {
+  getModuleResourcesDir,
+  loadModule,
+  ModuleInstallResource,
+} from './module'
 import { ExtraPackageEntry, getExtraTopo, PackageType } from './topo'
-
-interface InstallModuleResource {
-  path: string
-  data: string | object
-}
-
-interface InstallModuleResult {
-  resources?: InstallModuleResource[]
-  remove?: string[]
-}
-
-export interface InstallModule {
-  (
-    pkg: ExtraPackageEntry,
-    root: string,
-    development: boolean,
-    uninstall: boolean,
-  ): Promise<InstallModuleResult | void>
-}
 
 export const install: (
   root: string,
@@ -81,7 +66,7 @@ export const installModule = async (
 ) => {
   const { install } = await loadModule(module)
   const res = getModuleResourcesDir(module, root, development)
-  let resources: InstallModuleResource[] = []
+  let resources: ModuleInstallResource[] = []
   types[pkg.type].forEach((type) => {
     const cwd = resolve(res, type)
     fg.sync('**/*', {
@@ -111,7 +96,7 @@ export const installModule = async (
 const installModuleResources = (
   pkg: ExtraPackageEntry,
   uninstall: boolean,
-  resources: InstallModuleResource[],
+  resources: ModuleInstallResource[],
 ) => {
   resources.forEach(({ path, data }) => {
     const absPath = resolve(pkg.absPath, path)

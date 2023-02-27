@@ -1,6 +1,6 @@
-import { InstallModule } from '@packasso/core'
+import { ModuleInstall } from '@packasso/core'
 
-export const install: InstallModule = async () => ({
+export const install: ModuleInstall = async () => ({
   remove: [
     '.eslintrc',
     '.eslintrc.{json,yaml,yml,js,cjs}',

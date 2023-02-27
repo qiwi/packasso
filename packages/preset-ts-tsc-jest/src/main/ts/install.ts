@@ -1,8 +1,8 @@
-import { installModule, InstallModule } from '@packasso/core'
+import { installModule, ModuleInstall } from '@packasso/core'
 
 import { modules } from './modules'
 
-export const install: InstallModule = async (
+export const install: ModuleInstall = async (
   pkg,
   root,
   development,

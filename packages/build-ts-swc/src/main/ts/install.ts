@@ -1,6 +1,6 @@
-import { getReferences, InstallModule } from '@packasso/core'
+import { getReferences, ModuleInstall } from '@packasso/core'
 
-export const install: InstallModule = async (pkg, root) => ({
+export const install: ModuleInstall = async (pkg, root) => ({
   remove: [
     'build',
     'dist',

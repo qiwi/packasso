@@ -1,7 +1,7 @@
 import { cwd } from 'node:process'
 
-import { build } from '@packasso/core'
+import { command } from '@packasso/core'
 
 export const execute: () => Promise<unknown> = async () => {
-  await build(cwd())
+  await command('build', cwd())
 }
