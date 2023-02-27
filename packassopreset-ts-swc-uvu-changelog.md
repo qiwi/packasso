@@ -1,3 +1,18 @@
+## [@packasso/preset-ts-swc-uvu@0.14.0](https://github.com/qiwi/packasso/compare/2023.2.25-packasso.preset-ts-swc-uvu.0.13.0-f0...2023.2.27-packasso.preset-ts-swc-uvu.0.14.0-f0) (2023-02-27)
+
+### Features
+* feat: universal command (#19) [32b2e68](https://github.com/qiwi/packasso/commit/32b2e68963837b4b4debc039a65177ef238c538b)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.13.0
+* perf: @packasso/build-ts-swc updated to 0.14.0
+* perf: @packasso/core updated to 0.14.0
+* perf: @packasso/dev-license updated to 0.7.0
+* perf: @packasso/dev-ts updated to 0.14.0
+* perf: @packasso/release-zx-semrel updated to 0.13.0
+* perf: @packasso/style-eslint-prettier updated to 0.13.0
+* perf: @packasso/test-uvu updated to 0.14.0
+
 ## [@packasso/preset-ts-swc-uvu@0.13.0](https://github.com/qiwi/packasso/compare/2023.2.24-packasso.preset-ts-swc-uvu.0.12.0-f0...2023.2.25-packasso.preset-ts-swc-uvu.0.13.0-f0) (2023-02-25)
 
 ### Features
