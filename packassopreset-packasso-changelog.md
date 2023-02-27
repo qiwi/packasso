@@ -1,3 +1,13 @@
+## [@packasso/preset-packasso@0.3.0](https://github.com/qiwi/packasso/compare/2023.2.25-packasso.preset-packasso.0.2.0-f0...2023.2.27-packasso.preset-packasso.0.3.0-f0) (2023-02-27)
+
+### Features
+* feat: universal command (#19) [32b2e68](https://github.com/qiwi/packasso/commit/32b2e68963837b4b4debc039a65177ef238c538b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.14.0
+* perf: @packasso/dev-packasso updated to 0.3.0
+* perf: @packasso/preset-ts-tsc-uvu updated to 0.14.0
+
 ## [@packasso/preset-packasso@0.2.0](https://github.com/qiwi/packasso/compare/2023.2.24-packasso.preset-packasso.0.1.0-f0...2023.2.25-packasso.preset-packasso.0.2.0-f0) (2023-02-25)
 
 ### Features
