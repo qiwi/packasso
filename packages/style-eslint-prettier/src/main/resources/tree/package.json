@@ -2,5 +2,11 @@
   "scripts": {
     "lint": "packasso lint",
     "format": "packasso format"
+  },
+  "devDependencies": {
+    "eslint": "8.29.0",
+    "eslint-config-qiwi": "2.0.6",
+    "prettier": "2.8.1",
+    "prettier-config-qiwi": "2.0.1"
   }
 }
