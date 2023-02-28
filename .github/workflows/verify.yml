@@ -20,7 +20,7 @@ jobs:
       - name: Install
         run: yarn install
       - name: Check node_modules
-        run: ls -la node_modules
+        run: ls -la node_modules/.bin
       - name: Build
         run: yarn packasso build
       - name: Test
