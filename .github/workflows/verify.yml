@@ -19,8 +19,8 @@ jobs:
           cache: 'yarn'
       - name: Install
         run: yarn install
-      - name: Check node_modules
-        run: ls -la node_modules/.bin
+      - name: Path
+        run: echo "./node_modules/.bin" >> $GITHUB_PATH
       - name: Build
         run: yarn packasso build
       - name: Test
