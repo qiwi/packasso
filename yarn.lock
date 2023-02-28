@@ -1270,6 +1270,8 @@ __metadata:
 "@packasso/workspaces@workspace:.":
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
+  dependencies:
+    tsm: "npm:2.3.0"
   languageName: unknown
   linkType: soft
 

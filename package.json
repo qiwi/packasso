@@ -8,5 +8,8 @@
   "license": "MIT",
   "scripts": {
     "packasso": "tsm --conditions development packages/cli/src/main/ts/index.ts"
+  },
+  "devDependencies": {
+    "tsm": "2.3.0"
   }
 }
