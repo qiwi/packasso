@@ -1,3 +1,8 @@
+## [@packasso/build-resources@0.14.2](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.build-resources.0.14.1-f0...2023.2.28-packasso.build-resources.0.14.2-f0) (2023-02-28)
+
+### Fixes & improvements
+* fix: bin [6bf11ff](https://github.com/qiwi/packasso/commit/6bf11ff9ebd2ee348d19b8a601a411080bde6fe1)
+
 ## [@packasso/build-resources@0.14.1](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.build-resources.0.14.0-f0...2023.2.28-packasso.build-resources.0.14.1-f0) (2023-02-28)
 
 ### Dependencies
