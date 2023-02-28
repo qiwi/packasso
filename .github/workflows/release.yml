@@ -20,7 +20,9 @@ jobs:
       - name: Install
         run: yarn install
       - name: Path
-        run: echo "./node_modules/.bin" >> $GITHUB_PATH
+        run: |
+          echo "./node_modules/.bin" >> $GITHUB_PATH
+          echo $GITHUB_PATH
       - name: Build
         run: yarn packasso build
       - name: Test
