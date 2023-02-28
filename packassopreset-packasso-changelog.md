@@ -1,3 +1,9 @@
+## [@packasso/preset-packasso@0.4.2](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.preset-packasso.0.4.1-f0...2023.2.28-packasso.preset-packasso.0.4.2-f0) (2023-02-28)
+
+### Dependencies
+* perf: @packasso/dev-packasso updated to 0.4.2
+* perf: @packasso/preset-ts-tsc-uvu updated to 0.15.2
+
 ## [@packasso/preset-packasso@0.4.1](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.preset-packasso.0.4.0-f0...2023.2.28-packasso.preset-packasso.0.4.1-f0) (2023-02-28)
 
 ### Dependencies
