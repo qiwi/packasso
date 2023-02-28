@@ -19,8 +19,6 @@ jobs:
           cache: 'yarn'
       - name: Yarn Install
         run: yarn install --immutable
-      - name: Setup Path
-        run: echo "${GITHUB_WORKSPACE}/node_modules/.bin" >> $GITHUB_PATH
       - name: Build
         run: yarn packasso build
       - name: Test

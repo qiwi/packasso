@@ -5,6 +5,10 @@
     "globby-cp": "1.1.3",
     "rimraf": "3.0.2"
   },
+  "bin": {
+    "globby-cp": "./node_modules/.bin/globby-cp",
+    "rimraf": "./node_modules/.bin/rimraf"
+  },
   "exports": {
     ".": {
       "development": "./src/main/ts/index.ts",

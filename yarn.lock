@@ -1087,6 +1087,9 @@ __metadata:
     "@packasso/core": "workspace:*"
     globby-cp: "npm:1.1.3"
     rimraf: "npm:3.0.2"
+  bin:
+    globby-cp: ./node_modules/.bin/globby-cp
+    rimraf: ./node_modules/.bin/rimraf
   languageName: unknown
   linkType: soft
 
@@ -1101,6 +1104,12 @@ __metadata:
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
     typescript: "npm:4.9.4"
+  bin:
+    globby-cp: ./node_modules/.bin/globby-cp
+    rimraf: ./node_modules/.bin/rimraf
+    swc: ./node_modules/.bin/swc
+    tsc: ./node_modules/.bin/tsc
+    tsc-esm-fix: ./node_modules/.bin/tsc-esm-fix
   languageName: unknown
   linkType: soft
 
@@ -1112,6 +1121,10 @@ __metadata:
     rimraf: "npm:3.0.2"
     tsc-esm-fix: "npm:2.20.7"
     typescript: "npm:4.9.4"
+  bin:
+    rimraf: ./node_modules/.bin/rimraf
+    tsc: ./node_modules/.bin/tsc
+    tsc-esm-fix: ./node_modules/.bin/tsc-esm-fix
   languageName: unknown
   linkType: soft
 
@@ -1155,6 +1168,8 @@ __metadata:
   dependencies:
     "@packasso/core": "workspace:*"
     tsm: "npm:2.3.0"
+  bin:
+    tsm: ./node_modules/.bin/tsm
   languageName: unknown
   linkType: soft
 
@@ -1252,6 +1267,8 @@ __metadata:
     "@types/jest": "npm:29.2.4"
     jest: "npm:29.3.1"
     jest-environment-jsdom: "npm:29.3.1"
+  bin:
+    jest: ./node_modules/.bin/jest
   languageName: unknown
   linkType: soft
 
@@ -1264,12 +1281,27 @@ __metadata:
     earljs: "npm:0.2.3"
     tsm: "npm:2.3.0"
     uvu: "npm:0.5.6"
+  bin:
+    c8: ./node_modules/.bin/c8
+    tsm: ./node_modules/.bin/tsm
+    uvu: ./node_modules/.bin/uvu
   languageName: unknown
   linkType: soft
 
 "@packasso/workspaces@workspace:.":
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
+  dependencies:
+    "@swc/cli": "npm:0.1.57"
+    "@swc/core": "npm:1.3.22"
+    c8: "npm:7.12.0"
+    earljs: "npm:0.2.3"
+    globby-cp: "npm:1.1.3"
+    rimraf: "npm:3.0.2"
+    tsc-esm-fix: "npm:2.20.7"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.4"
+    uvu: "npm:0.5.6"
   languageName: unknown
   linkType: soft
 
