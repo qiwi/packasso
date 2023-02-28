@@ -1,3 +1,8 @@
+## [@packasso/core@0.15.1](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.core.0.15.0-f0...2023.2.28-packasso.core.0.15.1-f0) (2023-02-28)
+
+### Fixes & improvements
+* fix: add packasso deps [03b1939](https://github.com/qiwi/packasso/commit/03b19395170344186a461c634463b60d6144f913)
+
 ## [@packasso/core@0.15.0](https://github.com/qiwi/packasso/compare/2023.2.27-packasso.core.0.14.0-f0...2023.2.28-packasso.core.0.15.0-f0) (2023-02-28)
 
 ### Features
