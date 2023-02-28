@@ -1,3 +1,11 @@
+## [@packasso/dev-packasso@0.4.0](https://github.com/qiwi/packasso/compare/2023.2.27-packasso.dev-packasso.0.3.0-f0...2023.2.28-packasso.dev-packasso.0.4.0-f0) (2023-02-28)
+
+### Features
+* feat: deps from presets (#20) [610d3ea](https://github.com/qiwi/packasso/commit/610d3ea11d0e6b61392ae3c9779c5428830abc3c)
+
+### Dependencies
+* perf: @packasso/core updated to 0.15.0
+
 ## [@packasso/dev-packasso@0.3.0](https://github.com/qiwi/packasso/compare/2023.2.25-packasso.dev-packasso.0.2.0-f0...2023.2.27-packasso.dev-packasso.0.3.0-f0) (2023-02-27)
 
 ### Features
