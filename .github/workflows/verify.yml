@@ -15,10 +15,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
           cache: 'yarn'
-      - name: Install
+      - name: Yarn Install
         run: yarn install --immutable
+      - name: Setup Path
+        run: echo "${GITHUB_WORKSPACE}/node_modules/.bin" >> $GITHUB_PATH
       - name: Build
         run: yarn packasso build
       - name: Test

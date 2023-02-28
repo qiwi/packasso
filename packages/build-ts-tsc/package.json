@@ -1,7 +1,10 @@
 {
   "name": "@packasso/build-ts-tsc",
   "dependencies": {
-    "@packasso/core": "workspace:*"
+    "@packasso/core": "workspace:*",
+    "rimraf": "3.0.2",
+    "tsc-esm-fix": "2.20.7",
+    "typescript": "4.9.4"
   },
   "exports": {
     ".": {
@@ -20,21 +23,6 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
-  "devDependencies": {
-    "c8": "7.12.0",
-    "concurrently": "7.6.0",
-    "earljs": "0.2.3",
-    "eslint": "8.29.0",
-    "eslint-config-qiwi": "2.0.6",
-    "globby-cp": "1.1.3",
-    "prettier": "2.8.1",
-    "prettier-config-qiwi": "2.0.1",
-    "rimraf": "3.0.2",
-    "tsc-esm-fix": "2.20.7",
-    "tsm": "2.3.0",
-    "typescript": "4.9.4",
-    "uvu": "0.5.6"
-  },
   "license": "MIT",
   "type": "module",
   "main": "./target/cjs/index.cjs",
@@ -45,13 +33,6 @@
     "target/esm/**/*",
     "target/resources/**/*"
   ],
-  "scripts": {
-    "build": "packasso build",
-    "lint": "packasso lint",
-    "format": "packasso format",
-    "test": "packasso test",
-    "packasso": "node --conditions development --loader tsm ../cli/src/main/ts/index.ts"
-  },
   "eslintConfig": {
     "extends": "eslint-config-qiwi"
   },
