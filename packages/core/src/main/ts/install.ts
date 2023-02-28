@@ -13,6 +13,7 @@ import {
 } from './copy'
 import {
   getModuleResourcesDir,
+  getModuleVersion,
   loadModule,
   ModuleInstallResource,
 } from './module'
@@ -77,6 +78,15 @@ export const installModule = async (
                 .filter(Boolean)
                 .map((command) => [command, `packasso ${command}`]),
             ),
+            devDependencies:
+              pkg.type === PackageType.TREE
+                ? undefined
+                : Object.fromEntries(
+                    pkg.modules.map((module) => [
+                      module,
+                      getModuleVersion(module, root),
+                    ]),
+                  ),
           },
         },
       ]
