@@ -41,7 +41,10 @@
   "prettier": "prettier-config-qiwi",
   "version": "0.0.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "bin": {
+      "jest": "../../.bin/jest"
+    }
   },
   "release": {
     "cmd": "yarn",

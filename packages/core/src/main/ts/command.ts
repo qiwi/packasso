@@ -43,6 +43,7 @@ export const concurrentlyCommands = (
         ? {
             ...command,
             command: command.command.slice(1).trim(),
+            cwd: pkg.absPath,
           }
         : command,
     )

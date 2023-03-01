@@ -42,7 +42,14 @@
   "prettier": "prettier-config-qiwi",
   "version": "0.0.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "bin": {
+      "globby-cp": "../../.bin/globby-cp",
+      "rimraf": "../../.bin/rimraf",
+      "swc": "../../.bin/swc",
+      "tsc": "../../.bin/tsc",
+      "tsc-esm-fix": "../../.bin/tsc-esm-fix"
+    }
   },
   "release": {
     "cmd": "yarn",

@@ -40,7 +40,12 @@
   "prettier": "prettier-config-qiwi",
   "version": "0.0.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "bin": {
+      "c8": "../../.bin/c8",
+      "tsm": "../../.bin/tsm",
+      "uvu": "../../.bin/uvu"
+    }
   },
   "release": {
     "cmd": "yarn",
