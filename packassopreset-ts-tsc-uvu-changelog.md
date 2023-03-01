@@ -1,3 +1,18 @@
+## [@packasso/preset-ts-tsc-uvu@0.15.5](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.preset-ts-tsc-uvu.0.15.4-f0...2023.3.1-packasso.preset-ts-tsc-uvu.0.15.5-f0) (2023-03-01)
+
+### Fixes & improvements
+* fix: mr. bean [1db7733](https://github.com/qiwi/packasso/commit/1db77332a73f8ed6e3a26f38f773c2b37c59d83c)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.14.5
+* perf: @packasso/build-ts-tsc updated to 0.14.5
+* perf: @packasso/core updated to 0.15.4
+* perf: @packasso/dev-license updated to 0.8.4
+* perf: @packasso/dev-ts updated to 0.15.4
+* perf: @packasso/release-zx-semrel updated to 0.14.4
+* perf: @packasso/style-eslint-prettier updated to 0.14.4
+* perf: @packasso/test-uvu updated to 0.15.5
+
 ## [@packasso/preset-ts-tsc-uvu@0.15.4](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.preset-ts-tsc-uvu.0.15.3-f0...2023.3.1-packasso.preset-ts-tsc-uvu.0.15.4-f0) (2023-03-01)
 
 ### Dependencies
