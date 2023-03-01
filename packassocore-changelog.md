@@ -1,3 +1,8 @@
+## [@packasso/core@0.15.2](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.core.0.15.1-f0...2023.3.1-packasso.core.0.15.2-f0) (2023-03-01)
+
+### Fixes & improvements
+* fix: revert bin [9779239](https://github.com/qiwi/packasso/commit/977923991a048c45e1e39b9398660dd49cbea7c2)
+
 ## [@packasso/core@0.15.1](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.core.0.15.0-f0...2023.2.28-packasso.core.0.15.1-f0) (2023-02-28)
 
 ### Fixes & improvements
