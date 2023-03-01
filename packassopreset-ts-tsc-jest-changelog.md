@@ -1,3 +1,15 @@
+## [@packasso/preset-ts-tsc-jest@0.15.3](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.preset-ts-tsc-jest.0.15.2-f0...2023.3.1-packasso.preset-ts-tsc-jest.0.15.3-f0) (2023-03-01)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.14.3
+* perf: @packasso/build-ts-tsc updated to 0.14.3
+* perf: @packasso/core updated to 0.15.2
+* perf: @packasso/dev-license updated to 0.8.2
+* perf: @packasso/dev-ts updated to 0.15.2
+* perf: @packasso/release-zx-semrel updated to 0.14.2
+* perf: @packasso/style-eslint-prettier updated to 0.14.2
+* perf: @packasso/test-jest updated to 0.15.3
+
 ## [@packasso/preset-ts-tsc-jest@0.15.2](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.preset-ts-tsc-jest.0.15.1-f0...2023.2.28-packasso.preset-ts-tsc-jest.0.15.2-f0) (2023-02-28)
 
 ### Dependencies
