@@ -1,7 +1,6 @@
 import { resolve } from 'node:path'
 
 import { ConcurrentlyCommandInput } from 'concurrently'
-import { readPackageSync } from 'read-pkg'
 
 import { ExtraPackageEntry } from './topo'
 
@@ -60,8 +59,3 @@ export const getModuleResourcesDir: (
     ...(development ? ['src', 'main'] : ['target']),
     'resources',
   )
-
-export const getModuleVersion: (module: string, root: string) => string = (
-  module,
-  root,
-) => readPackageSync({ cwd: resolve(root, 'node_modules', module) }).version

@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts"
+  }
+}
