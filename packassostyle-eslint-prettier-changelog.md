@@ -1,3 +1,11 @@
+## [@packasso/style-eslint-prettier@0.14.4](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.style-eslint-prettier.0.14.3-f0...2023.3.1-packasso.style-eslint-prettier.0.14.4-f0) (2023-03-01)
+
+### Fixes & improvements
+* fix: mr. bean [1db7733](https://github.com/qiwi/packasso/commit/1db77332a73f8ed6e3a26f38f773c2b37c59d83c)
+
+### Dependencies
+* perf: @packasso/core updated to 0.15.4
+
 ## [@packasso/style-eslint-prettier@0.14.3](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.style-eslint-prettier.0.14.2-f0...2023.3.1-packasso.style-eslint-prettier.0.14.3-f0) (2023-03-01)
 
 ### Fixes & improvements
