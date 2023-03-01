@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/release-zx-semrel",
+  "hash": "452b9d2542430d08e037dc9ff2db44fbf55f2a1f",
+  "version": "0.14.3",
+  "dependencies": {
+    "@packasso/core": "0.15.3"
+  }
+}
