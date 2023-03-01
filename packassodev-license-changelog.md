@@ -1,3 +1,8 @@
+## [@packasso/dev-license@0.8.3](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.dev-license.0.8.2-f0...2023.3.1-packasso.dev-license.0.8.3-f0) (2023-03-01)
+
+### Dependencies
+* perf: @packasso/core updated to 0.15.3
+
 ## [@packasso/dev-license@0.8.2](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.dev-license.0.8.1-f0...2023.3.1-packasso.dev-license.0.8.2-f0) (2023-03-01)
 
 ### Dependencies
