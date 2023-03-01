@@ -1,3 +1,11 @@
+## [@packasso/build-ts-tsc@0.14.4](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.build-ts-tsc.0.14.3-f0...2023.3.1-packasso.build-ts-tsc.0.14.4-f0) (2023-03-01)
+
+### Fixes & improvements
+* fix: publish bin [452b9d2](https://github.com/qiwi/packasso/commit/452b9d2542430d08e037dc9ff2db44fbf55f2a1f)
+
+### Dependencies
+* perf: @packasso/core updated to 0.15.3
+
 ## [@packasso/build-ts-tsc@0.14.3](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.build-ts-tsc.0.14.2-f0...2023.3.1-packasso.build-ts-tsc.0.14.3-f0) (2023-03-01)
 
 ### Fixes & improvements
