@@ -39,6 +39,14 @@ export const concurrentlyCommands = (
         : command,
     )
     .flatMap((command) =>
+      command.command.startsWith('!')
+        ? {
+            ...command,
+            command: command.command.slice(1).trim(),
+          }
+        : command,
+    )
+    .flatMap((command) =>
       (command.cwd ? [pkg] : pkg.type === PackageType.TREE ? pkgs : [pkg]).map(
         (pkg) => ({
           ...command,

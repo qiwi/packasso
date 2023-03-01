@@ -15,6 +15,7 @@ import {
   getModuleResourcesDir,
   getModuleVersion,
   loadModule,
+  ModuleCommand,
   ModuleInstallResource,
 } from './module'
 import { ExtraPackageEntry, getExtraTopo, PackageType } from './topo'
@@ -67,6 +68,12 @@ export const installModule = async (
 ) => {
   const { install, build, test, lint, format } = await loadModule(module)
   const res = getModuleResourcesDir(module, root, development)
+  const commands: Partial<Record<string, ModuleCommand>> = {
+    build,
+    test,
+    lint,
+    format,
+  }
   let resources: ModuleInstallResource[] = development
     ? []
     : [
@@ -74,8 +81,8 @@ export const installModule = async (
           path: 'package.json',
           data: {
             scripts: Object.fromEntries(
-              Object.keys({ build, test, lint, format })
-                .filter(Boolean)
+              Object.keys(commands)
+                .filter((command) => commands[command])
                 .map((command) => [command, `packasso ${command}`]),
             ),
             devDependencies:

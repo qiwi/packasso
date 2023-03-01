@@ -4,9 +4,6 @@
     "@packasso/core": "workspace:*",
     "tsm": "2.3.0"
   },
-  "bin": {
-    "tsm": "./node_modules/.bin/tsm"
-  },
   "exports": {
     ".": {
       "development": "./src/main/ts/index.ts",

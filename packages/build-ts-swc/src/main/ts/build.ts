@@ -1,12 +1,12 @@
 import { ModuleCommand } from '@packasso/core'
 
-export const build: ModuleCommand = async (pkg) => ({
+export const build: ModuleCommand = async () => ({
   commands: [
     'rimraf target/cjs target/esm target/dts',
     [
       'swc src -d target/cjs.tmp/src --source-maps --no-swcrc --config-file swc.cjs.json',
       'swc src -d target/esm.tmp/src --source-maps --no-swcrc --config-file swc.esm.json',
-      { command: 'tsc -b tsconfig.dts.json', cwd: pkg.absPath },
+      '! tsc -b tsconfig.dts.json',
     ],
     [
       'globby-cp target/cjs.tmp/src/main/ts target/cjs',
