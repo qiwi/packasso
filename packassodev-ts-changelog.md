@@ -1,3 +1,8 @@
+## [@packasso/dev-ts@0.15.2](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.dev-ts.0.15.1-f0...2023.3.1-packasso.dev-ts.0.15.2-f0) (2023-03-01)
+
+### Dependencies
+* perf: @packasso/core updated to 0.15.2
+
 ## [@packasso/dev-ts@0.15.1](https://github.com/qiwi/packasso/compare/2023.2.28-packasso.dev-ts.0.15.0-f0...2023.2.28-packasso.dev-ts.0.15.1-f0) (2023-02-28)
 
 ### Dependencies
