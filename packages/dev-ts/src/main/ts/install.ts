@@ -3,7 +3,7 @@ import { getPaths, ModuleInstall, PackageType } from '@packasso/core'
 export const install: ModuleInstall = async (pkg, root) => {
   switch (pkg.type) {
     case PackageType.UNIT:
-    case PackageType.LEAF: {
+    case PackageType.LEAF:
       return {
         resources: [
           {
@@ -16,11 +16,9 @@ export const install: ModuleInstall = async (pkg, root) => {
           },
         ],
       }
-    }
-    case PackageType.TREE: {
+    case PackageType.TREE:
       return {
         remove: ['tsconfig.json'],
       }
-    }
   }
 }
