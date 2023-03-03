@@ -6,10 +6,11 @@ import { execute as build } from './build'
 import { execute as format } from './format'
 import { execute as install } from './install'
 import { execute as lint } from './lint'
+import { execute as purge } from './purge'
 import { execute as test } from './test'
 import { execute as uninstall } from './uninstall'
 
-const commands = { install, uninstall, build, test, lint, format }
+const commands = { install, uninstall, purge, build, test, lint, format }
 
 type Command = keyof typeof commands
 
@@ -28,6 +29,7 @@ execute(argv[2] as Command)
     exit(0)
   })
   // eslint-disable-next-line unicorn/prefer-top-level-await
-  .catch(() => {
+  .catch((e) => {
+    log(e)
     exit(1)
   })

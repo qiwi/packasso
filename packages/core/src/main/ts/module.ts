@@ -4,15 +4,10 @@ import { ConcurrentlyCommandInput } from 'concurrently'
 
 import { ExtraPackageEntry } from './topo'
 
-export interface ModuleInstallResource {
+export type ModuleInstallResult = {
   path: string
   data: string | object
-}
-
-export interface ModuleInstallResult {
-  resources?: ModuleInstallResource[]
-  remove?: string[]
-}
+}[]
 
 export interface ModuleInstall {
   (
@@ -23,9 +18,16 @@ export interface ModuleInstall {
   ): Promise<ModuleInstallResult | void>
 }
 
-export interface ModuleCommandResult {
-  commands?: (ConcurrentlyCommandInput | ConcurrentlyCommandInput[])[]
+export type ModulePurgeResult = string[]
+
+export interface ModulePurge {
+  (pkg: ExtraPackageEntry): Promise<ModulePurgeResult | void>
 }
+
+export type ModuleCommandResult = (
+  | ConcurrentlyCommandInput
+  | ConcurrentlyCommandInput[]
+)[]
 
 export interface ModuleCommand {
   (
@@ -36,6 +38,7 @@ export interface ModuleCommand {
 
 export interface Module {
   install?: ModuleInstall
+  purge?: ModulePurge
   build?: ModuleCommand
   test?: ModuleCommand
   lint?: ModuleCommand

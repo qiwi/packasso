@@ -9,13 +9,12 @@ import {
   readText,
   revertJson,
   revertText,
-  rmGlob,
 } from './copy'
 import {
   getModuleResourcesDir,
   loadModule,
   ModuleCommand,
-  ModuleInstallResource,
+  ModuleInstallResult,
 } from './module'
 import { ExtraPackageEntry, getExtraTopo, PackageType } from './topo'
 
@@ -73,7 +72,7 @@ export const installModule = async (
     lint,
     format,
   }
-  let resources: ModuleInstallResource[] = development
+  let result: ModuleInstallResult = development
     ? []
     : [
         {
@@ -95,30 +94,19 @@ export const installModule = async (
       absolute: true,
       onlyFiles: true,
     }).forEach((path) => {
-      resources.push({
+      result.push({
         path: relative(cwd, special(path)),
         data: (path.endsWith('.json') ? readJson : readText)(path),
       })
     })
   })
   if (install) {
-    const result = await install(pkg, root, development, uninstall)
-    resources = [...resources, ...(result?.resources || [])]
-    if (result?.remove) {
-      result.remove.forEach((pattern) => {
-        rmGlob(pkg.absPath, pattern)
-      })
-    }
+    result = [
+      ...result,
+      ...((await install(pkg, root, development, uninstall)) || []),
+    ]
   }
-  installModuleResources(pkg, uninstall, resources)
-}
-
-const installModuleResources = (
-  pkg: ExtraPackageEntry,
-  uninstall: boolean,
-  resources: ModuleInstallResource[],
-) => {
-  resources.forEach(({ path, data }) => {
+  result.forEach(({ path, data }) => {
     const absPath = resolve(pkg.absPath, path)
     if (typeof data === 'string') {
       uninstall ? revertText(absPath, data) : applyText(absPath, data)

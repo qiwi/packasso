@@ -14,10 +14,10 @@ export const concurrentlyResult = async (
   pkg: ExtraPackageEntry,
   pkgs: ExtraPackageEntry[],
 ) => {
-  if (!result?.commands) {
+  if (!result) {
     return
   }
-  for (const commands of result.commands) {
+  for (const commands of result) {
     await concurrently(concurrentlyCommands(commands, pkg, pkgs), {
       prefixColors: ['auto'],
     }).result
