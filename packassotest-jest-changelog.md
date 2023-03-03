@@ -1,3 +1,8 @@
+## [@packasso/test-jest@0.15.7](https://github.com/qiwi/packasso/compare/2023.3.3-packasso.test-jest.0.15.6-f0...2023.3.3-packasso.test-jest.0.15.7-f0) (2023-03-03)
+
+### Fixes & improvements
+* fix: up deps [15df227](https://github.com/qiwi/packasso/commit/15df227efbaac7684f4e5946a154c498ba34e53b)
+
 ## [@packasso/test-jest@0.15.6](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.test-jest.0.15.5-f0...2023.3.3-packasso.test-jest.0.15.6-f0) (2023-03-03)
 
 ### Fixes & improvements
