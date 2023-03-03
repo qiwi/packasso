@@ -1,3 +1,11 @@
+## [@packasso/dev-license@0.8.5](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.dev-license.0.8.4-f0...2023.3.3-packasso.dev-license.0.8.5-f0) (2023-03-03)
+
+### Fixes & improvements
+* fix: up deps [c5bac99](https://github.com/qiwi/packasso/commit/c5bac994fcf54db46b9d10c030922170f27b1a31)
+
+### Dependencies
+* perf: @packasso/core updated to 0.15.5
+
 ## [@packasso/dev-license@0.8.4](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.dev-license.0.8.3-f0...2023.3.1-packasso.dev-license.0.8.4-f0) (2023-03-01)
 
 ### Fixes & improvements
