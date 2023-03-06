@@ -1,3 +1,8 @@
+## [@packasso/dev-packasso@0.4.7](https://github.com/qiwi/packasso/compare/2023.3.3-packasso.dev-packasso.0.4.6-f0...2023.3.6-packasso.dev-packasso.0.4.7-f0) (2023-03-06)
+
+### Dependencies
+* perf: @packasso/core updated to 0.16.0
+
 ## [@packasso/dev-packasso@0.4.6](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.dev-packasso.0.4.5-f0...2023.3.3-packasso.dev-packasso.0.4.6-f0) (2023-03-03)
 
 ### Fixes & improvements
