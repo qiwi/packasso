@@ -1,21 +1,12 @@
 import { ModuleCommand, PackageType } from '@packasso/core'
 
-export const format: ModuleCommand = async (pkg, pkgs) => ({
-  commands:
+export const format: ModuleCommand = async (pkg, pkgs) => {
+  const paths =
     pkg.type === PackageType.TREE
-      ? [
-          {
-            command: `eslint --fix ${pkgs
-              .map(({ relPath }) => `${relPath}/src`)
-              .join(' ')}`,
-            cwd: pkg.absPath,
-          },
-          {
-            command: `prettier --loglevel warn --write ${pkgs
-              .map(({ relPath }) => `${relPath}/src`)
-              .join(' ')}`,
-            cwd: pkg.absPath,
-          },
-        ]
-      : ['eslint --fix src', 'prettier --loglevel warn --write src'],
-})
+      ? pkgs.map(({ relPath }) => `${relPath}/src`).join(' ')
+      : 'src'
+  return [
+    `! eslint --fix ${paths}`,
+    `! prettier --loglevel warn --write ${paths}`,
+  ]
+}

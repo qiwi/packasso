@@ -1,4 +1,5 @@
 export * from './install'
+export * from './purge'
 export * from './build'
 export * from './test'
 export * from './lint'
