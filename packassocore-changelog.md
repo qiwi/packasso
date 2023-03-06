@@ -1,3 +1,8 @@
+## [@packasso/core@0.16.0](https://github.com/qiwi/packasso/compare/2023.3.3-packasso.core.0.15.5-f0...2023.3.6-packasso.core.0.16.0-f0) (2023-03-06)
+
+### Features
+* feat: purge (#21) [365c4f8](https://github.com/qiwi/packasso/commit/365c4f83c08fe08baf9f8c4ac062452b81effc61)
+
 ## [@packasso/core@0.15.5](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.core.0.15.4-f0...2023.3.3-packasso.core.0.15.5-f0) (2023-03-03)
 
 ### Fixes & improvements
