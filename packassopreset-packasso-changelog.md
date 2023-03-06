@@ -1,3 +1,8 @@
+## [@packasso/preset-packasso@0.5.1](https://github.com/qiwi/packasso/compare/2023.3.6-packasso.preset-packasso.0.5.0-f0...2023.3.6-packasso.preset-packasso.0.5.1-f0) (2023-03-06)
+
+### Dependencies
+* perf: @packasso/preset-ts-tsc-uvu updated to 0.16.1
+
 ## [@packasso/preset-packasso@0.5.0](https://github.com/qiwi/packasso/compare/2023.3.3-packasso.preset-packasso.0.4.6-f0...2023.3.6-packasso.preset-packasso.0.5.0-f0) (2023-03-06)
 
 ### Features
