@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/build-ts-swc",
+  "hash": "365c4f83c08fe08baf9f8c4ac062452b81effc61",
+  "version": "0.16.0",
+  "dependencies": {
+    "@packasso/core": "0.16.0"
+  }
+}
