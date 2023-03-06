@@ -1,3 +1,13 @@
+## [@packasso/preset-packasso@0.5.0](https://github.com/qiwi/packasso/compare/2023.3.3-packasso.preset-packasso.0.4.6-f0...2023.3.6-packasso.preset-packasso.0.5.0-f0) (2023-03-06)
+
+### Features
+* feat: purge (#21) [365c4f8](https://github.com/qiwi/packasso/commit/365c4f83c08fe08baf9f8c4ac062452b81effc61)
+
+### Dependencies
+* perf: @packasso/core updated to 0.16.0
+* perf: @packasso/dev-packasso updated to 0.4.7
+* perf: @packasso/preset-ts-tsc-uvu updated to 0.16.0
+
 ## [@packasso/preset-packasso@0.4.6](https://github.com/qiwi/packasso/compare/2023.3.1-packasso.preset-packasso.0.4.5-f0...2023.3.3-packasso.preset-packasso.0.4.6-f0) (2023-03-03)
 
 ### Fixes & improvements
