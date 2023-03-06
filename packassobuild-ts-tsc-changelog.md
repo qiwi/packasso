@@ -1,3 +1,8 @@
+## [@packasso/build-ts-tsc@0.15.1](https://github.com/qiwi/packasso/compare/2023.3.6-packasso.build-ts-tsc.0.15.0-f0...2023.3.6-packasso.build-ts-tsc.0.15.1-f0) (2023-03-06)
+
+### Fixes & improvements
+* fix: more not less [fcd353a](https://github.com/qiwi/packasso/commit/fcd353a6b579c1a48c8af6fb3275d8b71548a084)
+
 ## [@packasso/build-ts-tsc@0.15.0](https://github.com/qiwi/packasso/compare/2023.3.3-packasso.build-ts-tsc.0.14.6-f0...2023.3.6-packasso.build-ts-tsc.0.15.0-f0) (2023-03-06)
 
 ### Features
