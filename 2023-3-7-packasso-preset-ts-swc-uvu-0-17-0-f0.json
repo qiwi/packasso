@@ -1,0 +1,17 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/preset-ts-swc-uvu",
+  "hash": "e792d336e83fc3c851e1541d2f6bed8560fa35f4",
+  "version": "0.17.0",
+  "dependencies": {
+    "@packasso/build-resources": "0.16.0",
+    "@packasso/build-ts-swc": "0.17.0",
+    "@packasso/core": "0.17.0",
+    "@packasso/dev-license": "0.10.0",
+    "@packasso/dev-ts": "0.17.0",
+    "@packasso/release-zx-semrel": "0.16.0",
+    "@packasso/style-eslint": "0.1.0",
+    "@packasso/style-prettier": "0.1.0",
+    "@packasso/test-uvu": "0.17.0"
+  }
+}
