@@ -1,10 +1,7 @@
-import { ModulePurge } from '@packasso/core'
+import { ModulePurge, purgePackage } from '@packasso/core'
 
-export const purge: ModulePurge = async () => [
-  '.eslintrc',
-  '.eslintrc.*',
-  'eslint.config.*',
-  '.prettierrc',
-  '.prettierrc.*',
-  'prettier.config.*',
-]
+import { modules } from './modules'
+
+export const purge: ModulePurge = async (pkg) => {
+  await purgePackage(pkg, modules)
+}

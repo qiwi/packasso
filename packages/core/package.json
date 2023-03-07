@@ -27,6 +27,7 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
+  "version": "0.0.0",
   "license": "MIT",
   "devDependencies": {
     "c8": "7.13.0",
@@ -51,17 +52,8 @@
     "target/esm/**/*",
     "target/resources/**/*"
   ],
-  "eslintConfig": {
-    "extends": "eslint-config-qiwi"
-  },
-  "prettier": "prettier-config-qiwi",
-  "version": "0.0.0",
   "publishConfig": {
     "access": "public"
-  },
-  "release": {
-    "cmd": "yarn",
-    "changelog": "changelog"
   },
   "scripts": {
     "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts"

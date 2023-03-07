@@ -14,6 +14,12 @@
   "references": [
     {
       "path": "../core/tsconfig.esm.json"
+    },
+    {
+      "path": "../style-eslint/tsconfig.esm.json"
+    },
+    {
+      "path": "../style-prettier/tsconfig.esm.json"
     }
   ]
 }

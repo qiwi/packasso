@@ -577,7 +577,8 @@ __metadata:
     "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
     "@packasso/release-zx-semrel": "workspace:*"
-    "@packasso/style-eslint-prettier": "workspace:*"
+    "@packasso/style-eslint": "workspace:*"
+    "@packasso/style-prettier": "workspace:*"
     "@packasso/test-uvu": "workspace:*"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
@@ -604,7 +605,8 @@ __metadata:
     "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
     "@packasso/release-zx-semrel": "workspace:*"
-    "@packasso/style-eslint-prettier": "workspace:*"
+    "@packasso/style-eslint": "workspace:*"
+    "@packasso/style-prettier": "workspace:*"
     "@packasso/test-jest": "workspace:*"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
@@ -631,7 +633,8 @@ __metadata:
     "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
     "@packasso/release-zx-semrel": "workspace:*"
-    "@packasso/style-eslint-prettier": "workspace:*"
+    "@packasso/style-eslint": "workspace:*"
+    "@packasso/style-prettier": "workspace:*"
     "@packasso/test-uvu": "workspace:*"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
@@ -668,9 +671,51 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/style-eslint-prettier@workspace:*, @packasso/style-eslint-prettier@workspace:packages/style-eslint-prettier":
+"@packasso/style-eslint-prettier@workspace:packages/style-eslint-prettier":
   version: 0.0.0-use.local
   resolution: "@packasso/style-eslint-prettier@workspace:packages/style-eslint-prettier"
+  dependencies:
+    "@packasso/core": "workspace:*"
+    "@packasso/style-eslint": "workspace:*"
+    "@packasso/style-prettier": "workspace:*"
+    c8: "npm:7.13.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.35.0"
+    eslint-config-qiwi: "npm:2.0.9"
+    globby-cp: "npm:1.1.3"
+    prettier: "npm:2.8.4"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:4.2.0"
+    tsc-esm-fix: "npm:2.20.12"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.5"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@packasso/style-eslint@workspace:*, @packasso/style-eslint@workspace:packages/style-eslint":
+  version: 0.0.0-use.local
+  resolution: "@packasso/style-eslint@workspace:packages/style-eslint"
+  dependencies:
+    "@packasso/core": "workspace:*"
+    c8: "npm:7.13.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.35.0"
+    eslint-config-qiwi: "npm:2.0.9"
+    globby-cp: "npm:1.1.3"
+    prettier: "npm:2.8.4"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:4.2.0"
+    tsc-esm-fix: "npm:2.20.12"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.5"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@packasso/style-prettier@workspace:*, @packasso/style-prettier@workspace:packages/style-prettier":
+  version: 0.0.0-use.local
+  resolution: "@packasso/style-prettier@workspace:packages/style-prettier"
   dependencies:
     "@packasso/core": "workspace:*"
     c8: "npm:7.13.0"

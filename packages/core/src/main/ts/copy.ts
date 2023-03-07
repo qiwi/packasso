@@ -68,7 +68,11 @@ export const revertText: (path: string, ...text: string[]) => void = (
 
 export const readJson: (path: string) => object = (path) => {
   try {
-    return JSON.parse(readText(path))
+    const json = JSON.parse(readText(path))
+    if (typeof json === 'string') {
+      return `"${json}"`
+    }
+    return json
   } catch {
     return {}
   }

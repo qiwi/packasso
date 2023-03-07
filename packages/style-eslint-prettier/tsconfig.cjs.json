@@ -17,6 +17,12 @@
   "references": [
     {
       "path": "../core/tsconfig.cjs.json"
+    },
+    {
+      "path": "../style-eslint/tsconfig.cjs.json"
+    },
+    {
+      "path": "../style-prettier/tsconfig.cjs.json"
     }
   ]
 }

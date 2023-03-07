@@ -31,8 +31,11 @@
       "@packasso/release-zx-semrel": [
         "../release-zx-semrel/src/main/ts"
       ],
-      "@packasso/style-eslint-prettier": [
-        "../style-eslint-prettier/src/main/ts"
+      "@packasso/style-eslint": [
+        "../style-eslint/src/main/ts"
+      ],
+      "@packasso/style-prettier": [
+        "../style-prettier/src/main/ts"
       ],
       "@packasso/test-jest": [
         "../test-jest/src/main/ts"
