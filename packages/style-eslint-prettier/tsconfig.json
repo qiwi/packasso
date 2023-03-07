@@ -15,6 +15,12 @@
     "paths": {
       "@packasso/core": [
         "../core/src/main/ts"
+      ],
+      "@packasso/style-eslint": [
+        "../style-eslint/src/main/ts"
+      ],
+      "@packasso/style-prettier": [
+        "../style-prettier/src/main/ts"
       ]
     }
   },

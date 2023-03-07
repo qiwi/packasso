@@ -43,7 +43,13 @@
       "path": "./packages/release-zx-semrel/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/style-eslint/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/style-eslint-prettier/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/style-prettier/tsconfig.cjs.json"
     },
     {
       "path": "./packages/test-jest/tsconfig.cjs.json"

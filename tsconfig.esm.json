@@ -43,7 +43,13 @@
       "path": "./packages/release-zx-semrel/tsconfig.esm.json"
     },
     {
+      "path": "./packages/style-eslint/tsconfig.esm.json"
+    },
+    {
       "path": "./packages/style-eslint-prettier/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/style-prettier/tsconfig.esm.json"
     },
     {
       "path": "./packages/test-jest/tsconfig.esm.json"

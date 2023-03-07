@@ -29,7 +29,6 @@ execute(argv[2] as Command)
     exit(0)
   })
   // eslint-disable-next-line unicorn/prefer-top-level-await
-  .catch((e) => {
-    log(e)
+  .catch(() => {
     exit(1)
   })

@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "eslint": "8.35.0",
+    "eslint-config-qiwi": "2.0.9"
+  }
+}
