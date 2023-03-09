@@ -1,3 +1,8 @@
-import { ModuleCommand } from '@packasso/core'
+import { argv } from 'node:process'
 
-export const test: ModuleCommand = async () => ['! jest']
+import { ModuleCommand } from '@packasso/core'
+import minimist from 'minimist'
+
+export const test: ModuleCommand = async () => [
+  `! jest ${minimist(argv).u ? '-u' : ''}`,
+]
