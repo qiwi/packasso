@@ -1,3 +1,8 @@
+## [@packasso/style-eslint-prettier@0.16.1](https://github.com/qiwi/packasso/compare/2023.3.7-packasso.style-eslint-prettier.0.16.0-f0...2023.3.9-packasso.style-eslint-prettier.0.16.1-f0) (2023-03-09)
+
+### Fixes & improvements
+* fix: remove unused [99bed88](https://github.com/qiwi/packasso/commit/99bed887718d41ff56b9e25689f3474d9ef8d14c)
+
 ## [@packasso/style-eslint-prettier@0.16.0](https://github.com/qiwi/packasso/compare/2023.3.6-packasso.style-eslint-prettier.0.15.1-f0...2023.3.7-packasso.style-eslint-prettier.0.16.0-f0) (2023-03-07)
 
 ### Features
