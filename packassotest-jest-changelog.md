@@ -1,3 +1,8 @@
+## [@packasso/test-jest@0.17.2](https://github.com/qiwi/packasso/compare/2023.3.9-packasso.test-jest.0.17.1-f0...2023.3.9-packasso.test-jest.0.17.2-f0) (2023-03-09)
+
+### Fixes & improvements
+* fix: jest no inject globals [8ce6ebf](https://github.com/qiwi/packasso/commit/8ce6ebf95f47f1c879e754986871821cb6c9f007)
+
 ## [@packasso/test-jest@0.17.1](https://github.com/qiwi/packasso/compare/2023.3.7-packasso.test-jest.0.17.0-f0...2023.3.9-packasso.test-jest.0.17.1-f0) (2023-03-09)
 
 ### Fixes & improvements
