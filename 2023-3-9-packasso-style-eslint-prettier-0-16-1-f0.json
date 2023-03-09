@@ -1,0 +1,11 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/style-eslint-prettier",
+  "hash": "99bed887718d41ff56b9e25689f3474d9ef8d14c",
+  "version": "0.16.1",
+  "dependencies": {
+    "@packasso/core": "0.17.0",
+    "@packasso/style-eslint": "0.1.0",
+    "@packasso/style-prettier": "0.1.0"
+  }
+}
