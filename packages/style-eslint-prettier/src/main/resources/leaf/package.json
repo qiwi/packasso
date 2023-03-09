@@ -1,6 +1,0 @@
-{
-  "eslintConfig": {
-    "extends": "eslint-config-qiwi"
-  },
-  "prettier": "prettier-config-qiwi"
-}
