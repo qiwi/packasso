@@ -1,3 +1,8 @@
+## [@packasso/test-uvu@0.17.1](https://github.com/qiwi/packasso/compare/2023.3.7-packasso.test-uvu.0.17.0-f0...2023.3.9-packasso.test-uvu.0.17.1-f0) (2023-03-09)
+
+### Fixes & improvements
+* fix: test update snapshots [797bdce](https://github.com/qiwi/packasso/commit/797bdcec30e5a51777561d8be64f4ccdd50e0925)
+
 ## [@packasso/test-uvu@0.17.0](https://github.com/qiwi/packasso/compare/2023.3.6-packasso.test-uvu.0.16.1-f0...2023.3.7-packasso.test-uvu.0.17.0-f0) (2023-03-07)
 
 ### Features
