@@ -7,6 +7,5 @@
     "rootDir": "./src/main/ts",
     "declarationDir": "./target/dts",
     "tsBuildInfoFile": "./target/dts/.tsbuildinfo"
-  },
-  "include": ["./src/main/ts"]
+  }
 }
