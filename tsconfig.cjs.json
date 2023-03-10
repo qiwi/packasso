@@ -28,6 +28,9 @@
       "path": "./packages/dev-ts/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/jest-snapshot-resolver/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/preset-packasso/tsconfig.cjs.json"
     },
     {

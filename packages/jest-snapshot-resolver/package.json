@@ -1,18 +1,6 @@
 {
-  "name": "@packasso/test-jest",
-  "dependencies": {
-    "@packasso/core": "workspace:*",
-    "@packasso/jest-snapshot-resolver": "workspace:*"
-  },
-  "exports": {
-    ".": {
-      "development": "./src/main/ts/index.ts",
-      "require": "./target/cjs/index.cjs",
-      "import": "./target/esm/index.mjs",
-      "types": "./target/esm/index.d.ts"
-    },
-    "./package.json": "./package.json"
-  },
+  "name": "@packasso/jest-snapshot-resolver",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qiwi/packasso.git"
@@ -21,7 +9,6 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
-  "version": "0.0.0",
   "license": "MIT",
   "devDependencies": {
     "c8": "7.13.0",
@@ -41,6 +28,14 @@
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",
   "types": "./target/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "types": "./target/esm/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "target/cjs/**/*",
     "target/esm/**/*",

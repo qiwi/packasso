@@ -11,12 +11,5 @@
   "include": [
     "./src/main/ts"
   ],
-  "references": [
-    {
-      "path": "../core/tsconfig.esm.json"
-    },
-    {
-      "path": "../jest-snapshot-resolver/tsconfig.esm.json"
-    }
-  ]
+  "references": []
 }

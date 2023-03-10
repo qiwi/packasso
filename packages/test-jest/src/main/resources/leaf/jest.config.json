@@ -7,6 +7,7 @@
   "collectCoverageFrom": ["<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"],
   "coverageDirectory": "<rootDir>/target/coverage",
   "coveragePathIgnorePatterns": ["<rootDir>/node_modules", "<rootDir>/target"],
+  "snapshotResolver": "@packasso/jest-snapshot-resolver",
   "transform": {
     "^.+\\.[jt]sx?$": [
       "@swc/jest",

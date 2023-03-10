@@ -28,6 +28,9 @@
       "path": "./packages/dev-ts/tsconfig.esm.json"
     },
     {
+      "path": "./packages/jest-snapshot-resolver/tsconfig.esm.json"
+    },
+    {
       "path": "./packages/preset-packasso/tsconfig.esm.json"
     },
     {
