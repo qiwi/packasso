@@ -11,9 +11,6 @@
     "outDir": "./target/cjs",
     "tsBuildInfoFile": "./target/cjs/.tsbuildinfo"
   },
-  "include": [
-    "./src/main/ts"
-  ],
   "references": [
     {
       "path": "../build-resources/tsconfig.cjs.json"

@@ -8,8 +8,5 @@
     "outDir": "./target/esm",
     "tsBuildInfoFile": "./target/esm/.tsbuildinfo"
   },
-  "include": [
-    "./src/main/ts"
-  ],
   "references": []
 }
