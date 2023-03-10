@@ -1,3 +1,8 @@
+## [@packasso/core@0.17.1](https://github.com/qiwi/packasso/compare/2023.3.7-packasso.core.0.17.0-f0...2023.3.10-packasso.core.0.17.1-f0) (2023-03-10)
+
+### Fixes & improvements
+* fix: move tsconfig include [e9792c6](https://github.com/qiwi/packasso/commit/e9792c6a6628f1805582d1fcfa388b176adce7b0)
+
 ## [@packasso/core@0.17.0](https://github.com/qiwi/packasso/compare/2023.3.6-packasso.core.0.16.0-f0...2023.3.7-packasso.core.0.17.0-f0) (2023-03-07)
 
 ### Features
