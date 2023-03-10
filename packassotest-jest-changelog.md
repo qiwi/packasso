@@ -1,3 +1,11 @@
+## [@packasso/test-jest@0.18.0](https://github.com/qiwi/packasso/compare/2023.3.9-packasso.test-jest.0.17.2-f0...2023.3.10-packasso.test-jest.0.18.0-f0) (2023-03-10)
+
+### Features
+* feat: jest snapshot resolver (#23) [3acb0f2](https://github.com/qiwi/packasso/commit/3acb0f21a51e7a528ebf00e331b7bfb17188fa02)
+
+### Dependencies
+* perf: @packasso/jest-snapshot-resolver updated to 0.1.0
+
 ## [@packasso/test-jest@0.17.2](https://github.com/qiwi/packasso/compare/2023.3.9-packasso.test-jest.0.17.1-f0...2023.3.9-packasso.test-jest.0.17.2-f0) (2023-03-09)
 
 ### Fixes & improvements
