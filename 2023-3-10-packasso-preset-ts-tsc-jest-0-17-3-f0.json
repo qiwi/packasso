@@ -1,0 +1,17 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/preset-ts-tsc-jest",
+  "hash": "3acb0f21a51e7a528ebf00e331b7bfb17188fa02",
+  "version": "0.17.3",
+  "dependencies": {
+    "@packasso/build-resources": "0.16.0",
+    "@packasso/build-ts-tsc": "0.16.0",
+    "@packasso/core": "0.17.0",
+    "@packasso/dev-license": "0.10.0",
+    "@packasso/dev-ts": "0.17.0",
+    "@packasso/release-zx-semrel": "0.16.0",
+    "@packasso/style-eslint": "0.1.0",
+    "@packasso/style-prettier": "0.1.0",
+    "@packasso/test-jest": "0.18.0"
+  }
+}
