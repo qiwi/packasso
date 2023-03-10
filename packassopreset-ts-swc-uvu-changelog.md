@@ -1,3 +1,8 @@
+## [@packasso/preset-ts-swc-uvu@0.17.3](https://github.com/qiwi/packasso/compare/2023.3.10-packasso.preset-ts-swc-uvu.0.17.2-f0...2023.3.10-packasso.preset-ts-swc-uvu.0.17.3-f0) (2023-03-10)
+
+### Dependencies
+* perf: @packasso/build-ts-swc updated to 0.17.2
+
 ## [@packasso/preset-ts-swc-uvu@0.17.2](https://github.com/qiwi/packasso/compare/2023.3.9-packasso.preset-ts-swc-uvu.0.17.1-f0...2023.3.10-packasso.preset-ts-swc-uvu.0.17.2-f0) (2023-03-10)
 
 ### Fixes & improvements
