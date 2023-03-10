@@ -1,3 +1,19 @@
+## [@packasso/preset-ts-swc-uvu@0.17.2](https://github.com/qiwi/packasso/compare/2023.3.9-packasso.preset-ts-swc-uvu.0.17.1-f0...2023.3.10-packasso.preset-ts-swc-uvu.0.17.2-f0) (2023-03-10)
+
+### Fixes & improvements
+* fix: move tsconfig include [e9792c6](https://github.com/qiwi/packasso/commit/e9792c6a6628f1805582d1fcfa388b176adce7b0)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.16.1
+* perf: @packasso/build-ts-swc updated to 0.17.1
+* perf: @packasso/core updated to 0.17.1
+* perf: @packasso/dev-license updated to 0.10.1
+* perf: @packasso/dev-ts updated to 0.17.1
+* perf: @packasso/release-zx-semrel updated to 0.16.1
+* perf: @packasso/style-eslint updated to 0.1.1
+* perf: @packasso/style-prettier updated to 0.1.1
+* perf: @packasso/test-uvu updated to 0.17.2
+
 ## [@packasso/preset-ts-swc-uvu@0.17.1](https://github.com/qiwi/packasso/compare/2023.3.7-packasso.preset-ts-swc-uvu.0.17.0-f0...2023.3.9-packasso.preset-ts-swc-uvu.0.17.1-f0) (2023-03-09)
 
 ### Dependencies
