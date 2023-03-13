@@ -1,9 +1,7 @@
 {
-  "name": "@packasso/style-eslint-prettier",
+  "name": "@packasso/buildstamp",
   "dependencies": {
-    "@packasso/core": "workspace:*",
-    "@packasso/style-eslint": "workspace:*",
-    "@packasso/style-prettier": "workspace:*"
+    "@packasso/core": "workspace:*"
   },
   "exports": {
     ".": {

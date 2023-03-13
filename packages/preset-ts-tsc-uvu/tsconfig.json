@@ -19,6 +19,9 @@
       "@packasso/build-ts-tsc": [
         "../build-ts-tsc/src/main/ts"
       ],
+      "@packasso/buildstamp": [
+        "../buildstamp/src/main/ts"
+      ],
       "@packasso/core": [
         "../core/src/main/ts"
       ],

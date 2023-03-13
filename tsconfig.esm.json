@@ -16,6 +16,9 @@
       "path": "./packages/build-typedoc/tsconfig.esm.json"
     },
     {
+      "path": "./packages/buildstamp/tsconfig.esm.json"
+    },
+    {
       "path": "./packages/cli/tsconfig.esm.json"
     },
     {

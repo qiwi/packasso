@@ -16,6 +16,9 @@
       "path": "../build-ts-swc/tsconfig.esm.json"
     },
     {
+      "path": "../buildstamp/tsconfig.esm.json"
+    },
+    {
       "path": "../core/tsconfig.esm.json"
     },
     {

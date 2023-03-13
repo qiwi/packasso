@@ -19,6 +19,9 @@
       "@packasso/build-ts-swc": [
         "../build-ts-swc/src/main/ts"
       ],
+      "@packasso/buildstamp": [
+        "../buildstamp/src/main/ts"
+      ],
       "@packasso/core": [
         "../core/src/main/ts"
       ],

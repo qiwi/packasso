@@ -1,4 +1,5 @@
 export const modules = [
+  '@packasso/buildstamp',
   '@packasso/dev-license',
   '@packasso/dev-ts',
   '@packasso/build-ts-tsc',

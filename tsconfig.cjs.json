@@ -16,6 +16,9 @@
       "path": "./packages/build-typedoc/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/buildstamp/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/cli/tsconfig.cjs.json"
     },
     {

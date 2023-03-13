@@ -12,6 +12,7 @@
   "dependencies": {
     "@packasso/build-resources": "workspace:*",
     "@packasso/build-ts-swc": "workspace:*",
+    "@packasso/buildstamp": "workspace:*",
     "@packasso/core": "workspace:*",
     "@packasso/dev-license": "workspace:*",
     "@packasso/dev-ts": "workspace:*",
@@ -29,8 +30,14 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "version": "0.0.0",
-  "license": "MIT",
+  "files": [
+    "target/buildstamp.json",
+    "target/cjs/**/*",
+    "target/esm/**/*",
+    "target/resources/**/*"
+  ],
   "devDependencies": {
+    "buildstamp": "2.1.1",
     "c8": "7.13.0",
     "earljs": "0.2.3",
     "eslint": "8.35.0",
@@ -44,15 +51,11 @@
     "typescript": "4.9.5",
     "uvu": "0.5.6"
   },
+  "license": "MIT",
   "type": "module",
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",
   "types": "./target/esm/index.d.ts",
-  "files": [
-    "target/cjs/**/*",
-    "target/esm/**/*",
-    "target/resources/**/*"
-  ],
   "publishConfig": {
     "access": "public"
   },
