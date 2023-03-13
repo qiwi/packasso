@@ -1,7 +1,7 @@
 export const modules = [
-  '@packasso/buildstamp',
   '@packasso/dev-license',
   '@packasso/dev-ts',
+  '@packasso/buildstamp',
   '@packasso/build-ts-tsc',
   '@packasso/build-resources',
   '@packasso/style-eslint',
