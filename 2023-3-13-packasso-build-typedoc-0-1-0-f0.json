@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/build-typedoc",
+  "hash": "4ed65136f549792f3f9a4d65a361ef0f6fdcf4b2",
+  "version": "0.1.0",
+  "dependencies": {
+    "@packasso/core": "0.17.1"
+  }
+}
