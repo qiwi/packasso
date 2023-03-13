@@ -1,0 +1,9 @@
+{
+  "out": "./target/docs",
+  "entryPoints": ["./src/main/ts"],
+  "excludeExternals": true,
+  "excludePrivate": false,
+  "hideGenerator": true,
+  "readme": "README.md",
+  "theme": "default"
+}
