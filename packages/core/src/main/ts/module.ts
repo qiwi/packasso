@@ -43,6 +43,7 @@ export interface Module {
   test?: ModuleCommand
   lint?: ModuleCommand
   format?: ModuleCommand
+  release?: ModuleCommand
 }
 
 export const loadModule: (name: string) => Promise<Module> = async (name) => {

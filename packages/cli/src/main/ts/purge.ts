@@ -1,7 +1,7 @@
 import { cwd } from 'node:process'
 
-import { getRootDir, purge } from '@packasso/core'
+import { purge as execute, getRootDir } from '@packasso/core'
 
-export const execute: () => Promise<unknown> = async () => {
-  await purge(getRootDir(cwd()))
+export const purge: () => Promise<unknown> = async () => {
+  await execute(getRootDir(cwd()))
 }
