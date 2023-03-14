@@ -1,3 +1,8 @@
+## [@packasso/test-uvu@0.17.4](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.test-uvu.0.17.3-f0...2023.3.14-packasso.test-uvu.0.17.4-f0) (2023-03-14)
+
+### Dependencies
+* perf: @packasso/core updated to 0.18.0
+
 ## [@packasso/test-uvu@0.17.3](https://github.com/qiwi/packasso/compare/2023.3.10-packasso.test-uvu.0.17.2-f0...2023.3.14-packasso.test-uvu.0.17.3-f0) (2023-03-14)
 
 ### Fixes & improvements
