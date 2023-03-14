@@ -5,7 +5,7 @@ import minimist from 'minimist'
 
 const { conditions } = minimist(execArgv)
 
-export const execute: () => Promise<unknown> = async () =>
+export const uninstall: () => Promise<unknown> = async () =>
   await install(
     getRootDir(cwd()),
     [conditions].flat().includes('development'),

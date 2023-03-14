@@ -57,7 +57,7 @@ export const concurrentlyCommands = (
       ),
     )
 
-export type Command = 'build' | 'test' | 'lint' | 'format'
+export type Command = 'build' | 'test' | 'lint' | 'format' | 'release'
 
 export const command: (
   command: Command,
