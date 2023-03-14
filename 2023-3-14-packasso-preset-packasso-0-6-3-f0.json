@@ -1,0 +1,11 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/preset-packasso",
+  "hash": "ca244f6f9ea35a5629f1eb6a43937b3db03de11b",
+  "version": "0.6.3",
+  "dependencies": {
+    "@packasso/core": "0.17.1",
+    "@packasso/dev-packasso": "0.5.1",
+    "@packasso/preset-ts-tsc-uvu": "0.17.3"
+  }
+}
