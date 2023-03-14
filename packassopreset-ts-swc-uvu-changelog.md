@@ -1,3 +1,8 @@
+## [@packasso/preset-ts-swc-uvu@0.17.4](https://github.com/qiwi/packasso/compare/2023.3.10-packasso.preset-ts-swc-uvu.0.17.3-f0...2023.3.14-packasso.preset-ts-swc-uvu.0.17.4-f0) (2023-03-14)
+
+### Dependencies
+* perf: @packasso/test-uvu updated to 0.17.3
+
 ## [@packasso/preset-ts-swc-uvu@0.17.3](https://github.com/qiwi/packasso/compare/2023.3.10-packasso.preset-ts-swc-uvu.0.17.2-f0...2023.3.10-packasso.preset-ts-swc-uvu.0.17.3-f0) (2023-03-10)
 
 ### Dependencies
