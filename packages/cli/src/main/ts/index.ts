@@ -2,15 +2,25 @@
 import { error, log } from 'node:console'
 import { argv, exit } from 'node:process'
 
-import { execute as build } from './build'
-import { execute as format } from './format'
-import { execute as install } from './install'
-import { execute as lint } from './lint'
-import { execute as purge } from './purge'
-import { execute as test } from './test'
-import { execute as uninstall } from './uninstall'
+import { build } from './build'
+import { format } from './format'
+import { install } from './install'
+import { lint } from './lint'
+import { purge } from './purge'
+import { release } from './release'
+import { test } from './test'
+import { uninstall } from './uninstall'
 
-const commands = { install, uninstall, purge, build, test, lint, format }
+const commands = {
+  install,
+  uninstall,
+  purge,
+  build,
+  test,
+  lint,
+  format,
+  release,
+}
 
 type Command = keyof typeof commands
 
