@@ -1,3 +1,11 @@
+## [@packasso/cli@0.17.0](https://github.com/qiwi/packasso/compare/2023.3.10-packasso.cli.0.16.1-f0...2023.3.14-packasso.cli.0.17.0-f0) (2023-03-14)
+
+### Features
+* feat: release command (#26) [e403d79](https://github.com/qiwi/packasso/commit/e403d798da9f58a208be3982ed4817b990c80e1b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.18.0
+
 ## [@packasso/cli@0.16.1](https://github.com/qiwi/packasso/compare/2023.3.7-packasso.cli.0.16.0-f0...2023.3.10-packasso.cli.0.16.1-f0) (2023-03-10)
 
 ### Fixes & improvements
