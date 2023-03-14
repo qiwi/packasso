@@ -1,3 +1,20 @@
+## [@packasso/preset-ts-swc-uvu@0.18.0](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.preset-ts-swc-uvu.0.17.5-f0...2023.3.14-packasso.preset-ts-swc-uvu.0.18.0-f0) (2023-03-14)
+
+### Features
+* feat: buildstamp (#25) [f5418ff](https://github.com/qiwi/packasso/commit/f5418ffac84f7d369b99f2dd80ffaafce82cf736)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.17.0
+* perf: @packasso/build-ts-swc updated to 0.18.0
+* perf: @packasso/buildstamp updated to 0.1.0
+* perf: @packasso/core updated to 0.19.0
+* perf: @packasso/dev-license updated to 0.11.0
+* perf: @packasso/dev-ts updated to 0.18.0
+* perf: @packasso/release-zx-semrel updated to 0.17.0
+* perf: @packasso/style-eslint updated to 0.2.0
+* perf: @packasso/style-prettier updated to 0.2.0
+* perf: @packasso/test-uvu updated to 0.18.0
+
 ## [@packasso/preset-ts-swc-uvu@0.17.5](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.preset-ts-swc-uvu.0.17.4-f0...2023.3.14-packasso.preset-ts-swc-uvu.0.17.5-f0) (2023-03-14)
 
 ### Dependencies
