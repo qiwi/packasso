@@ -1,8 +1,7 @@
 {
-  "name": "@packasso/test-jest",
+  "name": "@packasso/buildstamp",
   "dependencies": {
-    "@packasso/core": "workspace:*",
-    "@packasso/jest-snapshot-resolver": "workspace:*"
+    "@packasso/core": "workspace:*"
   },
   "exports": {
     ".": {

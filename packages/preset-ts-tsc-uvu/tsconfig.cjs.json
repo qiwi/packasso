@@ -19,6 +19,9 @@
       "path": "../build-ts-tsc/tsconfig.cjs.json"
     },
     {
+      "path": "../buildstamp/tsconfig.cjs.json"
+    },
+    {
       "path": "../core/tsconfig.cjs.json"
     },
     {

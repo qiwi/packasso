@@ -380,6 +380,7 @@ __metadata:
   resolution: "@packasso/build-resources@workspace:packages/build-resources"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -400,6 +401,7 @@ __metadata:
   resolution: "@packasso/build-ts-swc@workspace:packages/build-ts-swc"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -420,6 +422,7 @@ __metadata:
   resolution: "@packasso/build-ts-tsc@workspace:packages/build-ts-tsc"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -440,6 +443,28 @@ __metadata:
   resolution: "@packasso/build-typedoc@workspace:packages/build-typedoc"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
+    c8: "npm:7.13.0"
+    earljs: "npm:0.2.3"
+    eslint: "npm:8.35.0"
+    eslint-config-qiwi: "npm:2.0.9"
+    globby-cp: "npm:1.1.3"
+    prettier: "npm:2.8.4"
+    prettier-config-qiwi: "npm:2.0.1"
+    rimraf: "npm:4.2.0"
+    tsc-esm-fix: "npm:2.20.12"
+    tsm: "npm:2.3.0"
+    typescript: "npm:4.9.5"
+    uvu: "npm:0.5.6"
+  languageName: unknown
+  linkType: soft
+
+"@packasso/buildstamp@workspace:*, @packasso/buildstamp@workspace:packages/buildstamp":
+  version: 0.0.0-use.local
+  resolution: "@packasso/buildstamp@workspace:packages/buildstamp"
+  dependencies:
+    "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -460,6 +485,7 @@ __metadata:
   resolution: "@packasso/cli@workspace:packages/cli"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -485,6 +511,7 @@ __metadata:
     "@antongolub/git-root": "npm:1.5.10"
     "@semrel-extra/topo": "npm:1.5.0"
     "@types/lodash-es": "npm:4.17.6"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     concurrently: "npm:7.6.0"
     cosmiconfig: "npm:8.1.0"
@@ -510,6 +537,7 @@ __metadata:
   resolution: "@packasso/dev-license@workspace:packages/dev-license"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -530,6 +558,7 @@ __metadata:
   resolution: "@packasso/dev-packasso@workspace:packages/dev-packasso"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -550,6 +579,7 @@ __metadata:
   resolution: "@packasso/dev-ts@workspace:packages/dev-ts"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -569,6 +599,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/jest-snapshot-resolver@workspace:packages/jest-snapshot-resolver"
   dependencies:
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -591,6 +622,7 @@ __metadata:
     "@packasso/core": "workspace:*"
     "@packasso/dev-packasso": "workspace:*"
     "@packasso/preset-ts-tsc-uvu": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -612,6 +644,7 @@ __metadata:
   dependencies:
     "@packasso/build-resources": "workspace:*"
     "@packasso/build-ts-swc": "workspace:*"
+    "@packasso/buildstamp": "workspace:*"
     "@packasso/core": "workspace:*"
     "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
@@ -619,6 +652,7 @@ __metadata:
     "@packasso/style-eslint": "workspace:*"
     "@packasso/style-prettier": "workspace:*"
     "@packasso/test-uvu": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -640,6 +674,7 @@ __metadata:
   dependencies:
     "@packasso/build-resources": "workspace:*"
     "@packasso/build-ts-tsc": "workspace:*"
+    "@packasso/buildstamp": "workspace:*"
     "@packasso/core": "workspace:*"
     "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
@@ -647,6 +682,7 @@ __metadata:
     "@packasso/style-eslint": "workspace:*"
     "@packasso/style-prettier": "workspace:*"
     "@packasso/test-jest": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -668,6 +704,7 @@ __metadata:
   dependencies:
     "@packasso/build-resources": "workspace:*"
     "@packasso/build-ts-tsc": "workspace:*"
+    "@packasso/buildstamp": "workspace:*"
     "@packasso/core": "workspace:*"
     "@packasso/dev-license": "workspace:*"
     "@packasso/dev-ts": "workspace:*"
@@ -675,6 +712,7 @@ __metadata:
     "@packasso/style-eslint": "workspace:*"
     "@packasso/style-prettier": "workspace:*"
     "@packasso/test-uvu": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -695,6 +733,7 @@ __metadata:
   resolution: "@packasso/release-zx-semrel@workspace:packages/release-zx-semrel"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -717,6 +756,7 @@ __metadata:
     "@packasso/core": "workspace:*"
     "@packasso/style-eslint": "workspace:*"
     "@packasso/style-prettier": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -737,6 +777,7 @@ __metadata:
   resolution: "@packasso/style-eslint@workspace:packages/style-eslint"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -757,6 +798,7 @@ __metadata:
   resolution: "@packasso/style-prettier@workspace:packages/style-prettier"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -778,6 +820,7 @@ __metadata:
   dependencies:
     "@packasso/core": "workspace:*"
     "@packasso/jest-snapshot-resolver": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -798,6 +841,7 @@ __metadata:
   resolution: "@packasso/test-uvu@workspace:packages/test-uvu"
   dependencies:
     "@packasso/core": "workspace:*"
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -817,6 +861,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
   dependencies:
+    buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
     eslint: "npm:8.35.0"
@@ -1466,6 +1511,19 @@ __metadata:
   dependencies:
     node-int64: "npm:^0.4.0"
   checksum: bdce8c8576cc733882118f79534cb4335538104cb7b3f905852a45296b2e6177ddbdfd2521fd12371d0d4790b2168da549b8a7d7f5c69c36f8e49358155d75f7
+  languageName: node
+  linkType: hard
+
+"buildstamp@npm:2.1.1":
+  version: 2.1.1
+  resolution: "buildstamp@npm:2.1.1"
+  dependencies:
+    find-git-root: "npm:^1.0.4"
+    meow: "npm:^11.0.0"
+    tslib: "npm:^2.4.0"
+  bin:
+    buildstamp: target/es6/cli.js
+  checksum: 54c636bf5107d5bf092dcc2da9af69878b5df1ac7249aa6b17610fa258a71ca6d1e10a1e2f478480f6db495da9b139be9134129f0858bf1ba3d6b4992145ebc4
   languageName: node
   linkType: hard
 
@@ -2766,6 +2824,13 @@ __metadata:
   dependencies:
     to-regex-range: "npm:^5.0.1"
   checksum: e5ccb299de8a12ea5dcef663f658933e2fbdf40aeab3e7e5af9132e82d7f6bdd0984ac2e122dc1825707f33917c308bc40b632b852331c900c317c5d64bb7bf0
+  languageName: node
+  linkType: hard
+
+"find-git-root@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "find-git-root@npm:1.0.4"
+  checksum: aa380f7cb7d53d645dc39cbc472da0294f76c1252d507197b6c7e90266e124d7498dec59a513285d508c336a1d999c53ee55470f274851d606b96dab6f2aee1b
   languageName: node
   linkType: hard
 
@@ -6003,7 +6068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.5.0":
+"tslib@npm:^2.4.0, tslib@npm:^2.5.0":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: 5a6ee935f56cd653af29de928483acbab7323f964b053e98b6b318abc69431fb0e4f660c4f4a396e2e93852510bef25eeb9f1d951d060b2d7bcc313811e5da6f

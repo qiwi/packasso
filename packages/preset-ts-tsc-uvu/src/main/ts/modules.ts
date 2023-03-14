@@ -3,6 +3,7 @@ export const modules = [
   '@packasso/dev-ts',
   '@packasso/build-ts-tsc',
   '@packasso/build-resources',
+  '@packasso/buildstamp',
   '@packasso/style-eslint',
   '@packasso/style-prettier',
   '@packasso/test-uvu',

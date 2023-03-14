@@ -12,6 +12,7 @@
   "dependencies": {
     "@packasso/build-resources": "workspace:*",
     "@packasso/build-ts-tsc": "workspace:*",
+    "@packasso/buildstamp": "workspace:*",
     "@packasso/core": "workspace:*",
     "@packasso/dev-license": "workspace:*",
     "@packasso/dev-ts": "workspace:*",
@@ -31,6 +32,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "devDependencies": {
+    "buildstamp": "2.1.1",
     "c8": "7.13.0",
     "earljs": "0.2.3",
     "eslint": "8.35.0",
@@ -51,7 +53,8 @@
   "files": [
     "target/cjs/**/*",
     "target/esm/**/*",
-    "target/resources/**/*"
+    "target/resources/**/*",
+    "target/buildstamp.json"
   ],
   "publishConfig": {
     "access": "public"
