@@ -1,3 +1,8 @@
+## [@packasso/test-uvu@0.17.3](https://github.com/qiwi/packasso/compare/2023.3.10-packasso.test-uvu.0.17.2-f0...2023.3.14-packasso.test-uvu.0.17.3-f0) (2023-03-14)
+
+### Fixes & improvements
+* fix: singles [ca244f6](https://github.com/qiwi/packasso/commit/ca244f6f9ea35a5629f1eb6a43937b3db03de11b)
+
 ## [@packasso/test-uvu@0.17.2](https://github.com/qiwi/packasso/compare/2023.3.9-packasso.test-uvu.0.17.1-f0...2023.3.10-packasso.test-uvu.0.17.2-f0) (2023-03-10)
 
 ### Fixes & improvements
