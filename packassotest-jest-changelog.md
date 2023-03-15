@@ -1,3 +1,8 @@
+## [@packasso/test-jest@0.19.2](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.test-jest.0.19.1-f0...2023.3.15-packasso.test-jest.0.19.2-f0) (2023-03-15)
+
+### Fixes & improvements
+* fix: jest silent and config [44b2420](https://github.com/qiwi/packasso/commit/44b2420c0d30f125f43a5cc01611f9b7e82efc69)
+
 ## [@packasso/test-jest@0.19.1](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.test-jest.0.19.0-f0...2023.3.15-packasso.test-jest.0.19.1-f0) (2023-03-15)
 
 ### Fixes & improvements
