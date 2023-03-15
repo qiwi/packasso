@@ -1,3 +1,20 @@
+## [@packasso/preset-ts-tsc-jest@0.18.1](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.preset-ts-tsc-jest.0.18.0-f0...2023.3.15-packasso.preset-ts-tsc-jest.0.18.1-f0) (2023-03-15)
+
+### Fixes & improvements
+* fix: no types [f6015d5](https://github.com/qiwi/packasso/commit/f6015d5f46c89f9c419c1c480567a1df27629162)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.17.1
+* perf: @packasso/build-ts-tsc updated to 0.17.1
+* perf: @packasso/buildstamp updated to 0.1.1
+* perf: @packasso/core updated to 0.19.1
+* perf: @packasso/dev-license updated to 0.11.1
+* perf: @packasso/dev-ts updated to 0.18.1
+* perf: @packasso/release-zx-semrel updated to 0.17.1
+* perf: @packasso/style-eslint updated to 0.2.1
+* perf: @packasso/style-prettier updated to 0.2.1
+* perf: @packasso/test-jest updated to 0.19.1
+
 ## [@packasso/preset-ts-tsc-jest@0.18.0](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.preset-ts-tsc-jest.0.17.5-f0...2023.3.14-packasso.preset-ts-tsc-jest.0.18.0-f0) (2023-03-14)
 
 ### Features
