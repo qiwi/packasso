@@ -4,5 +4,5 @@ import { ModuleCommand } from '@packasso/core'
 import minimist from 'minimist'
 
 export const test: ModuleCommand = async () => [
-  `! jest ${minimist(argv).u ? '-u' : ''}`,
+  `! jest --silent ${minimist(argv).u ? '-u' : ''}`,
 ]
