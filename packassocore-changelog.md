@@ -1,3 +1,8 @@
+## [@packasso/core@0.19.2](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.core.0.19.1-f0...2023.3.15-packasso.core.0.19.2-f0) (2023-03-15)
+
+### Fixes & improvements
+* fix: node types is everywhere [f2bbf76](https://github.com/qiwi/packasso/commit/f2bbf767ee6e98e1ccbfa2f3f837ffd34768decc)
+
 ## [@packasso/core@0.19.1](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.core.0.19.0-f0...2023.3.15-packasso.core.0.19.1-f0) (2023-03-15)
 
 ### Fixes & improvements
