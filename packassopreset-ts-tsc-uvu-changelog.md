@@ -1,3 +1,20 @@
+## [@packasso/preset-ts-tsc-uvu@0.18.2](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.preset-ts-tsc-uvu.0.18.1-f0...2023.3.15-packasso.preset-ts-tsc-uvu.0.18.2-f0) (2023-03-15)
+
+### Fixes & improvements
+* fix: node types is everywhere [f2bbf76](https://github.com/qiwi/packasso/commit/f2bbf767ee6e98e1ccbfa2f3f837ffd34768decc)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.17.2
+* perf: @packasso/build-ts-tsc updated to 0.17.2
+* perf: @packasso/buildstamp updated to 0.1.2
+* perf: @packasso/core updated to 0.19.2
+* perf: @packasso/dev-license updated to 0.11.2
+* perf: @packasso/dev-ts updated to 0.18.2
+* perf: @packasso/release-zx-semrel updated to 0.17.2
+* perf: @packasso/style-eslint updated to 0.2.2
+* perf: @packasso/style-prettier updated to 0.2.2
+* perf: @packasso/test-uvu updated to 0.18.2
+
 ## [@packasso/preset-ts-tsc-uvu@0.18.1](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.preset-ts-tsc-uvu.0.18.0-f0...2023.3.15-packasso.preset-ts-tsc-uvu.0.18.1-f0) (2023-03-15)
 
 ### Fixes & improvements
