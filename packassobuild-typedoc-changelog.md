@@ -1,3 +1,11 @@
+## [@packasso/build-typedoc@0.2.2](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.build-typedoc.0.2.1-f0...2023.3.15-packasso.build-typedoc.0.2.2-f0) (2023-03-15)
+
+### Fixes & improvements
+* fix: node types is everywhere [f2bbf76](https://github.com/qiwi/packasso/commit/f2bbf767ee6e98e1ccbfa2f3f837ffd34768decc)
+
+### Dependencies
+* perf: @packasso/core updated to 0.19.2
+
 ## [@packasso/build-typedoc@0.2.1](https://github.com/qiwi/packasso/compare/2023.3.14-packasso.build-typedoc.0.2.0-f0...2023.3.15-packasso.build-typedoc.0.2.1-f0) (2023-03-15)
 
 ### Fixes & improvements
