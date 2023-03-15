@@ -1,3 +1,8 @@
+## [@packasso/style-eslint@0.2.3](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.style-eslint.0.2.2-f0...2023.3.15-packasso.style-eslint.0.2.3-f0) (2023-03-15)
+
+### Dependencies
+* perf: @packasso/core updated to 0.19.3
+
 ## [@packasso/style-eslint@0.2.2](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.style-eslint.0.2.1-f0...2023.3.15-packasso.style-eslint.0.2.2-f0) (2023-03-15)
 
 ### Fixes & improvements
