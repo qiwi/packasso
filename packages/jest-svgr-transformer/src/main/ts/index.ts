@@ -1,11 +1,13 @@
 import { basename, parse } from 'node:path'
 
-import { camelCase, startCase } from 'lodash-es'
+import lodash from 'lodash'
 
 export default {
   process: (source: string, filename: string) => {
     const content = JSON.stringify(basename(filename))
-    const name = `Svg${startCase(camelCase(parse(filename).name))}`
+    const name = `Svg${lodash.startCase(
+      lodash.camelCase(parse(filename).name),
+    )}`
     return {
       code: `
         const React = require('react');

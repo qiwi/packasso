@@ -2,15 +2,7 @@ import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname } from 'node:path'
 
 import fg from 'fast-glob'
-import {
-  differenceWith,
-  isArray,
-  isEqual,
-  isNil,
-  isObject,
-  mergeWith,
-  uniqWith,
-} from 'lodash-es'
+import lodash from 'lodash'
 
 export const rm = (path: string) => {
   try {
@@ -29,9 +21,13 @@ export const diffText: (text1: string, ...text2: string[]) => string = (
   text1,
   ...text2
 ) =>
-  differenceWith(text1.split('\n'), text2.join('\n').split('\n'), isEqual).join(
-    '\n',
-  )
+  lodash
+    .differenceWith(
+      text1.split('\n'),
+      text2.join('\n').split('\n'),
+      lodash.isEqual,
+    )
+    .join('\n')
 
 export const readText: (path: string) => string = (path) => {
   try {
@@ -107,28 +103,28 @@ export const revertJson: (path: string, ...json: object[]) => void = (
   )
 
 export const mergeJson = (json1: object, json2: object) =>
-  mergeWith(json1, json2, (value1, value2) => {
+  lodash.mergeWith(json1, json2, (value1, value2) => {
     if (Array.isArray(value1) || Array.isArray(value2)) {
-      return uniqWith([value1, value2].flat(), isEqual).filter(
-        (value) => !isNil(value),
-      )
+      return lodash
+        .uniqWith([value1, value2].flat(), lodash.isEqual)
+        .filter((value) => !lodash.isNil(value))
     }
   })
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const diffJson = (json1: any, json2: any): any =>
   Object.keys(json1).reduce((result, key) => {
-    if (isEqual(json1[key], json2[key])) {
+    if (lodash.isEqual(json1[key], json2[key])) {
       return result
     }
-    if (Array.isArray(json1[key]) && isArray(json2[key])) {
-      const d = differenceWith(json1, json2, isEqual)
+    if (Array.isArray(json1[key]) && Array.isArray(json2[key])) {
+      const d = lodash.differenceWith(json1, json2, lodash.isEqual)
       if (d.length === 0) {
         return result
       }
       return { ...result, [key]: d }
     }
-    if (isObject(json1[key]) && isObject(json2[key])) {
+    if (lodash.isObject(json1[key]) && lodash.isObject(json2[key])) {
       const d = diffJson(json1[key], json2[key])
       if (Object.keys(d).length === 0) {
         return result

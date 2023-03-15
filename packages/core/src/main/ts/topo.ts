@@ -4,7 +4,7 @@ import {
   ITopoOptions,
   topo,
 } from '@semrel-extra/topo'
-import { isEqual, uniqWith } from 'lodash-es'
+import lodash from 'lodash'
 
 import { getConfig } from './config'
 
@@ -48,12 +48,12 @@ export const getExtraTopo: (
     type: context.root.manifest.workspaces
       ? PackageType.TREE
       : PackageType.UNIT,
-    modules: uniqWith(
+    modules: lodash.uniqWith(
       [
         ...Object.values(packages).flatMap(({ modules }) => modules),
         ...(await getConfig(context.root.absPath)),
       ],
-      isEqual,
+      lodash.isEqual,
     ),
   }
   return {
