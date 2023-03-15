@@ -1,3 +1,8 @@
+## [@packasso/jest-svgr-transformer@0.1.2](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.jest-svgr-transformer.0.1.1-f0...2023.3.15-packasso.jest-svgr-transformer.0.1.2-f0) (2023-03-15)
+
+### Fixes & improvements
+* fix: no lodash-es no probl-esm [b0a81e6](https://github.com/qiwi/packasso/commit/b0a81e67209f3cf3b8f6d0d4a7e966f04c404851)
+
 ## [@packasso/jest-svgr-transformer@0.1.1](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.jest-svgr-transformer.0.1.0-f0...2023.3.15-packasso.jest-svgr-transformer.0.1.1-f0) (2023-03-15)
 
 ### Fixes & improvements
