@@ -1,0 +1,10 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/test-jest",
+  "hash": "44b2420c0d30f125f43a5cc01611f9b7e82efc69",
+  "version": "0.19.2",
+  "dependencies": {
+    "@packasso/core": "0.19.1",
+    "@packasso/jest-snapshot-resolver": "0.2.1"
+  }
+}
