@@ -12,7 +12,7 @@
     "removeComments": true,
     "importHelpers": true,
     "baseUrl": "./",
-    "types": [],
+    "types": ["node"],
     "paths": {}
   },
   "include": ["./src/main/ts"],

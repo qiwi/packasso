@@ -12,7 +12,9 @@
     "removeComments": true,
     "importHelpers": true,
     "baseUrl": "./",
-    "types": [],
+    "types": [
+      "node"
+    ],
     "paths": {
       "@packasso/core": [
         "../core/src/main/ts"
