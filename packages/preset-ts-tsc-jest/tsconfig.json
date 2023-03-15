@@ -12,6 +12,7 @@
     "removeComments": true,
     "importHelpers": true,
     "baseUrl": "./",
+    "types": [],
     "paths": {
       "@packasso/build-resources": [
         "../build-resources/src/main/ts"

@@ -2,6 +2,7 @@
   "name": "@packasso/cli",
   "dependencies": {
     "@packasso/core": "workspace:*",
+    "@types/node": "18.15.3",
     "minimist": "1.2.8"
   },
   "bin": {

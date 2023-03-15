@@ -12,6 +12,7 @@
     "removeComments": true,
     "importHelpers": true,
     "baseUrl": "./",
+    "types": [],
     "paths": {}
   },
   "include": [

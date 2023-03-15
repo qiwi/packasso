@@ -485,6 +485,7 @@ __metadata:
   resolution: "@packasso/cli@workspace:packages/cli"
   dependencies:
     "@packasso/core": "workspace:*"
+    "@types/node": "npm:18.15.3"
     buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
@@ -511,6 +512,7 @@ __metadata:
     "@antongolub/git-root": "npm:1.5.10"
     "@semrel-extra/topo": "npm:1.5.0"
     "@types/lodash-es": "npm:4.17.6"
+    "@types/node": "npm:18.15.3"
     buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     concurrently: "npm:7.6.0"
@@ -1030,6 +1032,13 @@ __metadata:
   version: 18.14.2
   resolution: "@types/node@npm:18.14.2"
   checksum: 129305df2c8e761c22cfa7a88ab780577864c8fc53a5b70cabbe4dd595e4b38b211b73a4380d0a18bf5da3634081bfa554cccf52dfd5e228e7a27de12c857aaf
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:18.15.3":
+  version: 18.15.3
+  resolution: "@types/node@npm:18.15.3"
+  checksum: 658d687cb6d88ccbb7d073fc583a0c88eb75936b64a6d43a6f06e320bf39384e35e3f5f4c88aa65c833a25cbe76080414bbfde54207050399b350e08aea70ada
   languageName: node
   linkType: hard
 

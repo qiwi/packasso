@@ -11,7 +11,9 @@
     "resolveJsonModule": true,
     "removeComments": true,
     "importHelpers": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "types": [],
+    "paths": {}
   },
   "include": ["./src/main/ts"],
   "exclude": ["./node_modules"]
