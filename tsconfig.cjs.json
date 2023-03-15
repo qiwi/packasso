@@ -37,6 +37,9 @@
       "path": "./packages/jest-snapshot-resolver/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/jest-svgr-transformer/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/preset-packasso/tsconfig.cjs.json"
     },
     {
