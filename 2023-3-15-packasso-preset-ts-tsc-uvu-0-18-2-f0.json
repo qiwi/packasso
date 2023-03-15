@@ -1,0 +1,18 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/preset-ts-tsc-uvu",
+  "hash": "f2bbf767ee6e98e1ccbfa2f3f837ffd34768decc",
+  "version": "0.18.2",
+  "dependencies": {
+    "@packasso/build-resources": "0.17.2",
+    "@packasso/build-ts-tsc": "0.17.2",
+    "@packasso/buildstamp": "0.1.2",
+    "@packasso/core": "0.19.2",
+    "@packasso/dev-license": "0.11.2",
+    "@packasso/dev-ts": "0.18.2",
+    "@packasso/release-zx-semrel": "0.17.2",
+    "@packasso/style-eslint": "0.2.2",
+    "@packasso/style-prettier": "0.2.2",
+    "@packasso/test-uvu": "0.18.2"
+  }
+}
