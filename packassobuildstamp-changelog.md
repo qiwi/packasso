@@ -1,3 +1,8 @@
+## [@packasso/buildstamp@0.2.1](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.buildstamp.0.2.0-f0...2023.3.16-packasso.buildstamp.0.2.1-f0) (2023-03-16)
+
+### Fixes & improvements
+* fix: buildstamp [134f6e7](https://github.com/qiwi/packasso/commit/134f6e7882e7882ea8231ddbb2e90c487278cf62)
+
 ## [@packasso/buildstamp@0.2.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.buildstamp.0.1.3-f0...2023.3.16-packasso.buildstamp.0.2.0-f0) (2023-03-16)
 
 ### Features
