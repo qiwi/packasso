@@ -48,6 +48,9 @@
       ],
       "@packasso/test-uvu": [
         "../test-uvu/src/main/ts"
+      ],
+      "@packasso/yarn-audit": [
+        "../yarn-audit/src/main/ts"
       ]
     }
   },

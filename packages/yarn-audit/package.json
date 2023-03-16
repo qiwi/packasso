@@ -1,5 +1,5 @@
 {
-  "name": "@packasso/buildstamp",
+  "name": "@packasso/yarn-audit",
   "dependencies": {
     "@packasso/core": "workspace:*"
   },

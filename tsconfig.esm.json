@@ -68,6 +68,9 @@
     },
     {
       "path": "./packages/test-uvu/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/yarn-audit/tsconfig.esm.json"
     }
   ],
   "files": []

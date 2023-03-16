@@ -11,6 +11,7 @@
   "homepage": "https://qiwi.github.io/packasso",
   "scripts": {
     "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts",
+    "audit": "yarn packasso audit",
     "build": "yarn packasso build",
     "format": "yarn packasso format",
     "lint": "yarn packasso lint",
@@ -30,7 +31,8 @@
     "tsc-esm-fix": "2.20.12",
     "tsm": "2.3.0",
     "typescript": "4.9.5",
-    "uvu": "0.5.6"
+    "uvu": "0.5.6",
+    "yarn-audit-fix": "9.3.9"
   },
   "type": "module",
   "main": "./target/cjs/index.cjs",

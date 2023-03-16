@@ -41,6 +41,9 @@
     },
     {
       "path": "../test-uvu/tsconfig.esm.json"
+    },
+    {
+      "path": "../yarn-audit/tsconfig.esm.json"
     }
   ]
 }
