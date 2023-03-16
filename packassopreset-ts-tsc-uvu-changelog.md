@@ -1,3 +1,20 @@
+## [@packasso/preset-ts-tsc-uvu@0.19.2](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.preset-ts-tsc-uvu.0.19.1-f0...2023.3.16-packasso.preset-ts-tsc-uvu.0.19.2-f0) (2023-03-16)
+
+### Fixes & improvements
+* fix: separate preset packasso [490b0b2](https://github.com/qiwi/packasso/commit/490b0b228ecec6571780685ee3647cd87530a50b)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.18.1
+* perf: @packasso/build-ts-tsc updated to 0.18.1
+* perf: @packasso/buildstamp updated to 0.2.2
+* perf: @packasso/core updated to 0.20.1
+* perf: @packasso/dev-license updated to 0.12.1
+* perf: @packasso/dev-ts updated to 0.19.1
+* perf: @packasso/release-zx-semrel updated to 0.18.1
+* perf: @packasso/style-eslint updated to 0.3.1
+* perf: @packasso/style-prettier updated to 0.3.1
+* perf: @packasso/test-uvu updated to 0.19.1
+
 ## [@packasso/preset-ts-tsc-uvu@0.19.1](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.preset-ts-tsc-uvu.0.19.0-f0...2023.3.16-packasso.preset-ts-tsc-uvu.0.19.1-f0) (2023-03-16)
 
 ### Dependencies
