@@ -10,9 +10,17 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
+    "@packasso/build-resources": "workspace:*",
+    "@packasso/build-ts-tsc": "workspace:*",
+    "@packasso/buildstamp": "workspace:*",
     "@packasso/core": "workspace:*",
+    "@packasso/dev-license": "workspace:*",
     "@packasso/dev-packasso": "workspace:*",
-    "@packasso/preset-ts-tsc-uvu": "workspace:*"
+    "@packasso/dev-ts": "workspace:*",
+    "@packasso/release-zx-semrel": "workspace:*",
+    "@packasso/style-eslint": "workspace:*",
+    "@packasso/style-prettier": "workspace:*",
+    "@packasso/test-uvu": "workspace:*"
   },
   "repository": {
     "type": "git",
@@ -24,11 +32,11 @@
   "homepage": "https://qiwi.github.io/packasso",
   "version": "0.0.0",
   "scripts": {
+    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts",
     "build": "yarn packasso build",
     "format": "yarn packasso format",
     "lint": "yarn packasso lint",
-    "test": "yarn packasso test",
-    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts"
+    "test": "yarn packasso test"
   },
   "license": "MIT",
   "devDependencies": {

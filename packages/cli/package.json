@@ -27,11 +27,11 @@
   "homepage": "https://qiwi.github.io/packasso",
   "version": "0.0.0",
   "scripts": {
+    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts",
     "build": "yarn packasso build",
     "format": "yarn packasso format",
     "lint": "yarn packasso lint",
-    "test": "yarn packasso test",
-    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts"
+    "test": "yarn packasso test"
   },
   "license": "MIT",
   "devDependencies": {

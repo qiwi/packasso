@@ -10,13 +10,37 @@
   },
   "references": [
     {
+      "path": "../build-resources/tsconfig.esm.json"
+    },
+    {
+      "path": "../build-ts-tsc/tsconfig.esm.json"
+    },
+    {
+      "path": "../buildstamp/tsconfig.esm.json"
+    },
+    {
       "path": "../core/tsconfig.esm.json"
+    },
+    {
+      "path": "../dev-license/tsconfig.esm.json"
     },
     {
       "path": "../dev-packasso/tsconfig.esm.json"
     },
     {
-      "path": "../preset-ts-tsc-uvu/tsconfig.esm.json"
+      "path": "../dev-ts/tsconfig.esm.json"
+    },
+    {
+      "path": "../release-zx-semrel/tsconfig.esm.json"
+    },
+    {
+      "path": "../style-eslint/tsconfig.esm.json"
+    },
+    {
+      "path": "../style-prettier/tsconfig.esm.json"
+    },
+    {
+      "path": "../test-uvu/tsconfig.esm.json"
     }
   ]
 }

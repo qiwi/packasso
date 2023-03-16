@@ -644,9 +644,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/preset-packasso@workspace:packages/preset-packasso"
   dependencies:
+    "@packasso/build-resources": "workspace:*"
+    "@packasso/build-ts-tsc": "workspace:*"
+    "@packasso/buildstamp": "workspace:*"
     "@packasso/core": "workspace:*"
+    "@packasso/dev-license": "workspace:*"
     "@packasso/dev-packasso": "workspace:*"
-    "@packasso/preset-ts-tsc-uvu": "workspace:*"
+    "@packasso/dev-ts": "workspace:*"
+    "@packasso/release-zx-semrel": "workspace:*"
+    "@packasso/style-eslint": "workspace:*"
+    "@packasso/style-prettier": "workspace:*"
+    "@packasso/test-uvu": "workspace:*"
     buildstamp: "npm:2.1.1"
     c8: "npm:7.13.0"
     earljs: "npm:0.2.3"
@@ -723,7 +731,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/preset-ts-tsc-uvu@workspace:*, @packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu":
+"@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu":
   version: 0.0.0-use.local
   resolution: "@packasso/preset-ts-tsc-uvu@workspace:packages/preset-ts-tsc-uvu"
   dependencies:

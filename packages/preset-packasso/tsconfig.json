@@ -16,14 +16,38 @@
       "node"
     ],
     "paths": {
+      "@packasso/build-resources": [
+        "../build-resources/src/main/ts"
+      ],
+      "@packasso/build-ts-tsc": [
+        "../build-ts-tsc/src/main/ts"
+      ],
+      "@packasso/buildstamp": [
+        "../buildstamp/src/main/ts"
+      ],
       "@packasso/core": [
         "../core/src/main/ts"
+      ],
+      "@packasso/dev-license": [
+        "../dev-license/src/main/ts"
       ],
       "@packasso/dev-packasso": [
         "../dev-packasso/src/main/ts"
       ],
-      "@packasso/preset-ts-tsc-uvu": [
-        "../preset-ts-tsc-uvu/src/main/ts"
+      "@packasso/dev-ts": [
+        "../dev-ts/src/main/ts"
+      ],
+      "@packasso/release-zx-semrel": [
+        "../release-zx-semrel/src/main/ts"
+      ],
+      "@packasso/style-eslint": [
+        "../style-eslint/src/main/ts"
+      ],
+      "@packasso/style-prettier": [
+        "../style-prettier/src/main/ts"
+      ],
+      "@packasso/test-uvu": [
+        "../test-uvu/src/main/ts"
       ]
     }
   },
