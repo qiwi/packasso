@@ -1,3 +1,12 @@
+## [@packasso/test-jest@0.20.1](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.test-jest.0.20.0-f0...2023.3.16-packasso.test-jest.0.20.1-f0) (2023-03-16)
+
+### Fixes & improvements
+* fix: separate preset packasso [490b0b2](https://github.com/qiwi/packasso/commit/490b0b228ecec6571780685ee3647cd87530a50b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.20.1
+* perf: @packasso/jest-snapshot-resolver updated to 0.3.1
+
 ## [@packasso/test-jest@0.20.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.test-jest.0.19.4-f0...2023.3.16-packasso.test-jest.0.20.0-f0) (2023-03-16)
 
 ### Features
