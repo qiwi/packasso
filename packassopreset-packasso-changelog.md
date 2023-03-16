@@ -1,3 +1,13 @@
+## [@packasso/preset-packasso@0.8.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.preset-packasso.0.7.3-f0...2023.3.16-packasso.preset-packasso.0.8.0-f0) (2023-03-16)
+
+### Features
+* feat: any command (#28) [b98ded9](https://github.com/qiwi/packasso/commit/b98ded9ad02eb48d5a6f5ec1e5f1e93b486fb46b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.20.0
+* perf: @packasso/dev-packasso updated to 0.7.0
+* perf: @packasso/preset-ts-tsc-uvu updated to 0.19.0
+
 ## [@packasso/preset-packasso@0.7.3](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.preset-packasso.0.7.2-f0...2023.3.15-packasso.preset-packasso.0.7.3-f0) (2023-03-15)
 
 ### Dependencies
