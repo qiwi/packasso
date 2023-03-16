@@ -1,3 +1,11 @@
+## [@packasso/buildstamp@0.2.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.buildstamp.0.1.3-f0...2023.3.16-packasso.buildstamp.0.2.0-f0) (2023-03-16)
+
+### Features
+* feat: any command (#28) [b98ded9](https://github.com/qiwi/packasso/commit/b98ded9ad02eb48d5a6f5ec1e5f1e93b486fb46b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.20.0
+
 ## [@packasso/buildstamp@0.1.3](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.buildstamp.0.1.2-f0...2023.3.15-packasso.buildstamp.0.1.3-f0) (2023-03-15)
 
 ### Dependencies
