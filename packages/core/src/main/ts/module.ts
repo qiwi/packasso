@@ -39,16 +39,18 @@ export interface ModuleCommand {
 export interface Module {
   install?: ModuleInstall
   purge?: ModulePurge
-  build?: ModuleCommand
-  test?: ModuleCommand
-  lint?: ModuleCommand
-  format?: ModuleCommand
-  release?: ModuleCommand
+  modules: string[]
+  commands: Record<string, ModuleCommand>
 }
 
 export const loadModule: (name: string) => Promise<Module> = async (name) => {
-  const module: Module = await import(name)
-  return module
+  const { install, purge, modules, ...commands } = await import(name)
+  return {
+    install,
+    purge,
+    modules,
+    commands,
+  }
 }
 
 export const getModuleResourcesDir: (

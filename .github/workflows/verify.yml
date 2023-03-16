@@ -12,14 +12,14 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Setup Node
+      - name: Setup
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'yarn'
-      - name: Yarn Install
+      - name: Install
         run: yarn install --immutable
       - name: Build
-        run: yarn packasso build
+        run: yarn build
       - name: Test
-        run: yarn packasso test
+        run: yarn test
