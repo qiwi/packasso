@@ -1,3 +1,8 @@
+## [@packasso/jest-snapshot-resolver@0.3.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.jest-snapshot-resolver.0.2.2-f0...2023.3.16-packasso.jest-snapshot-resolver.0.3.0-f0) (2023-03-16)
+
+### Features
+* feat: any command (#28) [b98ded9](https://github.com/qiwi/packasso/commit/b98ded9ad02eb48d5a6f5ec1e5f1e93b486fb46b)
+
 ## [@packasso/jest-snapshot-resolver@0.2.2](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.jest-snapshot-resolver.0.2.1-f0...2023.3.15-packasso.jest-snapshot-resolver.0.2.2-f0) (2023-03-15)
 
 ### Fixes & improvements
