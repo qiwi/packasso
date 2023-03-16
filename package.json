@@ -5,6 +5,13 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "build": "yarn packasso build",
+    "format": "yarn packasso format",
+    "lint": "yarn packasso lint",
+    "test": "yarn packasso test",
+    "packasso": "tsm --conditions development packages/cli/src/main/ts/index.ts"
+  },
   "license": "MIT",
   "devDependencies": {
     "buildstamp": "2.1.1",
@@ -20,8 +27,5 @@
     "tsm": "2.3.0",
     "typescript": "4.9.5",
     "uvu": "0.5.6"
-  },
-  "scripts": {
-    "packasso": "tsm --conditions development packages/cli/src/main/ts/index.ts"
   }
 }

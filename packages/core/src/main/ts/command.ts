@@ -18,9 +18,14 @@ export const concurrentlyResult = async (
     return
   }
   for (const commands of result) {
-    await concurrently(concurrentlyCommands(commands, pkg, pkgs), {
-      prefixColors: ['auto'],
-    }).result
+    const cmds = concurrentlyCommands(commands, pkg, pkgs)
+    try {
+      await concurrently(cmds, {
+        prefixColors: ['auto'],
+      }).result
+    } catch {
+      throw new Error('ooops...')
+    }
   }
 }
 
@@ -57,10 +62,8 @@ export const concurrentlyCommands = (
       ),
     )
 
-export type Command = 'build' | 'test' | 'lint' | 'format' | 'release'
-
 export const command: (
-  command: Command,
+  command: string,
   cwd: string,
 ) => Promise<unknown> = async (command, cwd) => {
   const root = getRootDir(cwd)
@@ -76,7 +79,7 @@ export const command: (
 }
 
 export const commandPackage = async (
-  command: Command,
+  command: string,
   pkg: ExtraPackageEntry,
   topo: ExtraTopoContext,
 ) => {
@@ -95,15 +98,18 @@ export const commandPackage = async (
 }
 
 export const commandModule = async (
-  command: Command,
+  command: string,
   module: string,
   pkg: ExtraPackageEntry,
   pkgs: ExtraPackageEntry[],
 ) => {
-  const m = await loadModule(module)
-  const c = m[command]
-  if (!c) {
-    return
+  const { modules, commands } = await loadModule(module)
+  if (modules) {
+    for (const module of modules) {
+      await commandModule(command, module, pkg, pkgs)
+    }
   }
-  await concurrentlyResult(await c(pkg, pkgs), pkg, pkgs)
+  if (commands[command]) {
+    await concurrentlyResult(await commands[command](pkg, pkgs), pkg, pkgs)
+  }
 }

@@ -13,7 +13,7 @@ import {
 import {
   getModuleResourcesDir,
   loadModule,
-  ModuleCommand,
+  Module,
   ModuleInstallResult,
 } from './module'
 import { ExtraPackageEntry, getExtraTopo, PackageType } from './topo'
@@ -44,9 +44,9 @@ export const installPackage = async (
 }
 
 const types: Record<PackageType, string[]> = {
-  [PackageType.UNIT]: ['root', 'leaf', 'none'],
-  [PackageType.TREE]: ['root', 'tree', 'none'],
-  [PackageType.LEAF]: ['leaf', 'none'],
+  [PackageType.UNIT]: ['root', 'leaf', 'each'],
+  [PackageType.TREE]: ['root', 'tree', 'each'],
+  [PackageType.LEAF]: ['leaf', 'each'],
 }
 
 const special = (path: string) => {
@@ -57,6 +57,50 @@ const special = (path: string) => {
   return path
 }
 
+const installModuleCommands = (
+  pkg: ExtraPackageEntry,
+  uninstall: boolean,
+  development: boolean,
+  commands: Module['commands'],
+) =>
+  installModuleResult(pkg, uninstall, {
+    path: 'package.json',
+    data: {
+      scripts: Object.fromEntries(
+        Object.keys(commands)
+          .filter((command) => commands[command])
+          .map((command) => [
+            command,
+            development ? `yarn packasso ${command}` : `packasso ${command}`,
+          ]),
+      ),
+    },
+  })
+
+const installModuleResources = (
+  pkg: ExtraPackageEntry,
+  uninstall: boolean,
+  res: string,
+) =>
+  types[pkg.type].forEach((type) => {
+    const cwd = resolve(res, type)
+    installModuleResult(
+      pkg,
+      uninstall,
+      ...fg
+        .sync('**/*', {
+          cwd,
+          dot: true,
+          absolute: true,
+          onlyFiles: true,
+        })
+        .map((path) => ({
+          path: relative(cwd, special(path)),
+          data: (path.endsWith('.json') ? readJson : readText)(path),
+        })),
+    )
+  })
+
 export const installModule = async (
   module: string,
   pkg: ExtraPackageEntry,
@@ -64,48 +108,31 @@ export const installModule = async (
   development: boolean,
   uninstall: boolean,
 ) => {
-  const { install, build, test, lint, format } = await loadModule(module)
-  const res = getModuleResourcesDir(module, root, development)
-  const commands: Partial<Record<string, ModuleCommand>> = {
-    build,
-    test,
-    lint,
-    format,
-  }
-  let result: ModuleInstallResult = development
-    ? []
-    : [
-        {
-          path: 'package.json',
-          data: {
-            scripts: Object.fromEntries(
-              Object.keys(commands)
-                .filter((command) => commands[command])
-                .map((command) => [command, `packasso ${command}`]),
-            ),
-          },
-        },
-      ]
-  types[pkg.type].forEach((type) => {
-    const cwd = resolve(res, type)
-    fg.sync('**/*', {
-      cwd,
-      dot: true,
-      absolute: true,
-      onlyFiles: true,
-    }).forEach((path) => {
-      result.push({
-        path: relative(cwd, special(path)),
-        data: (path.endsWith('.json') ? readJson : readText)(path),
-      })
-    })
-  })
+  const { install, modules, commands } = await loadModule(module)
+  installModuleCommands(pkg, uninstall, development, commands)
+  installModuleResources(
+    pkg,
+    uninstall,
+    getModuleResourcesDir(module, root, development),
+  )
   if (install) {
-    result = [
-      ...result,
+    installModuleResult(
+      pkg,
+      uninstall,
       ...((await install(pkg, root, development, uninstall)) || []),
-    ]
+    )
+  } else if (modules) {
+    for (const module of modules) {
+      await installModule(module, pkg, root, development, uninstall)
+    }
   }
+}
+
+const installModuleResult = (
+  pkg: ExtraPackageEntry,
+  uninstall: boolean,
+  ...result: ModuleInstallResult
+) => {
   result.forEach(({ path, data }) => {
     const absPath = resolve(pkg.absPath, path)
     if (typeof data === 'string') {

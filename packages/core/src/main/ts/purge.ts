@@ -22,7 +22,10 @@ export const purgePackage = async (
 }
 
 export const purgeModule = async (module: string, pkg: ExtraPackageEntry) => {
-  const { purge } = await loadModule(module)
+  const { purge, modules } = await loadModule(module)
+  if (modules) {
+    await purgePackage(pkg, modules)
+  }
   if (!purge) {
     return
   }
