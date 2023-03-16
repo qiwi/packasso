@@ -1,3 +1,12 @@
+## [@packasso/test-jest@0.20.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.test-jest.0.19.4-f0...2023.3.16-packasso.test-jest.0.20.0-f0) (2023-03-16)
+
+### Features
+* feat: any command (#28) [b98ded9](https://github.com/qiwi/packasso/commit/b98ded9ad02eb48d5a6f5ec1e5f1e93b486fb46b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.20.0
+* perf: @packasso/jest-snapshot-resolver updated to 0.3.0
+
 ## [@packasso/test-jest@0.19.4](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.test-jest.0.19.3-f0...2023.3.15-packasso.test-jest.0.19.4-f0) (2023-03-15)
 
 ### Dependencies
