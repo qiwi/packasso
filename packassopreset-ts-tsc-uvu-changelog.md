@@ -1,3 +1,20 @@
+## [@packasso/preset-ts-tsc-uvu@0.19.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.preset-ts-tsc-uvu.0.18.3-f0...2023.3.16-packasso.preset-ts-tsc-uvu.0.19.0-f0) (2023-03-16)
+
+### Features
+* feat: any command (#28) [b98ded9](https://github.com/qiwi/packasso/commit/b98ded9ad02eb48d5a6f5ec1e5f1e93b486fb46b)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.18.0
+* perf: @packasso/build-ts-tsc updated to 0.18.0
+* perf: @packasso/buildstamp updated to 0.2.0
+* perf: @packasso/core updated to 0.20.0
+* perf: @packasso/dev-license updated to 0.12.0
+* perf: @packasso/dev-ts updated to 0.19.0
+* perf: @packasso/release-zx-semrel updated to 0.18.0
+* perf: @packasso/style-eslint updated to 0.3.0
+* perf: @packasso/style-prettier updated to 0.3.0
+* perf: @packasso/test-uvu updated to 0.19.0
+
 ## [@packasso/preset-ts-tsc-uvu@0.18.3](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.preset-ts-tsc-uvu.0.18.2-f0...2023.3.15-packasso.preset-ts-tsc-uvu.0.18.3-f0) (2023-03-15)
 
 ### Dependencies
