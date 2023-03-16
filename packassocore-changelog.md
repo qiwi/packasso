@@ -1,3 +1,8 @@
+## [@packasso/core@0.20.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.core.0.19.3-f0...2023.3.16-packasso.core.0.20.0-f0) (2023-03-16)
+
+### Features
+* feat: any command (#28) [b98ded9](https://github.com/qiwi/packasso/commit/b98ded9ad02eb48d5a6f5ec1e5f1e93b486fb46b)
+
 ## [@packasso/core@0.19.3](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.core.0.19.2-f0...2023.3.15-packasso.core.0.19.3-f0) (2023-03-15)
 
 ### Fixes & improvements
