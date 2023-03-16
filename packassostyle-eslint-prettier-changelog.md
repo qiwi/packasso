@@ -1,3 +1,13 @@
+## [@packasso/style-eslint-prettier@0.18.1](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.style-eslint-prettier.0.18.0-f0...2023.3.16-packasso.style-eslint-prettier.0.18.1-f0) (2023-03-16)
+
+### Fixes & improvements
+* fix: separate preset packasso [490b0b2](https://github.com/qiwi/packasso/commit/490b0b228ecec6571780685ee3647cd87530a50b)
+
+### Dependencies
+* perf: @packasso/core updated to 0.20.1
+* perf: @packasso/style-eslint updated to 0.3.1
+* perf: @packasso/style-prettier updated to 0.3.1
+
 ## [@packasso/style-eslint-prettier@0.18.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.style-eslint-prettier.0.17.3-f0...2023.3.16-packasso.style-eslint-prettier.0.18.0-f0) (2023-03-16)
 
 ### Features
