@@ -1,3 +1,8 @@
+## [@packasso/jest-svgr-transformer@0.2.1](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.jest-svgr-transformer.0.2.0-f0...2023.3.16-packasso.jest-svgr-transformer.0.2.1-f0) (2023-03-16)
+
+### Fixes & improvements
+* fix: separate preset packasso [490b0b2](https://github.com/qiwi/packasso/commit/490b0b228ecec6571780685ee3647cd87530a50b)
+
 ## [@packasso/jest-svgr-transformer@0.2.0](https://github.com/qiwi/packasso/compare/2023.3.15-packasso.jest-svgr-transformer.0.1.2-f0...2023.3.16-packasso.jest-svgr-transformer.0.2.0-f0) (2023-03-16)
 
 ### Features
