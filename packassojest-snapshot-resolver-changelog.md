@@ -1,3 +1,8 @@
+## [@packasso/jest-snapshot-resolver@0.3.2](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.jest-snapshot-resolver.0.3.1-f0...2023.3.21-packasso.jest-snapshot-resolver.0.3.2-f0) (2023-03-21)
+
+### Fixes & improvements
+* fix: tsx [623267e](https://github.com/qiwi/packasso/commit/623267e2398fb56e69c1c7b955411fd4a1b6233d)
+
 ## [@packasso/jest-snapshot-resolver@0.3.1](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.jest-snapshot-resolver.0.3.0-f0...2023.3.16-packasso.jest-snapshot-resolver.0.3.1-f0) (2023-03-16)
 
 ### Fixes & improvements
