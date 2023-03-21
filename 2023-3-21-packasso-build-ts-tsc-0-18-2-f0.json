@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/build-ts-tsc",
+  "hash": "623267e2398fb56e69c1c7b955411fd4a1b6233d",
+  "version": "0.18.2",
+  "dependencies": {
+    "@packasso/core": "0.20.2"
+  }
+}
