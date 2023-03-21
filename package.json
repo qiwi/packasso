@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "packasso": "tsm --conditions development packages/cli/src/main/ts/index.ts",
+    "packasso": "npm_config_yes=true npx tsx --conditions development packages/cli/src/main/ts/index.ts",
     "build": "yarn packasso build",
     "format": "yarn packasso format",
     "lint": "yarn packasso lint",

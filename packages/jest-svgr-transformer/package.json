@@ -24,7 +24,7 @@
   "homepage": "https://qiwi.github.io/packasso",
   "version": "0.0.0",
   "scripts": {
-    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts",
+    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/index.ts",
     "build": "yarn packasso build",
     "format": "yarn packasso format",
     "lint": "yarn packasso lint",
