@@ -1,3 +1,12 @@
+## [@packasso/test-jest@0.20.2](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.test-jest.0.20.1-f0...2023.3.21-packasso.test-jest.0.20.2-f0) (2023-03-21)
+
+### Fixes & improvements
+* fix: tsx [623267e](https://github.com/qiwi/packasso/commit/623267e2398fb56e69c1c7b955411fd4a1b6233d)
+
+### Dependencies
+* perf: @packasso/core updated to 0.20.2
+* perf: @packasso/jest-snapshot-resolver updated to 0.3.2
+
 ## [@packasso/test-jest@0.20.1](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.test-jest.0.20.0-f0...2023.3.16-packasso.test-jest.0.20.1-f0) (2023-03-16)
 
 ### Fixes & improvements
