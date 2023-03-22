@@ -1,7 +1,5 @@
-import { ModulePurge } from '@packasso/core'
+import { ModuleCommand } from '@packasso/core'
 
-export const purge: ModulePurge = async () => [
-  '.prettierrc',
-  '.prettierrc.*',
-  'prettier.config.*',
+export const purge: ModuleCommand = async () => [
+  '+ rimraf .prettierrc .prettierrc.* prettier.config.*',
 ]

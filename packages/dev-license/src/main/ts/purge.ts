@@ -1,3 +1,3 @@
-import { ModulePurge } from '@packasso/core'
+import { ModuleCommand } from "@packasso/core";
 
-export const purge: ModulePurge = async () => ['LICENSE']
+export const purge: ModuleCommand = async () => ["+ rimraf LICENSE"];

@@ -11,6 +11,7 @@
   "homepage": "https://qiwi.github.io/packasso",
   "scripts": {
     "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/index.ts",
+    "purge": "yarn packasso purge",
     "build": "yarn packasso build",
     "format": "yarn packasso format",
     "lint": "yarn packasso lint",

@@ -1,7 +1,5 @@
-import { ModulePurge } from '@packasso/core'
+import { ModuleCommand } from '@packasso/core'
 
-export const purge: ModulePurge = async () => [
-  '.releaserc',
-  '.releaserc.*',
-  'release.config.*',
+export const purge: ModuleCommand = async () => [
+  '+ rimraf .releaserc .releaserc.* release.config.*',
 ]

@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "eslint": "8.35.0",
-    "eslint-config-qiwi": "2.0.9"
+    "eslint-config-qiwi": "2.0.9",
+    "rimraf": "4.2.0"
   }
 }

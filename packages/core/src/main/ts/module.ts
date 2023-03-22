@@ -18,12 +18,6 @@ export interface ModuleInstall {
   ): Promise<ModuleInstallResult | void>
 }
 
-export type ModulePurgeResult = string[]
-
-export interface ModulePurge {
-  (pkg: ExtraPackageEntry): Promise<ModulePurgeResult | void>
-}
-
 export type ModuleCommandResult = (
   | ConcurrentlyCommandInput
   | ConcurrentlyCommandInput[]
@@ -38,16 +32,14 @@ export interface ModuleCommand {
 
 export interface Module {
   install?: ModuleInstall
-  purge?: ModulePurge
   modules: string[]
   commands: Record<string, ModuleCommand>
 }
 
 export const loadModule: (name: string) => Promise<Module> = async (name) => {
-  const { install, purge, modules, ...commands } = await import(name)
+  const { install, modules, ...commands } = await import(name)
   return {
     install,
-    purge,
     modules,
     commands,
   }

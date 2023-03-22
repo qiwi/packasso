@@ -19,6 +19,9 @@ export const concurrentlyResult = async (
   }
   for (const commands of result) {
     const cmds = concurrentlyCommands(commands, pkg, pkgs)
+    if (cmds.length === 0) {
+      continue
+    }
     try {
       await concurrently(cmds, {
         prefixColors: ['auto'],
@@ -50,6 +53,12 @@ export const concurrentlyCommands = (
             command: command.command.slice(1).trim(),
             cwd: pkg.absPath,
           }
+        : command.command.startsWith('+')
+        ? [pkg, ...pkgs].flatMap((pkg) => ({
+            ...command,
+            command: command.command.slice(1).trim(),
+            cwd: pkg.absPath,
+          }))
         : command,
     )
     .flatMap((command) =>
