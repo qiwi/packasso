@@ -20,8 +20,7 @@
     "@packasso/release-zx-semrel": "workspace:*",
     "@packasso/style-eslint": "workspace:*",
     "@packasso/style-prettier": "workspace:*",
-    "@packasso/test-uvu": "workspace:*",
-    "@packasso/yarn-audit": "workspace:*"
+    "@packasso/test-uvu": "workspace:*"
   },
   "repository": {
     "type": "git",
@@ -33,7 +32,8 @@
   "homepage": "https://qiwi.github.io/packasso",
   "version": "0.0.0",
   "scripts": {
-    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts",
+    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/index.ts",
+    "purge": "yarn packasso purge",
     "audit": "yarn packasso audit",
     "build": "yarn packasso build",
     "format": "yarn packasso format",

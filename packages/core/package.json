@@ -9,6 +9,7 @@
     "cosmiconfig": "8.1.0",
     "fast-glob": "3.2.12",
     "lodash": "4.17.21",
+    "minimist": "1.2.8",
     "read-pkg": "7.1.0"
   },
   "exports": {
@@ -30,7 +31,8 @@
   "homepage": "https://qiwi.github.io/packasso",
   "version": "0.0.0",
   "scripts": {
-    "packasso": "tsm --conditions development ../cli/src/main/ts/index.ts",
+    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/index.ts",
+    "purge": "yarn packasso purge",
     "audit": "yarn packasso audit",
     "build": "yarn packasso build",
     "format": "yarn packasso format",

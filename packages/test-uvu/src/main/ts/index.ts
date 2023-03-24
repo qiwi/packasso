@@ -1,2 +1,2 @@
-export * from './purge'
 export * from './test'
+export * from './purge'

@@ -44,9 +44,6 @@
     },
     {
       "path": "../test-uvu/tsconfig.cjs.json"
-    },
-    {
-      "path": "../yarn-audit/tsconfig.cjs.json"
     }
   ]
 }

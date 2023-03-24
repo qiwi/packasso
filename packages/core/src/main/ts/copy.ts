@@ -1,7 +1,6 @@
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname } from 'node:path'
 
-import fg from 'fast-glob'
 import lodash from 'lodash'
 
 export const rm = (path: string) => {
@@ -133,14 +132,3 @@ export const diffJson = (json1: any, json2: any): any =>
     }
     return { ...result, [key]: json1[key] }
   }, {})
-
-export const rmGlob = (cwd: string, ...pattern: string[]) =>
-  fg
-    .sync(pattern, {
-      cwd,
-      absolute: true,
-      deep: 0,
-      onlyFiles: false,
-      onlyDirectories: false,
-    })
-    .forEach((path) => rm(path))
