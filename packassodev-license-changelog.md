@@ -1,3 +1,11 @@
+## [@packasso/dev-license@0.13.0](https://github.com/qiwi/packasso/compare/2023.3.21-packasso.dev-license.0.12.2-f0...2023.3.24-packasso.dev-license.0.13.0-f0) (2023-03-24)
+
+### Features
+* feat: purge is command (#30) [0c91aa2](https://github.com/qiwi/packasso/commit/0c91aa20d0a24f6214f30034b426f506062b25f4)
+
+### Dependencies
+* perf: @packasso/core updated to 0.21.0
+
 ## [@packasso/dev-license@0.12.2](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.dev-license.0.12.1-f0...2023.3.21-packasso.dev-license.0.12.2-f0) (2023-03-21)
 
 ### Fixes & improvements
