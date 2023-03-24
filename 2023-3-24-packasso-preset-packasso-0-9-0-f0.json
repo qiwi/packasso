@@ -1,0 +1,19 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/preset-packasso",
+  "hash": "0c91aa20d0a24f6214f30034b426f506062b25f4",
+  "version": "0.9.0",
+  "dependencies": {
+    "@packasso/build-resources": "0.19.0",
+    "@packasso/build-ts-tsc": "0.19.0",
+    "@packasso/buildstamp": "0.3.0",
+    "@packasso/core": "0.21.0",
+    "@packasso/dev-license": "0.13.0",
+    "@packasso/dev-packasso": "0.8.0",
+    "@packasso/dev-ts": "0.20.0",
+    "@packasso/release-zx-semrel": "0.19.0",
+    "@packasso/style-eslint": "0.4.0",
+    "@packasso/style-prettier": "0.4.0",
+    "@packasso/test-uvu": "0.20.0"
+  }
+}
