@@ -2,36 +2,25 @@
   "compilerOptions": {
     "rootDir": "./"
   },
+  "files": [],
   "references": [
     {
-      "path": "./packages/build-resources/tsconfig.esm.json"
-    },
-    {
-      "path": "./packages/build-ts-swc/tsconfig.esm.json"
-    },
-    {
-      "path": "./packages/build-ts-tsc/tsconfig.esm.json"
-    },
-    {
-      "path": "./packages/build-typedoc/tsconfig.esm.json"
-    },
-    {
-      "path": "./packages/buildstamp/tsconfig.esm.json"
+      "path": "./packages/core/tsconfig.esm.json"
     },
     {
       "path": "./packages/cli/tsconfig.esm.json"
     },
     {
-      "path": "./packages/core/tsconfig.esm.json"
+      "path": "./packages/buildstamp/tsconfig.esm.json"
     },
     {
-      "path": "./packages/dev-license/tsconfig.esm.json"
+      "path": "./packages/eslint/tsconfig.esm.json"
     },
     {
-      "path": "./packages/dev-packasso/tsconfig.esm.json"
+      "path": "./packages/gitignore/tsconfig.esm.json"
     },
     {
-      "path": "./packages/dev-ts/tsconfig.esm.json"
+      "path": "./packages/jest/tsconfig.esm.json"
     },
     {
       "path": "./packages/jest-snapshot-resolver/tsconfig.esm.json"
@@ -40,38 +29,37 @@
       "path": "./packages/jest-svgr-transformer/tsconfig.esm.json"
     },
     {
-      "path": "./packages/preset-packasso/tsconfig.esm.json"
+      "path": "./packages/license/tsconfig.esm.json"
     },
     {
-      "path": "./packages/preset-ts-swc-uvu/tsconfig.esm.json"
+      "path": "./packages/packasso/tsconfig.esm.json"
     },
     {
-      "path": "./packages/preset-ts-tsc-jest/tsconfig.esm.json"
+      "path": "./packages/prettier/tsconfig.esm.json"
     },
     {
-      "path": "./packages/preset-ts-tsc-uvu/tsconfig.esm.json"
+      "path": "./packages/resources/tsconfig.esm.json"
     },
     {
-      "path": "./packages/release-zx-semrel/tsconfig.esm.json"
+      "path": "./packages/semrel/tsconfig.esm.json"
     },
     {
-      "path": "./packages/style-eslint/tsconfig.esm.json"
+      "path": "./packages/swc/tsconfig.esm.json"
     },
     {
-      "path": "./packages/style-eslint-prettier/tsconfig.esm.json"
+      "path": "./packages/tsc/tsconfig.esm.json"
     },
     {
-      "path": "./packages/style-prettier/tsconfig.esm.json"
+      "path": "./packages/tsconfig/tsconfig.esm.json"
     },
     {
-      "path": "./packages/test-jest/tsconfig.esm.json"
+      "path": "./packages/typedoc/tsconfig.esm.json"
     },
     {
-      "path": "./packages/test-uvu/tsconfig.esm.json"
+      "path": "./packages/uvu/tsconfig.esm.json"
     },
     {
       "path": "./packages/yarn-audit/tsconfig.esm.json"
     }
-  ],
-  "files": []
+  ]
 }

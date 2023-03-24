@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/index.ts"
-  }
-}

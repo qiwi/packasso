@@ -1,0 +1,46 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "esnext"
+    ],
+    "rootDir": "./src/main/ts",
+    "outDir": "./target/cjs",
+    "tsBuildInfoFile": "./target/cjs/.tsbuildinfo"
+  },
+  "references": [
+    {
+      "path": "../buildstamp/tsconfig.cjs.json"
+    },
+    {
+      "path": "../core/tsconfig.cjs.json"
+    },
+    {
+      "path": "../eslint/tsconfig.cjs.json"
+    },
+    {
+      "path": "../gitignore/tsconfig.cjs.json"
+    },
+    {
+      "path": "../license/tsconfig.cjs.json"
+    },
+    {
+      "path": "../prettier/tsconfig.cjs.json"
+    },
+    {
+      "path": "../semrel/tsconfig.cjs.json"
+    },
+    {
+      "path": "../tsc/tsconfig.cjs.json"
+    },
+    {
+      "path": "../uvu/tsconfig.cjs.json"
+    },
+    {
+      "path": "../yarn-audit/tsconfig.cjs.json"
+    }
+  ]
+}

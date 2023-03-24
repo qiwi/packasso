@@ -1,16 +1,28 @@
 {
   "name": "@packasso/core",
+  "version": "0.0.0",
+  "description": "packasso core",
+  "keywords": [
+    "preset"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@antongolub/git-root": "1.5.10",
-    "@semrel-extra/topo": "1.5.0",
+    "@semrel-extra/topo": "1.6.0",
     "@types/lodash": "4.14.191",
-    "@types/node": "18.15.3",
+    "@types/node": "18.15.10",
     "concurrently": "7.6.0",
-    "cosmiconfig": "8.1.0",
-    "fast-glob": "3.2.12",
+    "cosmiconfig": "8.1.3",
     "lodash": "4.17.21",
     "minimist": "1.2.8",
-    "read-pkg": "7.1.0"
+    "read-pkg-up": "9.1.0"
   },
   "exports": {
     ".": {
@@ -21,41 +33,7 @@
     },
     "./package.json": "./package.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qiwi/packasso.git"
-  },
-  "bugs": {
-    "url": "https://github.com/qiwi/packasso/issues"
-  },
-  "homepage": "https://qiwi.github.io/packasso",
-  "version": "0.0.0",
-  "scripts": {
-    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/index.ts",
-    "purge": "yarn packasso purge",
-    "audit": "yarn packasso audit",
-    "build": "yarn packasso build",
-    "format": "yarn packasso format",
-    "lint": "yarn packasso lint",
-    "test": "yarn packasso test"
-  },
   "license": "MIT",
-  "devDependencies": {
-    "buildstamp": "2.1.1",
-    "c8": "7.13.0",
-    "earljs": "0.2.3",
-    "eslint": "8.35.0",
-    "eslint-config-qiwi": "2.0.9",
-    "globby-cp": "1.1.3",
-    "prettier": "2.8.4",
-    "prettier-config-qiwi": "2.0.1",
-    "rimraf": "4.2.0",
-    "tsc-esm-fix": "2.20.12",
-    "tsm": "2.3.0",
-    "typescript": "4.9.5",
-    "uvu": "0.5.6",
-    "yarn-audit-fix": "9.3.9"
-  },
   "type": "module",
   "main": "./target/cjs/index.cjs",
   "module": "./target/esm/index.mjs",
@@ -63,10 +41,12 @@
   "files": [
     "target/cjs/**/*",
     "target/esm/**/*",
-    "target/resources/**/*",
     "target/buildstamp.json"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/bin.ts"
   }
 }

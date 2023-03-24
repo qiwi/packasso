@@ -1,0 +1,53 @@
+{
+  "name": "@packasso/uvu",
+  "version": "0.0.0",
+  "description": "uvu",
+  "keywords": [
+    "uvu",
+    "preset"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "dependencies": {
+    "@packasso/core": "workspace:*",
+    "c8": "7.13.0",
+    "earljs": "0.2.3",
+    "rimraf": "4.4.1",
+    "tsm": "2.3.0",
+    "uvu": "0.5.6"
+  },
+  "exports": {
+    ".": {
+      "development": "./src/main/ts/index.ts",
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "types": "./target/esm/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./target/cjs/index.cjs",
+  "module": "./target/esm/index.mjs",
+  "types": "./target/esm/index.d.ts",
+  "files": [
+    "target/cjs/**/*",
+    "target/esm/**/*",
+    "target/buildstamp.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "packasso-uvu": "./target/esm/bin.mjs"
+  },
+  "scripts": {
+    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/bin.ts"
+  }
+}

@@ -1,27 +1,30 @@
+import { existsSync } from 'node:fs'
+import { join, relative } from 'node:path'
+
 import {
   IPackageEntry,
   ITopoContext,
   ITopoOptions,
   topo,
 } from '@semrel-extra/topo'
+import { cosmiconfig } from 'cosmiconfig'
 import lodash from 'lodash'
-
-import { getConfig } from './config'
-
-export enum PackageType {
-  UNIT = 'unit',
-  LEAF = 'leaf',
-  TREE = 'tree',
-}
 
 export interface ExtraPackageEntry extends IPackageEntry {
   modules: string[]
-  type: PackageType
+  leaf: boolean
+  unit: boolean
+  tree: boolean
 }
 
 export interface ExtraTopoContext extends ITopoContext {
   packages: Record<string, ExtraPackageEntry>
   root: ExtraPackageEntry
+}
+
+export const getConfig: (cwd: string) => Promise<string[]> = async (cwd) => {
+  const result = await cosmiconfig('packasso').search(cwd)
+  return lodash.uniqWith([result?.config || []].flat(), lodash.isEqual)
 }
 
 export const getExtraTopo: (
@@ -36,7 +39,9 @@ export const getExtraTopo: (
         name,
         {
           ...pkg,
-          type: PackageType.LEAF,
+          leaf: true,
+          unit: false,
+          tree: false,
           modules: await getConfig(pkg.absPath),
         },
       ]),
@@ -45,9 +50,9 @@ export const getExtraTopo: (
   const root = {
     ...context.root,
     relPath: '.',
-    type: context.root.manifest.workspaces
-      ? PackageType.TREE
-      : PackageType.UNIT,
+    leaf: false,
+    unit: !context.root.manifest.workspaces,
+    tree: !!context.root.manifest.workspaces,
     modules: lodash.uniqWith(
       [
         ...Object.values(packages).flatMap(({ modules }) => modules),
@@ -62,3 +67,17 @@ export const getExtraTopo: (
     root,
   }
 }
+
+export const getDependencies: (
+  pkg: ExtraPackageEntry,
+  topo: ExtraTopoContext,
+  file?: string,
+) => [string, string][] = (pkg, topo, file) =>
+  (pkg.tree
+    ? Object.values(topo.packages || {})
+    : Object.entries(pkg.manifest.dependencies || {})
+        .filter(([name, version]) => name && version.startsWith('workspace:'))
+        .map(([name]) => topo.packages[name])
+  )
+    .filter(({ absPath }) => !file || existsSync(join(absPath, file)))
+    .map(({ name, absPath }) => [name, relative(pkg.absPath, absPath)])

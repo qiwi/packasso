@@ -26,7 +26,7 @@ Packasso config refers to one or more preset modules. Pick them as the `packasso
 {
   "name": "pablo-picasso",
   "version": "1972.07.03",
-  "packasso": "@packasso/preset-ts-tsc-uvu"
+  "packasso": "@packasso/pablo-picasso"
 }
 ```
 

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "baseUrl": "./",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@packasso/core": [
+        "../core/src/main/ts"
+      ],
+      "@packasso/jest-snapshot-resolver": [
+        "../jest-snapshot-resolver/src/main/ts"
+      ],
+      "@packasso/jest-svgr-transformer": [
+        "../jest-svgr-transformer/src/main/ts"
+      ]
+    }
+  },
+  "include": [
+    "./src/main/ts"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}

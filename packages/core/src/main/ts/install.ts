@@ -1,144 +1,172 @@
-import { basename, dirname, relative, resolve } from 'node:path'
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { resolve } from 'node:path'
+import { dirname } from 'node:path'
 
-import fg from 'fast-glob'
+import lodash from 'lodash'
 
-import {
-  applyJson,
-  applyText,
-  readJson,
-  readText,
-  revertJson,
-  revertText,
-} from './copy'
-import {
-  getModuleResourcesDir,
-  loadModule,
-  Module,
-  ModuleInstallResult,
-} from './module'
-import { ExtraPackageEntry, getExtraTopo, PackageType } from './topo'
+import { ExtraPackageEntry } from './topo'
 
-export const install: (
-  root: string,
-  development: boolean,
-  uninstall?: boolean,
-) => Promise<unknown> = async (root, development, uninstall = false) => {
-  const topo = await getExtraTopo({
-    cwd: root,
-  })
-  for (const name of topo.queue) {
-    await installPackage(topo.packages[name], root, development, uninstall)
-  }
-  await installPackage(topo.root, root, development, uninstall)
-}
+export type InstallData = Partial<Record<string, string | object>>[]
 
-export const installPackage = async (
-  pkg: ExtraPackageEntry,
-  root: string,
-  development: boolean,
-  uninstall: boolean,
-) => {
-  for (const module of pkg.modules) {
-    await installModule(module, pkg, root, development, uninstall)
-  }
-}
-
-const types: Record<PackageType, string[]> = {
-  [PackageType.UNIT]: ['root', 'leaf', 'each'],
-  [PackageType.TREE]: ['root', 'tree', 'each'],
-  [PackageType.LEAF]: ['leaf', 'each'],
-}
-
-const special = (path: string) => {
-  const name = basename(path)
-  if (name === 'gitignore') {
-    return resolve(dirname(path), `.${name}`)
-  }
-  return path
-}
-
-const installModuleCommands = (
-  pkg: ExtraPackageEntry,
-  uninstall: boolean,
-  development: boolean,
-  commands: Module['commands'],
-) =>
-  installModuleResult(pkg, uninstall, {
-    path: 'package.json',
-    data: {
-      scripts: Object.fromEntries(
-        Object.keys(commands)
-          .filter((command) => commands[command])
-          .map((command) => [
-            command,
-            development ? `yarn packasso ${command}` : `packasso ${command}`,
-          ]),
-      ),
-    },
-  })
-
-const installModuleResources = (
-  pkg: ExtraPackageEntry,
-  uninstall: boolean,
-  res: string,
-) =>
-  types[pkg.type].forEach((type) => {
-    const cwd = resolve(res, type)
-    installModuleResult(
-      pkg,
-      uninstall,
-      ...fg
-        .sync('**/*', {
-          cwd,
-          dot: true,
-          absolute: true,
-          onlyFiles: true,
-        })
-        .map((path) => ({
-          path: relative(cwd, special(path)),
-          data: (path.endsWith('.json') ? readJson : readText)(path),
-        })),
-    )
-  })
-
-export const installModule = async (
-  module: string,
-  pkg: ExtraPackageEntry,
-  root: string,
-  development: boolean,
-  uninstall: boolean,
-) => {
-  const { install, modules, commands } = await loadModule(module)
-  installModuleCommands(pkg, uninstall, development, commands)
-  installModuleResources(
-    pkg,
-    uninstall,
-    getModuleResourcesDir(module, root, development),
+export const install = async (pkg: ExtraPackageEntry, ...data: InstallData) => {
+  data.forEach((data) =>
+    Object.entries(data).forEach(([path, data]) => {
+      const absPath = resolve(pkg.absPath, path)
+      if (lodash.isNil(data)) {
+        return
+      }
+      if (lodash.isString(data)) {
+        applyText(absPath, data)
+      } else {
+        applyJson(absPath, data)
+      }
+    }),
   )
-  if (install) {
-    installModuleResult(
-      pkg,
-      uninstall,
-      ...((await install(pkg, root, development, uninstall)) || []),
-    )
-  } else if (modules) {
-    for (const module of modules) {
-      await installModule(module, pkg, root, development, uninstall)
-    }
+}
+
+export const uninstall = async (
+  pkg: ExtraPackageEntry,
+  ...data: InstallData
+) => {
+  data.forEach((data) =>
+    Object.entries(data).forEach(([path, data]) => {
+      const absPath = resolve(pkg.absPath, path)
+      if (lodash.isNil(data)) {
+        return
+      }
+      if (lodash.isString(data)) {
+        revertText(absPath, data)
+      } else {
+        revertJson(absPath, data)
+      }
+    }),
+  )
+}
+
+const rm = (path: string) => {
+  try {
+    rmSync(path, {
+      recursive: true,
+    })
+  } catch {
+    //
   }
 }
 
-const installModuleResult = (
-  pkg: ExtraPackageEntry,
-  uninstall: boolean,
-  ...result: ModuleInstallResult
-) => {
-  result.forEach(({ path, data }) => {
-    const absPath = resolve(pkg.absPath, path)
-    if (typeof data === 'string') {
-      uninstall ? revertText(absPath, data) : applyText(absPath, data)
-    } else {
-      uninstall ? revertJson(absPath, data) : applyJson(absPath, data)
+const mergeText: (...text: string[]) => string = (...text) =>
+  lodash
+    .uniqWith(text.join('\n').split('\n'), (value1, value2) => {
+      if (value1 === '' || value2 === '') {
+        return false
+      }
+      return lodash.isEqual(value1, value2)
+    })
+    .join('\n')
+    .replaceAll(/\n{3,}/g, '\n\n')
+
+const diffText: (text1: string, ...text2: string[]) => string = (
+  text1,
+  ...text2
+) =>
+  lodash
+    .differenceWith(
+      text1.split('\n'),
+      text2.join('\n').split('\n'),
+      lodash.isEqual,
+    )
+    .join('\n')
+
+const readText: (path: string) => string = (path) => {
+  try {
+    return readFileSync(path, { encoding: 'utf8' })
+  } catch {
+    return ''
+  }
+}
+
+const writeText: (path: string, text: string) => void = (path, text) => {
+  mkdirSync(dirname(path), {
+    recursive: true,
+  })
+  const trim = text.replaceAll(/^\n+/g, '').replaceAll(/\n+$/g, '')
+  if (trim.length === 0) {
+    rm(path)
+  } else {
+    writeFileSync(path, trim + '\n', {
+      encoding: 'utf8',
+    })
+  }
+}
+
+const applyText: (path: string, ...text: string[]) => void = (path, ...text) =>
+  writeText(path, mergeText(readText(path), ...text))
+
+const revertText: (path: string, ...text: string[]) => void = (path, ...text) =>
+  writeText(path, diffText(readText(path), ...text))
+
+const readJson: (path: string) => object = (path) => {
+  try {
+    const json = JSON.parse(readText(path))
+    if (lodash.isString(json)) {
+      return `"${json}"`
+    }
+    return json
+  } catch {
+    return {}
+  }
+}
+
+const writeJson: (path: string, json: object) => void = (path, json) => {
+  const text = JSON.stringify(json, undefined, 2)
+  writeText(path, text === '{}' ? '' : text)
+}
+
+const applyJson: (path: string, ...json: object[]) => void = (path, ...json) =>
+  writeJson(
+    path,
+    mergeJson(
+      readJson(path),
+      json.reduce((acc, json) => mergeJson(acc, json), {}),
+    ),
+  )
+
+const revertJson: (path: string, ...json: object[]) => void = (path, ...json) =>
+  writeJson(
+    path,
+    diffJson(
+      readJson(path),
+      json.reduce((acc, json) => mergeJson(acc, json), {}),
+    ),
+  )
+
+const mergeJson = (json1: object, json2: object) =>
+  lodash.mergeWith(json1, json2, (value1, value2) => {
+    if (lodash.isArray(value1) || lodash.isArray(value2)) {
+      return lodash
+        .uniqWith([value1, value2].flat(), lodash.isEqual)
+        .filter((value) => !lodash.isNil(value))
     }
   })
-}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const diffJson = (json1: any, json2: any): any =>
+  Object.keys(json1).reduce((result, key) => {
+    if (lodash.isEqual(json1[key], json2[key])) {
+      return result
+    }
+    if (lodash.isArray(json1[key]) && lodash.isArray(json2[key])) {
+      const d = lodash.differenceWith(json1, json2, lodash.isEqual)
+      if (d.length === 0) {
+        return result
+      }
+      return { ...result, [key]: d }
+    }
+    if (lodash.isObject(json1[key]) && lodash.isObject(json2[key])) {
+      const d = diffJson(json1[key], json2[key])
+      if (Object.keys(d).length === 0) {
+        return result
+      }
+      return { ...result, [key]: d }
+    }
+    return { ...result, [key]: json1[key] }
+  }, {})

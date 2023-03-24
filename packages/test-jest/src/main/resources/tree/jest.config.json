@@ -1,6 +1,0 @@
-{
-  "collectCoverage": true,
-  "collectCoverageFrom": ["<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)"],
-  "coverageDirectory": "<rootDir>/target/coverage",
-  "coveragePathIgnorePatterns": ["<rootDir>/node_modules", "<rootDir>/target"]
-}
