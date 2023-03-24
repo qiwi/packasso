@@ -1,3 +1,11 @@
+## [@packasso/dev-packasso@0.9.0](https://github.com/qiwi/packasso/compare/2023.3.24-packasso.dev-packasso.0.8.0-f0...2023.3.24-packasso.dev-packasso.0.9.0-f0) (2023-03-24)
+
+### Features
+* feat: yarn audit (#29) [ec67ba6](https://github.com/qiwi/packasso/commit/ec67ba6ca45ebea9bf731bc6738133733c8dac5d)
+
+### Dependencies
+* perf: @packasso/core updated to 0.22.0
+
 ## [@packasso/dev-packasso@0.8.0](https://github.com/qiwi/packasso/compare/2023.3.21-packasso.dev-packasso.0.7.2-f0...2023.3.24-packasso.dev-packasso.0.8.0-f0) (2023-03-24)
 
 ### Features
