@@ -1,3 +1,8 @@
+## [@packasso/jest-snapshot-resolver@0.5.0](https://github.com/qiwi/packasso/compare/2023.3.24-packasso.jest-snapshot-resolver.0.4.0-f0...2023.3.24-packasso.jest-snapshot-resolver.0.5.0-f0) (2023-03-24)
+
+### Features
+* feat: yarn audit (#29) [ec67ba6](https://github.com/qiwi/packasso/commit/ec67ba6ca45ebea9bf731bc6738133733c8dac5d)
+
 ## [@packasso/jest-snapshot-resolver@0.4.0](https://github.com/qiwi/packasso/compare/2023.3.21-packasso.jest-snapshot-resolver.0.3.2-f0...2023.3.24-packasso.jest-snapshot-resolver.0.4.0-f0) (2023-03-24)
 
 ### Features
