@@ -1,3 +1,12 @@
+## [@packasso/test-jest@0.21.0](https://github.com/qiwi/packasso/compare/2023.3.21-packasso.test-jest.0.20.2-f0...2023.3.24-packasso.test-jest.0.21.0-f0) (2023-03-24)
+
+### Features
+* feat: purge is command (#30) [0c91aa2](https://github.com/qiwi/packasso/commit/0c91aa20d0a24f6214f30034b426f506062b25f4)
+
+### Dependencies
+* perf: @packasso/core updated to 0.21.0
+* perf: @packasso/jest-snapshot-resolver updated to 0.4.0
+
 ## [@packasso/test-jest@0.20.2](https://github.com/qiwi/packasso/compare/2023.3.16-packasso.test-jest.0.20.1-f0...2023.3.21-packasso.test-jest.0.20.2-f0) (2023-03-21)
 
 ### Fixes & improvements
