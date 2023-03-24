@@ -1,3 +1,21 @@
+## [@packasso/preset-packasso@0.10.0](https://github.com/qiwi/packasso/compare/2023.3.24-packasso.preset-packasso.0.9.0-f0...2023.3.24-packasso.preset-packasso.0.10.0-f0) (2023-03-24)
+
+### Features
+* feat: yarn audit (#29) [ec67ba6](https://github.com/qiwi/packasso/commit/ec67ba6ca45ebea9bf731bc6738133733c8dac5d)
+
+### Dependencies
+* perf: @packasso/build-resources updated to 0.20.0
+* perf: @packasso/build-ts-tsc updated to 0.20.0
+* perf: @packasso/buildstamp updated to 0.4.0
+* perf: @packasso/core updated to 0.22.0
+* perf: @packasso/dev-license updated to 0.14.0
+* perf: @packasso/dev-packasso updated to 0.9.0
+* perf: @packasso/dev-ts updated to 0.21.0
+* perf: @packasso/release-zx-semrel updated to 0.20.0
+* perf: @packasso/style-eslint updated to 0.5.0
+* perf: @packasso/style-prettier updated to 0.5.0
+* perf: @packasso/test-uvu updated to 0.21.0
+
 ## [@packasso/preset-packasso@0.9.0](https://github.com/qiwi/packasso/compare/2023.3.21-packasso.preset-packasso.0.8.3-f0...2023.3.24-packasso.preset-packasso.0.9.0-f0) (2023-03-24)
 
 ### Features
