@@ -1,21 +1,9 @@
 {
   "compilerOptions": {
-    "module": "es2022",
-    "target": "es2022",
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "removeComments": true,
-    "importHelpers": true,
-    "baseUrl": "./",
-    "types": [
-      "node"
-    ],
     "paths": {
+      "@packasso/yarn-audit": [
+        "../yarn-audit/src/main/ts"
+      ],
       "@packasso/build-resources": [
         "../build-resources/src/main/ts"
       ],
@@ -49,7 +37,22 @@
       "@packasso/test-uvu": [
         "../test-uvu/src/main/ts"
       ]
-    }
+    },
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "baseUrl": "./",
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "./src/main/ts"

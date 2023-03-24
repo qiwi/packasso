@@ -68,6 +68,9 @@
     },
     {
       "path": "./packages/test-uvu/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/yarn-audit/tsconfig.cjs.json"
     }
   ],
   "files": []

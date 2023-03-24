@@ -1,9 +1,7 @@
 {
-  "name": "@packasso/jest-svgr-transformer",
+  "name": "@packasso/yarn-audit",
   "dependencies": {
-    "@types/lodash": "4.14.191",
-    "@types/node": "18.15.3",
-    "lodash": "4.17.21"
+    "@packasso/core": "workspace:*"
   },
   "exports": {
     ".": {
