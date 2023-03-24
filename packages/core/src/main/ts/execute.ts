@@ -6,7 +6,6 @@ import minimist from 'minimist'
 import { command } from './command'
 import { install } from './install'
 import { getRootDir } from './package'
-import { purge } from './purge'
 
 const run: (name: string) => Promise<unknown> = async (name) => {
   log(`trying to ${name}...`)
@@ -23,9 +22,6 @@ const run: (name: string) => Promise<unknown> = async (name) => {
     case 'install':
       await install(root, development, true)
       await install(root, development)
-      break
-    case 'purge':
-      await purge(root)
       break
     default:
       await command(name, cwd())

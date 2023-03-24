@@ -1,7 +1,5 @@
-import { ModulePurge } from '@packasso/core'
+import { ModuleCommand } from '@packasso/core'
 
-export const purge: ModulePurge = async () => [
-  '.eslintrc',
-  '.eslintrc.*',
-  'eslint.config.*',
+export const purge: ModuleCommand = async () => [
+  '+ rimraf .eslintrc .eslintrc.* eslint.config.*',
 ]

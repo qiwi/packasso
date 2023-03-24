@@ -1,7 +1,5 @@
-import { ModulePurge } from '@packasso/core'
+import { ModuleCommand } from '@packasso/core'
 
-export const purge: ModulePurge = async () => [
-  'coverage',
-  'jest.config.*',
-  'tsconfig.test.json',
+export const purge: ModuleCommand = async () => [
+  '+ rimraf coverage jest.config.* tsconfig.test.json',
 ]
