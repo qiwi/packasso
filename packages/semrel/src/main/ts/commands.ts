@@ -29,6 +29,11 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(context.pkg, ...data(context))
   },
+  release: async ({ pkg }) => {
+    if (pkg.tree) {
+      await execute('zx-bulk-release', pkg)
+    }
+  },
   purge: async ({ pkgs }) => {
     await execute('rimraf .releaserc .releaserc.* release.config.*', pkgs)
   },
