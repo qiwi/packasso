@@ -1,0 +1,48 @@
+{
+  "name": "@packasso/license",
+  "version": "0.0.0",
+  "description": "license",
+  "keywords": [
+    "license",
+    "preset"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "dependencies": {
+    "@packasso/core": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "development": "./src/main/ts/index.ts",
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "types": "./target/esm/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./target/cjs/index.cjs",
+  "module": "./target/esm/index.mjs",
+  "types": "./target/esm/index.d.ts",
+  "files": [
+    "target/cjs/**/*",
+    "target/esm/**/*",
+    "target/buildstamp.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "packasso-license": "./target/esm/bin.mjs"
+  },
+  "scripts": {
+    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/bin.ts"
+  }
+}

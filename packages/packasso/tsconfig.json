@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "baseUrl": "./",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@packasso/buildstamp": [
+        "../buildstamp/src/main/ts"
+      ],
+      "@packasso/core": [
+        "../core/src/main/ts"
+      ],
+      "@packasso/eslint": [
+        "../eslint/src/main/ts"
+      ],
+      "@packasso/gitignore": [
+        "../gitignore/src/main/ts"
+      ],
+      "@packasso/license": [
+        "../license/src/main/ts"
+      ],
+      "@packasso/prettier": [
+        "../prettier/src/main/ts"
+      ],
+      "@packasso/semrel": [
+        "../semrel/src/main/ts"
+      ],
+      "@packasso/tsc": [
+        "../tsc/src/main/ts"
+      ],
+      "@packasso/uvu": [
+        "../uvu/src/main/ts"
+      ],
+      "@packasso/yarn-audit": [
+        "../yarn-audit/src/main/ts"
+      ]
+    }
+  },
+  "include": [
+    "./src/main/ts"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}

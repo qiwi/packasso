@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "rimraf": "4.2.0",
-    "typedoc": "0.23.26"
-  }
-}

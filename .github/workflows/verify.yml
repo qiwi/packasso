@@ -20,6 +20,6 @@ jobs:
       - name: Install
         run: yarn install --immutable
       - name: Build
-        run: yarn build
+        run: yarn packasso build
       - name: Test
-        run: yarn test
+        run: yarn packasso test

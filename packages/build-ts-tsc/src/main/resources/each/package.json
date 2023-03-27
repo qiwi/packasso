@@ -1,7 +1,0 @@
-{
-  "devDependencies": {
-    "rimraf": "4.2.0",
-    "typescript": "4.9.5",
-    "tsc-esm-fix": "2.20.12"
-  }
-}

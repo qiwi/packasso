@@ -1,4 +1,4 @@
 {
-  "cmd": "yarn",
-  "changelog": "changelog"
+  "changelog": "changelog",
+  "npmFetch": true
 }

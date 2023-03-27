@@ -1,5 +1,4 @@
 # @packasso/cli
-# @packasso
 
 <p align="center">
   <img alt="Pablo Picasso" src="https://raw.githubusercontent.com/qiwi/packasso/master/pablo-picasso-self-portrait-1972-06-30.webp" width="200" />&nbsp;
@@ -27,7 +26,7 @@ Packasso config refers to one or more preset modules. Pick them as the `packasso
 {
   "name": "pablo-picasso",
   "version": "1972.07.03",
-  "packasso": "@packasso/preset-ts-tsc-uvu"
+  "packasso": "@packasso/pablo-picasso"
 }
 ```
 
