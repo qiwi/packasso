@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/cli",
+  "hash": "f2611f8a01532402ecf9fbe01abee4517ff11c6b",
+  "version": "1.0.1",
+  "dependencies": {
+    "@packasso/core": "1.0.0"
+  }
+}
