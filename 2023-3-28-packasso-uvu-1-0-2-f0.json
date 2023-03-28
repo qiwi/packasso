@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/uvu",
+  "hash": "fd11c2f9750b6d8b4940caf931aeb455a370aa39",
+  "version": "1.0.2",
+  "dependencies": {
+    "@packasso/core": "1.0.1"
+  }
+}
