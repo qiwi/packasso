@@ -1,3 +1,20 @@
+## [@packasso/packasso@1.0.5](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.packasso.1.0.4-f0...2023.3.28-packasso.packasso.1.0.5-f0) (2023-03-28)
+
+### Fixes & improvements
+* fix: version [b5becf6](https://github.com/qiwi/packasso/commit/b5becf63f27b765e9d93378f53d54da456c8df4f)
+
+### Dependencies
+* perf: @packasso/buildstamp updated to 1.0.4
+* perf: @packasso/core updated to 1.0.2
+* perf: @packasso/eslint updated to 1.0.4
+* perf: @packasso/gitignore updated to 1.0.4
+* perf: @packasso/license updated to 1.0.3
+* perf: @packasso/prettier updated to 1.0.4
+* perf: @packasso/semrel updated to 1.0.7
+* perf: @packasso/tsc updated to 1.0.2
+* perf: @packasso/uvu updated to 1.0.3
+* perf: @packasso/yarn-audit updated to 1.0.4
+
 ## [@packasso/packasso@1.0.4](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.packasso.1.0.3-f0...2023.3.28-packasso.packasso.1.0.4-f0) (2023-03-28)
 
 ### Dependencies
