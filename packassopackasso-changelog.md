@@ -1,3 +1,8 @@
+## [@packasso/packasso@1.0.2](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.packasso.1.0.1-f0...2023.3.28-packasso.packasso.1.0.2-f0) (2023-03-28)
+
+### Dependencies
+* perf: @packasso/semrel updated to 1.0.4
+
 ## [@packasso/packasso@1.0.1](https://github.com/qiwi/packasso/compare/2023.3.27-packasso.packasso.1.0.0-f0...2023.3.28-packasso.packasso.1.0.1-f0) (2023-03-28)
 
 ### Dependencies
