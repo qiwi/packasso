@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/yarn-audit",
+  "hash": "b5becf63f27b765e9d93378f53d54da456c8df4f",
+  "version": "1.0.4",
+  "dependencies": {
+    "@packasso/core": "1.0.2"
+  }
+}
