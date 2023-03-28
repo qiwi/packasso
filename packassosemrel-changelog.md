@@ -1,3 +1,8 @@
+## [@packasso/semrel@1.0.6](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.semrel.1.0.5-f0...2023.3.28-packasso.semrel.1.0.6-f0) (2023-03-28)
+
+### Fixes & improvements
+* fix: up zx-bulk-release [41c3eed](https://github.com/qiwi/packasso/commit/41c3eed6859cd390b3899bd057fe5629d7426442)
+
 ## [@packasso/semrel@1.0.5](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.semrel.1.0.4-f0...2023.3.28-packasso.semrel.1.0.5-f0) (2023-03-28)
 
 ### Fixes & improvements
