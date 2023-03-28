@@ -20,6 +20,9 @@
     },
     {
       "path": "../jest-svgr-transformer/tsconfig.cjs.json"
+    },
+    {
+      "path": "../jest-environment-jsdom/tsconfig.cjs.json"
     }
   ]
 }

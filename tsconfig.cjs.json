@@ -5,22 +5,25 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/core/tsconfig.cjs.json"
-    },
-    {
-      "path": "./packages/cli/tsconfig.cjs.json"
-    },
-    {
       "path": "./packages/buildstamp/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/core/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/eslint/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/cli/tsconfig.cjs.json"
     },
     {
       "path": "./packages/gitignore/tsconfig.cjs.json"
     },
     {
       "path": "./packages/jest/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/jest-environment-jsdom/tsconfig.cjs.json"
     },
     {
       "path": "./packages/jest-snapshot-resolver/tsconfig.cjs.json"

@@ -1,3 +1,6 @@
+import { sep } from 'node:path'
+import { argv } from 'node:process'
+
 import {
   cmd,
   Commands,
@@ -18,7 +21,7 @@ const data: ContextInstallData = ({ pkg, topo }) => [
             injectGlobals: false,
             clearMocks: true,
             resetMocks: true,
-            testEnvironment: 'jsdom',
+            testEnvironment: '@packasso/jest-environment-jsdom',
             testMatch: ['<rootDir>/src/test/[jt]s/**/*.(spec|test).[jt]s?(x)'],
             testPathIgnorePatterns: ['__mocks__', '__snapshots__'],
             collectCoverage: true,
@@ -69,7 +72,10 @@ export const commands: Commands = {
     await uninstall(context.pkg, ...data(context))
   },
   test: async ({ pkg, args }) => {
-    await execute(cmd('jest', { silent: true, u: args.u }), pkg)
+    const argvs = argv[1].split(sep)
+    const i = argvs.indexOf('node_modules')
+    const n = i === -1 ? '' : `NODE_PATH=${argvs.slice(0, i + 1).join(sep)}`
+    await execute(cmd(`${n} jest`, { silent: true, u: args.u }), pkg)
   },
   purge: async ({ pkg, pkgs }) => {
     await execute('rimraf coverage jest.config.* tsconfig.test.json', [

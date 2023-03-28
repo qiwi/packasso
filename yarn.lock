@@ -1021,6 +1021,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@packasso/jest-environment-jsdom@workspace:*, @packasso/jest-environment-jsdom@workspace:packages/jest-environment-jsdom":
+  version: 0.0.0-use.local
+  resolution: "@packasso/jest-environment-jsdom@workspace:packages/jest-environment-jsdom"
+  dependencies:
+    jest-environment-jsdom: "npm:29.5.0"
+  languageName: unknown
+  linkType: soft
+
 "@packasso/jest-snapshot-resolver@workspace:*, @packasso/jest-snapshot-resolver@workspace:packages/jest-snapshot-resolver":
   version: 0.0.0-use.local
   resolution: "@packasso/jest-snapshot-resolver@workspace:packages/jest-snapshot-resolver"
@@ -1042,6 +1050,7 @@ __metadata:
   resolution: "@packasso/jest@workspace:packages/jest"
   dependencies:
     "@packasso/core": "workspace:*"
+    "@packasso/jest-environment-jsdom": "workspace:*"
     "@packasso/jest-snapshot-resolver": "workspace:*"
     "@packasso/jest-svgr-transformer": "workspace:*"
     "@swc/core": "npm:1.3.42"
