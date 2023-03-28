@@ -17,6 +17,9 @@
     },
     {
       "path": "../jest-svgr-transformer/tsconfig.esm.json"
+    },
+    {
+      "path": "../jest-environment-jsdom/tsconfig.esm.json"
     }
   ]
 }
