@@ -1114,7 +1114,7 @@ __metadata:
   resolution: "@packasso/semrel@workspace:packages/semrel"
   dependencies:
     "@packasso/core": "workspace:*"
-    zx-bulk-release: "npm:2.2.16"
+    zx-bulk-release: "npm:2.2.17"
   bin:
     packasso-semrel: ./target/esm/bin.mjs
   languageName: unknown
@@ -9619,9 +9619,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zx-bulk-release@npm:2.2.16":
-  version: 2.2.16
-  resolution: "zx-bulk-release@npm:2.2.16"
+"zx-bulk-release@npm:2.2.17":
+  version: 2.2.17
+  resolution: "zx-bulk-release@npm:2.2.17"
   dependencies:
     "@semrel-extra/topo": "npm:^1.6.0"
     cosmiconfig: "npm:^8.1.3"
@@ -9629,7 +9629,7 @@ __metadata:
     zx-extra: "npm:^2.5.4"
   bin:
     zx-bulk-release: src/main/js/cli.js
-  checksum: 59573c8c1ed95ec6ca29f153bb9a01f8165a00f15c68a97281c9f9f68cc908a553aec8604e64e1ea168f0ad0f426bb938f7a02fc21c6379fc0d44a02d6e2468d
+  checksum: 92514c3a5f106874119d7707b37519c678f6a8c09bf7c3759ac13c03ec31b4b53721266025b795dc1066e7317baaa08b89a83f56508a964c0d9ecd146c30c2df
   languageName: node
   linkType: hard
 
