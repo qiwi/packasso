@@ -1,3 +1,8 @@
+## [@packasso/core@1.0.2](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.core.1.0.1-f0...2023.3.28-packasso.core.1.0.2-f0) (2023-03-28)
+
+### Fixes & improvements
+* fix: version [b5becf6](https://github.com/qiwi/packasso/commit/b5becf63f27b765e9d93378f53d54da456c8df4f)
+
 ## [@packasso/core@1.0.1](https://github.com/qiwi/packasso/compare/2023.3.27-packasso.core.1.0.0-f0...2023.3.28-packasso.core.1.0.1-f0) (2023-03-28)
 
 ### Fixes & improvements
