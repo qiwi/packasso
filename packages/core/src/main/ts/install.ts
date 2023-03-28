@@ -149,21 +149,21 @@ const mergeJson = (json1: object, json2: object) =>
   })
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const diffJson = (json1: any, json2: any): any =>
+export const diffJson = (json1: any, json2: any): any =>
   Object.keys(json1).reduce((result, key) => {
     if (lodash.isEqual(json1[key], json2[key])) {
       return result
     }
     if (lodash.isArray(json1[key]) && lodash.isArray(json2[key])) {
-      const d = lodash.differenceWith(json1, json2, lodash.isEqual)
-      if (d.length === 0) {
+      const d = lodash.differenceWith(json1[key], json2[key], lodash.isEqual)
+      if (lodash.isEmpty(d)) {
         return result
       }
       return { ...result, [key]: d }
     }
     if (lodash.isObject(json1[key]) && lodash.isObject(json2[key])) {
       const d = diffJson(json1[key], json2[key])
-      if (Object.keys(d).length === 0) {
+      if (lodash.isEmpty(d)) {
         return result
       }
       return { ...result, [key]: d }
