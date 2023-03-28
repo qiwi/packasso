@@ -16,7 +16,7 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "zx-bulk-release": "2.2.15"
+    "zx-bulk-release": "2.2.16"
   },
   "exports": {
     ".": {
