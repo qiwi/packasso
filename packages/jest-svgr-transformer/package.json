@@ -1,6 +1,6 @@
 {
   "name": "@packasso/jest-svgr-transformer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "jest svg transformer compatible with @svgr/webpack loader",
   "keywords": [
     "jest",
