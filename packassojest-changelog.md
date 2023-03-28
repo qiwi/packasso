@@ -1,3 +1,8 @@
+## [@packasso/jest@1.1.1](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.jest.1.1.0-f0...2023.3.28-packasso.jest.1.1.1-f0) (2023-03-28)
+
+### Dependencies
+* perf: @packasso/jest-environment-jsdom updated to 1.0.1
+
 ## [@packasso/jest@1.1.0](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.jest.1.0.4-f0...2023.3.28-packasso.jest.1.1.0-f0) (2023-03-28)
 
 ### Features
