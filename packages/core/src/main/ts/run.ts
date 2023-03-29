@@ -31,7 +31,7 @@ export const getModuleName = async (path: string = argv[1]) => {
   if (res) {
     return res.packageJson.name
   }
-  throw new Error('Ooops...')
+  throw new Error('can`t get module name')
 }
 
 export const context: (module: Module) => Promise<Context> = async (module) => {
@@ -41,7 +41,7 @@ export const context: (module: Module) => Promise<Context> = async (module) => {
     throw new Error('can`t get git root')
   }
   const command = argv[2]
-  if (command === undefined || command === '') {
+  if (lodash.isNil(command) || lodash.isEmpty(command)) {
     throw new Error('invalid command')
   }
   const root = gitRootRes.toString()
@@ -106,11 +106,13 @@ export const bin: (
       )}`
     : `npm_config_yes=true npx ${module}`
 
-export const cmd: (bin: string, args: Partial<ParsedArgs>) => string = (
-  bin,
-  args,
-) =>
+export const cmd: (
+  bin: string,
+  args?: Partial<ParsedArgs>,
+  env?: Record<string, string | number | boolean>,
+) => string = (bin, args = {}, env = {}) =>
   [
+    ...Object.entries(env).flatMap(([key, value]) => `${key}=${value}`),
     bin,
     ...Object.entries(args).flatMap(([key, value]) => {
       if (lodash.isNil(value)) {
@@ -125,7 +127,9 @@ export const cmd: (bin: string, args: Partial<ParsedArgs>) => string = (
       }
       return [value].flat().flatMap((value) => [arg, value])
     }),
-  ].join(' ')
+  ]
+    .join(' ')
+    .trim()
 
 export const npx: (
   pkg: ExtraPackageEntry,

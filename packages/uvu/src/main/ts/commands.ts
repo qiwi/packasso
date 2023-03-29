@@ -10,18 +10,25 @@ export const commands: Commands = {
     const testPaths = `${
       pkg.tree ? `${many ? '(' : ''}${paths.join('|')}${many ? ')' : ''}/` : ''
     }src/test/[jt]s/.*.(spec|test).[jt]sx?`
-    const u = args.u ? 'UPDATE_SNAPSHOTS=true' : ''
-    const c8 = cmd('c8', {
-      all: true,
-      o: 'target/coverage',
-      r: ['html', 'text', 'lcov'],
-      n: `'${mainPaths}'`,
-    })
-    const uvu = cmd('uvu', {
-      r: ['tsm', 'earljs/uvu'],
-      _: ['.', `'${testPaths}'`],
-    })
-    await execute(`${u} ${c8} ${uvu}`.trim(), pkg)
+    await execute(
+      cmd(
+        'c8',
+        {
+          all: true,
+          o: 'target/coverage',
+          r: ['html', 'text', 'lcov'],
+          n: `'${mainPaths}'`,
+          _: [
+            cmd('uvu', {
+              r: ['tsm', 'earljs/uvu'],
+              _: ['.', `'${testPaths}'`],
+            }),
+          ],
+        },
+        args.u ? { UPDATE_SNAPSHOTS: true } : {},
+      ),
+      pkg,
+    )
   },
   clean: async ({ pkg, pkgs }) => {
     await execute('rimraf target/coverage', [pkg, ...pkgs])

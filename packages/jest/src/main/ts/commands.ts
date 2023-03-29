@@ -74,8 +74,14 @@ export const commands: Commands = {
   test: async ({ pkg, args }) => {
     const argvs = argv[1].split(sep)
     const i = argvs.indexOf('node_modules')
-    const n = i === -1 ? '' : `NODE_PATH=${argvs.slice(0, i + 1).join(sep)}`
-    await execute(cmd(`${n} jest`, { silent: true, u: args.u }), pkg)
+    await execute(
+      cmd(
+        'jest',
+        { silent: true, u: args.u },
+        i === -1 ? { NODE_PATH: argvs.slice(0, i + 1).join(sep) } : {},
+      ),
+      pkg,
+    )
   },
   purge: async ({ pkg, pkgs }) => {
     await execute('rimraf coverage jest.config.* tsconfig.test.json', [
