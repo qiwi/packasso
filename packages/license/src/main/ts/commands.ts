@@ -1,4 +1,10 @@
-import { Commands, execute, install, uninstall } from '@packasso/core'
+import {
+  Commands,
+  ContextInstallData,
+  execute,
+  install,
+  uninstall,
+} from '@packasso/core'
 
 const license = `MIT License
 
@@ -23,7 +29,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `
 
-const data = [
+const data: ContextInstallData = () => [
   {
     'package.json': {
       license: 'MIT',
@@ -34,10 +40,10 @@ const data = [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context.pkg, ...data)
+    await install(context, data)
   },
   uninstall: async (context) => {
-    await uninstall(context.pkg, ...data)
+    await uninstall(context, data)
   },
   purge: async ({ pkg, pkgs }) => {
     await execute('rimraf LICENSE', [pkg, ...pkgs])

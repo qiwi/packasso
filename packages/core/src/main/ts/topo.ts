@@ -1,26 +1,11 @@
 import { existsSync } from 'node:fs'
 import { join, relative } from 'node:path'
 
-import {
-  IPackageEntry,
-  ITopoContext,
-  ITopoOptions,
-  topo,
-} from '@semrel-extra/topo'
+import { ITopoOptions, topo } from '@semrel-extra/topo'
 import { cosmiconfig } from 'cosmiconfig'
 import lodash from 'lodash'
 
-export interface ExtraPackageEntry extends IPackageEntry {
-  modules: string[]
-  leaf: boolean
-  unit: boolean
-  tree: boolean
-}
-
-export interface ExtraTopoContext extends ITopoContext {
-  packages: Record<string, ExtraPackageEntry>
-  root: ExtraPackageEntry
-}
+import { ExtraPackageEntry, ExtraTopoContext } from './types'
 
 export const getConfig: (cwd: string) => Promise<string[]> = async (cwd) => {
   const result = await cosmiconfig('packasso').search(cwd)

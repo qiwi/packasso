@@ -7,20 +7,22 @@ import {
   uninstall,
 } from '@packasso/core'
 
+const prettierConfigQiwi = 'prettier-config-qiwi'
+
 const data: ContextInstallData = ({ pkg }) => [
   pkg.leaf || pkg.unit
     ? {
-        '.prettierrc.json': '"prettier-config-qiwi"',
+        '.prettierrc.json': `"${prettierConfigQiwi}"`,
       }
     : {},
 ]
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context.pkg, ...data(context))
+    await install(context, data, ['prettier', prettierConfigQiwi])
   },
   uninstall: async (context) => {
-    await uninstall(context.pkg, ...data(context))
+    await uninstall(context, data, ['prettier', prettierConfigQiwi])
   },
   lint: async ({ pkg, pkgs, args }) => {
     await execute(

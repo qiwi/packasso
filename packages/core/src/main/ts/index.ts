@@ -1,3 +1,4 @@
+export * from './types'
 export * from './topo'
 export * from './helpers'
 export * from './install'

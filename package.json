@@ -9,5 +9,12 @@
     "packasso": "npm_config_yes=true npx tsx --conditions development packages/cli/src/main/ts/bin.ts"
   },
   "packageManager": "yarn@4.0.0-rc.40",
-  "license": "MIT"
+  "license": "MIT",
+  "optionalDependencies": {
+    "typescript": "4.9.5",
+    "eslint": "8.36.0",
+    "eslint-config-qiwi": "2.1.1",
+    "prettier": "2.8.7",
+    "prettier-config-qiwi": "2.1.0"
+  }
 }

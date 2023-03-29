@@ -33,9 +33,9 @@ const data: ContextInstallData = ({ pkg, root }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context.pkg, ...data(context))
+    await install(context, data)
   },
   uninstall: async (context) => {
-    await uninstall(context.pkg, ...data(context))
+    await uninstall(context, data)
   },
 }

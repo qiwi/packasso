@@ -1,6 +1,7 @@
 import { join, sep } from 'node:path'
 
-import { ExtraPackageEntry, ExtraTopoContext, getDependencies } from './topo'
+import { getDependencies } from './topo'
+import { ExtraPackageEntry, ExtraTopoContext } from './types'
 
 export const getJestModuleNameMapper: (
   pkg: ExtraPackageEntry,

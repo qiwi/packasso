@@ -77,7 +77,6 @@ const data: ContextInstallData = ({ pkg, topo }) => [
                 import: './target/esm/index.mjs',
                 types: './target/esm/index.d.ts',
               },
-              './package.json': './package.json',
             },
             files: ['target/cjs/**/*', 'target/esm/**/*'],
           }
@@ -87,10 +86,10 @@ const data: ContextInstallData = ({ pkg, topo }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context.pkg, ...data(context))
+    await install(context, data, ['typescript'])
   },
   uninstall: async (context) => {
-    await uninstall(context.pkg, ...data(context))
+    await uninstall(context, data, ['typescript'])
   },
   clean: async ({ pkg, pkgs }) => {
     await execute('rimraf target/cjs target/esm', [pkg, ...pkgs])

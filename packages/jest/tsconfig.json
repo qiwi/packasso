@@ -19,14 +19,14 @@
       "@packasso/core": [
         "../core/src/main/ts"
       ],
+      "@packasso/jest-environment-jsdom": [
+        "../jest-environment-jsdom/src/main/ts"
+      ],
       "@packasso/jest-snapshot-resolver": [
         "../jest-snapshot-resolver/src/main/ts"
       ],
       "@packasso/jest-svgr-transformer": [
         "../jest-svgr-transformer/src/main/ts"
-      ],
-      "@packasso/jest-environment-jsdom": [
-        "../jest-environment-jsdom/src/main/ts"
       ]
     }
   },

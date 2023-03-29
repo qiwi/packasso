@@ -66,10 +66,10 @@ const data: ContextInstallData = ({ pkg, topo }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context.pkg, ...data(context))
+    await install(context, data)
   },
   uninstall: async (context) => {
-    await uninstall(context.pkg, ...data(context))
+    await uninstall(context, data)
   },
   test: async ({ pkg, args }) => {
     const argvs = argv[1].split(sep)

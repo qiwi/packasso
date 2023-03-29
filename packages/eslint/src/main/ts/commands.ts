@@ -7,11 +7,13 @@ import {
   uninstall,
 } from '@packasso/core'
 
+const eslintConfigQiwi = 'eslint-config-qiwi'
+
 const data: ContextInstallData = ({ pkg }) => [
   pkg.leaf || pkg.unit
     ? {
         '.eslintrc.json': {
-          extends: 'eslint-config-qiwi',
+          extends: eslintConfigQiwi,
         },
       }
     : {},
@@ -19,10 +21,10 @@ const data: ContextInstallData = ({ pkg }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context.pkg, ...data(context))
+    await install(context, data, ['eslint', eslintConfigQiwi])
   },
   uninstall: async (context) => {
-    await uninstall(context.pkg, ...data(context))
+    await uninstall(context, data, ['eslint', eslintConfigQiwi])
   },
   lint: async ({ pkg, pkgs, args }) => {
     await execute(

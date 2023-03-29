@@ -19,10 +19,10 @@ const data: ContextInstallData = ({ pkg }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context.pkg, ...data(context))
+    await install(context, data)
   },
   uninstall: async (context) => {
-    await uninstall(context.pkg, ...data(context))
+    await uninstall(context, data)
   },
   clean: async ({ pkg, pkgs }) => {
     await execute('rimraf target/buildstamp.json', [pkg, ...pkgs])
