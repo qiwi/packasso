@@ -1,3 +1,11 @@
+## [@packasso/uvu@1.0.4](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.uvu.1.0.3-f0...2023.3.29-packasso.uvu.1.0.4-f0) (2023-03-29)
+
+### Fixes & improvements
+* fix: add env to cmd [ce10354](https://github.com/qiwi/packasso/commit/ce10354d01b9a466aa575b5a7cd7557d2e0f79bf)
+
+### Dependencies
+* perf: @packasso/core updated to 1.0.3
+
 ## [@packasso/uvu@1.0.3](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.uvu.1.0.2-f0...2023.3.28-packasso.uvu.1.0.3-f0) (2023-03-28)
 
 ### Fixes & improvements
