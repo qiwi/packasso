@@ -1,3 +1,11 @@
+## [@packasso/typedoc@1.1.0](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.typedoc.1.0.4-f0...2023.3.29-packasso.typedoc.1.1.0-f0) (2023-03-29)
+
+### Features
+* feat: optional dependencies [78149ec](https://github.com/qiwi/packasso/commit/78149ec559effebd05bf94ce43a92fb8573d42fe)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.0
+
 ## [@packasso/typedoc@1.0.4](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.typedoc.1.0.3-f0...2023.3.29-packasso.typedoc.1.0.4-f0) (2023-03-29)
 
 ### Dependencies
