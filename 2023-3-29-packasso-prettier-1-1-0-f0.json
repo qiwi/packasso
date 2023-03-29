@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/prettier",
+  "hash": "75716f7a28457aea04b2f663363af029f4cec1ca",
+  "version": "1.1.0",
+  "dependencies": {
+    "@packasso/core": "1.1.0"
+  }
+}
