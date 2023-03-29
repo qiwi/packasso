@@ -1,3 +1,8 @@
+## [@packasso/jest@1.2.1](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.jest.1.2.0-f0...2023.3.29-packasso.jest.1.2.1-f0) (2023-03-29)
+
+### Fixes & improvements
+* fix: jest node path env [d2067f6](https://github.com/qiwi/packasso/commit/d2067f6263418949e186f00df7629a180092d0e3)
+
 ## [@packasso/jest@1.2.0](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.jest.1.1.2-f0...2023.3.29-packasso.jest.1.2.0-f0) (2023-03-29)
 
 ### Features
