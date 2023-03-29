@@ -78,7 +78,7 @@ export const commands: Commands = {
       cmd(
         'jest',
         { silent: true, u: args.u },
-        i === -1 ? { NODE_PATH: argvs.slice(0, i + 1).join(sep) } : {},
+        i === -1 ? {} : { NODE_PATH: argvs.slice(0, i + 1).join(sep) },
       ),
       pkg,
     )
