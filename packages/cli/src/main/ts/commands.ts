@@ -2,11 +2,11 @@ import { Context } from '@packasso/core'
 import { Command, Commands, npx } from '@packasso/core'
 
 const pkgNpx: (context: Context, prefix: string) => Promise<unknown> = async (
-  { pkg, root, command, args },
+  { pkg, root, command, args, development },
   prefix,
 ) => {
   for (const module of pkg.modules) {
-    await npx(pkg, root, module, command, args, {
+    await npx(pkg, root, module, command, args, development, {
       prefix,
     })
   }

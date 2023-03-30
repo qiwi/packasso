@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx packages/cli/src/main/ts/bin.ts"
+    "packasso": "npm_config_yes=true npx tsx --conditions development packages/cli/src/main/ts/bin.ts"
   },
   "packageManager": "yarn@4.0.0-rc.40",
   "license": "MIT",

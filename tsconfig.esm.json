@@ -5,16 +5,16 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/cli/tsconfig.esm.json"
-    },
-    {
       "path": "./packages/buildstamp/tsconfig.esm.json"
     },
     {
-      "path": "./packages/eslint/tsconfig.esm.json"
+      "path": "./packages/cli/tsconfig.esm.json"
     },
     {
       "path": "./packages/core/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/eslint/tsconfig.esm.json"
     },
     {
       "path": "./packages/gitignore/tsconfig.esm.json"
@@ -29,10 +29,10 @@
       "path": "./packages/jest-snapshot-resolver/tsconfig.esm.json"
     },
     {
-      "path": "./packages/jest-svgr-transformer/tsconfig.esm.json"
+      "path": "./packages/license/tsconfig.esm.json"
     },
     {
-      "path": "./packages/license/tsconfig.esm.json"
+      "path": "./packages/jest-svgr-transformer/tsconfig.esm.json"
     },
     {
       "path": "./packages/packasso/tsconfig.esm.json"
