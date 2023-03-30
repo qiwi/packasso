@@ -1,3 +1,8 @@
+## [@packasso/core@1.1.5](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.core.1.1.4-f0...2023.3.30-packasso.core.1.1.5-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: exports experiment [4b206ef](https://github.com/qiwi/packasso/commit/4b206efaab3bded0e89e03fb1a6025253e29ce82)
+
 ## [@packasso/core@1.1.4](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.core.1.1.3-f0...2023.3.30-packasso.core.1.1.4-f0) (2023-03-30)
 
 ### Fixes & improvements
