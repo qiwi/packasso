@@ -1,3 +1,11 @@
+## [@packasso/license@1.1.1](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.license.1.1.0-f0...2023.3.30-packasso.license.1.1.1-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: manual optional dependencies [d6d911f](https://github.com/qiwi/packasso/commit/d6d911ffd30ed94e528eeade78fe11d011ddcfcf)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.1
+
 ## [@packasso/license@1.1.0](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.license.1.0.4-f0...2023.3.29-packasso.license.1.1.0-f0) (2023-03-29)
 
 ### Features
