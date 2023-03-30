@@ -1,3 +1,8 @@
+## [@packasso/jest-svgr-transformer@1.0.4](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.jest-svgr-transformer.1.0.3-f0...2023.3.30-packasso.jest-svgr-transformer.1.0.4-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: exports experiment [4b206ef](https://github.com/qiwi/packasso/commit/4b206efaab3bded0e89e03fb1a6025253e29ce82)
+
 ## [@packasso/jest-svgr-transformer@1.0.3](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.jest-svgr-transformer.1.0.2-f0...2023.3.30-packasso.jest-svgr-transformer.1.0.3-f0) (2023-03-30)
 
 ### Fixes & improvements
