@@ -1,3 +1,8 @@
+## [@packasso/jest-snapshot-resolver@1.0.2](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.jest-snapshot-resolver.1.0.1-f0...2023.3.30-packasso.jest-snapshot-resolver.1.0.2-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: publish experiment [b8d339e](https://github.com/qiwi/packasso/commit/b8d339e959390e6ab39f24ef6ceaa19d54586e80)
+
 ## [@packasso/jest-snapshot-resolver@1.0.1](https://github.com/qiwi/packasso/compare/2023.3.27-packasso.jest-snapshot-resolver.1.0.0-f0...2023.3.28-packasso.jest-snapshot-resolver.1.0.1-f0) (2023-03-28)
 
 ### Fixes & improvements
