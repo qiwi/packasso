@@ -1,3 +1,8 @@
+## [@packasso/core@1.1.2](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.core.1.1.1-f0...2023.3.30-packasso.core.1.1.2-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: prefer src bin [8e6b27e](https://github.com/qiwi/packasso/commit/8e6b27e2e8e42d3f64e2be1f7c871a034582ced2)
+
 ## [@packasso/core@1.1.1](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.core.1.1.0-f0...2023.3.30-packasso.core.1.1.1-f0) (2023-03-30)
 
 ### Fixes & improvements
