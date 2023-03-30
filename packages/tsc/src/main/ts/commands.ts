@@ -76,6 +76,7 @@ const data: ContextInstallData = ({ pkg, topo }) => [
                 require: './target/cjs/index.cjs',
                 import: './target/esm/index.mjs',
                 types: './target/esm/index.d.ts',
+                default: './target/esm/index.mjs',
               },
             },
             files: ['target/cjs/**/*', 'target/esm/**/*'],

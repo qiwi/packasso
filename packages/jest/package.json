@@ -31,7 +31,8 @@
       "development": "./src/main/ts/index.ts",
       "require": "./target/cjs/index.cjs",
       "import": "./target/esm/index.mjs",
-      "types": "./target/esm/index.d.ts"
+      "types": "./target/esm/index.d.ts",
+      "default": "./target/esm/index.mjs"
     },
     "./package.json": "./package.json"
   },
