@@ -21,8 +21,8 @@ const data: ContextInstallData = ({ pkg, topo }) => [
     ? {
         'tsconfig.json': {
           compilerOptions: {
-            module: 'esnext',
-            target: 'esnext',
+            module: 'es2022',
+            target: 'es2022',
             moduleResolution: 'node',
             jsx: 'react-jsx',
             strict: true,
