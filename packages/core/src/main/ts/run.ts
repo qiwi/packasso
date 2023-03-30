@@ -1,7 +1,7 @@
 import { error } from 'node:console'
 import { existsSync, realpathSync } from 'node:fs'
 import { dirname, relative, resolve } from 'node:path'
-import { argv, execArgv, exit, cwd as pcwd } from 'node:process'
+import { argv, env, execArgv, exit, cwd as pcwd } from 'node:process'
 
 import { gitRoot } from '@antongolub/git-root'
 import concurrently, { ConcurrentlyOptions } from 'concurrently'
@@ -34,8 +34,6 @@ export const context: (module: Module) => Promise<Context> = async (module) => {
   }
   const root = gitRootRes.toString()
   const args = minimist(argv.slice(3))
-  const { conditions } = minimist(execArgv)
-  const development = [conditions].flat().includes('development')
   const topo = await getExtraTopo({ cwd: root })
   const pkg =
     Object.values(topo.packages).find(({ absPath }) => absPath === cwd) ||
@@ -44,7 +42,6 @@ export const context: (module: Module) => Promise<Context> = async (module) => {
     pkg === topo.root ? topo.queue.map((name) => topo.packages[name]) : []
   return {
     cwd,
-    development,
     command,
     args,
     pkg,
@@ -83,43 +80,46 @@ export const bin: (
   pkg: ExtraPackageEntry,
   root: string,
   module: string,
-  development: boolean,
-) => string = (pkg, root, module, development) => {
-  if (development) {
-    const path = realpathSync(
-      resolve(root, 'node_modules', module, 'src', 'main', 'ts', 'bin.ts'),
+) => string = (pkg, root, module) => {
+  if (env.NODE_ENV === 'development') {
+    const path = resolve(
+      root,
+      'node_modules',
+      module,
+      'src',
+      'main',
+      'ts',
+      'bin.ts',
     )
     if (existsSync(path)) {
-      return `npm_config_yes=true npx tsx --conditions development ${relative(
-        pkg.absPath,
-        path,
-      )}`
+      return `npx tsx ${relative(pkg.absPath, realpathSync(path))}`
     }
   }
-  return `npm_config_yes=true npx ${module}`
+  return `npx ${module}`
 }
 
 export const cmd: (
   bin: string,
   args?: Partial<ParsedArgs>,
-  env?: Record<string, string | number | boolean>,
+  env?: Record<string, string | number | boolean | undefined>,
 ) => string = (bin, args = {}, env = {}) =>
   [
-    ...Object.entries(env).flatMap(([key, value]) => `${key}=${value}`),
+    ...Object.entries(env)
+      .filter(([key, value]) => !lodash.isNil(key) && !lodash.isNil(value))
+      .flatMap(([key, value]) => `${key}=${value}`),
     bin,
-    ...Object.entries(args).flatMap(([key, value]) => {
-      if (lodash.isNil(value)) {
-        return []
-      }
-      if (key === '_') {
-        return value
-      }
-      const arg = [key.length === 1 ? '-' : '--', key].join('')
-      if (value === true) {
-        return arg
-      }
-      return [value].flat().flatMap((value) => [arg, value])
-    }),
+    ...Object.entries(args)
+      .filter(([key, value]) => !lodash.isNil(key) && !lodash.isNil(value))
+      .flatMap(([key, value]) => {
+        if (key === '_') {
+          return value
+        }
+        const arg = [key.length === 1 ? '-' : '--', key].join('')
+        if (value === true) {
+          return arg
+        }
+        return [value].flat().flatMap((value) => [arg, value])
+      }),
   ]
     .join(' ')
     .trim()
@@ -130,19 +130,13 @@ export const npx: (
   module: string,
   command: string,
   args: ParsedArgs,
-  development: boolean,
   options?: Partial<ConcurrentlyOptions>,
-) => Promise<unknown> = async (
-  pkg,
-  root,
-  module,
-  command,
-  args,
-  development,
-  options,
-) =>
+) => Promise<unknown> = async (pkg, root, module, command, args, options) =>
   await execute(
-    cmd(`${bin(pkg, root, module, development)} ${command}`, args),
+    cmd(`${bin(pkg, root, module)} ${command}`, args, {
+      NODE_ENV: env.NODE_ENV,
+      NPM_CONFIG_YES: env.NPM_CONFIG_YES,
+    }),
     pkg,
     options,
   )

@@ -5,16 +5,16 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/buildstamp/tsconfig.cjs.json"
-    },
-    {
       "path": "./packages/cli/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/core/tsconfig.cjs.json"
+      "path": "./packages/buildstamp/tsconfig.cjs.json"
     },
     {
       "path": "./packages/eslint/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/core/tsconfig.cjs.json"
     },
     {
       "path": "./packages/gitignore/tsconfig.cjs.json"
@@ -29,10 +29,10 @@
       "path": "./packages/jest-snapshot-resolver/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/license/tsconfig.cjs.json"
+      "path": "./packages/jest-svgr-transformer/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/jest-svgr-transformer/tsconfig.cjs.json"
+      "path": "./packages/license/tsconfig.cjs.json"
     },
     {
       "path": "./packages/packasso/tsconfig.cjs.json"

@@ -20,32 +20,31 @@
     "rimraf": "4.4.1",
     "typedoc": "0.23.28"
   },
-  "exports": {
-    ".": {
-      "development": "./src/main/ts/index.ts",
-      "require": "./target/cjs/index.cjs",
-      "import": "./target/esm/index.mjs",
-      "types": "./target/esm/index.d.ts"
-    },
-    "./package.json": "./package.json"
-  },
+  "exports": "./src/main/ts/index.ts",
   "license": "MIT",
-  "type": "module",
-  "main": "./target/cjs/index.cjs",
-  "module": "./target/esm/index.mjs",
-  "types": "./target/esm/index.d.ts",
+  "publishConfig": {
+    "type": "module",
+    "main": "./target/cjs/index.cjs",
+    "module": "./target/esm/index.mjs",
+    "types": "./target/esm/index.d.ts",
+    "exports": {
+      ".": {
+        "require": "./target/cjs/index.cjs",
+        "import": "./target/esm/index.mjs",
+        "types": "./target/esm/index.d.ts"
+      }
+    },
+    "access": "public"
+  },
   "files": [
     "target/cjs/**/*",
     "target/esm/**/*",
     "target/buildstamp.json"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "bin": {
     "packasso-typedoc": "./target/esm/bin.mjs"
   },
   "scripts": {
-    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/bin.ts"
+    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../cli/src/main/ts/bin.ts"
   }
 }
