@@ -1,3 +1,9 @@
+## [@packasso/swc@1.1.3](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.swc.1.1.2-f0...2023.3.30-packasso.swc.1.1.3-f0) (2023-03-30)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.2
+* perf: @packasso/tsconfig updated to 1.1.3
+
 ## [@packasso/swc@1.1.2](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.swc.1.1.1-f0...2023.3.30-packasso.swc.1.1.2-f0) (2023-03-30)
 
 ### Dependencies
