@@ -1,3 +1,20 @@
+## [@packasso/packasso@1.1.4](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.packasso.1.1.3-f0...2023.3.30-packasso.packasso.1.1.4-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: publish experiment [b8d339e](https://github.com/qiwi/packasso/commit/b8d339e959390e6ab39f24ef6ceaa19d54586e80)
+
+### Dependencies
+* perf: @packasso/buildstamp updated to 1.1.3
+* perf: @packasso/core updated to 1.1.3
+* perf: @packasso/eslint updated to 1.1.3
+* perf: @packasso/gitignore updated to 1.1.3
+* perf: @packasso/license updated to 1.1.3
+* perf: @packasso/prettier updated to 1.1.3
+* perf: @packasso/semrel updated to 1.1.3
+* perf: @packasso/tsc updated to 1.1.4
+* perf: @packasso/uvu updated to 1.0.8
+* perf: @packasso/yarn-audit updated to 1.0.9
+
 ## [@packasso/packasso@1.1.3](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.packasso.1.1.2-f0...2023.3.30-packasso.packasso.1.1.3-f0) (2023-03-30)
 
 ### Dependencies
