@@ -1,3 +1,8 @@
+## [@packasso/jest-svgr-transformer@1.0.3](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.jest-svgr-transformer.1.0.2-f0...2023.3.30-packasso.jest-svgr-transformer.1.0.3-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: revert publish experiment [33202a5](https://github.com/qiwi/packasso/commit/33202a5ca8e3d59cd203960af423e4b2cd0c90f3)
+
 ## [@packasso/jest-svgr-transformer@1.0.2](https://github.com/qiwi/packasso/compare/2023.3.28-packasso.jest-svgr-transformer.1.0.1-f0...2023.3.30-packasso.jest-svgr-transformer.1.0.2-f0) (2023-03-30)
 
 ### Fixes & improvements
