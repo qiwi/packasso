@@ -1,3 +1,11 @@
+## [@packasso/uvu@1.0.9](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.uvu.1.0.8-f0...2023.3.30-packasso.uvu.1.0.9-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: revert publish experiment [33202a5](https://github.com/qiwi/packasso/commit/33202a5ca8e3d59cd203960af423e4b2cd0c90f3)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.4
+
 ## [@packasso/uvu@1.0.8](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.uvu.1.0.7-f0...2023.3.30-packasso.uvu.1.0.8-f0) (2023-03-30)
 
 ### Fixes & improvements
