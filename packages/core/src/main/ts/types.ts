@@ -1,13 +1,12 @@
 import { IPackageEntry, ITopoContext } from '@semrel-extra/topo'
 import { ParsedArgs } from 'minimist'
-import { NormalizedPackageJson } from 'read-pkg'
 
 export type Command = (context: Context) => Promise<unknown>
 
 export type Commands = Record<string, Command>
 
 export type Module = {
-  manifest: NormalizedPackageJson
+  name: string
   commands: Commands
   modules: string[]
 }

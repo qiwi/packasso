@@ -7,20 +7,19 @@ import { gitRoot } from '@antongolub/git-root'
 import concurrently, { ConcurrentlyOptions } from 'concurrently'
 import lodash from 'lodash'
 import minimist, { ParsedArgs } from 'minimist'
-import { NormalizedPackageJson } from 'read-pkg'
 import { readPackageUp } from 'read-pkg-up'
 
 import { getExtraTopo } from './topo'
 import { Context, ExtraPackageEntry, Module } from './types'
 
-export const getModuleManifest: (
-  path?: string,
-) => Promise<NormalizedPackageJson> = async (path = argv[1]) => {
+export const getModuleName: (path?: string) => Promise<string> = async (
+  path = argv[1],
+) => {
   const res = await readPackageUp({ cwd: dirname(realpathSync(path)) })
   if (res) {
-    return res.packageJson as NormalizedPackageJson
+    return res.packageJson.name
   }
-  throw new Error('can`t get module manifest')
+  throw new Error('can`t get module name')
 }
 
 export const context: (module: Module) => Promise<Context> = async (module) => {
@@ -152,7 +151,7 @@ export const runWithContext: (context: Context) => Promise<unknown> = async (
     await runWithContext({
       ...context,
       module: {
-        manifest: await import(`${module}/package.json`),
+        name: module,
         ...(await import(module)),
       },
     })
@@ -167,7 +166,7 @@ export const runWithoutContext: (
 ) => Promise<unknown> = async ({ commands = {}, modules = [] } = {}) => {
   await runWithContext(
     await context({
-      manifest: await getModuleManifest(),
+      name: await getModuleName(),
       modules,
       commands,
     }),

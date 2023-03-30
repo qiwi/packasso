@@ -1,8 +1,8 @@
 import {
   Commands,
-  ContextInstallData,
   execute,
   install,
+  InstallData,
   uninstall,
 } from '@packasso/core'
 
@@ -29,7 +29,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `
 
-const data: ContextInstallData = () => [
+const data: InstallData = [
   {
     'package.json': {
       license: 'MIT',
@@ -40,10 +40,10 @@ const data: ContextInstallData = () => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context, data)
+    await install(data, context.pkg)
   },
   uninstall: async (context) => {
-    await uninstall(context, data)
+    await uninstall(data, context.pkg)
   },
   purge: async ({ pkg, pkgs }) => {
     await execute('rimraf LICENSE', [pkg, ...pkgs])

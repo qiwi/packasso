@@ -4,17 +4,16 @@ import { dirname } from 'node:path'
 
 import lodash from 'lodash'
 
-import { Context, ContextInstallData, InstallData } from './types'
+import { ExtraPackageEntry, InstallData } from './types'
 
 export const install = async (
-  context: Context,
-  data: ContextInstallData,
-  deps: string[] = [],
+  data: InstallData,
+  pkg: ExtraPackageEntry,
   uninstall = false,
 ) =>
-  [...data(context), ...dependencies(context, deps)].forEach((data) =>
+  data.forEach((data) =>
     Object.entries(data).forEach(([path, data]) => {
-      const absPath = resolve(context.pkg.absPath, path)
+      const absPath = resolve(pkg.absPath, path)
       if (lodash.isNil(data)) {
         return
       }
@@ -26,11 +25,8 @@ export const install = async (
     }),
   )
 
-export const uninstall = async (
-  context: Context,
-  data: ContextInstallData,
-  deps: string[] = [],
-) => install(context, data, deps, true)
+export const uninstall = async (data: InstallData, pkg: ExtraPackageEntry) =>
+  install(data, pkg, true)
 
 const rm = (path: string) => {
   try {
@@ -159,26 +155,3 @@ export const diffJson = (json1: any, json2: any): any =>
     }
     return { ...result, [key]: json1[key] }
   }, {})
-
-const dependencies: (
-  context: Context,
-  dependencies: string[],
-) => InstallData = ({ pkg, module }, dependencies) => {
-  if (pkg.leaf) {
-    return []
-  }
-  const deps = Object.entries({
-    ...module.manifest.dependencies,
-    ...module.manifest.devDependencies,
-  }).filter(([dependency]) => dependencies.includes(dependency))
-  if (lodash.isEmpty(deps)) {
-    return []
-  }
-  return [
-    {
-      'package.json': {
-        optionalDependencies: Object.fromEntries(deps),
-      },
-    },
-  ]
-}

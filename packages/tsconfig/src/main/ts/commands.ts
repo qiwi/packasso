@@ -8,12 +8,21 @@ import {
 } from '@packasso/core'
 
 const data: ContextInstallData = ({ pkg, topo }) => [
+  pkg.tree || pkg.unit
+    ? {
+        'package.json': {
+          optionalDependencies: {
+            typescript: '4.9.5',
+          },
+        },
+      }
+    : {},
   pkg.leaf || pkg.unit
     ? {
         'tsconfig.json': {
           compilerOptions: {
-            module: 'es2022',
-            target: 'es2022',
+            module: 'esnext',
+            target: 'esnext',
             moduleResolution: 'node',
             jsx: 'react-jsx',
             strict: true,
@@ -36,10 +45,10 @@ const data: ContextInstallData = ({ pkg, topo }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context, data, ['typescript'])
+    await install(data(context), context.pkg)
   },
   uninstall: async (context) => {
-    await uninstall(context, data, ['typescript'])
+    await uninstall(data(context), context.pkg)
   },
   purge: async ({ pkg, pkgs }) => {
     await execute('rimraf tsconfig.json', [pkg, ...pkgs])

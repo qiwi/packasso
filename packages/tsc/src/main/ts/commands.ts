@@ -86,10 +86,10 @@ const data: ContextInstallData = ({ pkg, topo }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(context, data, ['typescript'])
+    await install(data(context), context.pkg)
   },
   uninstall: async (context) => {
-    await uninstall(context, data, ['typescript'])
+    await uninstall(data(context), context.pkg)
   },
   clean: async ({ pkg, pkgs }) => {
     await execute('rimraf target/cjs target/esm', [pkg, ...pkgs])
