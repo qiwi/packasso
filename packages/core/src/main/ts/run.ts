@@ -1,5 +1,5 @@
 import { error } from 'node:console'
-import { realpathSync } from 'node:fs'
+import { existsSync, realpathSync } from 'node:fs'
 import { dirname, relative, resolve } from 'node:path'
 import { argv, execArgv, exit, cwd as pcwd } from 'node:process'
 
@@ -84,15 +84,20 @@ export const bin: (
   root: string,
   module: string,
   development: boolean,
-) => string = (pkg, root, module, development) =>
-  development
-    ? `npm_config_yes=true npx tsx --conditions development ${relative(
+) => string = (pkg, root, module, development) => {
+  if (development) {
+    const path = realpathSync(
+      resolve(root, 'node_modules', module, 'src', 'main', 'ts', 'bin.ts'),
+    )
+    if (existsSync(path)) {
+      return `npm_config_yes=true npx tsx --conditions development ${relative(
         pkg.absPath,
-        realpathSync(
-          resolve(root, 'node_modules', module, 'src', 'main', 'ts', 'bin.ts'),
-        ),
+        path,
       )}`
-    : `npm_config_yes=true npx ${module}`
+    }
+  }
+  return `npm_config_yes=true npx ${module}`
+}
 
 export const cmd: (
   bin: string,
