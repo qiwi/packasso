@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/eslint",
+  "hash": "33202a5ca8e3d59cd203960af423e4b2cd0c90f3",
+  "version": "1.1.4",
+  "dependencies": {
+    "@packasso/core": "1.1.4"
+  }
+}
