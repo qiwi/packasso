@@ -1,3 +1,11 @@
+## [@packasso/uvu@1.0.10](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.uvu.1.0.9-f0...2023.3.30-packasso.uvu.1.0.10-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: exports experiment [4b206ef](https://github.com/qiwi/packasso/commit/4b206efaab3bded0e89e03fb1a6025253e29ce82)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.5
+
 ## [@packasso/uvu@1.0.9](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.uvu.1.0.8-f0...2023.3.30-packasso.uvu.1.0.9-f0) (2023-03-30)
 
 ### Fixes & improvements
