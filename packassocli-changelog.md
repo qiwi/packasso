@@ -1,3 +1,8 @@
+## [@packasso/cli@1.0.7](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.cli.1.0.6-f0...2023.3.30-packasso.cli.1.0.7-f0) (2023-03-30)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.1
+
 ## [@packasso/cli@1.0.6](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.cli.1.0.5-f0...2023.3.29-packasso.cli.1.0.6-f0) (2023-03-29)
 
 ### Dependencies
