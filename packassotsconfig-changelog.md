@@ -1,3 +1,8 @@
+## [@packasso/tsconfig@1.1.2](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.tsconfig.1.1.1-f0...2023.3.30-packasso.tsconfig.1.1.2-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: es2022 [bdc5480](https://github.com/qiwi/packasso/commit/bdc54801a98bfa74cbf66af4d5d7d059b3fb9ed8)
+
 ## [@packasso/tsconfig@1.1.1](https://github.com/qiwi/packasso/compare/2023.3.29-packasso.tsconfig.1.1.0-f0...2023.3.30-packasso.tsconfig.1.1.1-f0) (2023-03-30)
 
 ### Fixes & improvements
