@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/tsconfig",
+  "hash": "bdc54801a98bfa74cbf66af4d5d7d059b3fb9ed8",
+  "version": "1.1.2",
+  "dependencies": {
+    "@packasso/core": "1.1.1"
+  }
+}
