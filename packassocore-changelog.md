@@ -1,3 +1,8 @@
+## [@packasso/core@1.1.4](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.core.1.1.3-f0...2023.3.30-packasso.core.1.1.4-f0) (2023-03-30)
+
+### Fixes & improvements
+* fix: revert publish experiment [33202a5](https://github.com/qiwi/packasso/commit/33202a5ca8e3d59cd203960af423e4b2cd0c90f3)
+
 ## [@packasso/core@1.1.3](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.core.1.1.2-f0...2023.3.30-packasso.core.1.1.3-f0) (2023-03-30)
 
 ### Fixes & improvements
