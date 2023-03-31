@@ -1,3 +1,11 @@
+## [@packasso/cli@1.0.12](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.cli.1.0.11-f0...2023.3.31-packasso.cli.1.0.12-f0) (2023-03-31)
+
+### Fixes & improvements
+* fix: clean publish experiment [24d09f6](https://github.com/qiwi/packasso/commit/24d09f6b6bf550618b470c9ad5b85c7186350bfd)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.6
+
 ## [@packasso/cli@1.0.11](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.cli.1.0.10-f0...2023.3.30-packasso.cli.1.0.11-f0) (2023-03-30)
 
 ### Fixes & improvements
