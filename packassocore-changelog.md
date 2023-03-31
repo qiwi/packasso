@@ -1,3 +1,8 @@
+## [@packasso/core@1.1.7](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.core.1.1.6-f0...2023.3.31-packasso.core.1.1.7-f0) (2023-03-31)
+
+### Fixes & improvements
+* fix: reuse clean publish [797e853](https://github.com/qiwi/packasso/commit/797e853c1425b89729d6c240786c6f791ffcae95)
+
 ## [@packasso/core@1.1.6](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.core.1.1.5-f0...2023.3.31-packasso.core.1.1.6-f0) (2023-03-31)
 
 ### Fixes & improvements
