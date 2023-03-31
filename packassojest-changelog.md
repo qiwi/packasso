@@ -1,3 +1,14 @@
+## [@packasso/jest@1.2.7](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.jest.1.2.6-f0...2023.3.31-packasso.jest.1.2.7-f0) (2023-03-31)
+
+### Fixes & improvements
+* fix: clean publish experiment [24d09f6](https://github.com/qiwi/packasso/commit/24d09f6b6bf550618b470c9ad5b85c7186350bfd)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.6
+* perf: @packasso/jest-environment-jsdom updated to 1.0.6
+* perf: @packasso/jest-snapshot-resolver updated to 1.0.6
+* perf: @packasso/jest-svgr-transformer updated to 1.0.6
+
 ## [@packasso/jest@1.2.6](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.jest.1.2.5-f0...2023.3.30-packasso.jest.1.2.6-f0) (2023-03-30)
 
 ### Fixes & improvements
