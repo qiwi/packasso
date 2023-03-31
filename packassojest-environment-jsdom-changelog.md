@@ -1,3 +1,8 @@
+## [@packasso/jest-environment-jsdom@1.0.6](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.jest-environment-jsdom.1.0.5-f0...2023.3.31-packasso.jest-environment-jsdom.1.0.6-f0) (2023-03-31)
+
+### Fixes & improvements
+* fix: clean publish experiment [24d09f6](https://github.com/qiwi/packasso/commit/24d09f6b6bf550618b470c9ad5b85c7186350bfd)
+
 ## [@packasso/jest-environment-jsdom@1.0.4](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.jest-environment-jsdom.1.0.3-f0...2023.3.30-packasso.jest-environment-jsdom.1.0.4-f0) (2023-03-30)
 
 ### Fixes & improvements
