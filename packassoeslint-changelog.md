@@ -1,3 +1,8 @@
+## [@packasso/eslint@1.1.7](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.eslint.1.1.6-f0...2023.3.31-packasso.eslint.1.1.7-f0) (2023-03-31)
+
+### Dependencies
+* perf: @packasso/core updated to 1.1.7
+
 ## [@packasso/eslint@1.1.6](https://github.com/qiwi/packasso/compare/2023.3.30-packasso.eslint.1.1.5-f0...2023.3.31-packasso.eslint.1.1.6-f0) (2023-03-31)
 
 ### Fixes & improvements
