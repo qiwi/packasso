@@ -14,7 +14,6 @@ export type Module = {
 export interface Context {
   cwd: string
   root: string
-  development: boolean
   pkg: ExtraPackageEntry
   pkgs: ExtraPackageEntry[]
   topo: ExtraTopoContext

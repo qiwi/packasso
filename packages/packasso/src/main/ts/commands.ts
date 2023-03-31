@@ -3,6 +3,7 @@ import { resolve } from 'node:path'
 
 import {
   bin,
+  cmd,
   Commands,
   ContextInstallData,
   install,
@@ -13,9 +14,11 @@ const data: ContextInstallData = ({ pkg, root }) => [
   pkg.leaf && existsSync(resolve(pkg.absPath, 'src', 'main', 'ts', 'bin.ts'))
     ? {
         'package.json': {
-          bin: {
-            [pkg.name.replaceAll('@', '').replaceAll('/', '-')]:
-              './target/esm/bin.mjs',
+          publishConfig: {
+            bin: {
+              [pkg.name.replaceAll('@', '').replaceAll('/', '-')]:
+                './target/esm/bin.mjs',
+            },
           },
         },
       }
@@ -24,7 +27,14 @@ const data: ContextInstallData = ({ pkg, root }) => [
     ? {
         'package.json': {
           scripts: {
-            packasso: bin(pkg, root, '@packasso/cli', true),
+            packasso: cmd(
+              bin(pkg, root, '@packasso/cli'),
+              {},
+              {
+                NODE_ENV: 'development',
+                NPM_CONFIG_YES: 'true',
+              },
+            ),
           },
         },
       }

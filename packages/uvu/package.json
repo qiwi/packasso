@@ -22,33 +22,31 @@
     "tsm": "2.3.0",
     "uvu": "0.5.6"
   },
-  "exports": {
-    ".": {
-      "development": "./src/main/ts/index.ts",
-      "require": "./target/cjs/index.cjs",
-      "import": "./target/esm/index.mjs",
-      "types": "./target/esm/index.d.ts",
-      "default": "./target/esm/index.mjs"
-    },
-    "./package.json": "./package.json"
-  },
+  "exports": "./src/main/ts/index.ts",
   "license": "MIT",
-  "type": "module",
-  "main": "./target/cjs/index.cjs",
-  "module": "./target/esm/index.mjs",
-  "types": "./target/esm/index.d.ts",
-  "files": [
-    "target/cjs/**/*",
-    "target/esm/**/*",
-    "target/buildstamp.json"
-  ],
   "publishConfig": {
-    "access": "public"
-  },
-  "bin": {
-    "packasso-uvu": "./target/esm/bin.mjs"
+    "type": "module",
+    "main": "./target/cjs/index.cjs",
+    "module": "./target/esm/index.mjs",
+    "types": "./target/esm/index.d.ts",
+    "exports": {
+      ".": {
+        "require": "./target/cjs/index.cjs",
+        "import": "./target/esm/index.mjs",
+        "types": "./target/esm/index.d.ts"
+      }
+    },
+    "files": [
+      "target/cjs/**/*",
+      "target/esm/**/*",
+      "target/buildstamp.json"
+    ],
+    "access": "public",
+    "bin": {
+      "packasso-uvu": "./target/esm/bin.mjs"
+    }
   },
   "scripts": {
-    "packasso": "npm_config_yes=true npx tsx --conditions development ../cli/src/main/ts/bin.ts"
+    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../cli/src/main/ts/bin.ts"
   }
 }

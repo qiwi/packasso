@@ -10,7 +10,9 @@ const data: ContextInstallData = ({ pkg }) => [
   pkg.leaf || pkg.unit
     ? {
         'package.json': {
-          files: ['target/resources/**/*'],
+          publishConfig: {
+            files: ['target/resources/**/*'],
+          },
         },
       }
     : {},

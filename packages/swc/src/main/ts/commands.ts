@@ -90,19 +90,20 @@ const data: ContextInstallData = ({ pkg, topo }) => [
     'package.json':
       pkg.leaf || pkg.unit
         ? {
-            type: 'module',
-            main: './target/cjs/index.cjs',
-            module: './target/esm/index.mjs',
-            types: './target/dts/index.d.ts',
-            exports: {
-              '.': {
-                require: './target/cjs/index.cjs',
-                import: './target/esm/index.mjs',
-                types: './target/dts/index.d.ts',
-                default: './target/esm/index.mjs',
+            publishConfig: {
+              type: 'module',
+              main: './target/cjs/index.cjs',
+              module: './target/esm/index.mjs',
+              types: './target/dts/index.d.ts',
+              exports: {
+                '.': {
+                  require: './target/cjs/index.cjs',
+                  import: './target/esm/index.mjs',
+                  types: './target/dts/index.d.ts',
+                },
               },
+              files: ['target/cjs/**/*', 'target/esm/**/*', 'target/dts/**/*'],
             },
-            files: ['target/cjs/**/*', 'target/esm/**/*', 'target/dts/**/*'],
           }
         : {},
   },

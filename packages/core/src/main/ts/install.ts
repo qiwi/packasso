@@ -89,7 +89,7 @@ const applyText: (path: string, ...text: string[]) => void = (path, ...text) =>
 const revertText: (path: string, ...text: string[]) => void = (path, ...text) =>
   writeText(path, diffText(readText(path), ...text))
 
-const readJson: (path: string) => object = (path) => {
+export const readJson: (path: string) => object = (path) => {
   try {
     const json = JSON.parse(readText(path))
     if (lodash.isString(json)) {
@@ -101,7 +101,7 @@ const readJson: (path: string) => object = (path) => {
   }
 }
 
-const writeJson: (path: string, json: object) => void = (path, json) => {
+export const writeJson: (path: string, json: object) => void = (path, json) => {
   const text = JSON.stringify(json, undefined, 2)
   writeText(path, text === '{}' ? '' : text)
 }

@@ -11,7 +11,9 @@ const data: ContextInstallData = ({ pkg }) => [
   pkg.leaf || pkg.unit
     ? {
         'package.json': {
-          files: ['target/buildstamp.json'],
+          publishConfig: {
+            files: ['target/buildstamp.json'],
+          },
         },
       }
     : {},
