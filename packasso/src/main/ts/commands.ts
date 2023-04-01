@@ -1,5 +1,4 @@
-import { Context } from '@packasso/core'
-import { Command, Commands, npx } from '@packasso/core'
+import { Command, Commands, Context, npx } from '@packasso/core'
 
 const pkgNpx: (context: Context, prefix: string) => Promise<unknown> = async (
   { pkg, root, command, args },

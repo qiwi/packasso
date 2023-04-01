@@ -16,11 +16,8 @@
       "node"
     ],
     "paths": {
-      "packasso": [
-        "../../packasso/src/main/ts"
-      ],
       "@packasso/core": [
-        "../core/src/main/ts"
+        "../packages/core/src/main/ts"
       ]
     }
   },

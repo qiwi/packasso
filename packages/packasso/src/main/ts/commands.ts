@@ -28,7 +28,7 @@ const data: ContextInstallData = ({ pkg, root }) => [
         'package.json': {
           scripts: {
             packasso: cmd(
-              bin(pkg, root, '@packasso/cli'),
+              bin(pkg, root, 'packasso'),
               {},
               {
                 NODE_ENV: 'development',

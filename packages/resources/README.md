@@ -7,7 +7,7 @@ Copy resources (`src/main/resources`) to target (`target/resources`).
 
 ## Usage
 
-[@packasso/cli](https://www.npmjs.com/package/@packasso/cli)
+[packasso](https://www.npmjs.com/package/packasso)
 
 ## License
 

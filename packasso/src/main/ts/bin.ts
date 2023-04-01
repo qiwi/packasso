@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { run } from '@packasso/core'
 
-import * as module from './index'
+import { commands } from './commands'
 
-run(module)
+run({ commands })

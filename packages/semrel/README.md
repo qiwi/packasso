@@ -8,7 +8,7 @@ and [zx-bulk-release](https://www.npmjs.com/package/zx-bulk-release)
 
 ## Usage
 
-[@packasso/cli](https://www.npmjs.com/package/@packasso/cli)
+[packasso](https://www.npmjs.com/package/packasso)
 
 ## License
 

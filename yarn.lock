@@ -973,8 +973,7 @@ __metadata:
   resolution: "@packasso/cli@workspace:packages/cli"
   dependencies:
     "@packasso/core": "workspace:*"
-  bin:
-    packasso: ./target/esm/bin.mjs
+    packasso: "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -7349,6 +7348,14 @@ __metadata:
   checksum: 1b9a6b5d6f42a46e36f053ee737a72cbe8f7990ee65e0d7bc3f8f8324e233d5b5e790f9f660bcc44d93738a2b12108dec1f7a39c9650d276fd1f9d73d54d4f55
   languageName: node
   linkType: hard
+
+"packasso@workspace:*, packasso@workspace:packasso":
+  version: 0.0.0-use.local
+  resolution: "packasso@workspace:packasso"
+  dependencies:
+    "@packasso/core": "workspace:*"
+  languageName: unknown
+  linkType: soft
 
 "parent-module@npm:^1.0.0":
   version: 1.0.1

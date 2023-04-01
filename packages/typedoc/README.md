@@ -7,7 +7,7 @@
 
 ## Usage
 
-[@packasso/cli](https://www.npmjs.com/package/@packasso/cli)
+[packasso](https://www.npmjs.com/package/packasso)
 
 ## License
 

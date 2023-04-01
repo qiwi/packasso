@@ -1,11 +1,9 @@
 {
-  "name": "@packasso/resources",
+  "name": "packasso",
   "version": "1.0.0",
-  "description": "copy resources to target",
+  "description": "packasso",
   "keywords": [
-    "copy",
-    "build",
-    "preset"
+    "cli"
   ],
   "repository": {
     "type": "git",
@@ -16,9 +14,7 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
-    "@packasso/core": "workspace:*",
-    "globby-cp": "1.1.3",
-    "rimraf": "4.4.1"
+    "@packasso/core": "workspace:*"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
@@ -41,10 +37,10 @@
     ],
     "access": "public",
     "bin": {
-      "packasso-resources": "./target/esm/bin.mjs"
+      "packasso": "./target/esm/bin.mjs"
     }
   },
   "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
+    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx src/main/ts/bin.ts"
   }
 }

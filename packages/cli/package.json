@@ -5,9 +5,6 @@
   "keywords": [
     "cli"
   ],
-  "bin": {
-    "packasso": "./target/esm/bin.mjs"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qiwi/packasso.git"
@@ -17,7 +14,8 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
-    "@packasso/core": "workspace:*"
+    "@packasso/core": "workspace:*",
+    "packasso": "workspace:*"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
@@ -44,6 +42,6 @@
     }
   },
   "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx src/main/ts/bin.ts"
+    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
   }
 }

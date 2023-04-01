@@ -39,6 +39,6 @@
     "access": "public"
   },
   "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../cli/src/main/ts/bin.ts"
+    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
   }
 }
