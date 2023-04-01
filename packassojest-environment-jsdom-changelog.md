@@ -1,3 +1,8 @@
+## [@packasso/jest-environment-jsdom@1.1.0](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.jest-environment-jsdom.1.0.6-f0...2023.4.1-packasso.jest-environment-jsdom.1.1.0-f0) (2023-04-01)
+
+### Features
+* feat: npx packasso [e298a5a](https://github.com/qiwi/packasso/commit/e298a5a02497b5f8c02044cf9aa65c94bf76b0f7)
+
 ## [@packasso/jest-environment-jsdom@1.0.6](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.jest-environment-jsdom.1.0.5-f0...2023.3.31-packasso.jest-environment-jsdom.1.0.6-f0) (2023-03-31)
 
 ### Fixes & improvements
