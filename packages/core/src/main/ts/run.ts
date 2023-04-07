@@ -5,6 +5,7 @@ import { argv, env, exit, cwd as pcwd } from 'node:process'
 
 import { gitRoot } from '@antongolub/git-root'
 import concurrently, { ConcurrentlyOptions } from 'concurrently'
+import { findUp } from 'find-up'
 import lodash from 'lodash'
 import minimist, { ParsedArgs } from 'minimist'
 import { readPackageUp } from 'read-pkg-up'
@@ -28,6 +29,13 @@ export const context: (module: Module) => Promise<Context> = async (module) => {
   if (!gitRootRes) {
     throw new Error('can`t get git root')
   }
+  const node_modules = await findUp('node_modules', {
+    cwd: dirname(realpathSync(argv[1])),
+    type: 'directory',
+  })
+  if (!node_modules) {
+    throw new Error('can`t get node_modules')
+  }
   const command = argv[2]
   if (lodash.isNil(command) || lodash.isEmpty(command)) {
     throw new Error('invalid command')
@@ -49,6 +57,7 @@ export const context: (module: Module) => Promise<Context> = async (module) => {
     topo,
     root,
     module,
+    node_modules,
   }
 }
 

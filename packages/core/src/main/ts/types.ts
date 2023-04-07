@@ -18,6 +18,7 @@ export interface Context {
   pkgs: ExtraPackageEntry[]
   topo: ExtraTopoContext
   module: Module
+  node_modules: string
   command: string
   args: ParsedArgs
 }
