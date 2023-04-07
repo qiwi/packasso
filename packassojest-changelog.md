@@ -1,3 +1,8 @@
+## [@packasso/jest@1.3.1](https://github.com/qiwi/packasso/compare/2023.4.1-packasso.jest.1.3.0-f0...2023.4.7-packasso.jest.1.3.1-f0) (2023-04-07)
+
+### Dependencies
+* perf: @packasso/core updated to 1.3.0
+
 ## [@packasso/jest@1.3.0](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.jest.1.2.8-f0...2023.4.1-packasso.jest.1.3.0-f0) (2023-04-01)
 
 ### Features
