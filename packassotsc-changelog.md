@@ -1,3 +1,9 @@
+## [@packasso/tsc@1.2.1](https://github.com/qiwi/packasso/compare/2023.4.1-packasso.tsc.1.2.0-f0...2023.4.7-packasso.tsc.1.2.1-f0) (2023-04-07)
+
+### Dependencies
+* perf: @packasso/core updated to 1.3.0
+* perf: @packasso/tsconfig updated to 1.2.1
+
 ## [@packasso/tsc@1.2.0](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.tsc.1.1.8-f0...2023.4.1-packasso.tsc.1.2.0-f0) (2023-04-01)
 
 ### Features
