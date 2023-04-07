@@ -1,3 +1,8 @@
+## [@packasso/core@1.3.0](https://github.com/qiwi/packasso/compare/2023.4.1-packasso.core.1.2.0-f0...2023.4.7-packasso.core.1.3.0-f0) (2023-04-07)
+
+### Features
+* feat: node_modules context [b256704](https://github.com/qiwi/packasso/commit/b256704a9592d7967f2ebbef7a5b25fec52d31dc)
+
 ## [@packasso/core@1.2.0](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.core.1.1.7-f0...2023.4.1-packasso.core.1.2.0-f0) (2023-04-01)
 
 ### Features
