@@ -66,6 +66,9 @@
     },
     {
       "path": "./packages/yarn-audit/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/react-scripts-build/tsconfig.cjs.json"
     }
   ]
 }
