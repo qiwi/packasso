@@ -2807,6 +2807,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@packasso/react-scripts-start@workspace:packages/react-scripts-start":
+  version: 0.0.0-use.local
+  resolution: "@packasso/react-scripts-start@workspace:packages/react-scripts-start"
+  dependencies:
+    "@packasso/core": "workspace:*"
+    react-scripts: "npm:5.0.1"
+  languageName: unknown
+  linkType: soft
+
 "@packasso/resources@workspace:packages/resources":
   version: 0.0.0-use.local
   resolution: "@packasso/resources@workspace:packages/resources"
