@@ -66,6 +66,9 @@
     },
     {
       "path": "./packages/yarn-audit/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/react-scripts-build/tsconfig.esm.json"
     }
   ]
 }
