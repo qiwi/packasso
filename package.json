@@ -17,5 +17,8 @@
     "prettier": "2.8.7",
     "prettier-config-qiwi": "2.1.0",
     "typescript": "4.9.5"
+  },
+  "resolutions": {
+    "webpack-dev-server": "4.11.1"
   }
 }
