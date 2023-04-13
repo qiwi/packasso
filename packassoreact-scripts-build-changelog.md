@@ -1,3 +1,8 @@
+## [@packasso/react-scripts-build@1.0.1](https://github.com/qiwi/packasso/compare/2023.4.10-packasso.react-scripts-build.1.0.0-f0...2023.4.13-packasso.react-scripts-build.1.0.1-f0) (2023-04-13)
+
+### Fixes & improvements
+* fix: freeze webpack-dev-server [7cee502](https://github.com/qiwi/packasso/commit/7cee502d70d98c247083967b8d0b1dfc0334cf62)
+
 ## [@packasso/react-scripts-build@1.0.0](https://github.com/qiwi/packasso/compare/undefined...2023.4.10-packasso.react-scripts-build.1.0.0-f0) (2023-04-10)
 
 ### Features
@@ -5,5 +10,3 @@
 
 ### Dependencies
 * perf: @packasso/core updated to 1.3.0
-
-
