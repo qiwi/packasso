@@ -1,3 +1,20 @@
+## [@packasso/packasso@1.3.0](https://github.com/qiwi/packasso/compare/2023.4.7-packasso.packasso.1.2.1-f0...2023.4.24-packasso.packasso.1.3.0-f0) (2023-04-24)
+
+### Features
+* feat: symlink deps [54187bd](https://github.com/qiwi/packasso/commit/54187bd61cacc32bfc3f5fc07897c35e8933eb91)
+
+### Dependencies
+* perf: @packasso/buildstamp updated to 1.3.0
+* perf: @packasso/core updated to 1.4.0
+* perf: @packasso/eslint updated to 1.3.0
+* perf: @packasso/gitignore updated to 1.3.0
+* perf: @packasso/license updated to 1.3.0
+* perf: @packasso/prettier updated to 1.3.0
+* perf: @packasso/semrel updated to 1.3.0
+* perf: @packasso/tsc updated to 1.3.0
+* perf: @packasso/uvu updated to 1.1.2
+* perf: @packasso/yarn-audit updated to 1.2.0
+
 ## [@packasso/packasso@1.2.1](https://github.com/qiwi/packasso/compare/2023.4.1-packasso.packasso.1.2.0-f0...2023.4.7-packasso.packasso.1.2.1-f0) (2023-04-07)
 
 ### Dependencies
