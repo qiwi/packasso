@@ -1,0 +1,12 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/jest",
+  "hash": "54187bd61cacc32bfc3f5fc07897c35e8933eb91",
+  "version": "1.4.0",
+  "dependencies": {
+    "@packasso/core": "1.4.0",
+    "@packasso/jest-environment-jsdom": "1.1.0",
+    "@packasso/jest-snapshot-resolver": "1.1.0",
+    "@packasso/jest-svgr-transformer": "1.1.0"
+  }
+}
