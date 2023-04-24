@@ -8,16 +8,6 @@ import {
 } from '@packasso/core'
 
 const data: ContextInstallData = ({ pkg }) => [
-  pkg.tree || pkg.unit
-    ? {
-        'package.json': {
-          optionalDependencies: {
-            eslint: '8.36.0',
-            'eslint-config-qiwi': '2.1.1',
-          },
-        },
-      }
-    : {},
   pkg.leaf || pkg.unit
     ? {
         '.eslintrc.json': {
@@ -27,12 +17,22 @@ const data: ContextInstallData = ({ pkg }) => [
     : {},
 ]
 
+const deps = [
+  'eslint',
+  'eslint-config-qiwi',
+  'eslint-plugin-unicorn',
+  'eslint-plugin-sonarjs',
+  'eslint-plugin-react-hooks',
+  'eslint-plugin-react',
+  '@typescript-eslint',
+]
+
 export const commands: Commands = {
   install: async (context) => {
-    await install(data(context), context.pkg)
+    await install(data, deps, context)
   },
   uninstall: async (context) => {
-    await uninstall(data(context), context.pkg)
+    await uninstall(data, deps, context)
   },
   lint: async ({ pkg, pkgs, args }) => {
     await execute(

@@ -45,10 +45,10 @@ const data: ContextInstallData = ({ pkg, topo }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(data(context), context.pkg)
+    await install(data, [], context)
   },
   uninstall: async (context) => {
-    await uninstall(data(context), context.pkg)
+    await uninstall(data, [], context)
   },
   purge: async ({ pkg, pkgs }) => {
     await execute('rimraf tsconfig.json', [pkg, ...pkgs])

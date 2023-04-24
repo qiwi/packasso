@@ -1,6 +1,3 @@
-import { sep } from 'node:path'
-import { argv } from 'node:process'
-
 import {
   cmd,
   Commands,
@@ -66,20 +63,14 @@ const data: ContextInstallData = ({ pkg, topo }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(data(context), context.pkg)
+    await install(data, [], context)
   },
   uninstall: async (context) => {
-    await uninstall(data(context), context.pkg)
+    await uninstall(data, [], context)
   },
-  test: async ({ pkg, args }) => {
-    const argvs = argv[1].split(sep)
-    const i = argvs.indexOf('node_modules')
+  test: async ({ pkg, args, node_modules }) => {
     await execute(
-      cmd(
-        'jest',
-        { silent: true, u: args.u },
-        i === -1 ? {} : { NODE_PATH: argvs.slice(0, i + 1).join(sep) },
-      ),
+      cmd('jest', { silent: true, u: args.u }, { NODE_PATH: node_modules }),
       pkg,
     )
   },

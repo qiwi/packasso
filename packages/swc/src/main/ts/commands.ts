@@ -111,10 +111,10 @@ const data: ContextInstallData = ({ pkg, topo }) => [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(data(context), context.pkg)
+    await install(data, [], context)
   },
   uninstall: async (context) => {
-    await uninstall(data(context), context.pkg)
+    await uninstall(data, [], context)
   },
   clean: async ({ pkg, pkgs }) => {
     await execute('rimraf target/cjs target/esm target/dts', [pkg, ...pkgs])

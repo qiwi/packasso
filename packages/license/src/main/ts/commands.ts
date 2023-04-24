@@ -40,10 +40,10 @@ const data: InstallData = [
 
 export const commands: Commands = {
   install: async (context) => {
-    await install(data, context.pkg)
+    await install(data, [], context)
   },
   uninstall: async (context) => {
-    await uninstall(data, context.pkg)
+    await uninstall(data, [], context)
   },
   purge: async ({ pkg, pkgs }) => {
     await execute('rimraf LICENSE', [pkg, ...pkgs])

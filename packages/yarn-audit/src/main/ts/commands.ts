@@ -5,7 +5,11 @@ export const commands: Commands = {
     await execute(
       args.fix
         ? cmd('yarn-audit-fix', { 'audit-level': 'moderate' })
-        : cmd('yarn npm audit', { recursive: 'all', severity: 'moderate' }),
+        : cmd('yarn npm audit', {
+            recursive: true,
+            all: true,
+            severity: 'moderate',
+          }),
       pkg,
     )
   },

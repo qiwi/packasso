@@ -8,16 +8,6 @@ import {
 } from '@packasso/core'
 
 const data: ContextInstallData = ({ pkg }) => [
-  pkg.tree || pkg.unit
-    ? {
-        'package.json': {
-          optionalDependencies: {
-            prettier: '2.8.7',
-            'prettier-config-qiwi': '2.1.0',
-          },
-        },
-      }
-    : {},
   pkg.leaf || pkg.unit
     ? {
         '.prettierrc.json': `"prettier-config-qiwi"`,
@@ -25,12 +15,14 @@ const data: ContextInstallData = ({ pkg }) => [
     : {},
 ]
 
+const deps = ['prettier', 'prettier-config-qiwi']
+
 export const commands: Commands = {
   install: async (context) => {
-    await install(data(context), context.pkg)
+    await install(data, deps, context)
   },
   uninstall: async (context) => {
-    await uninstall(data(context), context.pkg)
+    await uninstall(data, deps, context)
   },
   lint: async ({ pkg, pkgs, args }) => {
     await execute(
