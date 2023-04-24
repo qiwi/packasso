@@ -1,3 +1,8 @@
+## [@packasso/core@1.4.0](https://github.com/qiwi/packasso/compare/2023.4.7-packasso.core.1.3.0-f0...2023.4.24-packasso.core.1.4.0-f0) (2023-04-24)
+
+### Features
+* feat: symlink deps [54187bd](https://github.com/qiwi/packasso/commit/54187bd61cacc32bfc3f5fc07897c35e8933eb91)
+
 ## [@packasso/core@1.3.0](https://github.com/qiwi/packasso/compare/2023.4.1-packasso.core.1.2.0-f0...2023.4.7-packasso.core.1.3.0-f0) (2023-04-07)
 
 ### Features
