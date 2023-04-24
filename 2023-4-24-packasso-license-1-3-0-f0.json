@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/license",
+  "hash": "54187bd61cacc32bfc3f5fc07897c35e8933eb91",
+  "version": "1.3.0",
+  "dependencies": {
+    "@packasso/core": "1.4.0"
+  }
+}
