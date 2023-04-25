@@ -49,17 +49,20 @@ const installDeps = async (
   }
   deps.forEach((dep) => {
     const target = resolve(context.pkg.absPath, 'node_modules', dep)
-    const source = resolve(context.node_modules, dep)
+    const source = resolve(
+      context.node_modules,
+      ...(target.startsWith(context.node_modules)
+        ? [context.module.name, 'node_modules']
+        : []),
+      dep,
+    )
     const existed = existsSync(target)
     const linked = existed && lstatSync(target).isSymbolicLink()
-    if (uninstall) {
-      if (linked) {
-        unlinkSync(target)
-      }
-    } else {
-      if (!existed || linked) {
-        symlinkSync(source, target)
-      }
+    if (linked) {
+      unlinkSync(target)
+    }
+    if (!uninstall && (linked || !existed)) {
+      symlinkSync(source, target)
     }
   })
 }
