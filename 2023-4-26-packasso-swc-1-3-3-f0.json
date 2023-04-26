@@ -1,0 +1,10 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/swc",
+  "hash": "bf3b02c617b5f70bcd15445dc53d4d9131190489",
+  "version": "1.3.3",
+  "dependencies": {
+    "@packasso/core": "1.4.2",
+    "@packasso/tsconfig": "1.3.3"
+  }
+}
