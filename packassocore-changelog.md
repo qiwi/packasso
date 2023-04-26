@@ -1,3 +1,8 @@
+## [@packasso/core@1.4.2](https://github.com/qiwi/packasso/compare/2023.4.25-packasso.core.1.4.1-f0...2023.4.26-packasso.core.1.4.2-f0) (2023-04-26)
+
+### Fixes & improvements
+* fix: broken symlink [c185eff](https://github.com/qiwi/packasso/commit/c185eff99719054b09d1cd2e7659396e82f8105a)
+
 ## [@packasso/core@1.4.1](https://github.com/qiwi/packasso/compare/2023.4.24-packasso.core.1.4.0-f0...2023.4.25-packasso.core.1.4.1-f0) (2023-04-25)
 
 ### Fixes & improvements
