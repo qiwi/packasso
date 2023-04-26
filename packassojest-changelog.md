@@ -1,3 +1,8 @@
+## [@packasso/jest@1.4.3](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.jest.1.4.2-f0...2023.4.26-packasso.jest.1.4.3-f0) (2023-04-26)
+
+### Fixes & improvements
+* fix: ts and jest symlink [bf3b02c](https://github.com/qiwi/packasso/commit/bf3b02c617b5f70bcd15445dc53d4d9131190489)
+
 ## [@packasso/jest@1.4.2](https://github.com/qiwi/packasso/compare/2023.4.25-packasso.jest.1.4.1-f0...2023.4.26-packasso.jest.1.4.2-f0) (2023-04-26)
 
 ### Dependencies
