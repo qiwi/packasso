@@ -61,12 +61,14 @@ const data: ContextInstallData = ({ pkg, topo }) => [
   },
 ]
 
+const deps = ['@jest']
+
 export const commands: Commands = {
   install: async (context) => {
-    await install(data, [], context)
+    await install(data, deps, context)
   },
   uninstall: async (context) => {
-    await uninstall(data, [], context)
+    await uninstall(data, deps, context)
   },
   test: async ({ pkg, args, node_modules }) => {
     await execute(

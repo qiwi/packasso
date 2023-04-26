@@ -2900,23 +2900,6 @@ __metadata:
 "@packasso/workspaces@workspace:.":
   version: 0.0.0-use.local
   resolution: "@packasso/workspaces@workspace:."
-  dependencies:
-    eslint: "npm:8.36.0"
-    eslint-config-qiwi: "npm:2.1.1"
-    prettier: "npm:2.8.7"
-    prettier-config-qiwi: "npm:2.1.0"
-    typescript: "npm:4.9.5"
-  dependenciesMeta:
-    eslint:
-      optional: true
-    eslint-config-qiwi:
-      optional: true
-    prettier:
-      optional: true
-    prettier-config-qiwi:
-      optional: true
-    typescript:
-      optional: true
   languageName: unknown
   linkType: soft
 
