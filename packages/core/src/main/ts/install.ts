@@ -57,7 +57,8 @@ const installDeps = async (
       dep,
     )
     const existed = existsSync(target)
-    const linked = existed && lstatSync(target).isSymbolicLink()
+    const lstat = lstatSync(target, { throwIfNoEntry: false })
+    const linked = lstat ? lstat.isSymbolicLink() : false
     if (linked) {
       unlinkSync(target)
     }
