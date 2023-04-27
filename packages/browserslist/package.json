@@ -1,0 +1,48 @@
+{
+  "name": "@packasso/browserslist",
+  "version": "1.0.0",
+  "description": "browserslist",
+  "keywords": [
+    "browserslist",
+    "preset"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "dependencies": {
+    "@packasso/core": "workspace:*",
+    "rimraf": "4.4.1"
+  },
+  "exports": "./src/main/ts/index.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "type": "module",
+    "main": "./target/cjs/index.cjs",
+    "module": "./target/esm/index.mjs",
+    "types": "./target/esm/index.d.ts",
+    "exports": {
+      ".": {
+        "require": "./target/cjs/index.cjs",
+        "import": "./target/esm/index.mjs",
+        "types": "./target/esm/index.d.ts"
+      }
+    },
+    "files": [
+      "target/cjs/**/*",
+      "target/esm/**/*",
+      "target/buildstamp.json"
+    ],
+    "access": "public",
+    "bin": {
+      "packasso-browserslist": "./target/esm/bin.mjs"
+    }
+  },
+  "scripts": {
+    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
+  }
+}

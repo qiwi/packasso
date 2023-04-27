@@ -2666,6 +2666,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@packasso/browserslist@workspace:packages/browserslist":
+  version: 0.0.0-use.local
+  resolution: "@packasso/browserslist@workspace:packages/browserslist"
+  dependencies:
+    "@packasso/core": "workspace:*"
+    rimraf: "npm:4.4.1"
+  languageName: unknown
+  linkType: soft
+
 "@packasso/buildstamp@workspace:*, @packasso/buildstamp@workspace:packages/buildstamp":
   version: 0.0.0-use.local
   resolution: "@packasso/buildstamp@workspace:packages/buildstamp"

@@ -72,6 +72,9 @@
     },
     {
       "path": "./packages/react-scripts-start/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/browserslist/tsconfig.esm.json"
     }
   ]
 }

@@ -72,6 +72,9 @@
     },
     {
       "path": "./packages/react-scripts-start/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/browserslist/tsconfig.cjs.json"
     }
   ]
 }
