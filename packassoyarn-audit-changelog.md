@@ -1,3 +1,8 @@
+## [@packasso/yarn-audit@1.2.4](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.yarn-audit.1.2.3-f0...2023.5.5-packasso.yarn-audit.1.2.4-f0) (2023-05-05)
+
+### Fixes & improvements
+* fix: handle audit non-zero codes (#36) [ebd5b36](https://github.com/qiwi/packasso/commit/ebd5b36a7a18f80775e9d27f65696219ac57e394)
+
 ## [@packasso/yarn-audit@1.2.3](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.yarn-audit.1.2.2-f0...2023.5.5-packasso.yarn-audit.1.2.3-f0) (2023-05-05)
 
 ### Dependencies
