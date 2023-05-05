@@ -66,23 +66,19 @@ export const execute: (
   packages: ExtraPackageEntry | ExtraPackageEntry[],
   options?: Partial<ConcurrentlyOptions>,
 ) => Promise<unknown> = async (commands, packages, options) => {
-  try {
-    await concurrently(
-      [commands].flat().flatMap((command) =>
-        [packages].flat().flatMap(({ name, absPath: cwd }) => ({
-          command,
-          name,
-          cwd,
-        })),
-      ),
-      {
-        prefixColors: ['auto'],
-        ...options,
-      },
-    ).result
-  } catch {
-    throw new Error('ooops...')
-  }
+  await concurrently(
+    [commands].flat().flatMap((command) =>
+      [packages].flat().flatMap(({ name, absPath: cwd }) => ({
+        command,
+        name,
+        cwd,
+      })),
+    ),
+    {
+      prefixColors: ['auto'],
+      ...options,
+    },
+  ).result
 }
 
 export const bin: (
@@ -165,7 +161,14 @@ export const runWithContext: (context: Context) => Promise<unknown> = async (
     })
   }
   if (commands[command]) {
-    await commands[command](context)
+    try {
+      await commands[command](context)
+    } catch (e) {
+      if (e instanceof Error) {
+        error(e)
+      }
+      throw e
+    }
   }
 }
 
@@ -183,11 +186,6 @@ export const runWithoutContext: (
 
 export const run: (module?: Partial<Module>) => void = (module) => {
   runWithoutContext(module)
-    .then(() => {
-      exit(0)
-    })
-    .catch((e) => {
-      error(e)
-      exit(1)
-    })
+    .then(() => exit(0))
+    .catch(() => exit(1))
 }
