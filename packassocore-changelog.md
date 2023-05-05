@@ -1,3 +1,8 @@
+## [@packasso/core@1.4.3](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.core.1.4.2-f0...2023.5.5-packasso.core.1.4.3-f0) (2023-05-05)
+
+### Fixes & improvements
+* fix: error handling (#35) [6db69df](https://github.com/qiwi/packasso/commit/6db69df1541444694da100ac302923d0afd36041)
+
 ## [@packasso/core@1.4.2](https://github.com/qiwi/packasso/compare/2023.4.25-packasso.core.1.4.1-f0...2023.4.26-packasso.core.1.4.2-f0) (2023-04-26)
 
 ### Fixes & improvements
