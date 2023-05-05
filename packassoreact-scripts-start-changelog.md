@@ -1,3 +1,8 @@
+## [@packasso/react-scripts-start@1.0.5](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.react-scripts-start.1.0.4-f0...2023.5.5-packasso.react-scripts-start.1.0.5-f0) (2023-05-05)
+
+### Dependencies
+* perf: @packasso/core updated to 1.4.3
+
 ## [@packasso/react-scripts-start@1.0.4](https://github.com/qiwi/packasso/compare/2023.4.25-packasso.react-scripts-start.1.0.3-f0...2023.4.26-packasso.react-scripts-start.1.0.4-f0) (2023-04-26)
 
 ### Dependencies
