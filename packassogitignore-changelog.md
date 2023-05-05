@@ -1,3 +1,8 @@
+## [@packasso/gitignore@1.3.3](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.gitignore.1.3.2-f0...2023.5.5-packasso.gitignore.1.3.3-f0) (2023-05-05)
+
+### Dependencies
+* perf: @packasso/core updated to 1.4.3
+
 ## [@packasso/gitignore@1.3.2](https://github.com/qiwi/packasso/compare/2023.4.25-packasso.gitignore.1.3.1-f0...2023.4.26-packasso.gitignore.1.3.2-f0) (2023-04-26)
 
 ### Dependencies
