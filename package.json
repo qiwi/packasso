@@ -10,8 +10,5 @@
     "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx packasso/src/main/ts/bin.ts"
   },
   "packageManager": "yarn@4.0.0-rc.40",
-  "license": "MIT",
-  "resolutions": {
-    "webpack-dev-server": "4.11.1"
-  }
+  "license": "MIT"
 }
