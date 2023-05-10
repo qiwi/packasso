@@ -1,3 +1,11 @@
+## [@packasso/typedoc@1.3.4](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.typedoc.1.3.3-f0...2023.5.10-packasso.typedoc.1.3.4-f0) (2023-05-10)
+
+### Fixes & improvements
+* fix: up deps (#37) [e678e7d](https://github.com/qiwi/packasso/commit/e678e7d67f3201d4af2503bae690e3e51fcc1844)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 1.4.4
+
 ## [@packasso/typedoc@1.3.3](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.typedoc.1.3.2-f0...2023.5.5-packasso.typedoc.1.3.3-f0) (2023-05-05)
 
 ### Dependencies
