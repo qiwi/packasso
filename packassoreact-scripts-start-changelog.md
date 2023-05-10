@@ -1,3 +1,11 @@
+## [@packasso/react-scripts-start@1.0.6](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.react-scripts-start.1.0.5-f0...2023.5.10-packasso.react-scripts-start.1.0.6-f0) (2023-05-10)
+
+### Fixes & improvements
+* fix: up deps (#37) [e678e7d](https://github.com/qiwi/packasso/commit/e678e7d67f3201d4af2503bae690e3e51fcc1844)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 1.4.4
+
 ## [@packasso/react-scripts-start@1.0.5](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.react-scripts-start.1.0.4-f0...2023.5.5-packasso.react-scripts-start.1.0.5-f0) (2023-05-05)
 
 ### Dependencies
