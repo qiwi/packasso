@@ -1,3 +1,8 @@
+## [@packasso/yarn-audit@1.2.5](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.yarn-audit.1.2.4-f0...2023.5.10-packasso.yarn-audit.1.2.5-f0) (2023-05-10)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 1.4.4
+
 ## [@packasso/yarn-audit@1.2.4](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.yarn-audit.1.2.3-f0...2023.5.5-packasso.yarn-audit.1.2.4-f0) (2023-05-05)
 
 ### Fixes & improvements
