@@ -1,3 +1,11 @@
+## [@packasso/browserslist@1.0.2](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.browserslist.1.0.1-f0...2023.5.10-packasso.browserslist.1.0.2-f0) (2023-05-10)
+
+### Fixes & improvements
+* fix: up deps (#37) [e678e7d](https://github.com/qiwi/packasso/commit/e678e7d67f3201d4af2503bae690e3e51fcc1844)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 1.4.4
+
 ## [@packasso/browserslist@1.0.1](https://github.com/qiwi/packasso/compare/2023.4.27-packasso.browserslist.1.0.0-f0...2023.5.5-packasso.browserslist.1.0.1-f0) (2023-05-05)
 
 ### Dependencies
