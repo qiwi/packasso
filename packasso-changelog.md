@@ -1,3 +1,8 @@
+## [packasso@1.0.6](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.1.0.5-f0...2023.5.10-packasso.1.0.6-f0) (2023-05-10)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 1.4.4
+
 ## [packasso@1.0.5](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.1.0.4-f0...2023.5.5-packasso.1.0.5-f0) (2023-05-05)
 
 ### Dependencies
