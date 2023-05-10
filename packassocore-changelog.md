@@ -1,3 +1,8 @@
+## [@packasso/core@1.4.4](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.core.1.4.3-f0...2023.5.10-packasso.core.1.4.4-f0) (2023-05-10)
+
+### Fixes & improvements
+* fix: up deps (#37) [e678e7d](https://github.com/qiwi/packasso/commit/e678e7d67f3201d4af2503bae690e3e51fcc1844)
+
 ## [@packasso/core@1.4.3](https://github.com/qiwi/packasso/compare/2023.4.26-packasso.core.1.4.2-f0...2023.5.5-packasso.core.1.4.3-f0) (2023-05-05)
 
 ### Fixes & improvements
