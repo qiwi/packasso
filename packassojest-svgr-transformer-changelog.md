@@ -1,3 +1,8 @@
+## [@packasso/jest-svgr-transformer@1.1.1](https://github.com/qiwi/packasso/compare/2023.4.1-packasso.jest-svgr-transformer.1.1.0-f0...2023.5.10-packasso.jest-svgr-transformer.1.1.1-f0) (2023-05-10)
+
+### Fixes & improvements
+* fix: up deps (#37) [e678e7d](https://github.com/qiwi/packasso/commit/e678e7d67f3201d4af2503bae690e3e51fcc1844)
+
 ## [@packasso/jest-svgr-transformer@1.1.0](https://github.com/qiwi/packasso/compare/2023.3.31-packasso.jest-svgr-transformer.1.0.6-f0...2023.4.1-packasso.jest-svgr-transformer.1.1.0-f0) (2023-04-01)
 
 ### Features
