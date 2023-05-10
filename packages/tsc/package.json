@@ -18,9 +18,9 @@
   "dependencies": {
     "@packasso/core": "workspace:*",
     "@packasso/tsconfig": "workspace:*",
-    "rimraf": "4.4.1",
-    "tsc-esm-fix": "2.20.12",
-    "typescript": "4.9.5"
+    "rimraf": "5.0.0",
+    "tsc-esm-fix": "2.20.14",
+    "typescript": "5.0.4"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
