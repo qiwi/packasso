@@ -1,3 +1,11 @@
+## [@packasso/jest@1.5.0](https://github.com/qiwi/packasso/compare/2023.5.10-packasso.jest.1.4.5-f0...2023.5.11-packasso.jest.1.5.0-f0) (2023-05-11)
+
+### Features
+* feat: nested bins (#38) [624efa6](https://github.com/qiwi/packasso/commit/624efa6db80af2dc8d6656368e10a44b83572511)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 1.5.0
+
 ## [@packasso/jest@1.4.5](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.jest.1.4.4-f0...2023.5.10-packasso.jest.1.4.5-f0) (2023-05-10)
 
 ### Fixes & improvements
