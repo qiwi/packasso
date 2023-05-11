@@ -1,3 +1,8 @@
+## [@packasso/gitignore@1.3.5](https://github.com/qiwi/packasso/compare/2023.5.10-packasso.gitignore.1.3.4-f0...2023.5.11-packasso.gitignore.1.3.5-f0) (2023-05-11)
+
+### Fixes & improvements
+* fix: ignore dot local [28b07e2](https://github.com/qiwi/packasso/commit/28b07e21297449dcadaf8672f0b776a3112d0db1)
+
 ## [@packasso/gitignore@1.3.4](https://github.com/qiwi/packasso/compare/2023.5.5-packasso.gitignore.1.3.3-f0...2023.5.10-packasso.gitignore.1.3.4-f0) (2023-05-10)
 
 ### Fixes & improvements
