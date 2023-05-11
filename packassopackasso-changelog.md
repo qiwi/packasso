@@ -1,3 +1,20 @@
+## [@packasso/packasso@1.4.0](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.packasso.1.3.7-f0...2023.5.11-packasso.packasso.1.4.0-f0) (2023-05-11)
+
+### Features
+* feat: nested bins (#38) [624efa6](https://github.com/qiwi/packasso/commit/624efa6db80af2dc8d6656368e10a44b83572511)
+
+### Dependencies
+* perf: dependencies @packasso/buildstamp updated to 1.4.0
+* perf: dependencies @packasso/core updated to 1.5.0
+* perf: dependencies @packasso/eslint updated to 1.4.0
+* perf: dependencies @packasso/gitignore updated to 1.4.0
+* perf: dependencies @packasso/license updated to 1.4.0
+* perf: dependencies @packasso/prettier updated to 1.4.0
+* perf: dependencies @packasso/semrel updated to 1.4.0
+* perf: dependencies @packasso/tsc updated to 1.4.0
+* perf: dependencies @packasso/uvu updated to 1.2.0
+* perf: dependencies @packasso/yarn-audit updated to 1.3.0
+
 ## [@packasso/packasso@1.3.7](https://github.com/qiwi/packasso/compare/2023.5.10-packasso.packasso.1.3.6-f0...2023.5.11-packasso.packasso.1.3.7-f0) (2023-05-11)
 
 ### Dependencies
