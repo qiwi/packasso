@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -34,19 +35,23 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, deps, context)
   },
-  lint: async ({ pkg, pkgs, args }) => {
+  lint: async (context) => {
     await execute(
-      cmd('eslint', {
-        fix: args.fix,
-        _: pkg.tree ? pkgs.map(({ relPath }) => `${relPath}/src`) : ['src'],
+      cmd(bin('eslint', context), {
+        fix: context.args.fix,
+        _: context.pkg.tree
+          ? context.pkgs.map(({ relPath }) => `${relPath}/src`)
+          : ['src'],
       }),
-      pkg,
+      context.pkg,
     )
   },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf .eslintrc .eslintrc.* eslint.config.*', [
-      pkg,
-      ...pkgs,
-    ])
+  purge: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), {
+        _: ['.eslintrc', '.eslintrc.*', 'eslint.config.*'],
+      }),
+      [context.pkg, ...context.pkgs],
+    )
   },
 }

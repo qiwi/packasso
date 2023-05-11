@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -11,6 +12,9 @@ import {
 const tsDts = 'tsconfig.dts.json'
 const swcCjs = 'swc.cjs.json'
 const swcEsm = 'swc.esm.json'
+const targetCjs = 'target/cjs'
+const targetEsm = 'target/esm'
+const targetDts = 'target/dts'
 
 const data: ContextInstallData = ({ pkg, topo }) => [
   pkg.leaf || pkg.unit
@@ -71,8 +75,8 @@ const data: ContextInstallData = ({ pkg, topo }) => [
               declaration: true,
               emitDeclarationOnly: true,
               rootDir: './src/main/ts',
-              declarationDir: './target/dts',
-              tsBuildInfoFile: './target/dts/.tsbuildinfo',
+              declarationDir: `./${targetDts}`,
+              tsBuildInfoFile: `./${targetDts}/.tsbuildinfo`,
             },
           }
         : pkg.tree
@@ -92,17 +96,21 @@ const data: ContextInstallData = ({ pkg, topo }) => [
         ? {
             publishConfig: {
               type: 'module',
-              main: './target/cjs/index.cjs',
-              module: './target/esm/index.mjs',
-              types: './target/dts/index.d.ts',
+              main: `./${targetCjs}/index.cjs`,
+              module: `./${targetEsm}/index.mjs`,
+              types: `./${targetDts}/index.d.ts`,
               exports: {
                 '.': {
-                  require: './target/cjs/index.cjs',
-                  import: './target/esm/index.mjs',
-                  types: './target/dts/index.d.ts',
+                  require: `./${targetCjs}/index.cjs`,
+                  import: `./${targetEsm}/index.mjs`,
+                  types: `./${targetDts}/index.d.ts`,
                 },
               },
-              files: ['target/cjs/**/*', 'target/esm/**/*', 'target/dts/**/*'],
+              files: [
+                `${targetCjs}/**/*`,
+                `${targetEsm}/**/*`,
+                `${targetDts}/**/*`,
+              ],
             },
           }
         : {},
@@ -116,59 +124,81 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  clean: async ({ pkg, pkgs }) => {
-    await execute('rimraf target/cjs target/esm target/dts', [pkg, ...pkgs])
+  clean: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), {
+        _: [targetCjs, targetEsm, targetDts],
+      }),
+      [context.pkg, ...context.pkgs],
+    )
   },
-  build: async ({ pkg, pkgs }) => {
+  build: async (context) => {
     await execute(
       [
-        cmd('swc', {
+        cmd(bin('swc', context), {
           _: ['src'],
-          d: 'target/cjs.tmp/src',
+          d: `${targetCjs}.tmp/src`,
           'source-maps': true,
           'no-swcrc': true,
           'config-file': swcCjs,
         }),
-        cmd('swc', {
+        cmd(bin('swc', context), {
           _: ['src'],
-          d: 'target/esm.tmp/src',
+          d: `${targetEsm}.tmp/src`,
           'source-maps': true,
           'no-swcrc': true,
           'config-file': swcEsm,
         }),
       ],
-      pkg.tree ? pkgs : pkg,
+      context.pkg.tree ? context.pkgs : context.pkg,
     )
-    await execute(`tsc -b ${tsDts}`, pkg)
+    await execute(cmd(bin('tsc', context), { b: tsDts }), context.pkg)
     await execute(
       [
-        'globby-cp target/cjs.tmp/src/main/ts target/cjs',
-        'globby-cp target/esm.tmp/src/main/ts target/esm',
-        'rimraf target/cjs.tmp target/esm.tmp',
+        cmd(bin('globby-cp', context), {
+          _: [`${targetCjs}.tmp/src/main/ts`, targetCjs],
+        }),
+        cmd(bin('globby-cp', context), {
+          _: [`${targetEsm}.tmp/src/main/ts`, targetEsm],
+        }),
+        cmd(bin('rimraf', context), {
+          _: [`${targetCjs}.tmp`, `${targetEsm}.tmp`],
+        }),
       ],
-      pkg.tree ? pkgs : pkg,
+      context.pkg.tree ? context.pkgs : context.pkg,
     )
     await execute(
       [
-        cmd('tsc-esm-fix', {
-          target: 'target/cjs',
+        cmd(bin('tsc-esm-fix', context), {
+          target: targetCjs,
           ext: '.cjs',
           fillBlank: true,
         }),
-        cmd('tsc-esm-fix', {
-          target: 'target/esm',
+        cmd(bin('tsc-esm-fix', context), {
+          target: targetEsm,
           ext: '.mjs',
           fillBlank: true,
           forceDefaultExport: true,
         }),
       ],
-      pkg.tree ? pkgs : pkg,
+      context.pkg.tree ? context.pkgs : context.pkg,
     )
   },
-  purge: async ({ pkg, pkgs }) => {
+  purge: async (context) => {
     await execute(
-      'rimraf build dist lib buildcache .buildcache .swcrc swc.*.json tsconfig.*.json',
-      [pkg, ...pkgs],
+      cmd(bin('rimraf', context), {
+        _: [
+          'build',
+          'dist',
+          'lib',
+          'buildcache',
+          '.buildcache',
+          '.swcrc',
+          'swc.*.json',
+          'tsconfig.*.json',
+        ],
+      }),
+      [context.pkg, ...context.pkgs],
     )
   },
 }

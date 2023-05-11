@@ -2,11 +2,11 @@ import { existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 import {
-  bin,
   cmd,
   Commands,
   ContextInstallData,
   install,
+  npx,
   uninstall,
 } from '@packasso/core'
 
@@ -28,7 +28,7 @@ const data: ContextInstallData = ({ pkg, root }) => [
         'package.json': {
           scripts: {
             packasso: cmd(
-              bin(pkg, root, 'packasso'),
+              npx(pkg, root, 'packasso'),
               {},
               {
                 NODE_ENV: 'development',

@@ -1,4 +1,4 @@
-import { cmd, Commands, execute } from '@packasso/core'
+import { bin, cmd, Commands, execute } from '@packasso/core'
 import lodash from 'lodash'
 
 const levelExitCodes: Record<string, number> = {
@@ -10,20 +10,21 @@ const levelExitCodes: Record<string, number> = {
 }
 
 export const commands: Commands = {
-  audit: async ({ pkg, args }) => {
-    const { fix = false, level = 'moderate' } = args
+  audit: async (context) => {
+    const { fix = false, level = 'moderate' } = context.args
     try {
       await execute(
         fix
-          ? cmd('yarn-audit-fix', {
+          ? cmd(bin('yarn-audit-fix', context), {
               'audit-level': level,
             })
-          : cmd('yarn npm audit', {
+          : cmd(bin('yarn', context), {
+              _: ['npm audit'],
               recursive: true,
               all: true,
               severity: level,
             }),
-        pkg,
+        context.pkg,
       )
     } catch (e) {
       if (

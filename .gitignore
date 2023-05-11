@@ -3,6 +3,10 @@
 .DS_Store
 /.idea
 
+# local
+
+*.local
+
 # yarn
 
 /.pnp.*
@@ -27,7 +31,3 @@
 
 /node_modules
 /target
-
-# local
-
-*.local

@@ -16,11 +16,11 @@
       "node"
     ],
     "paths": {
-      "packasso": [
-        "../../packasso/src/main/ts"
-      ],
       "@packasso/core": [
         "../core/src/main/ts"
+      ],
+      "packasso": [
+        "../../packasso/src/main/ts"
       ]
     }
   },

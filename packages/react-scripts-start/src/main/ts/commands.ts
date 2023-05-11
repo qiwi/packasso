@@ -1,7 +1,10 @@
-import { cmd, Commands, execute } from '@packasso/core'
+import { bin, cmd, Commands, execute } from '@packasso/core'
 
 export const commands: Commands = {
-  start: async ({ pkg, pkgs }) => {
-    await execute(cmd('react-scripts start'), pkg.tree ? pkgs : pkg)
+  start: async (context) => {
+    await execute(
+      cmd(bin('react-scripts', context), { _: ['start'] }),
+      context.pkg.tree ? context.pkgs : context.pkg,
+    )
   },
 }

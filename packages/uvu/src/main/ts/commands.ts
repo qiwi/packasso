@@ -1,42 +1,51 @@
-import { cmd, Commands, execute } from '@packasso/core'
+import { bin, cmd, Commands, execute } from '@packasso/core'
 
 export const commands: Commands = {
-  test: async ({ pkg, pkgs, args }) => {
-    const paths = pkgs.map(({ relPath }) => relPath)
+  test: async (context) => {
+    const paths = context.pkgs.map(({ relPath }) => relPath)
     const many = paths.length > 1
     const mainPaths = `${
-      pkg.tree ? `${many ? '{' : ''}${paths.join(',')}${many ? '}' : ''}/` : ''
+      context.pkg.tree
+        ? `${many ? '{' : ''}${paths.join(',')}${many ? '}' : ''}/`
+        : ''
     }src/main/{ts,js}`
     const testPaths = `${
-      pkg.tree ? `${many ? '(' : ''}${paths.join('|')}${many ? ')' : ''}/` : ''
+      context.pkg.tree
+        ? `${many ? '(' : ''}${paths.join('|')}${many ? ')' : ''}/`
+        : ''
     }src/test/[jt]s/.*.(spec|test).[jt]sx?`
     await execute(
       cmd(
-        'c8',
+        bin('c8', context),
         {
           all: true,
           o: 'target/coverage',
           r: ['html', 'text', 'lcov'],
           n: `'${mainPaths}'`,
           _: [
-            cmd('uvu', {
+            cmd(bin('uvu', context), {
               r: ['tsm', 'earljs/uvu'],
               _: ['.', `'${testPaths}'`],
             }),
           ],
         },
-        args.u ? { UPDATE_SNAPSHOTS: true } : {},
+        context.args.u ? { UPDATE_SNAPSHOTS: true } : {},
       ),
-      pkg,
+      context.pkg,
     )
   },
-  clean: async ({ pkg, pkgs }) => {
-    await execute('rimraf target/coverage', [pkg, ...pkgs])
-  },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf coverage jest.config.* tsconfig.test.json', [
-      pkg,
-      ...pkgs,
+  clean: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: ['target/coverage'] }), [
+      context.pkg,
+      ...context.pkgs,
     ])
+  },
+  purge: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), {
+        _: ['coverage', 'jest.config.*', 'tsconfig.test.json'],
+      }),
+      [context.pkg, ...context.pkgs],
+    )
   },
 }

@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -27,10 +28,16 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  clean: async ({ pkg, pkgs }) => {
-    await execute('rimraf target/webapp', pkg.tree ? pkgs : pkg)
+  clean: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), { _: ['target/webapp'] }),
+      context.pkg.tree ? context.pkgs : context.pkg,
+    )
   },
-  build: async ({ pkg, pkgs }) => {
-    await execute(cmd('react-scripts build'), pkg.tree ? pkgs : pkg)
+  build: async (context) => {
+    await execute(
+      cmd(bin('react-scripts', context), { _: ['build'] }),
+      context.pkg.tree ? context.pkgs : context.pkg,
+    )
   },
 }

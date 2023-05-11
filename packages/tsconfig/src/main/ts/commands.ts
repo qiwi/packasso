@@ -1,4 +1,6 @@
 import {
+  bin,
+  cmd,
   Commands,
   ContextInstallData,
   execute,
@@ -43,7 +45,10 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, deps, context)
   },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf tsconfig.json', [pkg, ...pkgs])
+  purge: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: ['tsconfig.json'] }), [
+      context.pkg,
+      ...context.pkgs,
+    ])
   },
 }

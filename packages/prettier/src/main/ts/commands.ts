@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -24,20 +25,24 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, deps, context)
   },
-  lint: async ({ pkg, pkgs, args }) => {
+  lint: async (context) => {
     await execute(
-      cmd('prettier', {
+      cmd(bin('prettier', context), {
         loglevel: 'warn',
-        ...(args.fix ? { write: true } : { check: true }),
-        _: pkg.tree ? pkgs.map(({ relPath }) => `${relPath}/src`) : ['src'],
+        ...(context.args.fix ? { write: true } : { check: true }),
+        _: context.pkg.tree
+          ? context.pkgs.map(({ relPath }) => `${relPath}/src`)
+          : ['src'],
       }),
-      pkg,
+      context.pkg,
     )
   },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf .prettierrc .prettierrc.* prettier.config.*', [
-      pkg,
-      ...pkgs,
-    ])
+  purge: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), {
+        _: ['.prettierrc', '.prettierrc.*', 'prettier.config.*'],
+      }),
+      [context.pkg, ...context.pkgs],
+    )
   },
 }

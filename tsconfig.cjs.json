@@ -11,13 +11,16 @@
       "path": "./packages/buildstamp/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/browserslist/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/cli/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/eslint/tsconfig.cjs.json"
+      "path": "./packages/core/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/core/tsconfig.cjs.json"
+      "path": "./packages/eslint/tsconfig.cjs.json"
     },
     {
       "path": "./packages/gitignore/tsconfig.cjs.json"
@@ -32,16 +35,22 @@
       "path": "./packages/jest-snapshot-resolver/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/license/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/jest-svgr-transformer/tsconfig.cjs.json"
     },
     {
       "path": "./packages/packasso/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/license/tsconfig.cjs.json"
+      "path": "./packages/prettier/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/prettier/tsconfig.cjs.json"
+      "path": "./packages/react-scripts-build/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/react-scripts-start/tsconfig.cjs.json"
     },
     {
       "path": "./packages/resources/tsconfig.cjs.json"
@@ -66,15 +75,6 @@
     },
     {
       "path": "./packages/yarn-audit/tsconfig.cjs.json"
-    },
-    {
-      "path": "./packages/react-scripts-build/tsconfig.cjs.json"
-    },
-    {
-      "path": "./packages/react-scripts-start/tsconfig.cjs.json"
-    },
-    {
-      "path": "./packages/browserslist/tsconfig.cjs.json"
     }
   ]
 }
