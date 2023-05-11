@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -93,32 +94,49 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  clean: async ({ pkg, pkgs }) => {
-    await execute('rimraf target/cjs target/esm', [pkg, ...pkgs])
+  clean: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), { _: ['target/cjs target/esm'] }),
+      [context.pkg, ...context.pkgs],
+    )
   },
-  build: async ({ pkg, pkgs }) => {
-    await execute(`tsc -b ${tsEsm} ${tsCjs}`, pkg)
+  build: async (context) => {
+    await execute(
+      cmd(bin('tsc', context), { b: `${tsEsm} ${tsCjs}` }),
+      context.pkg,
+    )
     await execute(
       [
-        cmd('tsc-esm-fix', {
+        cmd(bin('tsc-esm-fix', context), {
           target: 'target/cjs',
           ext: '.cjs',
           fillBlank: true,
         }),
-        cmd('tsc-esm-fix', {
+        cmd(bin('tsc-esm-fix', context), {
           target: 'target/esm',
           ext: '.mjs',
           fillBlank: true,
           forceDefaultExport: true,
         }),
       ],
-      pkg.tree ? pkgs : pkg,
+      context.pkg.tree ? context.pkgs : context.pkg,
     )
   },
-  purge: async ({ pkg, pkgs }) => {
+  purge: async (context) => {
     await execute(
-      'rimraf build dist lib buildcache .buildcache .swcrc swc.*.json tsconfig.*.json',
-      [pkg, ...pkgs],
+      cmd(bin('rimraf', context), {
+        _: [
+          'build',
+          'dist',
+          'lib',
+          'buildcache',
+          '.buildcache',
+          '.swcrc',
+          'swc.*.json',
+          'tsconfig.*.json',
+        ],
+      }),
+      [context.pkg, ...context.pkgs],
     )
   },
 }

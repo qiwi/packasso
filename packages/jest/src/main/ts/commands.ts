@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -70,16 +71,27 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, deps, context)
   },
-  test: async ({ pkg, args, node_modules }) => {
+  test: async (context) => {
     await execute(
-      cmd('jest', { silent: true, u: args.u }, { NODE_PATH: node_modules }),
-      pkg,
+      cmd(
+        bin('jest', context),
+        {
+          silent: true,
+          u: context.args.u,
+        },
+        {
+          NODE_PATH: context.node_modules,
+        },
+      ),
+      context.pkg,
     )
   },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf coverage jest.config.* tsconfig.test.json', [
-      pkg,
-      ...pkgs,
-    ])
+  purge: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), {
+        _: ['coverage', 'jest.config.*', 'tsconfig.test.json'],
+      }),
+      [context.pkg, ...context.pkgs],
+    )
   },
 }

@@ -1,4 +1,6 @@
 import {
+  bin,
+  cmd,
   Commands,
   ContextInstallData,
   execute,
@@ -60,7 +62,10 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf .gitignore', [pkg, ...pkgs])
+  purge: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: ['.gitignore'] }), [
+      context.pkg,
+      ...context.pkgs,
+    ])
   },
 }

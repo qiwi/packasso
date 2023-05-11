@@ -1,13 +1,26 @@
-import { Command, Commands, Context, npx } from '@packasso/core'
+import { env } from 'node:process'
+
+import { cmd, Command, Commands, Context, execute, npx } from '@packasso/core'
 
 const pkgNpx: (context: Context, prefix: string) => Promise<unknown> = async (
-  { pkg, root, command, args },
+  context,
   prefix,
 ) => {
-  for (const module of pkg.modules) {
-    await npx(pkg, root, module, command, args, {
-      prefix,
-    })
+  for (const module of context.pkg.modules) {
+    await execute(
+      cmd(
+        `${npx(context.pkg, context.root, module)} ${context.command}`,
+        context.args,
+        {
+          NODE_ENV: env.NODE_ENV,
+          NPM_CONFIG_YES: env.NPM_CONFIG_YES,
+        },
+      ),
+      context.pkg,
+      {
+        prefix,
+      },
+    )
   }
 }
 

@@ -1,4 +1,6 @@
 import {
+  bin,
+  cmd,
   Commands,
   ContextInstallData,
   execute,
@@ -30,15 +32,20 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  release: async ({ pkg, pkgs }) => {
-    for (const pkg of pkgs) {
+  release: async (context) => {
+    for (const pkg of context.pkgs) {
       await publish(pkg)
     }
-    if (pkg.tree) {
-      await execute('zx-bulk-release', pkg)
+    if (context.pkg.tree) {
+      await execute(cmd(bin('zx-bulk-release', context)), context.pkg)
     }
   },
-  purge: async ({ pkgs }) => {
-    await execute('rimraf .releaserc .releaserc.* release.config.*', pkgs)
+  purge: async (context) => {
+    await execute(
+      cmd(bin('rimraf', context), {
+        _: ['.releaserc', '.releaserc.*', 'release.config.*'],
+      }),
+      context.pkgs,
+    )
   },
 }

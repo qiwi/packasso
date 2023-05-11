@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -30,16 +31,26 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  clean: async ({ pkg, pkgs }) => {
-    await execute('rimraf target/docs', [pkg, ...pkgs])
+  clean: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: ['target/docs'] }), [
+      context.pkg,
+      ...context.pkgs,
+    ])
   },
-  build: async ({ pkg, pkgs }) => {
+  build: async (context) => {
     await execute(
-      cmd('typedoc', { skipErrorChecking: true, logLevel: 'Error' }),
-      pkg.tree ? pkgs : pkg,
+      cmd(bin('typedoc', context), {
+        _: [],
+        skipErrorChecking: 'a',
+        logLevel: 'Error',
+      }),
+      context.pkg.tree ? context.pkgs : context.pkg,
     )
   },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf typedoc.json', [pkg, ...pkgs])
+  purge: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: ['typedoc.json'] }), [
+      context.pkg,
+      ...context.pkgs,
+    ])
   },
 }

@@ -13,10 +13,10 @@
   },
   "references": [
     {
-      "path": "../../packasso/tsconfig.cjs.json"
+      "path": "../core/tsconfig.cjs.json"
     },
     {
-      "path": "../core/tsconfig.cjs.json"
+      "path": "../../packasso/tsconfig.cjs.json"
     }
   ]
 }

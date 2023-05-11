@@ -1,4 +1,6 @@
 import {
+  bin,
+  cmd,
   Commands,
   execute,
   install,
@@ -45,7 +47,10 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  purge: async ({ pkg, pkgs }) => {
-    await execute('rimraf LICENSE', [pkg, ...pkgs])
+  purge: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: ['LICENSE'] }), [
+      context.pkg,
+      ...context.pkgs,
+    ])
   },
 }

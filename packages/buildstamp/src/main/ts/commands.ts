@@ -1,4 +1,5 @@
 import {
+  bin,
   cmd,
   Commands,
   ContextInstallData,
@@ -7,12 +8,14 @@ import {
   uninstall,
 } from '@packasso/core'
 
+const buildStampJson = 'target/buildstamp.json'
+
 const data: ContextInstallData = ({ pkg }) => [
   pkg.leaf || pkg.unit
     ? {
         'package.json': {
           publishConfig: {
-            files: ['target/buildstamp.json'],
+            files: [buildStampJson],
           },
         },
       }
@@ -26,19 +29,22 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  clean: async ({ pkg, pkgs }) => {
-    await execute('rimraf target/buildstamp.json', [pkg, ...pkgs])
+  clean: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: [buildStampJson] }), [
+      context.pkg,
+      ...context.pkgs,
+    ])
   },
-  build: async ({ pkg, pkgs }) => {
+  build: async (context) => {
     await execute(
-      cmd('buildstamp', {
-        'out.path': 'target/buildstamp.json',
+      cmd(bin('buildstamp', context), {
+        'out.path': buildStampJson,
         'out.jsonSeparator': 'double-space',
         git: true,
         'docker.imageTag': '${IMAGE_TAG:-none}',
         'date.format': 'iso',
       }),
-      pkg.tree ? pkgs : pkg,
+      context.pkg.tree ? context.pkgs : context.pkg,
     )
   },
 }

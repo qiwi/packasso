@@ -10,10 +10,10 @@
   },
   "references": [
     {
-      "path": "../../packasso/tsconfig.esm.json"
+      "path": "../core/tsconfig.esm.json"
     },
     {
-      "path": "../core/tsconfig.esm.json"
+      "path": "../../packasso/tsconfig.esm.json"
     }
   ]
 }

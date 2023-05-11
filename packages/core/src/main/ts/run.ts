@@ -81,7 +81,7 @@ export const execute: (
   ).result
 }
 
-export const bin: (
+export const npx: (
   pkg: ExtraPackageEntry,
   root: string,
   module: string,
@@ -101,6 +101,23 @@ export const bin: (
     }
   }
   return `npx ${module}`
+}
+
+export const bin: (bin: string, context: Context) => string = (
+  bin,
+  context,
+) => {
+  const path = resolve(
+    context.node_modules,
+    context.module.name,
+    'node_modules',
+    '.bin',
+    bin,
+  )
+  if (existsSync(path)) {
+    return path
+  }
+  return bin
 }
 
 export const cmd: (
@@ -128,23 +145,6 @@ export const cmd: (
   ]
     .join(' ')
     .trim()
-
-export const npx: (
-  pkg: ExtraPackageEntry,
-  root: string,
-  module: string,
-  command: string,
-  args: ParsedArgs,
-  options?: Partial<ConcurrentlyOptions>,
-) => Promise<unknown> = async (pkg, root, module, command, args, options) =>
-  await execute(
-    cmd(`${bin(pkg, root, module)} ${command}`, args, {
-      NODE_ENV: env.NODE_ENV,
-      NPM_CONFIG_YES: env.NPM_CONFIG_YES,
-    }),
-    pkg,
-    options,
-  )
 
 export const runWithContext: (context: Context) => Promise<unknown> = async (
   context,

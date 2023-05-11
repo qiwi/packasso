@@ -1,4 +1,6 @@
 import {
+  bin,
+  cmd,
   Commands,
   ContextInstallData,
   execute,
@@ -25,13 +27,18 @@ export const commands: Commands = {
   uninstall: async (context) => {
     await uninstall(data, [], context)
   },
-  clean: async ({ pkg, pkgs }) => {
-    await execute('rimraf target/resources', [pkg, ...pkgs])
+  clean: async (context) => {
+    await execute(cmd(bin('rimraf', context), { _: ['target/resources'] }), [
+      context.pkg,
+      ...context.pkgs,
+    ])
   },
-  build: async ({ pkg, pkgs }) => {
+  build: async (context) => {
     await execute(
-      'globby-cp src/main/resources target/resources',
-      pkg.tree ? pkgs : pkg,
+      cmd(bin('globby-cp', context), {
+        _: ['src/main/resources', 'target/resources'],
+      }),
+      context.pkg.tree ? context.pkgs : context.pkg,
     )
   },
 }
