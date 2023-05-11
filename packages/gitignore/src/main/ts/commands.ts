@@ -15,6 +15,10 @@ const gitignoreRoot = `# misc
 .DS_Store
 /.idea
 
+# local
+
+*.local
+
 # yarn
 
 /.pnp.*

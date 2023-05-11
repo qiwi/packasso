@@ -27,3 +27,7 @@
 
 /node_modules
 /target
+
+# local
+
+*.local
