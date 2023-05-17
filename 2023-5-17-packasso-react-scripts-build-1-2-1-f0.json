@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/react-scripts-build",
+  "hash": "a97eff9cd7fcfeb8c44a8410990cbab9466ecb99",
+  "version": "1.2.1",
+  "dependencies": {
+    "@packasso/core": "1.5.0"
+  }
+}
