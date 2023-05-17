@@ -16,7 +16,13 @@ const data: ContextInstallData = ({ pkg }) => [
             files: ['target/webapp'],
           },
         },
-        '.env': ['BUILD_PATH=target/webapp', ''].join('\n'),
+        '.env': [
+          'BUILD_PATH=target/webapp',
+          'DISABLE_ESLINT_PLUGIN=true',
+          'ESLINT_NO_DEV_ERRORS=true',
+          '',
+        ].join('\n'),
+        '.env.local': ['PUBLIC_URL=/', ''].join('\n'),
       }
     : {},
 ]

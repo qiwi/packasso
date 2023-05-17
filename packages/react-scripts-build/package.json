@@ -17,7 +17,8 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "webpack-dev-server": "4.11.1"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
