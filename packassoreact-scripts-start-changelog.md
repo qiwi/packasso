@@ -1,3 +1,8 @@
+## [@packasso/react-scripts-start@1.1.1](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.react-scripts-start.1.1.0-f0...2023.5.17-packasso.react-scripts-start.1.1.1-f0) (2023-05-17)
+
+### Fixes & improvements
+* fix: downgrade webpack-dev-server (#39) [a97eff9](https://github.com/qiwi/packasso/commit/a97eff9cd7fcfeb8c44a8410990cbab9466ecb99)
+
 ## [@packasso/react-scripts-start@1.1.0](https://github.com/qiwi/packasso/compare/2023.5.10-packasso.react-scripts-start.1.0.6-f0...2023.5.11-packasso.react-scripts-start.1.1.0-f0) (2023-05-11)
 
 ### Features
