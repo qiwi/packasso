@@ -1,3 +1,9 @@
+## [@packasso/react-scripts-start@1.1.2](https://github.com/qiwi/packasso/compare/2023.5.17-packasso.react-scripts-start.1.1.1-f0...2023.5.17-packasso.react-scripts-start.1.1.2-f0) (2023-05-17)
+
+### Fixes & improvements
+* fix: react-scripts-start install [2704260](https://github.com/qiwi/packasso/commit/27042609d275aea7bd77deecb201149601fa4b66)
+* fix: react-scripts-start install [bb09450](https://github.com/qiwi/packasso/commit/bb0945029374928d2b5d0865ede63ca71e8bac27)
+
 ## [@packasso/react-scripts-start@1.1.1](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.react-scripts-start.1.1.0-f0...2023.5.17-packasso.react-scripts-start.1.1.1-f0) (2023-05-17)
 
 ### Fixes & improvements
