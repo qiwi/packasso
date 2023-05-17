@@ -1,4 +1,12 @@
-import { bin, cmd, Commands, ContextInstallData, execute } from '@packasso/core'
+import {
+  bin,
+  cmd,
+  Commands,
+  ContextInstallData,
+  execute,
+  install,
+  uninstall,
+} from '@packasso/core'
 
 const data: ContextInstallData = ({ pkg }) => [
   pkg.leaf || pkg.unit
@@ -14,6 +22,12 @@ const data: ContextInstallData = ({ pkg }) => [
 ]
 
 export const commands: Commands = {
+  install: async (context) => {
+    await install(data, [], [], context)
+  },
+  uninstall: async (context) => {
+    await uninstall(data, [], [], context)
+  },
   start: async (context) => {
     await execute(
       cmd(bin('react-scripts', context), { _: ['start'] }),
