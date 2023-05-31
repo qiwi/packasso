@@ -1,7 +1,31 @@
-import { join, sep } from 'node:path'
+import { realpathSync } from 'node:fs'
+import { dirname, join, sep } from 'node:path'
+import process from 'node:process'
+
+import { gitRoot } from '@antongolub/git-root'
+import { findUpSync } from 'find-up'
 
 import { getDependencies } from './topo'
 import { ExtraPackageEntry, ExtraTopoContext } from './types'
+
+export const getRoot: (cwd: string) => string = (cwd) => {
+  const gitRootRes = gitRoot.sync(cwd)
+  if (!gitRootRes) {
+    throw new Error('can`t get git root')
+  }
+  return gitRootRes.toString()
+}
+
+export const getNodeModules: () => string = () => {
+  const node_modules = findUpSync('node_modules', {
+    cwd: dirname(realpathSync(process.argv[1])),
+    type: 'directory',
+  })
+  if (!node_modules) {
+    throw new Error('can`t get node_modules')
+  }
+  return node_modules
+}
 
 export const getJestModuleNameMapper: (
   pkg: ExtraPackageEntry,
@@ -32,7 +56,7 @@ export const getTypeScriptPaths: (
   pkg: ExtraPackageEntry,
   topo: ExtraTopoContext,
 ) => Record<string, string[]> = (pkg, topo) =>
-  Object.fromEntries(
+  Object.fromEntries<string[]>(
     getDependencies(pkg, topo, 'tsconfig.json').map(([name, path]) => [
       name,
       [dotted(join(path, 'src', 'main', 'ts'))],

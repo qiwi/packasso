@@ -1,6 +1,22 @@
 #!/usr/bin/env node
-import { run } from '@packasso/core'
+import { exit } from 'node:process'
 
-import { commands } from './commands'
+import {
+  createArgument,
+  createOptionCwd,
+  createProgram,
+  getTopo,
+  run,
+} from '@packasso/core'
 
-run({ commands })
+createProgram('packasso', 'packasso')
+  .addArgument(createArgument('<command>', 'preset command to execute'))
+  .addOption(createOptionCwd())
+  .action(async (command, options, context) => {
+    const { cwd } = options
+    const { root } = await getTopo({ cwd })
+    await run(root, root.modules, command, undefined, context)
+  })
+  .parseAsync()
+  .then(() => exit(0))
+  .catch(() => exit(1))

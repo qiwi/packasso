@@ -12,9 +12,10 @@ export const getConfig: (cwd: string) => Promise<string[]> = async (cwd) => {
   return lodash.uniqWith([result?.config || []].flat(), lodash.isEqual)
 }
 
-export const getExtraTopo: (
+export const getTopo: (
   options?: ITopoOptions,
-) => Promise<ExtraTopoContext> = async (options) => {
+  from?: string,
+) => Promise<ExtraTopoContext> = async (options, preset) => {
   const context = await topo(options)
   const packages = Object.fromEntries(
     await Promise.all(
@@ -49,6 +50,9 @@ export const getExtraTopo: (
   return {
     ...context,
     packages,
+    queuePackages: context.queue
+      .map((name) => packages[name])
+      .filter((pkg) => (preset ? pkg.modules.includes(preset) : true)),
     root,
   }
 }
@@ -60,7 +64,12 @@ export const getDependencies: (
 ) => [string, string][] = (pkg, topo, file) =>
   (pkg.tree
     ? Object.values(topo.packages || {})
-    : Object.entries(pkg.manifest.dependencies || {})
+    : Object.entries({
+        ...pkg.manifest.dependencies,
+        ...pkg.manifest.devDependencies,
+        ...pkg.manifest.optionalDependencies,
+        ...pkg.manifest.peerDependencies,
+      })
         .filter(([name, version]) => name && version.startsWith('workspace:'))
         .map(([name]) => topo.packages[name])
   )

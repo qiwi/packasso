@@ -1,6 +1,48 @@
 #!/usr/bin/env node
-import { run } from '@packasso/core'
+import {
+  cmd,
+  createCommand,
+  createCommandClean,
+  createCommandInstall,
+  createCommandUninstall,
+  execute,
+  getTopo,
+  Install,
+  program,
+} from '@packasso/core'
 
-import { commands } from './commands'
+const buildStampJson = 'target/buildstamp.json'
 
-run({ commands })
+const install: Install = {
+  data: (pkg) => [
+    pkg.leaf || pkg.unit
+      ? {
+          'package.json': {
+            publishConfig: {
+              files: [buildStampJson],
+            },
+          },
+        }
+      : {},
+  ],
+}
+
+program('@packasso/buildstamp', 'buildstamp', [
+  createCommandInstall(install),
+  createCommandUninstall(install),
+  createCommandClean([buildStampJson]),
+  createCommand('build', 'build').action(async (options) => {
+    const { cwd, preset } = options
+    const { root, queuePackages } = await getTopo({ cwd }, preset)
+    await execute(
+      cmd('buildstamp', {
+        'out.path': buildStampJson,
+        'out.jsonSeparator': 'double-space',
+        git: true,
+        'docker.imageTag': '${IMAGE_TAG:-none}',
+        'date.format': 'iso',
+      }),
+      root.tree ? queuePackages : preset ? root.absPath : root,
+    )
+  }),
+])

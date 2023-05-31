@@ -1,129 +1,76 @@
-import { error } from 'node:console'
 import { existsSync, realpathSync } from 'node:fs'
-import { dirname, relative, resolve } from 'node:path'
-import { argv, env, exit, cwd as pcwd } from 'node:process'
+import { relative, resolve } from 'node:path'
+import process, { env } from 'node:process'
 
-import { gitRoot } from '@antongolub/git-root'
+import { Command } from '@commander-js/extra-typings'
 import concurrently, { ConcurrentlyOptions } from 'concurrently'
-import { findUp } from 'find-up'
 import lodash from 'lodash'
-import minimist, { ParsedArgs } from 'minimist'
-import { readPackageUp } from 'read-pkg-up'
 
-import { getExtraTopo } from './topo'
-import { Context, ExtraPackageEntry, Module } from './types'
-
-export const getModuleName: (path?: string) => Promise<string> = async (
-  path = argv[1],
-) => {
-  const res = await readPackageUp({ cwd: dirname(realpathSync(path)) })
-  if (res) {
-    return res.packageJson.name
-  }
-  throw new Error('can`t get module name')
-}
-
-export const context: (module: Module) => Promise<Context> = async (module) => {
-  const cwd = pcwd()
-  const gitRootRes = await gitRoot(cwd)
-  if (!gitRootRes) {
-    throw new Error('can`t get git root')
-  }
-  const node_modules = await findUp('node_modules', {
-    cwd: dirname(realpathSync(argv[1])),
-    type: 'directory',
-  })
-  if (!node_modules) {
-    throw new Error('can`t get node_modules')
-  }
-  const command = argv[2]
-  if (lodash.isNil(command) || lodash.isEmpty(command)) {
-    throw new Error('invalid command')
-  }
-  const root = gitRootRes.toString()
-  const args = minimist(argv.slice(3))
-  const topo = await getExtraTopo({ cwd: root })
-  const pkg =
-    Object.values(topo.packages).find(({ absPath }) => absPath === cwd) ||
-    topo.root
-  const pkgs =
-    pkg === topo.root ? topo.queue.map((name) => topo.packages[name]) : []
-  return {
-    cwd,
-    command,
-    args,
-    pkg,
-    pkgs,
-    topo,
-    root,
-    module,
-    node_modules,
-  }
-}
+import { getRoot } from './helpers'
+import { ExtraPackageEntry } from './types'
 
 export const execute: (
   commands: string | string[],
-  packages: ExtraPackageEntry | ExtraPackageEntry[],
+  packages: (ExtraPackageEntry | string) | (ExtraPackageEntry | string)[],
   options?: Partial<ConcurrentlyOptions>,
 ) => Promise<unknown> = async (commands, packages, options) => {
   await concurrently(
     [commands].flat().flatMap((command) =>
-      [packages].flat().flatMap(({ name, absPath: cwd }) => ({
-        command,
-        name,
-        cwd,
-      })),
+      [packages].flat().flatMap((pkg) =>
+        lodash.isString(pkg)
+          ? {
+              command,
+              cwd: pkg,
+            }
+          : {
+              command,
+              name: pkg.name,
+              cwd: pkg.absPath,
+            },
+      ),
     ),
     {
       prefixColors: ['auto'],
+      prefix:
+        lodash.isString(packages) || lodash.every(packages, lodash.isString)
+          ? 'none'
+          : 'name',
+      // timings: true,
       ...options,
     },
   ).result
 }
 
-export const npx: (
-  pkg: ExtraPackageEntry,
-  root: string,
-  module: string,
-) => string = (pkg, root, module) => {
-  if (env.NODE_ENV === 'development') {
+export const npx: (module: string, cwd?: string) => string = (
+  module,
+  cwd = process.cwd(),
+) => {
+  const index = module.lastIndexOf('@')
+  const [name, version] =
+    index === -1 || index === 0
+      ? [module, 'latest']
+      : [module.slice(0, index), module.slice(index + 1)]
+  if (process.env.NODE_ENV === 'development') {
     const path = resolve(
-      root,
+      getRoot(cwd),
       'node_modules',
-      module,
+      name,
       'src',
       'main',
       'ts',
       'bin.ts',
     )
     if (existsSync(path)) {
-      return `npx tsx ${relative(pkg.absPath, realpathSync(path))}`
+      return `npx tsx ${relative(cwd, realpathSync(path))}`
     }
   }
-  return `npx ${module}`
-}
-
-export const bin: (bin: string, context: Context) => string = (
-  bin,
-  context,
-) => {
-  const path = resolve(
-    context.node_modules,
-    context.module.name,
-    'node_modules',
-    '.bin',
-    bin,
-  )
-  if (existsSync(path)) {
-    return path
-  }
-  return bin
+  return `npx ${name}@${version}`
 }
 
 export const cmd: (
   bin: string,
-  args?: Partial<ParsedArgs>,
-  env?: Record<string, string | number | boolean | undefined>,
+  args?: Record<string, unknown>,
+  env?: Record<string, unknown>,
 ) => string = (bin, args = {}, env = {}) =>
   [
     ...Object.entries(env)
@@ -146,46 +93,31 @@ export const cmd: (
     .join(' ')
     .trim()
 
-export const runWithContext: (context: Context) => Promise<unknown> = async (
-  context,
+export const run = async (
+  pkg: string | ExtraPackageEntry,
+  modules: string[],
+  command: string,
+  preset: string | undefined,
+  context: Command<unknown[]>,
 ) => {
-  const { command, module } = context
-  const { modules = [], commands = {} } = module
   for (const module of modules) {
-    await runWithContext({
-      ...context,
-      module: {
-        name: module,
-        ...(await import(module)),
-      },
-    })
+    await execute(
+      cmd(
+        [
+          npx(module, lodash.isString(pkg) ? pkg : pkg.absPath),
+          command,
+          ...lodash.difference(context.args, context.processedArgs),
+        ].join(' '),
+        {
+          cwd: lodash.isString(pkg) ? pkg : pkg.absPath,
+          preset: preset || module,
+        },
+        {
+          NODE_ENV: env.NODE_ENV,
+          NPM_CONFIG_YES: env.NPM_CONFIG_YES,
+        },
+      ),
+      pkg,
+    )
   }
-  if (commands[command]) {
-    try {
-      await commands[command](context)
-    } catch (e) {
-      if (e instanceof Error) {
-        error(e)
-      }
-      throw e
-    }
-  }
-}
-
-export const runWithoutContext: (
-  module?: Partial<Module>,
-) => Promise<unknown> = async ({ commands = {}, modules = [] } = {}) => {
-  await runWithContext(
-    await context({
-      name: await getModuleName(),
-      modules,
-      commands,
-    }),
-  )
-}
-
-export const run: (module?: Partial<Module>) => void = (module) => {
-  runWithoutContext(module)
-    .then(() => exit(0))
-    .catch(() => exit(1))
 }

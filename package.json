@@ -9,6 +9,6 @@
   "scripts": {
     "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx packasso/src/main/ts/bin.ts"
   },
-  "packageManager": "yarn@4.0.0-rc.40",
+  "packageManager": "yarn@3.5.1",
   "license": "MIT"
 }

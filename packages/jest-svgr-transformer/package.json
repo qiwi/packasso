@@ -17,8 +17,8 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
-    "@types/lodash": "4.14.194",
-    "@types/node": "20.1.2",
+    "@types/lodash": "4.14.195",
+    "@types/node": "20.2.5",
     "lodash": "4.17.21"
   },
   "exports": "./src/main/ts/index.ts",

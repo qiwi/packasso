@@ -1,6 +1,44 @@
 #!/usr/bin/env node
-import { run } from '@packasso/core'
+import {
+  cmd,
+  createCommand,
+  createCommandClean,
+  createCommandInstall,
+  createCommandUninstall,
+  execute,
+  getTopo,
+  Install,
+  program,
+} from '@packasso/core'
 
-import { commands } from './commands'
+const install: Install = {
+  data: (pkg) => [
+    pkg.leaf || pkg.unit
+      ? {
+          'package.json': {
+            publishConfig: {
+              files: ['target/webapp'],
+            },
+          },
+          '.env': [
+            'BUILD_PATH=target/webapp',
+            'DISABLE_ESLINT_PLUGIN=true',
+            'ESLINT_NO_DEV_ERRORS=true',
+            '',
+          ].join('\n'),
+          '.env.local': ['PUBLIC_URL=/', ''].join('\n'),
+        }
+      : {},
+  ],
+}
 
-run({ commands })
+program('@packasso/react-scripts-build', 'react-scripts build', [
+  createCommandInstall(install),
+  createCommandUninstall(install),
+  createCommandClean(['target/webapp']),
+  createCommand('build', 'build').action(async (options) => {
+    const { cwd, preset } = options
+    const { root, queuePackages } = await getTopo({ cwd }, preset)
+    await execute(cmd('react-scripts build'), root.tree ? queuePackages : root)
+  }),
+])
