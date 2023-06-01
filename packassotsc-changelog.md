@@ -1,3 +1,15 @@
+## [@packasso/tsc@2.0.0](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.tsc.1.4.0-f0...2023.6.1-packasso.tsc.2.0.0-f0) (2023-06-01)
+
+### Features
+* feat: true npx (#40) [49b840a](https://github.com/qiwi/packasso/commit/49b840a014e848dc0e51e3cf213299ed26825a97)
+
+### BREAKING CHANGES
+* feat: true npx (#40) [49b840a](https://github.com/qiwi/packasso/commit/49b840a014e848dc0e51e3cf213299ed26825a97)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.0.0
+* perf: devDependencies @packasso/tsconfig updated to 2.0.0
+
 ## [@packasso/tsc@1.4.0](https://github.com/qiwi/packasso/compare/2023.5.10-packasso.tsc.1.3.5-f0...2023.5.11-packasso.tsc.1.4.0-f0) (2023-05-11)
 
 ### Features
