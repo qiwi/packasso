@@ -1,3 +1,14 @@
+## [@packasso/eslint@2.0.0](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.eslint.1.4.0-f0...2023.6.1-packasso.eslint.2.0.0-f0) (2023-06-01)
+
+### Features
+* feat: true npx (#40) [49b840a](https://github.com/qiwi/packasso/commit/49b840a014e848dc0e51e3cf213299ed26825a97)
+
+### BREAKING CHANGES
+* feat: true npx (#40) [49b840a](https://github.com/qiwi/packasso/commit/49b840a014e848dc0e51e3cf213299ed26825a97)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.0.0
+
 ## [@packasso/eslint@1.4.0](https://github.com/qiwi/packasso/compare/2023.5.10-packasso.eslint.1.3.4-f0...2023.5.11-packasso.eslint.1.4.0-f0) (2023-05-11)
 
 ### Features
