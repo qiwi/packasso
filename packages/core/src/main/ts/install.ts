@@ -13,49 +13,39 @@ import { dirname, resolve } from 'node:path'
 import lodash from 'lodash'
 import { PackageJson } from 'read-pkg-up'
 
-import {
-  Context,
-  ContextInstallData,
-  ExtraPackageEntry,
-  InstallData,
-} from './types'
+import { getNodeModules, getRoot } from './helpers'
+import { ExtraPackageEntry, InstallData } from './types'
 
-const installData = async (
+export const installData = async (
   data: InstallData,
-  context: Context,
+  cwd: string,
   uninstall: boolean,
 ) =>
   data.forEach((data) =>
-    Object.entries(data).forEach(([path, data]) => {
-      const absPath = resolve(context.pkg.absPath, path)
+    Object.entries(data).forEach(([file, data]) => {
+      const path = resolve(cwd, file)
       if (lodash.isNil(data)) {
         return
       }
       if (lodash.isString(data)) {
-        uninstall ? revertText(absPath, data) : applyText(absPath, data)
+        uninstall ? revertText(path, data) : applyText(path, data)
       } else {
-        uninstall ? revertJson(absPath, data) : applyJson(absPath, data)
+        uninstall ? revertJson(path, data) : applyJson(path, data)
       }
     }),
   )
 
-const installDeps = async (
+export const installDeps = async (
   deps: string[],
-  context: Context,
+  cwd: string,
   uninstall: boolean,
 ) => {
-  if (context.pkg.leaf) {
-    return
-  }
+  const node_modules = getNodeModules()
+  const root = getRoot(cwd)
   deps.forEach((dep) => {
-    const target = resolve(context.pkg.absPath, 'node_modules', dep)
-    const source = resolve(
-      context.node_modules,
-      ...(target.startsWith(context.node_modules)
-        ? [context.module.name, 'node_modules']
-        : []),
-      dep,
-    )
+    const target = resolve(root, 'node_modules', dep)
+    const source = resolve(node_modules, dep)
+    console.log(target, source, cwd)
     const existed = existsSync(target)
     const lstat = lstatSync(target, { throwIfNoEntry: false })
     const linked = lstat ? lstat.isSymbolicLink() : false
@@ -67,26 +57,6 @@ const installDeps = async (
     }
   })
 }
-
-export const install = async (
-  data: InstallData | ContextInstallData,
-  deps: string | string[],
-  context: Context,
-  uninstall = false,
-) => {
-  await installData(
-    lodash.isFunction(data) ? data(context) : data,
-    context,
-    uninstall,
-  )
-  await installDeps([deps].flat(), context, uninstall)
-}
-
-export const uninstall = async (
-  data: InstallData | ContextInstallData,
-  deps: string | string[],
-  context: Context,
-) => install(data, deps, context, true)
 
 export const publish = async (pkg: ExtraPackageEntry) => {
   const { publishConfig = {}, ...json } = readJson(

@@ -23,9 +23,14 @@ export interface Context {
   args: ParsedArgs
 }
 
-export type InstallData = Partial<Record<string, string | object>>[]
+export type Install = {
+  data?:
+    | InstallData
+    | ((pkg: ExtraPackageEntry, topo: ExtraTopoContext) => InstallData)
+  deps?: string[]
+}
 
-export type ContextInstallData = (context: Context) => InstallData
+export type InstallData = Partial<Record<string, string | object>>[]
 
 export interface ExtraPackageEntry extends IPackageEntry {
   modules: string[]
@@ -36,5 +41,6 @@ export interface ExtraPackageEntry extends IPackageEntry {
 
 export interface ExtraTopoContext extends ITopoContext {
   packages: Record<string, ExtraPackageEntry>
+  queuePackages: ExtraPackageEntry[]
   root: ExtraPackageEntry
 }

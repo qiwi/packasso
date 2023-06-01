@@ -17,8 +17,8 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "rimraf": "5.0.0",
-    "typescript": "5.0.4"
+    "rimraf": "5.0.1",
+    "typescript": "4.9.5"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",

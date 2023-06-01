@@ -1,6 +1,33 @@
 #!/usr/bin/env node
-import { run } from '@packasso/core'
+import {
+  createCommandInstall,
+  createCommandPurge,
+  createCommandUninstall,
+  Install,
+  program,
+} from '@packasso/core'
 
-import { commands } from './commands'
+const install: Install = {
+  data: [
+    {
+      '.browserslistrc': [
+        '[production]',
+        '> 0.2%',
+        'not dead',
+        'not op_mini all',
+        '',
+        '[development]',
+        'last 1 chrome version',
+        'last 1 firefox version',
+        'last 1 safari version',
+        '',
+      ].join('\n'),
+    },
+  ],
+}
 
-run({ commands })
+program('@packasso/browserslist', 'browserslist', [
+  createCommandInstall(install),
+  createCommandUninstall(install),
+  createCommandPurge(['.browserslistrc']),
+])

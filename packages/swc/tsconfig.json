@@ -10,7 +10,7 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "removeComments": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "baseUrl": "./",
     "types": [
       "node"

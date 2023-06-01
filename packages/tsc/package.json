@@ -17,10 +17,12 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "@packasso/tsconfig": "workspace:*",
-    "rimraf": "5.0.0",
+    "rimraf": "5.0.1",
     "tsc-esm-fix": "2.20.14",
-    "typescript": "5.0.4"
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "@packasso/tsconfig": "workspace:*"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
