@@ -1,3 +1,11 @@
+## [@packasso/semrel@2.0.2](https://github.com/qiwi/packasso/compare/2023.6.1-packasso.semrel.2.0.1-f0...2023.6.1-packasso.semrel.2.0.2-f0) (2023-06-01)
+
+### Fixes & improvements
+* fix: auto name and description [70eae6f](https://github.com/qiwi/packasso/commit/70eae6f7b5596db58d2f207d00f3d0f719d83319)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.0.2
+
 ## [@packasso/semrel@2.0.1](https://github.com/qiwi/packasso/compare/2023.6.1-packasso.semrel.2.0.0-f0...2023.6.1-packasso.semrel.2.0.1-f0) (2023-06-01)
 
 ### Dependencies
