@@ -41,7 +41,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/license', 'license', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandPurge(['LICENSE']),

@@ -17,7 +17,7 @@ const levelExitCodes: Record<string, number> = {
   critical: 16,
 }
 
-program('@packasso/yarn-audit', 'yarn-audit', [
+program([
   createCommand('audit', 'audit')
     .addOption(createOption('--fix', 'fix'))
     .addOption(

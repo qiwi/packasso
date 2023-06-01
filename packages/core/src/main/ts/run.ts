@@ -1,6 +1,6 @@
 import { existsSync, realpathSync } from 'node:fs'
 import { relative, resolve } from 'node:path'
-import process, { env } from 'node:process'
+import { env } from 'node:process'
 
 import { Command } from '@commander-js/extra-typings'
 import concurrently, { ConcurrentlyOptions } from 'concurrently'
@@ -41,16 +41,13 @@ export const execute: (
   ).result
 }
 
-export const npx: (module: string, cwd?: string) => string = (
-  module,
-  cwd = process.cwd(),
-) => {
+export const npx: (module: string, cwd: string) => string = (module, cwd) => {
   const index = module.lastIndexOf('@')
   const [name, version] =
     index === -1 || index === 0
       ? [module, 'latest']
       : [module.slice(0, index), module.slice(index + 1)]
-  if (process.env.NODE_ENV === 'development') {
+  if (env.NODE_ENV === 'development') {
     const path = resolve(
       getRoot(cwd),
       'node_modules',

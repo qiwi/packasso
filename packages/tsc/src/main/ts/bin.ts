@@ -99,7 +99,7 @@ const TSCONFIG = '@packasso/tsconfig'
 
 const modules = [TSCONFIG]
 
-program('@packasso/tsc', 'tsc', [
+program([
   createCommandInstall(install, modules),
   createCommandUninstall(install, modules),
   createCommand('build', 'build').action(async (options) => {

@@ -1,6 +1,6 @@
 import { realpathSync } from 'node:fs'
 import { dirname, join, sep } from 'node:path'
-import process from 'node:process'
+import { argv } from 'node:process'
 
 import { gitRoot } from '@antongolub/git-root'
 import { findUpSync } from 'find-up'
@@ -18,7 +18,7 @@ export const getRoot: (cwd: string) => string = (cwd) => {
 
 export const getNodeModules: () => string = () => {
   const node_modules = findUpSync('node_modules', {
-    cwd: dirname(realpathSync(process.argv[1])),
+    cwd: dirname(realpathSync(argv[1])),
     type: 'directory',
   })
   if (!node_modules) {

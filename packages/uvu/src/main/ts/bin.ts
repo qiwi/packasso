@@ -10,7 +10,7 @@ import {
   program,
 } from '@packasso/core'
 
-program('@packasso/uvu', 'uvu', [
+program([
   createCommandClean(['target/coverage']),
   createCommandPurge(['coverage', 'jest.config.*', 'tsconfig.test.json']),
   createCommand('test', 'test')

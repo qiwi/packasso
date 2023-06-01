@@ -25,7 +25,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/resources', 'copy resources to target', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandClean(['target/resources']),

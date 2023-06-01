@@ -26,7 +26,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/browserslist', 'browserslist', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandPurge(['.browserslistrc']),

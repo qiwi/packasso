@@ -1,7 +1,10 @@
-import { cwd, exit } from 'node:process'
+import { realpathSync } from 'node:fs'
+import { dirname } from 'node:path'
+import { argv, cwd, exit } from 'node:process'
 
 import * as commander from '@commander-js/extra-typings'
 import lodash from 'lodash'
+import { readPackageUpSync } from 'read-pkg-up'
 
 import { installData, installDeps } from './install'
 import { cmd, execute, run } from './run'
@@ -90,15 +93,22 @@ export const createCommand = (name: string, description: string) =>
     .addOption(createOptionCwd())
     .addOption(createOptionPreset())
 
-export const createProgram = (name: string, description: string) =>
-  commander.createCommand(name).description(description).allowUnknownOption()
+export const createProgram = () => {
+  const pkg = readPackageUpSync({
+    cwd: dirname(realpathSync(argv[1])),
+  })
+  if (!pkg) {
+    throw new Error('can`t get package.json')
+  }
+  const { name, description = '' } = pkg.packageJson
+  return commander
+    .createCommand(name)
+    .description(description)
+    .allowUnknownOption()
+}
 
-export const program = (
-  name: string,
-  description: string,
-  commands: commander.Command[] = [],
-) => {
-  const program = createProgram(name, description)
+export const program = (commands: commander.Command[] = []) => {
+  const program = createProgram()
   for (const command of commands) {
     program.addCommand(command)
   }

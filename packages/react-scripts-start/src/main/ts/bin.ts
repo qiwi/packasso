@@ -25,7 +25,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/react-scripts-start', 'react-scripts start', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommand('start', 'start').action(async (options) => {

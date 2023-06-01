@@ -23,7 +23,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/prettier', 'prettier', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandPurge(['.prettierrc', '.prettierrc.*', 'prettier.config.*']),

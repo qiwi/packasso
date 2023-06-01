@@ -31,7 +31,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/semrel', 'semantic release', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandPurge(['.releaserc', '.releaserc.*', 'release.config.*']),

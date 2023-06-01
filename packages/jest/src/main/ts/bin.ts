@@ -73,7 +73,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/jest', 'jest', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandClean(['target/coverage']),

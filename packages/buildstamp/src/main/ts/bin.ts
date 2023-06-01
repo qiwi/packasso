@@ -27,7 +27,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/buildstamp', 'buildstamp', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandClean([buildStampJson]),

@@ -69,8 +69,6 @@ const install: Install = {
 }
 
 program(
-  '@packasso/packasso',
-  '@packasso/packasso',
   Object.keys(modules).map((command) => {
     if (command === 'install') {
       return createCommandInstall(install, modules.install)

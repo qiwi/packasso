@@ -45,7 +45,6 @@ export const installDeps = async (
   deps.forEach((dep) => {
     const target = resolve(root, 'node_modules', dep)
     const source = resolve(node_modules, dep)
-    console.log(target, source, cwd)
     const existed = existsSync(target)
     const lstat = lstatSync(target, { throwIfNoEntry: false })
     const linked = lstat ? lstat.isSymbolicLink() : false

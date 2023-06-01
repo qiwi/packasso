@@ -38,7 +38,7 @@ const install: Install = {
   deps: ['typescript'],
 }
 
-program('@packasso/tsconfig', 'tsconfig', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandPurge(['tsconfig.json']),

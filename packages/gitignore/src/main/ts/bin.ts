@@ -56,7 +56,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/gitignore', 'gitignore', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandPurge(['.gitignore']),

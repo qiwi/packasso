@@ -30,7 +30,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/typedoc', 'typedoc', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandClean(['target/docs']),

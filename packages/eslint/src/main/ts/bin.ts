@@ -33,7 +33,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/eslint', 'eslint', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandPurge(['.eslintrc', '.eslintrc.*', 'eslint.config.*']),

@@ -32,7 +32,7 @@ const install: Install = {
   ],
 }
 
-program('@packasso/react-scripts-build', 'react-scripts build', [
+program([
   createCommandInstall(install),
   createCommandUninstall(install),
   createCommandClean(['target/webapp']),

@@ -9,7 +9,7 @@ import {
   run,
 } from '@packasso/core'
 
-createProgram('packasso', 'packasso')
+createProgram()
   .addArgument(createArgument('<command>', 'preset command to execute'))
   .addOption(createOptionCwd())
   .action(async (command, options, context) => {
