@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/resources",
+  "hash": "9434176875c96b86ed53012d919fd2567d4ff6bd",
+  "version": "2.0.1",
+  "dependencies": {
+    "@packasso/core": "2.0.1"
+  }
+}
