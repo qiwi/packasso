@@ -1,3 +1,14 @@
+## [@packasso/yarn-audit@2.0.0](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.yarn-audit.1.3.0-f0...2023.6.1-packasso.yarn-audit.2.0.0-f0) (2023-06-01)
+
+### Features
+* feat: true npx (#40) [49b840a](https://github.com/qiwi/packasso/commit/49b840a014e848dc0e51e3cf213299ed26825a97)
+
+### BREAKING CHANGES
+* feat: true npx (#40) [49b840a](https://github.com/qiwi/packasso/commit/49b840a014e848dc0e51e3cf213299ed26825a97)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.0.0
+
 ## [@packasso/yarn-audit@1.3.0](https://github.com/qiwi/packasso/compare/2023.5.10-packasso.yarn-audit.1.2.5-f0...2023.5.11-packasso.yarn-audit.1.3.0-f0) (2023-05-11)
 
 ### Features
