@@ -1,3 +1,8 @@
+## [@packasso/uvu@2.0.1](https://github.com/qiwi/packasso/compare/2023.6.1-packasso.uvu.2.0.0-f0...2023.6.1-packasso.uvu.2.0.1-f0) (2023-06-01)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.0.1
+
 ## [@packasso/uvu@2.0.0](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.uvu.1.2.0-f0...2023.6.1-packasso.uvu.2.0.0-f0) (2023-06-01)
 
 ### Features
