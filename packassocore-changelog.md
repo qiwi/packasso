@@ -1,3 +1,8 @@
+## [@packasso/core@2.0.1](https://github.com/qiwi/packasso/compare/2023.6.1-packasso.core.2.0.0-f0...2023.6.1-packasso.core.2.0.1-f0) (2023-06-01)
+
+### Fixes & improvements
+* fix: no default [9434176](https://github.com/qiwi/packasso/commit/9434176875c96b86ed53012d919fd2567d4ff6bd)
+
 ## [@packasso/core@2.0.0](https://github.com/qiwi/packasso/compare/2023.5.11-packasso.core.1.5.0-f0...2023.6.1-packasso.core.2.0.0-f0) (2023-06-01)
 
 ### Features
