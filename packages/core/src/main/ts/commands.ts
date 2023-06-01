@@ -1,6 +1,6 @@
 import { cwd, exit } from 'node:process'
 
-import commander from '@commander-js/extra-typings'
+import * as commander from '@commander-js/extra-typings'
 import lodash from 'lodash'
 
 import { installData, installDeps } from './install'
