@@ -1,3 +1,8 @@
+## [@packasso/jest-environment-jsdom@2.1.0](https://github.com/qiwi/packasso/compare/2023.6.1-packasso.jest-environment-jsdom.2.0.0-f0...2023.6.2-packasso.jest-environment-jsdom.2.1.0-f0) (2023-06-02)
+
+### Features
+* feat: versions from dev deps (#41) [af2d1c0](https://github.com/qiwi/packasso/commit/af2d1c016313c1e78ae489514dc71b406449d00e)
+
 ## [@packasso/jest-environment-jsdom@2.0.0](https://github.com/qiwi/packasso/compare/2023.4.1-packasso.jest-environment-jsdom.1.1.0-f0...2023.6.1-packasso.jest-environment-jsdom.2.0.0-f0) (2023-06-01)
 
 ### Features
