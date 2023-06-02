@@ -1,11 +1,9 @@
-import { realpathSync } from 'node:fs'
-import { dirname } from 'node:path'
-import { argv, cwd, exit } from 'node:process'
+import { cwd, exit } from 'node:process'
 
 import * as commander from '@commander-js/extra-typings'
 import lodash from 'lodash'
-import { readPackageUpSync } from 'read-pkg-up'
 
+import { getPackageJson } from './helpers'
 import { installData, installDeps } from './install'
 import { cmd, execute, run } from './run'
 import { getTopo } from './topo'
@@ -25,7 +23,7 @@ export const createOptionPreset = () =>
 export const createCommandInstall = (
   install: Install,
   modules: string[] = [],
-) =>
+) => [
   createCommand('install', 'install').action(async (options, context) => {
     const { cwd, preset } = options
     const topo = await getTopo({ cwd }, preset)
@@ -42,12 +40,7 @@ export const createCommandInstall = (
         await installDeps(deps, pkg.absPath, false)
       }
     }
-  })
-
-export const createCommandUninstall = (
-  install: Install,
-  modules: string[] = [],
-) =>
+  }),
   createCommand('uninstall', 'uninstall').action(async (options, context) => {
     const { cwd, preset } = options
     const topo = await getTopo({ cwd }, preset)
@@ -64,7 +57,8 @@ export const createCommandUninstall = (
       }
     }
     await run(cwd, modules.reverse(), 'uninstall', preset, context)
-  })
+  }),
+]
 
 export const createCommandRimraf = (
   name: string,
@@ -85,6 +79,14 @@ export const createCommandClean = (files: string[], modules: string[] = []) =>
 export const createCommandPurge = (files: string[], modules: string[] = []) =>
   createCommandRimraf('purge', 'purge configs', files, modules)
 
+export const createCommandModules = (modules: Record<string, string[]>) =>
+  Object.keys(modules).map((command) =>
+    createCommand(command, command).action(async (options, context) => {
+      const { cwd, preset } = options
+      await run(cwd, modules[command], command, preset, context)
+    }),
+  )
+
 export const createCommand = (name: string, description: string) =>
   commander
     .createCommand(name)
@@ -94,22 +96,18 @@ export const createCommand = (name: string, description: string) =>
     .addOption(createOptionPreset())
 
 export const createProgram = () => {
-  const pkg = readPackageUpSync({
-    cwd: dirname(realpathSync(argv[1])),
-  })
-  if (!pkg) {
-    throw new Error('can`t get package.json')
-  }
-  const { name, description = '' } = pkg.packageJson
+  const { name, description = '' } = getPackageJson()
   return commander
     .createCommand(name)
     .description(description)
     .allowUnknownOption()
 }
 
-export const program = (commands: commander.Command[] = []) => {
+export const program = (
+  ...commands: (commander.Command | commander.Command[])[]
+) => {
   const program = createProgram()
-  for (const command of commands) {
+  for (const command of commands.flat()) {
     program.addCommand(command)
   }
   program

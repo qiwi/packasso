@@ -4,7 +4,6 @@ import {
   createCommand,
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   createOption,
   execute,
   getTopo,
@@ -33,9 +32,8 @@ const install: Install = {
   ],
 }
 
-program([
+program(
   createCommandInstall(install),
-  createCommandUninstall(install),
   createCommandPurge(['.eslintrc', '.eslintrc.*', 'eslint.config.*']),
   createCommand('lint', 'lint')
     .addOption(createOption('--fix', 'fix'))
@@ -52,4 +50,4 @@ program([
         preset ? root.absPath : root,
       )
     }),
-])
+)

@@ -5,7 +5,6 @@ import {
   createCommandClean,
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   execute,
   getTopo,
   getTypeScriptReferences,
@@ -99,9 +98,8 @@ const TSCONFIG = '@packasso/tsconfig'
 
 const modules = [TSCONFIG]
 
-program([
+program(
   createCommandInstall(install, modules),
-  createCommandUninstall(install, modules),
   createCommand('build', 'build').action(async (options) => {
     const { cwd, preset } = options
     const { root, queuePackages } = await getTopo({ cwd }, preset)
@@ -140,4 +138,4 @@ program([
     ],
     modules,
   ),
-])
+)

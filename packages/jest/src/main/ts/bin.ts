@@ -5,7 +5,6 @@ import {
   createCommandClean,
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   createOption,
   execute,
   getJestModuleNameMapper,
@@ -73,9 +72,8 @@ const install: Install = {
   ],
 }
 
-program([
+program(
   createCommandInstall(install),
-  createCommandUninstall(install),
   createCommandClean(['target/coverage']),
   createCommandPurge(['coverage', 'jest.config.*', 'tsconfig.test.json']),
   createCommand('test', 'test')
@@ -97,4 +95,4 @@ program([
         preset ? root.absPath : root,
       )
     }),
-])
+)

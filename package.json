@@ -1,13 +1,13 @@
 {
   "name": "@packasso/workspaces",
   "private": true,
-  "packasso": "@packasso/packasso",
+  "packasso": "@packasso/packasso@workspace:*",
   "workspaces": [
     "packasso",
     "packages/*"
   ],
   "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx packasso/src/main/ts/bin.ts"
+    "packasso": "NPM_CONFIG_YES=true npx tsx packasso/src/main/ts/bin.ts"
   },
   "packageManager": "yarn@3.5.1",
   "license": "MIT"

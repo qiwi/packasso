@@ -1,6 +1,6 @@
 {
   "name": "@packasso/semrel",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "zx-semrel and zx-bulk-release",
   "keywords": [
     "preset",
@@ -21,6 +21,9 @@
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
+    "bin": {
+      "packasso-semrel": "./target/esm/bin.mjs"
+    },
     "type": "module",
     "main": "./target/cjs/index.cjs",
     "module": "./target/esm/index.mjs",
@@ -37,12 +40,6 @@
       "target/esm/**/*",
       "target/buildstamp.json"
     ],
-    "access": "public",
-    "bin": {
-      "packasso-semrel": "./target/esm/bin.mjs"
-    }
-  },
-  "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
+    "access": "public"
   }
 }

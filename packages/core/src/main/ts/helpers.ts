@@ -4,9 +4,20 @@ import { argv } from 'node:process'
 
 import { gitRoot } from '@antongolub/git-root'
 import { findUpSync } from 'find-up'
+import { NormalizedPackageJson, readPackageUpSync } from 'read-pkg-up'
 
 import { getDependencies } from './topo'
 import { ExtraPackageEntry, ExtraTopoContext } from './types'
+
+export const getPackageJson: () => NormalizedPackageJson = () => {
+  const pkg = readPackageUpSync({
+    cwd: dirname(realpathSync(argv[1])),
+  })
+  if (!pkg) {
+    throw new Error('can`t get package.json')
+  }
+  return pkg.packageJson
+}
 
 export const getRoot: (cwd: string) => string = (cwd) => {
   const gitRootRes = gitRoot.sync(cwd)

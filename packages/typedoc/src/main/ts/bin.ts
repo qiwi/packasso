@@ -5,7 +5,6 @@ import {
   createCommandClean,
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   execute,
   getTopo,
   Install,
@@ -30,9 +29,8 @@ const install: Install = {
   ],
 }
 
-program([
+program(
   createCommandInstall(install),
-  createCommandUninstall(install),
   createCommandClean(['target/docs']),
   createCommandPurge(['typedoc.json']),
   createCommand('build', 'build').action(async (options) => {
@@ -46,4 +44,4 @@ program([
       root.tree ? queuePackages : preset ? root.absPath : root,
     )
   }),
-])
+)

@@ -1,6 +1,6 @@
 {
   "name": "packasso",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "packasso",
   "keywords": [
     "cli"
@@ -19,6 +19,9 @@
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
+    "bin": {
+      "packasso": "./target/esm/bin.mjs"
+    },
     "type": "module",
     "main": "./target/cjs/index.cjs",
     "module": "./target/esm/index.mjs",
@@ -35,12 +38,6 @@
       "target/esm/**/*",
       "target/buildstamp.json"
     ],
-    "access": "public",
-    "bin": {
-      "packasso": "./target/esm/bin.mjs"
-    }
-  },
-  "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx src/main/ts/bin.ts"
+    "access": "public"
   }
 }

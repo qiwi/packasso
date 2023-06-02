@@ -4,7 +4,6 @@ import {
   createCommand,
   createCommandClean,
   createCommandInstall,
-  createCommandUninstall,
   execute,
   getTopo,
   Install,
@@ -32,13 +31,12 @@ const install: Install = {
   ],
 }
 
-program([
+program(
   createCommandInstall(install),
-  createCommandUninstall(install),
   createCommandClean(['target/webapp']),
   createCommand('build', 'build').action(async (options) => {
     const { cwd, preset } = options
     const { root, queuePackages } = await getTopo({ cwd }, preset)
     await execute(cmd('react-scripts build'), root.tree ? queuePackages : root)
   }),
-])
+)

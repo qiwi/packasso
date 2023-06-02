@@ -1,6 +1,6 @@
 {
   "name": "@packasso/jest-environment-jsdom",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "jest test environment wrapper over original jest-environment-jsdom",
   "keywords": [
     "jest",
@@ -37,8 +37,5 @@
       "target/buildstamp.json"
     ],
     "access": "public"
-  },
-  "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
   }
 }

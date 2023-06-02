@@ -1,6 +1,6 @@
 {
   "name": "@packasso/eslint",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "eslint via eslint-config-qiwi",
   "keywords": [
     "preset",
@@ -18,12 +18,14 @@
   "dependencies": {
     "@packasso/core": "workspace:*",
     "eslint": "8.41.0",
-    "eslint-config-qiwi": "2.1.3",
-    "rimraf": "5.0.1"
+    "eslint-config-qiwi": "2.1.3"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
+    "bin": {
+      "packasso-eslint": "./target/esm/bin.mjs"
+    },
     "type": "module",
     "main": "./target/cjs/index.cjs",
     "module": "./target/esm/index.mjs",
@@ -40,12 +42,6 @@
       "target/esm/**/*",
       "target/buildstamp.json"
     ],
-    "access": "public",
-    "bin": {
-      "packasso-eslint": "./target/esm/bin.mjs"
-    }
-  },
-  "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
+    "access": "public"
   }
 }

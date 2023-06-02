@@ -10,7 +10,7 @@ import {
   program,
 } from '@packasso/core'
 
-program([
+program(
   createCommandClean(['target/coverage']),
   createCommandPurge(['coverage', 'jest.config.*', 'tsconfig.test.json']),
   createCommand('test', 'test')
@@ -50,4 +50,4 @@ program([
         preset ? root.absPath : root,
       )
     }),
-])
+)

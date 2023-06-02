@@ -4,7 +4,6 @@ import {
   createCommand,
   createCommandClean,
   createCommandInstall,
-  createCommandUninstall,
   execute,
   getTopo,
   Install,
@@ -25,9 +24,8 @@ const install: Install = {
   ],
 }
 
-program([
+program(
   createCommandInstall(install),
-  createCommandUninstall(install),
   createCommandClean(['target/resources']),
   createCommand('build', 'build').action(async (options) => {
     const { cwd, preset } = options
@@ -39,4 +37,4 @@ program([
       root.tree ? queuePackages : preset ? root.absPath : root,
     )
   }),
-])
+)
