@@ -42,12 +42,11 @@ export const execute: (
 
 export const npx: (module: string, cwd: string) => string = (module, cwd) => {
   const { devDependencies = {} } = getPackageJson()
-  const index = module.lastIndexOf('@')
-  const [name, version] =
-    index === -1 || index === 0
-      ? [module, '']
-      : [module.slice(0, index), module.slice(index + 1)]
-  if ((version || devDependencies[name]).startsWith('workspace:')) {
+  const at = module.indexOf('@', module.startsWith('@') ? 1 : 0)
+  const name = at === -1 ? module : module.slice(0, at)
+  const version =
+    at === -1 ? devDependencies[name] || 'latest' : module.slice(at + 1)
+  if (version.startsWith('workspace:')) {
     const path = resolve(
       getRoot(cwd),
       'node_modules',
@@ -62,7 +61,7 @@ export const npx: (module: string, cwd: string) => string = (module, cwd) => {
     }
     throw new Error(`can\`t run ${module}`)
   }
-  return `npx ${name}@${version || devDependencies[name] || 'latest'}`
+  return `npx ${name}@${version}`
 }
 
 export const cmd: (
