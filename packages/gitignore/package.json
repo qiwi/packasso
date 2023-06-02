@@ -1,6 +1,6 @@
 {
   "name": "@packasso/gitignore",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": ".gitignore",
   "keywords": [
     "typescript",
@@ -15,12 +15,14 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
-    "@packasso/core": "workspace:*",
-    "rimraf": "5.0.1"
+    "@packasso/core": "workspace:*"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
+    "bin": {
+      "packasso-gitignore": "./target/esm/bin.mjs"
+    },
     "type": "module",
     "main": "./target/cjs/index.cjs",
     "module": "./target/esm/index.mjs",
@@ -37,12 +39,6 @@
       "target/esm/**/*",
       "target/buildstamp.json"
     ],
-    "access": "public",
-    "bin": {
-      "packasso-gitignore": "./target/esm/bin.mjs"
-    }
-  },
-  "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
+    "access": "public"
   }
 }

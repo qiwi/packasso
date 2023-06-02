@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import 'packasso'
+import { log } from 'node:console'
+
+log('DEPRECATED: use npx packasso')

@@ -4,7 +4,6 @@ import {
   createCommand,
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   createOption,
   execute,
   getTopo,
@@ -31,9 +30,8 @@ const install: Install = {
   ],
 }
 
-program([
+program(
   createCommandInstall(install),
-  createCommandUninstall(install),
   createCommandPurge(['.releaserc', '.releaserc.*', 'release.config.*']),
   createCommand('release', 'release')
     .addOption(createOption('--dry-run', 'disable any publish logic'))
@@ -54,4 +52,4 @@ program([
         )
       }
     }),
-])
+)

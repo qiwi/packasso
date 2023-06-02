@@ -4,7 +4,6 @@ import {
   createCommand,
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   createOption,
   execute,
   getTopo,
@@ -23,9 +22,8 @@ const install: Install = {
   ],
 }
 
-program([
+program(
   createCommandInstall(install),
-  createCommandUninstall(install),
   createCommandPurge(['.prettierrc', '.prettierrc.*', 'prettier.config.*']),
   createCommand('lint', 'lint')
     .addOption(createOption('--fix', 'fix'))
@@ -43,4 +41,4 @@ program([
         preset ? root.absPath : root,
       )
     }),
-])
+)

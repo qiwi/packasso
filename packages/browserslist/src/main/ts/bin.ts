@@ -2,7 +2,6 @@
 import {
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   Install,
   program,
 } from '@packasso/core'
@@ -26,8 +25,4 @@ const install: Install = {
   ],
 }
 
-program([
-  createCommandInstall(install),
-  createCommandUninstall(install),
-  createCommandPurge(['.browserslistrc']),
-])
+program(createCommandInstall(install), createCommandPurge(['.browserslistrc']))

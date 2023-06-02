@@ -2,7 +2,6 @@
 import {
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   Install,
   program,
 } from '@packasso/core'
@@ -56,8 +55,4 @@ const install: Install = {
   ],
 }
 
-program([
-  createCommandInstall(install),
-  createCommandUninstall(install),
-  createCommandPurge(['.gitignore']),
-])
+program(createCommandInstall(install), createCommandPurge(['.gitignore']))

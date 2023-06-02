@@ -1,6 +1,6 @@
 {
   "name": "@packasso/jest-snapshot-resolver",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "jest snapshot resolver compatible with maven standard directory layout",
   "keywords": [
     "jest",
@@ -35,8 +35,5 @@
       "target/buildstamp.json"
     ],
     "access": "public"
-  },
-  "scripts": {
-    "packasso": "NODE_ENV=development NPM_CONFIG_YES=true npx tsx ../../packasso/src/main/ts/bin.ts"
   }
 }

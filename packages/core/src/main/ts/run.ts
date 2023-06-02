@@ -1,12 +1,11 @@
 import { existsSync, realpathSync } from 'node:fs'
 import { relative, resolve } from 'node:path'
-import { env } from 'node:process'
 
 import { Command } from '@commander-js/extra-typings'
 import concurrently, { ConcurrentlyOptions } from 'concurrently'
 import lodash from 'lodash'
 
-import { getRoot } from './helpers'
+import { getPackageJson, getRoot } from './helpers'
 import { ExtraPackageEntry } from './types'
 
 export const execute: (
@@ -42,12 +41,13 @@ export const execute: (
 }
 
 export const npx: (module: string, cwd: string) => string = (module, cwd) => {
+  const { devDependencies = {} } = getPackageJson()
   const index = module.lastIndexOf('@')
   const [name, version] =
     index === -1 || index === 0
-      ? [module, 'latest']
+      ? [module, '']
       : [module.slice(0, index), module.slice(index + 1)]
-  if (env.NODE_ENV === 'development') {
+  if ((version || devDependencies[name]).startsWith('workspace:')) {
     const path = resolve(
       getRoot(cwd),
       'node_modules',
@@ -60,8 +60,9 @@ export const npx: (module: string, cwd: string) => string = (module, cwd) => {
     if (existsSync(path)) {
       return `npx tsx ${relative(cwd, realpathSync(path))}`
     }
+    throw new Error(`can\`t run ${module}`)
   }
-  return `npx ${name}@${version}`
+  return `npx ${name}@${version || devDependencies[name] || 'latest'}`
 }
 
 export const cmd: (
@@ -108,10 +109,6 @@ export const run = async (
         {
           cwd: lodash.isString(pkg) ? pkg : pkg.absPath,
           preset: preset || module,
-        },
-        {
-          NODE_ENV: env.NODE_ENV,
-          NPM_CONFIG_YES: env.NPM_CONFIG_YES,
         },
       ),
       pkg,

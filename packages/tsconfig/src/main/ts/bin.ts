@@ -2,7 +2,6 @@
 import {
   createCommandInstall,
   createCommandPurge,
-  createCommandUninstall,
   getTypeScriptPaths,
   Install,
   program,
@@ -38,8 +37,4 @@ const install: Install = {
   deps: ['typescript'],
 }
 
-program([
-  createCommandInstall(install),
-  createCommandUninstall(install),
-  createCommandPurge(['tsconfig.json']),
-])
+program(createCommandInstall(install), createCommandPurge(['tsconfig.json']))

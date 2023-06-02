@@ -1,11 +1,10 @@
 {
-  "name": "@packasso/typedoc",
+  "name": "@packasso/bin",
   "version": "2.0.0",
-  "description": "typedoc",
+  "description": "bin",
   "keywords": [
-    "typedoc",
-    "build",
-    "preset"
+    "preset",
+    "bin"
   ],
   "repository": {
     "type": "git",
@@ -16,14 +15,13 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
-    "@packasso/core": "workspace:*",
-    "typedoc": "0.24.7"
+    "@packasso/core": "workspace:*"
   },
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
     "bin": {
-      "packasso-typedoc": "./target/esm/bin.mjs"
+      "packasso-bin": "./target/esm/bin.mjs"
     },
     "type": "module",
     "main": "./target/cjs/index.cjs",
