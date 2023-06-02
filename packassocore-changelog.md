@@ -1,3 +1,8 @@
+## [@packasso/core@2.1.1](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.core.2.1.0-f0...2023.6.2-packasso.core.2.1.1-f0) (2023-06-02)
+
+### Fixes & improvements
+* fix: detect version [cfa23cf](https://github.com/qiwi/packasso/commit/cfa23cf534aa7ee3297ad0ddb0fb1bbd28f0f80f)
+
 ## [@packasso/core@2.1.0](https://github.com/qiwi/packasso/compare/2023.6.1-packasso.core.2.0.2-f0...2023.6.2-packasso.core.2.1.0-f0) (2023-06-02)
 
 ### Features
