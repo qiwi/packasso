@@ -1,3 +1,8 @@
+## [@packasso/bin@2.0.1](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.bin.2.0.0-f0...2023.6.2-packasso.bin.2.0.1-f0) (2023-06-02)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.1.1
+
 ## [@packasso/bin@2.0.0](https://github.com/qiwi/packasso/compare/undefined...2023.6.2-packasso.bin.2.0.0-f0) (2023-06-02)
 
 ### Features
@@ -5,5 +10,3 @@
 
 ### Dependencies
 * perf: dependencies @packasso/core updated to 2.1.0
-
-
