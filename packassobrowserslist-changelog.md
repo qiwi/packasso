@@ -1,3 +1,8 @@
+## [@packasso/browserslist@2.1.2](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.browserslist.2.1.1-f0...2023.7.19-packasso.browserslist.2.1.2-f0) (2023-07-19)
+
+### Fixes & improvements
+* fix: browserslist (#44) [6d0428c](https://github.com/qiwi/packasso/commit/6d0428cadcf95c17a01f2c2a25de1eaee2e1db1f)
+
 ## [@packasso/browserslist@2.1.1](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.browserslist.2.1.0-f0...2023.6.2-packasso.browserslist.2.1.1-f0) (2023-06-02)
 
 ### Dependencies
