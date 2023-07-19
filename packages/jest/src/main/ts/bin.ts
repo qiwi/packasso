@@ -86,6 +86,7 @@ program(
           'jest',
           {
             silent: true,
+            passWithNoTests: true,
             u,
           },
           {
