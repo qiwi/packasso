@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/browserslist",
+  "hash": "6d0428cadcf95c17a01f2c2a25de1eaee2e1db1f",
+  "version": "2.1.2",
+  "dependencies": {
+    "@packasso/core": "2.1.1"
+  }
+}
