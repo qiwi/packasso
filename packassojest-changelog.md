@@ -1,3 +1,8 @@
+## [@packasso/jest@2.1.2](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.jest.2.1.1-f0...2023.7.19-packasso.jest.2.1.2-f0) (2023-07-19)
+
+### Fixes & improvements
+* fix: jest pass with no tests [324ef2c](https://github.com/qiwi/packasso/commit/324ef2cd9efffbb03781d67233f606775f674e28)
+
 ## [@packasso/jest@2.1.1](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.jest.2.1.0-f0...2023.6.2-packasso.jest.2.1.1-f0) (2023-06-02)
 
 ### Dependencies
