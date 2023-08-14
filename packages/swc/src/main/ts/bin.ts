@@ -18,6 +18,8 @@ const swcEsm = 'swc.esm.json'
 const targetCjs = 'target/cjs'
 const targetEsm = 'target/esm'
 const targetDts = 'target/dts'
+const targetCjsTmp = `${targetCjs}.tmp`
+const targetEsmTmp = `${targetEsm}.tmp`
 
 const install: Install = {
   data: (pkg, topo) => [
@@ -135,14 +137,14 @@ program(
       [
         cmd('swc', {
           _: ['src'],
-          d: `${targetCjs}.tmp/src`,
+          d: `${targetCjsTmp}/src`,
           'source-maps': true,
           'no-swcrc': true,
           'config-file': swcCjs,
         }),
         cmd('swc', {
           _: ['src'],
-          d: `${targetEsm}.tmp/src`,
+          d: `${targetEsmTmp}/src`,
           'source-maps': true,
           'no-swcrc': true,
           'config-file': swcEsm,
@@ -154,15 +156,18 @@ program(
     await execute(
       [
         cmd('globby-cp', {
-          _: [`${targetCjs}.tmp/src/main/ts`, targetCjs],
+          _: [`${targetCjsTmp}/src/main/ts`, targetCjs],
         }),
         cmd('globby-cp', {
-          _: [`${targetEsm}.tmp/src/main/ts`, targetEsm],
-        }),
-        cmd('rimraf', {
-          _: [`${targetCjs}.tmp`, `${targetEsm}.tmp`],
+          _: [`${targetEsmTmp}/src/main/ts`, targetEsm],
         }),
       ],
+      root.tree ? queuePackages : preset ? root.absPath : root,
+    )
+    await execute(
+      cmd('rimraf', {
+        _: [`${targetCjsTmp}`, `${targetEsmTmp}`],
+      }),
       root.tree ? queuePackages : preset ? root.absPath : root,
     )
     await execute(
@@ -182,7 +187,13 @@ program(
       root.tree ? queuePackages : preset ? root.absPath : root,
     )
   }),
-  createCommandClean([targetCjs, targetEsm, targetDts]),
+  createCommandClean([
+    targetCjs,
+    targetEsm,
+    targetDts,
+    targetCjsTmp,
+    targetEsmTmp,
+  ]),
   createCommandPurge(
     [
       'build',
