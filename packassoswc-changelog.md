@@ -1,3 +1,8 @@
+## [@packasso/swc@2.1.2](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.swc.2.1.1-f0...2023.8.14-packasso.swc.2.1.2-f0) (2023-08-14)
+
+### Fixes & improvements
+* fix: swc build and clean tmp [0b58629](https://github.com/qiwi/packasso/commit/0b586293f8795ee7b992422d44ca2ba0a9464fff)
+
 ## [@packasso/swc@2.1.1](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.swc.2.1.0-f0...2023.6.2-packasso.swc.2.1.1-f0) (2023-06-02)
 
 ### Dependencies
