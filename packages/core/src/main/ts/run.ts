@@ -2,9 +2,9 @@ import { existsSync, realpathSync } from 'node:fs'
 import { relative, resolve } from 'node:path'
 
 import { Command } from '@commander-js/extra-typings'
-import concurrently, { ConcurrentlyOptions } from 'concurrently'
 import lodash from 'lodash'
 
+import concurrently, { ConcurrentlyOptions } from './concurrently'
 import { getPackageJson, getRoot } from './helpers'
 import { ExtraPackageEntry } from './types'
 
