@@ -11,7 +11,7 @@ export class LogStart implements FlowController {
     commands.forEach((command) =>
       command.timer.subscribe(({ endDate }) => {
         if (!endDate) {
-          this.logger.logCommandEvent(command.command, command)
+          this.logger.logCommandEvent(`${command.command} started`, command)
         }
       }),
     )
