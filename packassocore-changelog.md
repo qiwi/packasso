@@ -1,3 +1,8 @@
+## [@packasso/core@2.2.0](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.core.2.1.1-f0...2023.8.15-packasso.core.2.2.0-f0) (2023-08-15)
+
+### Features
+* feat: log command started (#46) [964464b](https://github.com/qiwi/packasso/commit/964464bf34e19b2bd07c0aaefa8d771c34ea6b1d)
+
 ## [@packasso/core@2.1.1](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.core.2.1.0-f0...2023.6.2-packasso.core.2.1.1-f0) (2023-06-02)
 
 ### Fixes & improvements
