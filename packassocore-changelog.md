@@ -1,3 +1,8 @@
+## [@packasso/core@2.2.1](https://github.com/qiwi/packasso/compare/2023.8.15-packasso.core.2.2.0-f0...2023.8.16-packasso.core.2.2.1-f0) (2023-08-16)
+
+### Fixes & improvements
+* fix: default self root preset (#47) [08253bd](https://github.com/qiwi/packasso/commit/08253bd40b3a3938924dd7ce7a0223bdcc3a9f15)
+
 ## [@packasso/core@2.2.0](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.core.2.1.1-f0...2023.8.15-packasso.core.2.2.0-f0) (2023-08-15)
 
 ### Features
