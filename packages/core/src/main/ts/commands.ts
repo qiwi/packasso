@@ -18,7 +18,9 @@ export const createOptionCwd = () =>
     .makeOptionMandatory(true)
 
 export const createOptionPreset = () =>
-  createOption('--preset <preset>', 'root preset').makeOptionMandatory(false)
+  createOption('--preset <preset>', 'root preset')
+    .default(getPackageJson().name)
+    .makeOptionMandatory(false)
 
 export const createCommandInstall = (
   install: Install,
