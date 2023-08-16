@@ -1,3 +1,8 @@
+## [@packasso/react-scripts-build@2.1.3](https://github.com/qiwi/packasso/compare/2023.8.15-packasso.react-scripts-build.2.1.2-f0...2023.8.16-packasso.react-scripts-build.2.1.3-f0) (2023-08-16)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.1
+
 ## [@packasso/react-scripts-build@2.1.2](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.react-scripts-build.2.1.1-f0...2023.8.15-packasso.react-scripts-build.2.1.2-f0) (2023-08-15)
 
 ### Dependencies
