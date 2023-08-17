@@ -27,9 +27,7 @@ const install: Install = {
               clearMocks: true,
               resetMocks: true,
               testEnvironment: '@packasso/jest-environment-jsdom',
-              testMatch: [
-                '<rootDir>/src/test/[jt]s/**/*.(spec|test).[jt]s?(x)',
-              ],
+              testMatch: ['<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)'],
               testPathIgnorePatterns: ['__mocks__', '__snapshots__'],
               collectCoverage: true,
               collectCoverageFrom: ['<rootDir>/src/main/[jt]s/**/*.[jt]s?(x)'],
@@ -72,11 +70,8 @@ const install: Install = {
   ],
 }
 
-program(
-  createCommandInstall(install),
-  createCommandClean(['target/coverage']),
-  createCommandPurge(['coverage', 'jest.config.*', 'tsconfig.test.json']),
-  createCommand('test', 'test')
+const createCommandTest = (name: string, description: string, suffix: string) =>
+  createCommand(name, description)
     .addOption(createOption('-u', 'update snapshots and screenshots'))
     .action(async (options) => {
       const { cwd, preset, u } = options
@@ -87,7 +82,8 @@ program(
           {
             silent: true,
             passWithNoTests: true,
-            u,
+            updateSnapshot: u,
+            testMatch: [`'<rootDir>/src/test/[jt]s/**/*.${suffix}.[jt]s?(x)'`],
           },
           {
             NODE_PATH: getNodeModules(),
@@ -95,5 +91,13 @@ program(
         ),
         preset ? root.absPath : root,
       )
-    }),
+    })
+
+program(
+  createCommandInstall(install),
+  createCommandClean(['target/coverage']),
+  createCommandPurge(['coverage', 'jest.config.*', 'tsconfig.test.json']),
+  createCommandTest('test:unit', 'unit tests', '(spec|test)'),
+  createCommandTest('test:it', 'integration tests', 'it'),
+  createCommandTest('test:e2e', 'end-to-end tests', 'e2e'),
 )
