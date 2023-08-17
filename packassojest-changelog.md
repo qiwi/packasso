@@ -1,3 +1,8 @@
+## [@packasso/jest@2.2.0](https://github.com/qiwi/packasso/compare/2023.8.16-packasso.jest.2.1.4-f0...2023.8.17-packasso.jest.2.2.0-f0) (2023-08-17)
+
+### Features
+* feat: jest test unit, it and e2e (#48) [da5f272](https://github.com/qiwi/packasso/commit/da5f272c411648c6e7d55bb14b102a67f24eb1c3)
+
 ## [@packasso/jest@2.1.4](https://github.com/qiwi/packasso/compare/2023.8.15-packasso.jest.2.1.3-f0...2023.8.16-packasso.jest.2.1.4-f0) (2023-08-16)
 
 ### Dependencies
