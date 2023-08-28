@@ -1,3 +1,8 @@
+## [@packasso/jest-environment-jsdom@2.1.1](https://github.com/qiwi/packasso/compare/2023.6.2-packasso.jest-environment-jsdom.2.1.0-f0...2023.8.28-packasso.jest-environment-jsdom.2.1.1-f0) (2023-08-28)
+
+### Fixes & improvements
+* fix: add experimental decorators (#49) [ad20e87](https://github.com/qiwi/packasso/commit/ad20e872f7462571721f9102a374eeed2ef1f941)
+
 ## [@packasso/jest-environment-jsdom@2.1.0](https://github.com/qiwi/packasso/compare/2023.6.1-packasso.jest-environment-jsdom.2.0.0-f0...2023.6.2-packasso.jest-environment-jsdom.2.1.0-f0) (2023-06-02)
 
 ### Features
