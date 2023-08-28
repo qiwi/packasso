@@ -20,9 +20,6 @@
       "@packasso/core": [
         "../core/src/main/ts"
       ],
-      "@packasso/jest-environment-jsdom": [
-        "../jest-environment-jsdom/src/main/ts"
-      ],
       "@packasso/jest-snapshot-resolver": [
         "../jest-snapshot-resolver/src/main/ts"
       ],
