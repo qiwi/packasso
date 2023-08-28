@@ -1,3 +1,8 @@
+## [@packasso/jest@2.3.1](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.jest.2.3.0-f0...2023.8.28-packasso.jest.2.3.1-f0) (2023-08-28)
+
+### Fixes & improvements
+* fix: jest deps [3ce66e9](https://github.com/qiwi/packasso/commit/3ce66e94d124ce4127cab4510a733c67efcb0252)
+
 ## [@packasso/jest@2.3.0](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.jest.2.2.1-f0...2023.8.28-packasso.jest.2.3.0-f0) (2023-08-28)
 
 ### Features
