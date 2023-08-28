@@ -1,3 +1,14 @@
+## [@packasso/jest@2.2.1](https://github.com/qiwi/packasso/compare/2023.8.17-packasso.jest.2.2.0-f0...2023.8.28-packasso.jest.2.2.1-f0) (2023-08-28)
+
+### Fixes & improvements
+* fix: add experimental decorators (#49) [ad20e87](https://github.com/qiwi/packasso/commit/ad20e872f7462571721f9102a374eeed2ef1f941)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.2
+* perf: dependencies @packasso/jest-environment-jsdom updated to 2.1.1
+* perf: dependencies @packasso/jest-snapshot-resolver updated to 2.1.1
+* perf: dependencies @packasso/jest-svgr-transformer updated to 2.1.1
+
 ## [@packasso/jest@2.2.0](https://github.com/qiwi/packasso/compare/2023.8.16-packasso.jest.2.1.4-f0...2023.8.17-packasso.jest.2.2.0-f0) (2023-08-17)
 
 ### Features
