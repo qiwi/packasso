@@ -1,3 +1,21 @@
+## [@packasso/packasso@2.1.4](https://github.com/qiwi/packasso/compare/2023.8.16-packasso.packasso.2.1.3-f0...2023.8.28-packasso.packasso.2.1.4-f0) (2023-08-28)
+
+### Fixes & improvements
+* fix: add experimental decorators (#49) [ad20e87](https://github.com/qiwi/packasso/commit/ad20e872f7462571721f9102a374eeed2ef1f941)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.2
+* perf: devDependencies @packasso/bin updated to 2.0.4
+* perf: devDependencies @packasso/buildstamp updated to 2.1.4
+* perf: devDependencies @packasso/eslint updated to 2.1.4
+* perf: devDependencies @packasso/gitignore updated to 2.1.4
+* perf: devDependencies @packasso/license updated to 2.1.4
+* perf: devDependencies @packasso/prettier updated to 2.1.4
+* perf: devDependencies @packasso/semrel updated to 2.1.4
+* perf: devDependencies @packasso/tsc updated to 2.1.4
+* perf: devDependencies @packasso/uvu updated to 2.1.4
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.4
+
 ## [@packasso/packasso@2.1.3](https://github.com/qiwi/packasso/compare/2023.8.15-packasso.packasso.2.1.2-f0...2023.8.16-packasso.packasso.2.1.3-f0) (2023-08-16)
 
 ### Dependencies
