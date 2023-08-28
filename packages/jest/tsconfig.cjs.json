@@ -16,9 +16,6 @@
       "path": "../core/tsconfig.cjs.json"
     },
     {
-      "path": "../jest-environment-jsdom/tsconfig.cjs.json"
-    },
-    {
       "path": "../jest-snapshot-resolver/tsconfig.cjs.json"
     },
     {

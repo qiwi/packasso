@@ -2589,7 +2589,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/jest-environment-jsdom@workspace:*, @packasso/jest-environment-jsdom@workspace:packages/jest-environment-jsdom":
+"@packasso/jest-environment-jsdom@workspace:packages/jest-environment-jsdom":
   version: 0.0.0-use.local
   resolution: "@packasso/jest-environment-jsdom@workspace:packages/jest-environment-jsdom"
   dependencies:
@@ -2619,12 +2619,13 @@ __metadata:
   dependencies:
     "@jest/globals": 29.5.0
     "@packasso/core": "workspace:*"
-    "@packasso/jest-environment-jsdom": "workspace:*"
     "@packasso/jest-snapshot-resolver": "workspace:*"
     "@packasso/jest-svgr-transformer": "workspace:*"
     "@swc/core": 1.3.61
     "@swc/jest": 0.2.26
     jest: 29.5.0
+    jest-environment-jsdom: 29.5.0
+    jest-environment-node: 29.5.0
   languageName: unknown
   linkType: soft
 
@@ -10407,6 +10408,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jest-environment-node@npm:29.5.0, jest-environment-node@npm:^29.5.0":
+  version: 29.5.0
+  resolution: "jest-environment-node@npm:29.5.0"
+  dependencies:
+    "@jest/environment": "npm:^29.5.0"
+    "@jest/fake-timers": "npm:^29.5.0"
+    "@jest/types": "npm:^29.5.0"
+    "@types/node": "npm:*"
+    jest-mock: "npm:^29.5.0"
+    jest-util: "npm:^29.5.0"
+  checksum: 57981911cc20a4219b0da9e22b2e3c9f31b505e43f78e61c899e3227ded455ce1a3a9483842c69cfa4532f02cfb536ae0995bf245f9211608edacfc1e478d411
+  languageName: node
+  linkType: hard
+
 "jest-environment-node@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-environment-node@npm:27.5.1"
@@ -10418,20 +10433,6 @@ __metadata:
     jest-mock: "npm:^27.5.1"
     jest-util: "npm:^27.5.1"
   checksum: 0f988330c4f3eec092e3fb37ea753b0c6f702e83cd8f4d770af9c2bf964a70bc45fbd34ec6fdb6d71ce98a778d9f54afd673e63f222e4667fff289e8069dba39
-  languageName: node
-  linkType: hard
-
-"jest-environment-node@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "jest-environment-node@npm:29.5.0"
-  dependencies:
-    "@jest/environment": "npm:^29.5.0"
-    "@jest/fake-timers": "npm:^29.5.0"
-    "@jest/types": "npm:^29.5.0"
-    "@types/node": "npm:*"
-    jest-mock: "npm:^29.5.0"
-    jest-util: "npm:^29.5.0"
-  checksum: 57981911cc20a4219b0da9e22b2e3c9f31b505e43f78e61c899e3227ded455ce1a3a9483842c69cfa4532f02cfb536ae0995bf245f9211608edacfc1e478d411
   languageName: node
   linkType: hard
 

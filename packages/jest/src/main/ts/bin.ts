@@ -26,7 +26,7 @@ const install: Install = {
               injectGlobals: false,
               clearMocks: true,
               resetMocks: true,
-              testEnvironment: '@packasso/jest-environment-jsdom',
+              testEnvironment: 'node',
               testMatch: ['<rootDir>/src/test/[jt]s/**/*.[jt]s?(x)'],
               testPathIgnorePatterns: ['__mocks__', '__snapshots__'],
               collectCoverage: true,
@@ -45,16 +45,25 @@ const install: Install = {
                   '@swc/jest',
                   {
                     jsc: {
+                      parser: {
+                        syntax: 'typescript',
+                        tsx: true,
+                        decorators: true,
+                        dynamicImport: true,
+                      },
                       transform: {
                         react: {
                           runtime: 'automatic',
                         },
+                        legacyDecorator: true,
+                        decoratorMetadata: true,
                       },
                     },
                   },
                 ],
               },
-              transformIgnorePatterns: [],
+              extensionsToTreatAsEsm: ['.ts', '.tsx'],
+              transformIgnorePatterns: ['/node_modules/'],
             }
           : {
               collectCoverage: true,
@@ -82,10 +91,13 @@ const createCommandTest = (name: string, description: string, suffix: string) =>
           {
             silent: true,
             passWithNoTests: true,
+            detectOpenHandles: true,
+            forceExit: true,
             updateSnapshot: u,
             testMatch: [`'<rootDir>/src/test/[jt]s/**/*.${suffix}.[jt]s?(x)'`],
           },
           {
+            NODE_OPTIONS: '--experimental-vm-modules',
             NODE_PATH: getNodeModules(),
           },
         ),
