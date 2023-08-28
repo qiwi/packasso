@@ -20,6 +20,7 @@ const install: Install = {
               strict: true,
               skipLibCheck: true,
               esModuleInterop: true,
+              experimentalDecorators: true,
               isolatedModules: true,
               resolveJsonModule: true,
               removeComments: true,
