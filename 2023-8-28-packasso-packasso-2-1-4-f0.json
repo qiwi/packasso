@@ -1,0 +1,21 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/packasso",
+  "hash": "ad20e872f7462571721f9102a374eeed2ef1f941",
+  "version": "2.1.4",
+  "dependencies": {
+    "@packasso/core": "2.2.2"
+  },
+  "devDependencies": {
+    "@packasso/bin": "2.0.4",
+    "@packasso/buildstamp": "2.1.4",
+    "@packasso/eslint": "2.1.4",
+    "@packasso/gitignore": "2.1.4",
+    "@packasso/license": "2.1.4",
+    "@packasso/prettier": "2.1.4",
+    "@packasso/semrel": "2.1.4",
+    "@packasso/tsc": "2.1.4",
+    "@packasso/uvu": "2.1.4",
+    "@packasso/yarn-audit": "2.1.4"
+  }
+}
