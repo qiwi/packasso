@@ -1,3 +1,8 @@
+## [@packasso/jest@2.3.0](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.jest.2.2.1-f0...2023.8.28-packasso.jest.2.3.0-f0) (2023-08-28)
+
+### Features
+* feat: jest with esm (#50) [a674477](https://github.com/qiwi/packasso/commit/a674477ffee7abff96a1cb40d8146e122c6f0d35)
+
 ## [@packasso/jest@2.2.1](https://github.com/qiwi/packasso/compare/2023.8.17-packasso.jest.2.2.0-f0...2023.8.28-packasso.jest.2.2.1-f0) (2023-08-28)
 
 ### Fixes & improvements
