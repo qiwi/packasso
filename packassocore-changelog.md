@@ -1,3 +1,8 @@
+## [@packasso/core@2.2.2](https://github.com/qiwi/packasso/compare/2023.8.16-packasso.core.2.2.1-f0...2023.8.28-packasso.core.2.2.2-f0) (2023-08-28)
+
+### Fixes & improvements
+* fix: add experimental decorators (#49) [ad20e87](https://github.com/qiwi/packasso/commit/ad20e872f7462571721f9102a374eeed2ef1f941)
+
 ## [@packasso/core@2.2.1](https://github.com/qiwi/packasso/compare/2023.8.15-packasso.core.2.2.0-f0...2023.8.16-packasso.core.2.2.1-f0) (2023-08-16)
 
 ### Fixes & improvements
