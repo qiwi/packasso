@@ -1,3 +1,8 @@
+## [@packasso/core@2.2.3](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.core.2.2.2-f0...2023.8.29-packasso.core.2.2.3-f0) (2023-08-29)
+
+### Fixes & improvements
+* fix: add emit decorator metadata (#51) [728d54a](https://github.com/qiwi/packasso/commit/728d54acecaab51b93dca5df5778daa0e94048eb)
+
 ## [@packasso/core@2.2.2](https://github.com/qiwi/packasso/compare/2023.8.16-packasso.core.2.2.1-f0...2023.8.28-packasso.core.2.2.2-f0) (2023-08-28)
 
 ### Fixes & improvements
