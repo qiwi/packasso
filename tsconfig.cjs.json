@@ -78,6 +78,9 @@
     },
     {
       "path": "./packages/yarn-audit/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/nest/tsconfig.cjs.json"
     }
   ]
 }
