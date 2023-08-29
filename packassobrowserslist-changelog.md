@@ -1,3 +1,11 @@
+## [@packasso/browserslist@2.1.6](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.browserslist.2.1.5-f0...2023.8.29-packasso.browserslist.2.1.6-f0) (2023-08-29)
+
+### Fixes & improvements
+* fix: add emit decorator metadata (#51) [728d54a](https://github.com/qiwi/packasso/commit/728d54acecaab51b93dca5df5778daa0e94048eb)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.3
+
 ## [@packasso/browserslist@2.1.5](https://github.com/qiwi/packasso/compare/2023.8.16-packasso.browserslist.2.1.4-f0...2023.8.28-packasso.browserslist.2.1.5-f0) (2023-08-28)
 
 ### Fixes & improvements
