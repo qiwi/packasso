@@ -1,3 +1,13 @@
+## [@packasso/jest@2.3.2](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.jest.2.3.1-f0...2023.8.29-packasso.jest.2.3.2-f0) (2023-08-29)
+
+### Fixes & improvements
+* fix: add emit decorator metadata (#51) [728d54a](https://github.com/qiwi/packasso/commit/728d54acecaab51b93dca5df5778daa0e94048eb)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.3
+* perf: dependencies @packasso/jest-snapshot-resolver updated to 2.1.2
+* perf: dependencies @packasso/jest-svgr-transformer updated to 2.1.2
+
 ## [@packasso/jest@2.3.1](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.jest.2.3.0-f0...2023.8.28-packasso.jest.2.3.1-f0) (2023-08-28)
 
 ### Fixes & improvements
