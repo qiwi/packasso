@@ -11,13 +11,13 @@
       "path": "./packages/bin/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/cli/tsconfig.cjs.json"
-    },
-    {
       "path": "./packages/buildstamp/tsconfig.cjs.json"
     },
     {
       "path": "./packages/browserslist/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/cli/tsconfig.cjs.json"
     },
     {
       "path": "./packages/core/tsconfig.cjs.json"
@@ -32,13 +32,13 @@
       "path": "./packages/gitignore/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/jest-svgr-transformer/tsconfig.cjs.json"
-    },
-    {
       "path": "./packages/jest-environment-jsdom/tsconfig.cjs.json"
     },
     {
       "path": "./packages/jest-snapshot-resolver/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/jest-svgr-transformer/tsconfig.cjs.json"
     },
     {
       "path": "./packages/license/tsconfig.cjs.json"
