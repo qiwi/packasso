@@ -1,3 +1,21 @@
+## [@packasso/packasso@2.1.5](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.packasso.2.1.4-f0...2023.8.29-packasso.packasso.2.1.5-f0) (2023-08-29)
+
+### Fixes & improvements
+* fix: add emit decorator metadata (#51) [728d54a](https://github.com/qiwi/packasso/commit/728d54acecaab51b93dca5df5778daa0e94048eb)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.3
+* perf: devDependencies @packasso/bin updated to 2.0.5
+* perf: devDependencies @packasso/buildstamp updated to 2.1.5
+* perf: devDependencies @packasso/eslint updated to 2.1.5
+* perf: devDependencies @packasso/gitignore updated to 2.1.5
+* perf: devDependencies @packasso/license updated to 2.1.5
+* perf: devDependencies @packasso/prettier updated to 2.1.5
+* perf: devDependencies @packasso/semrel updated to 2.1.5
+* perf: devDependencies @packasso/tsc updated to 2.1.5
+* perf: devDependencies @packasso/uvu updated to 2.1.5
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.5
+
 ## [@packasso/packasso@2.1.4](https://github.com/qiwi/packasso/compare/2023.8.16-packasso.packasso.2.1.3-f0...2023.8.28-packasso.packasso.2.1.4-f0) (2023-08-28)
 
 ### Fixes & improvements
