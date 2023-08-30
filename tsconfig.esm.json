@@ -78,6 +78,9 @@
     },
     {
       "path": "./packages/yarn-audit/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/nest/tsconfig.esm.json"
     }
   ]
 }

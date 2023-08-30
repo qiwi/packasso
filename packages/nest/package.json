@@ -1,0 +1,50 @@
+{
+  "name": "@packasso/nest",
+  "version": "2.0.0",
+  "description": "nest",
+  "keywords": [
+    "nest",
+    "preset"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "dependencies": {
+    "@nestjs/cli": "9.4.0",
+    "@packasso/core": "workspace:*",
+    "nestjs-esm-fix": "1.6.0",
+    "tsc-esm-fix": "2.20.14"
+  },
+  "devDependencies": {
+    "@packasso/tsconfig": "workspace:*"
+  },
+  "exports": "./src/main/ts/index.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "bin": {
+      "packasso-nest": "./target/esm/bin.mjs"
+    },
+    "type": "module",
+    "main": "./target/cjs/index.cjs",
+    "module": "./target/esm/index.mjs",
+    "types": "./target/esm/index.d.ts",
+    "exports": {
+      ".": {
+        "require": "./target/cjs/index.cjs",
+        "import": "./target/esm/index.mjs",
+        "types": "./target/esm/index.d.ts"
+      }
+    },
+    "files": [
+      "target/cjs/**/*",
+      "target/esm/**/*",
+      "target/buildstamp.json"
+    ],
+    "access": "public"
+  }
+}
