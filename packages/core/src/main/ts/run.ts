@@ -30,6 +30,7 @@ export const execute: (
     ),
     {
       prefixColors: ['auto'],
+      maxProcesses: '50%',
       prefix:
         lodash.isString(packages) || lodash.every(packages, lodash.isString)
           ? 'none'

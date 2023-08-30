@@ -1,0 +1,51 @@
+{
+  "name": "@packasso/node-test",
+  "version": "0.0.0",
+  "description": "node test",
+  "keywords": [
+    "node",
+    "test",
+    "preset"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "dependencies": {
+    "@packasso/core": "workspace:*",
+    "c8": "^8.0.1",
+    "fast-glob": "^3.3.1",
+    "tsx": "^3.12.7"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "exports": "./src/main/ts/index.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "bin": {
+      "packasso-node-test": "./target/esm/bin.mjs"
+    },
+    "type": "module",
+    "main": "./target/cjs/index.cjs",
+    "module": "./target/esm/index.mjs",
+    "types": "./target/esm/index.d.ts",
+    "exports": {
+      ".": {
+        "require": "./target/cjs/index.cjs",
+        "import": "./target/esm/index.mjs",
+        "types": "./target/esm/index.d.ts"
+      }
+    },
+    "files": [
+      "target/cjs/**/*",
+      "target/esm/**/*",
+      "target/buildstamp.json"
+    ],
+    "access": "public"
+  }
+}
