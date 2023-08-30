@@ -17,7 +17,7 @@
   "dependencies": {
     "@nestjs/cli": "9.4.0",
     "@packasso/core": "workspace:*",
-    "nestjs-esm-fix": "1.6.0",
+    "nestjs-esm-fix": "1.6.1",
     "tsc-esm-fix": "2.20.14"
   },
   "devDependencies": {
