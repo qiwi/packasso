@@ -13,7 +13,12 @@ const createCommandTest = (name: string, description: string, suffix?: string) =
     .action(async (options) => {
       const { cwd, preset } = options
       const { root, queuePackages } = await getTopo({ cwd }, preset)
-      const files = await glob(`**/src/test/{ts,js}/**/*.${suffix}.{ts,js,tsx,jsx}`, { ignore: ['node_modules']})
+      const files = await glob(
+        root.tree
+          ? queuePackages.map(it => it.relPath + `/src/test/{ts,js}/**/*.${suffix}.{ts,js,tsx,jsx}`)
+          : `src/test/{ts,js}/**/*.${suffix}.{ts,js,tsx,jsx}`,
+        { ignore: ['node_modules'] }
+      )
       const paths = queuePackages.map(({ relPath }) => relPath)
       const many = paths.length > 1
       const mainPaths = `${
