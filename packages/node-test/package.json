@@ -1,7 +1,7 @@
 {
   "name": "@packasso/node-test",
   "version": "0.0.0",
-  "description": "node test",
+  "description": "Packasso preset for node:test",
   "keywords": [
     "node",
     "test",
