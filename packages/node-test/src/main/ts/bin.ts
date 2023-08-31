@@ -18,7 +18,7 @@ const createCommandTest = (name: string, description: string, suffix?: string) =
 
       await execute(
         cmd(
-          `${getNodeModules()}/.bin/c8`,
+          'c8',
           {
             r: ['html', 'text', 'lcov'],
             exclude: 'src/test',
