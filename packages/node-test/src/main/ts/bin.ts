@@ -3,7 +3,6 @@ import {
   cmd,
   createCommand,
   execute,
-  getNodeModules,
   getTopo,
   program,
 } from '@packasso/core'
@@ -13,15 +12,22 @@ const createCommandTest = (name: string, description: string, suffix?: string) =
   createCommand(name, description)
     .action(async (options) => {
       const { cwd, preset } = options
-      const { root } = await getTopo({ cwd }, preset)
+      const { root, queuePackages } = await getTopo({ cwd }, preset)
       const files = await glob(`**/src/test/{ts,js}/**/*.${suffix}.{ts,js,tsx,jsx}`, { ignore: ['node_modules']})
+      const paths = queuePackages.map(({ relPath }) => relPath)
+      const many = paths.length > 1
+      const mainPaths = `${
+        root.tree
+          ? `${many ? '{' : ''}${paths.join(',')}${many ? '}' : ''}/`
+          : ''
+      }src/main/{ts,js}`
 
       await execute(
         cmd(
           'c8',
           {
             r: ['html', 'text', 'lcov'],
-            exclude: 'src/test',
+            n: `'${mainPaths}'`,
             o: `./target/coverage-${suffix}-node`,
             _: cmd(
               'node',
