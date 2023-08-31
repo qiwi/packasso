@@ -18,12 +18,20 @@ const createCommandTest = (name: string, description: string, suffix?: string) =
 
       await execute(
         cmd(
-          `${getNodeModules()}/.bin/c8 -r lcov --exclude src/test -o ./target/coverage-${suffix}-node node`,
+          `${getNodeModules()}/.bin/c8`,
           {
-            test: true,
-            loader: 'tsx',
-            _: files
-          },
+            r: ['html', 'text', 'lcov'],
+            exclude: 'src/test',
+            o: `./target/coverage-${suffix}-node`,
+            _: cmd(
+              'node',
+              {
+                test: true,
+                loader: 'tsx',
+                _: files
+              }
+            )
+          }
         ),
         root
       )
