@@ -33,7 +33,7 @@ const createCommandTest = (name: string, description: string, suffix?: string) =
           {
             r: ['html', 'text', 'lcov'],
             n: `'${mainPaths}'`,
-            o: `./target/coverage-${suffix}-node`,
+            o: './target/coverage',
             _: cmd(
               'node',
               {
@@ -49,7 +49,7 @@ const createCommandTest = (name: string, description: string, suffix?: string) =
     })
 
 program(
-  createCommandTest('test:unit', 'unit tests', 'unit'),
+  createCommandTest('test:unit', 'unit tests', '{spec,test}'),
   createCommandTest('test:it', 'integration tests', 'it'),
   createCommandTest('test:e2e', 'end-to-end tests', 'e2e'),
 )
