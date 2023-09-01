@@ -1,3 +1,8 @@
+## [@packasso/node-test@2.0.5](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.node-test.2.0.4-f0...2023.9.1-packasso.node-test.2.0.5-f0) (2023-09-01)
+
+### Fixes & improvements
+* fix: node-test purge and clean [6f43649](https://github.com/qiwi/packasso/commit/6f43649eb247743a4a6d9202c08ac2f2fedabc55)
+
 ## [@packasso/node-test@2.0.4](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.node-test.2.0.3-f0...2023.9.1-packasso.node-test.2.0.4-f0) (2023-09-01)
 
 ### Fixes & improvements
