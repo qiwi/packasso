@@ -1,3 +1,8 @@
+## [@packasso/core@2.3.0](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.core.2.2.4-f0...2023.9.1-packasso.core.2.3.0-f0) (2023-09-01)
+
+### Features
+* feat: use node-test (#59) [ce28ab9](https://github.com/qiwi/packasso/commit/ce28ab90b362519d0601e73c16af206bc5bfe6ea)
+
 ## [@packasso/core@2.2.4](https://github.com/qiwi/packasso/compare/2023.8.29-packasso.core.2.2.3-f0...2023.9.1-packasso.core.2.2.4-f0) (2023-09-01)
 
 ### Fixes & improvements
