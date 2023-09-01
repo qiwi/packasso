@@ -3078,7 +3078,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/node-test@workspace:packages/node-test":
+"@packasso/node-test@workspace:*, @packasso/node-test@workspace:packages/node-test":
   version: 0.0.0-use.local
   resolution: "@packasso/node-test@workspace:packages/node-test"
   dependencies:
@@ -3099,10 +3099,10 @@ __metadata:
     "@packasso/eslint": "workspace:*"
     "@packasso/gitignore": "workspace:*"
     "@packasso/license": "workspace:*"
+    "@packasso/node-test": "workspace:*"
     "@packasso/prettier": "workspace:*"
     "@packasso/semrel": "workspace:*"
     "@packasso/tsc": "workspace:*"
-    "@packasso/uvu": "workspace:*"
     "@packasso/yarn-audit": "workspace:*"
   languageName: unknown
   linkType: soft
@@ -3199,7 +3199,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/uvu@workspace:*, @packasso/uvu@workspace:packages/uvu":
+"@packasso/uvu@workspace:packages/uvu":
   version: 0.0.0-use.local
   resolution: "@packasso/uvu@workspace:packages/uvu"
   dependencies:

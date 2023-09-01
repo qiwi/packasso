@@ -31,6 +31,9 @@
       "path": "../license/tsconfig.cjs.json"
     },
     {
+      "path": "../node-test/tsconfig.cjs.json"
+    },
+    {
       "path": "../prettier/tsconfig.cjs.json"
     },
     {
@@ -38,9 +41,6 @@
     },
     {
       "path": "../tsc/tsconfig.cjs.json"
-    },
-    {
-      "path": "../uvu/tsconfig.cjs.json"
     },
     {
       "path": "../yarn-audit/tsconfig.cjs.json"
