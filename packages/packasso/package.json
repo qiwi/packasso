@@ -22,10 +22,10 @@
     "@packasso/eslint": "workspace:*",
     "@packasso/gitignore": "workspace:*",
     "@packasso/license": "workspace:*",
+    "@packasso/node-test": "workspace:*",
     "@packasso/prettier": "workspace:*",
     "@packasso/semrel": "workspace:*",
     "@packasso/tsc": "workspace:*",
-    "@packasso/uvu": "workspace:*",
     "@packasso/yarn-audit": "workspace:*"
   },
   "type": "module",

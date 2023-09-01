@@ -36,6 +36,9 @@
       "@packasso/license": [
         "../license/src/main/ts"
       ],
+      "@packasso/node-test": [
+        "../node-test/src/main/ts"
+      ],
       "@packasso/prettier": [
         "../prettier/src/main/ts"
       ],
@@ -44,9 +47,6 @@
       ],
       "@packasso/tsc": [
         "../tsc/src/main/ts"
-      ],
-      "@packasso/uvu": [
-        "../uvu/src/main/ts"
       ],
       "@packasso/yarn-audit": [
         "../yarn-audit/src/main/ts"

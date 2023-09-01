@@ -28,6 +28,9 @@
       "path": "../license/tsconfig.esm.json"
     },
     {
+      "path": "../node-test/tsconfig.esm.json"
+    },
+    {
       "path": "../prettier/tsconfig.esm.json"
     },
     {
@@ -35,9 +38,6 @@
     },
     {
       "path": "../tsc/tsconfig.esm.json"
-    },
-    {
-      "path": "../uvu/tsconfig.esm.json"
     },
     {
       "path": "../yarn-audit/tsconfig.esm.json"
