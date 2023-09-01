@@ -1,3 +1,8 @@
+## [@packasso/core@2.2.4](https://github.com/qiwi/packasso/compare/2023.8.29-packasso.core.2.2.3-f0...2023.9.1-packasso.core.2.2.4-f0) (2023-09-01)
+
+### Fixes & improvements
+* fix: esm everywhere (#58) [c9fb015](https://github.com/qiwi/packasso/commit/c9fb015792587f796dc4b4ffd5a6d1428e52acc7)
+
 ## [@packasso/core@2.2.3](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.core.2.2.2-f0...2023.8.29-packasso.core.2.2.3-f0) (2023-08-29)
 
 ### Fixes & improvements
