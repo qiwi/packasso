@@ -8,7 +8,7 @@ import {
 } from '@packasso/core'
 import { glob } from 'fast-glob'
 
-const createCommandTest = (name: string, description: string, suffix?: string) =>
+const createCommandTest = (name: string, description: string, suffix: string) =>
   createCommand(name, description)
     .action(async (options) => {
       const { cwd, preset } = options
