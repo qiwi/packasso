@@ -15,6 +15,7 @@
     "url": "https://github.com/qiwi/packasso/issues"
   },
   "homepage": "https://qiwi.github.io/packasso",
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {

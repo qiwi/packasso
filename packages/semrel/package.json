@@ -18,6 +18,7 @@
     "@packasso/core": "workspace:*",
     "zx-bulk-release": "2.9.0"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {

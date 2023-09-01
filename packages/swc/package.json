@@ -27,6 +27,7 @@
   "devDependencies": {
     "@packasso/tsconfig": "workspace:*"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {

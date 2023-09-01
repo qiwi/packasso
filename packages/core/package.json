@@ -26,6 +26,7 @@
     "lodash": "4.17.21",
     "read-pkg-up": "9.1.0"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {

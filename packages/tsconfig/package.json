@@ -19,6 +19,7 @@
     "@packasso/core": "workspace:*",
     "typescript": "4.9.5"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
