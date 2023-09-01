@@ -81,6 +81,9 @@
     },
     {
       "path": "./packages/nest/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/node-test/tsconfig.cjs.json"
     }
   ]
 }
