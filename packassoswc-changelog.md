@@ -1,3 +1,12 @@
+## [@packasso/swc@2.1.7](https://github.com/qiwi/packasso/compare/2023.8.29-packasso.swc.2.1.6-f0...2023.9.1-packasso.swc.2.1.7-f0) (2023-09-01)
+
+### Fixes & improvements
+* fix: esm everywhere (#58) [c9fb015](https://github.com/qiwi/packasso/commit/c9fb015792587f796dc4b4ffd5a6d1428e52acc7)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.4
+* perf: devDependencies @packasso/tsconfig updated to 2.1.6
+
 ## [@packasso/swc@2.1.6](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.swc.2.1.5-f0...2023.8.29-packasso.swc.2.1.6-f0) (2023-08-29)
 
 ### Fixes & improvements
