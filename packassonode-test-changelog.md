@@ -1,3 +1,8 @@
+## [@packasso/node-test@2.0.2](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.node-test.2.0.1-f0...2023.9.1-packasso.node-test.2.0.2-f0) (2023-09-01)
+
+### Fixes & improvements
+* fix: build config for node-test (#55) [cea480f](https://github.com/qiwi/packasso/commit/cea480faf7f5232432da47ca4ec5ea7cf8d45b1b)
+
 ## [@packasso/node-test@2.0.1](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.node-test.2.0.0-f0...2023.9.1-packasso.node-test.2.0.1-f0) (2023-09-01)
 
 ### Fixes & improvements
