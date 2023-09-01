@@ -1,3 +1,8 @@
+## [@packasso/jest-snapshot-resolver@2.1.3](https://github.com/qiwi/packasso/compare/2023.8.29-packasso.jest-snapshot-resolver.2.1.2-f0...2023.9.1-packasso.jest-snapshot-resolver.2.1.3-f0) (2023-09-01)
+
+### Fixes & improvements
+* fix: esm everywhere (#58) [c9fb015](https://github.com/qiwi/packasso/commit/c9fb015792587f796dc4b4ffd5a6d1428e52acc7)
+
 ## [@packasso/jest-snapshot-resolver@2.1.2](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.jest-snapshot-resolver.2.1.1-f0...2023.8.29-packasso.jest-snapshot-resolver.2.1.2-f0) (2023-08-29)
 
 ### Fixes & improvements
