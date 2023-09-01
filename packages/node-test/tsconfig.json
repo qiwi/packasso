@@ -8,6 +8,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
     "removeComments": true,
@@ -20,8 +21,7 @@
       "@packasso/core": [
         "../core/src/main/ts"
       ]
-    },
-    "emitDecoratorMetadata": true
+    }
   },
   "include": [
     "./src/main/ts"
