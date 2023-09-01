@@ -1,3 +1,21 @@
+## [@packasso/packasso@2.2.0](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.packasso.2.1.6-f0...2023.9.1-packasso.packasso.2.2.0-f0) (2023-09-01)
+
+### Features
+* feat: use node-test (#59) [ce28ab9](https://github.com/qiwi/packasso/commit/ce28ab90b362519d0601e73c16af206bc5bfe6ea)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.3.0
+* perf: devDependencies @packasso/bin updated to 2.0.7
+* perf: devDependencies @packasso/buildstamp updated to 2.1.7
+* perf: devDependencies @packasso/eslint updated to 2.1.7
+* perf: devDependencies @packasso/gitignore updated to 2.1.7
+* perf: devDependencies @packasso/license updated to 2.1.7
+* perf: devDependencies @packasso/node-test updated to 2.0.6
+* perf: devDependencies @packasso/prettier updated to 2.1.7
+* perf: devDependencies @packasso/semrel updated to 2.1.7
+* perf: devDependencies @packasso/tsc updated to 2.1.7
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.7
+
 ## [@packasso/packasso@2.1.6](https://github.com/qiwi/packasso/compare/2023.8.29-packasso.packasso.2.1.5-f0...2023.9.1-packasso.packasso.2.1.6-f0) (2023-09-01)
 
 ### Fixes & improvements
