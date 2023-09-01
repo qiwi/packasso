@@ -20,6 +20,7 @@
     "@packasso/core": "workspace:*",
     "yarn-audit-fix": "9.3.10"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {

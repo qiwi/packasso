@@ -28,6 +28,7 @@
     "@packasso/uvu": "workspace:*",
     "@packasso/yarn-audit": "workspace:*"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {

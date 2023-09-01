@@ -21,6 +21,7 @@
     "@types/node": "20.2.5",
     "lodash": "4.17.21"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {

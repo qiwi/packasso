@@ -74,6 +74,8 @@ const install: Install = {
       'package.json':
         pkg.leaf || pkg.unit
           ? {
+              type: 'module',
+              exports: './src/main/ts/index.ts',
               publishConfig: {
                 type: 'module',
                 main: `./${targetCjs}/index.cjs`,

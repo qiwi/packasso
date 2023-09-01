@@ -16,6 +16,7 @@
   "dependencies": {
     "@packasso/core": "workspace:*"
   },
+  "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
