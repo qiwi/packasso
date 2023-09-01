@@ -6,14 +6,14 @@ import {
   getTopo,
   program,
 } from '@packasso/core'
-import { glob } from 'fast-glob'
+import fg from 'fast-glob'
 
 const createCommandTest = (name: string, description: string, suffix: string) =>
   createCommand(name, description)
     .action(async (options) => {
       const { cwd, preset } = options
       const { root, queuePackages } = await getTopo({ cwd }, preset)
-      const files = await glob(
+      const files = await fg.glob(
         root.tree
           ? queuePackages.map(it => it.relPath + `/src/test/{ts,js}/**/*.${suffix}.{ts,js,tsx,jsx}`)
           : `src/test/{ts,js}/**/*.${suffix}.{ts,js,tsx,jsx}`,
