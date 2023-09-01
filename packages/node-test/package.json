@@ -17,9 +17,11 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "c8": "^8.0.1",
-    "fast-glob": "^3.3.1",
-    "tsx": "^3.12.7"
+    "c8": "7.14.0",
+    "fast-glob": "3.3.1",
+    "istanbul-merge": "2.0.0",
+    "nyc": "15.1.0",
+    "tsx": "3.12.7"
   },
   "engines": {
     "node": ">=20.0.0"
