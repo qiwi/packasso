@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/semrel",
+  "hash": "ce28ab90b362519d0601e73c16af206bc5bfe6ea",
+  "version": "2.1.7",
+  "dependencies": {
+    "@packasso/core": "2.3.0"
+  }
+}
