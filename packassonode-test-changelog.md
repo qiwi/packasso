@@ -1,3 +1,8 @@
+## [@packasso/node-test@2.0.3](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.node-test.2.0.2-f0...2023.9.1-packasso.node-test.2.0.3-f0) (2023-09-01)
+
+### Fixes & improvements
+* fix: import fg as default in node-test (#56) [951ae0d](https://github.com/qiwi/packasso/commit/951ae0dbd35a0a9014e3155863c1164f859780dc)
+
 ## [@packasso/node-test@2.0.2](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.node-test.2.0.1-f0...2023.9.1-packasso.node-test.2.0.2-f0) (2023-09-01)
 
 ### Fixes & improvements
