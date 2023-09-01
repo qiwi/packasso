@@ -1,3 +1,21 @@
+## [@packasso/packasso@2.1.6](https://github.com/qiwi/packasso/compare/2023.8.29-packasso.packasso.2.1.5-f0...2023.9.1-packasso.packasso.2.1.6-f0) (2023-09-01)
+
+### Fixes & improvements
+* fix: esm everywhere (#58) [c9fb015](https://github.com/qiwi/packasso/commit/c9fb015792587f796dc4b4ffd5a6d1428e52acc7)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.2.4
+* perf: devDependencies @packasso/bin updated to 2.0.6
+* perf: devDependencies @packasso/buildstamp updated to 2.1.6
+* perf: devDependencies @packasso/eslint updated to 2.1.6
+* perf: devDependencies @packasso/gitignore updated to 2.1.6
+* perf: devDependencies @packasso/license updated to 2.1.6
+* perf: devDependencies @packasso/prettier updated to 2.1.6
+* perf: devDependencies @packasso/semrel updated to 2.1.6
+* perf: devDependencies @packasso/tsc updated to 2.1.6
+* perf: devDependencies @packasso/uvu updated to 2.1.6
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.6
+
 ## [@packasso/packasso@2.1.5](https://github.com/qiwi/packasso/compare/2023.8.28-packasso.packasso.2.1.4-f0...2023.8.29-packasso.packasso.2.1.5-f0) (2023-08-29)
 
 ### Fixes & improvements
