@@ -1,3 +1,8 @@
+## [@packasso/prettier@2.1.9](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.prettier.2.1.8-f0...2023.9.5-packasso.prettier.2.1.9-f0) (2023-09-05)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.5.0
+
 ## [@packasso/prettier@2.1.8](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.prettier.2.1.7-f0...2023.9.5-packasso.prettier.2.1.8-f0) (2023-09-05)
 
 ### Dependencies
