@@ -1,3 +1,8 @@
+## [@packasso/core@2.4.0](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.core.2.3.0-f0...2023.9.5-packasso.core.2.4.0-f0) (2023-09-05)
+
+### Features
+* feat: test coverage merge (#60) [53b5efe](https://github.com/qiwi/packasso/commit/53b5efed9f0deea7f4d632f7048927ad8fe8cf93)
+
 ## [@packasso/core@2.3.0](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.core.2.2.4-f0...2023.9.1-packasso.core.2.3.0-f0) (2023-09-01)
 
 ### Features
