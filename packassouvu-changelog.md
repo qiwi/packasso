@@ -1,3 +1,11 @@
+## [@packasso/uvu@2.2.0](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.uvu.2.1.7-f0...2023.9.5-packasso.uvu.2.2.0-f0) (2023-09-05)
+
+### Features
+* feat: test coverage merge (#60) [53b5efe](https://github.com/qiwi/packasso/commit/53b5efed9f0deea7f4d632f7048927ad8fe8cf93)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.4.0
+
 ## [@packasso/uvu@2.1.7](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.uvu.2.1.6-f0...2023.9.1-packasso.uvu.2.1.7-f0) (2023-09-01)
 
 ### Dependencies
