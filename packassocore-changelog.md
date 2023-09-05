@@ -1,3 +1,8 @@
+## [@packasso/core@2.5.0](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.core.2.4.0-f0...2023.9.5-packasso.core.2.5.0-f0) (2023-09-05)
+
+### Features
+* feat: no error - no pain (#61) [a6cb9de](https://github.com/qiwi/packasso/commit/a6cb9de39167b2347b723a667ae07e823f59c99f)
+
 ## [@packasso/core@2.4.0](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.core.2.3.0-f0...2023.9.5-packasso.core.2.4.0-f0) (2023-09-05)
 
 ### Features
