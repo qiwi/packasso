@@ -98,19 +98,25 @@ export const run = async (
   context: Command<unknown[]>,
 ) => {
   for (const module of modules) {
-    await execute(
-      cmd(
-        [
-          npx(module, lodash.isString(pkg) ? pkg : pkg.absPath),
-          command,
-          ...lodash.difference(context.args, context.processedArgs),
-        ].join(' '),
-        {
-          cwd: lodash.isString(pkg) ? pkg : pkg.absPath,
-          preset: preset || module,
-        },
-      ),
-      pkg,
-    )
+    try {
+      await execute(
+        cmd(
+          [
+            npx(module, lodash.isString(pkg) ? pkg : pkg.absPath),
+            command,
+            ...lodash.difference(context.args, context.processedArgs),
+          ].join(' '),
+          {
+            cwd: lodash.isString(pkg) ? pkg : pkg.absPath,
+            preset: preset || module,
+          },
+        ),
+        pkg,
+      )
+    } catch (e) {
+      if (preset || modules.length === 1) {
+        throw e
+      }
+    }
   }
 }
