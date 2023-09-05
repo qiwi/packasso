@@ -18,6 +18,8 @@
     "@packasso/core": "workspace:*",
     "c8": "7.14.0",
     "earljs": "0.2.3",
+    "istanbul-merge": "2.0.0",
+    "nyc": "15.1.0",
     "tsm": "2.3.0",
     "uvu": "0.5.6"
   },

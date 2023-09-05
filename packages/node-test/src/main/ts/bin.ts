@@ -5,47 +5,79 @@ import {
   createCommandClean,
   createCommandPurge,
   execute,
+  ExtraTopoContext,
   getTopo,
   program,
+  testCoverageDir,
+  testCoverageMergeAndReport,
+  testSuffixes,
+  TestType,
 } from '@packasso/core'
 import fg from 'fast-glob'
 
-const createCommandTest = (name: string, description: string, suffix: string) =>
+const paths = (topo: ExtraTopoContext, type: TestType, runner?: string) => {
+  const { root, queuePackages } = topo
+  const filesSuffixes = `{${testSuffixes[type].join(',')}}${runner ? '.' : ''}${
+    runner ?? ''
+  }`
+  const filesPath = `src/test/{ts,js}/**/*.${filesSuffixes}.{ts,js,tsx,jsx}`
+  const files = fg.globSync(
+    root.tree
+      ? queuePackages.map(({ relPath }) => `${relPath}/${filesPath}`)
+      : filesPath,
+    { ignore: ['node_modules'] },
+  )
+  const includeDirs = root.tree
+    ? `${queuePackages.length === 1 ? '' : '{'}${queuePackages
+        .map(({ relPath }) => relPath)
+        .join(',')}${queuePackages.length === 1 ? '' : '}'}/`
+    : ''
+  const include = `'${includeDirs}src/main/{ts,js}'`
+  return {
+    files,
+    include,
+  }
+}
+
+const createCommandTest = (
+  name: string,
+  description: string,
+  types: TestType[],
+  runner?: string,
+) =>
   createCommand(name, description).action(async (options) => {
     const { cwd, preset } = options
-    const { root, queuePackages } = await getTopo({ cwd }, preset)
-    const srcTest = `src/test/{ts,js}/**/*.${suffix}.{ts,js,tsx,jsx}`
-    const files = await fg.glob(
-      root.tree
-        ? queuePackages.map(({ relPath }) => `${relPath}/${srcTest}`)
-        : srcTest,
-      { ignore: ['node_modules'] },
-    )
-    const paths = queuePackages.map(({ relPath }) => relPath)
-    const many = paths.length > 1
-    const mainPaths = `${
-      root.tree ? `${many ? '{' : ''}${paths.join(',')}${many ? '}' : ''}/` : ''
-    }src/main/{ts,js}`
-    await execute(
-      cmd('c8', {
-        r: ['html', 'text', 'lcov'],
-        n: `'${mainPaths}'`,
-        o: './target/coverage',
-        _: cmd('node', {
-          test: true,
-          loader: 'tsx',
-          _: files,
+    const topo = await getTopo({ cwd }, preset)
+    const { root } = topo
+    for (const type of types) {
+      const { include, files } = paths(topo, type, runner)
+      await execute(
+        cmd('c8', {
+          all: true,
+          o: `${testCoverageDir}-${type}-node`,
+          r: ['json', 'lcov', 'html'],
+          n: include,
+          _: cmd('node', {
+            test: true,
+            loader: 'tsx',
+            _: files,
+          }),
         }),
-      }),
-      root,
-    )
+        preset ? root.absPath : root,
+      )
+    }
+    await testCoverageMergeAndReport(testCoverageDir, root, preset)
   })
 
 program(
-  createCommandClean(['target/coverage']),
-  createCommandPurge(['coverage', 'jest.config.*', 'tsconfig.test.json']),
-  createCommandTest('test', 'unit tests', '{spec,test,it,e2e}'),
-  createCommandTest('test:unit', 'unit tests', '{spec,test}'),
-  createCommandTest('test:it', 'integration tests', 'it'),
-  createCommandTest('test:e2e', 'end-to-end tests', 'e2e'),
+  createCommandClean([`${testCoverageDir}-*-node`, testCoverageDir]),
+  createCommandPurge(['coverage', 'tsconfig.test.json']),
+  createCommandTest('node:test', 'all tests', ['unit', 'it', 'e2e'], 'node'),
+  createCommandTest('node:test:unit', 'unit tests', ['unit'], 'node'),
+  createCommandTest('node:test:it', 'integration tests', ['it'], 'node'),
+  createCommandTest('node:test:e2e', 'end-to-end tests', ['e2e'], 'node'),
+  createCommandTest('test', 'all tests', ['unit', 'it', 'e2e']),
+  createCommandTest('test:unit', 'unit tests', ['unit']),
+  createCommandTest('test:it', 'integration tests', ['it']),
+  createCommandTest('test:e2e', 'end-to-end tests', ['e2e']),
 )
