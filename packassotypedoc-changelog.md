@@ -1,3 +1,8 @@
+## [@packasso/typedoc@2.2.0](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.typedoc.2.1.9-f0...2023.9.6-packasso.typedoc.2.2.0-f0) (2023-09-06)
+
+### Features
+* feat: typedoc up deps and zero config (#62) [92df70e](https://github.com/qiwi/packasso/commit/92df70e5c45ae3300ea6cb8749fb3970e2f8c7f3)
+
 ## [@packasso/typedoc@2.1.9](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.typedoc.2.1.8-f0...2023.9.5-packasso.typedoc.2.1.9-f0) (2023-09-05)
 
 ### Dependencies
