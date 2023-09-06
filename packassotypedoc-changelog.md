@@ -1,3 +1,11 @@
+## [@packasso/typedoc@2.2.1](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.typedoc.2.2.0-f0...2023.9.6-packasso.typedoc.2.2.1-f0) (2023-09-06)
+
+### Fixes & improvements
+* fix: type exports include (#63) [fd5bfa9](https://github.com/qiwi/packasso/commit/fd5bfa9cc3a1a2fb98da1f597b94ec499dfde390)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.5.1
+
 ## [@packasso/typedoc@2.2.0](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.typedoc.2.1.9-f0...2023.9.6-packasso.typedoc.2.2.0-f0) (2023-09-06)
 
 ### Features
