@@ -1,3 +1,12 @@
+## [@packasso/nest@2.0.7](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.nest.2.0.6-f0...2023.9.6-packasso.nest.2.0.7-f0) (2023-09-06)
+
+### Fixes & improvements
+* fix: type exports include (#63) [fd5bfa9](https://github.com/qiwi/packasso/commit/fd5bfa9cc3a1a2fb98da1f597b94ec499dfde390)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.5.1
+* perf: devDependencies @packasso/tsconfig updated to 2.1.10
+
 ## [@packasso/nest@2.0.6](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.nest.2.0.5-f0...2023.9.5-packasso.nest.2.0.6-f0) (2023-09-05)
 
 ### Dependencies
