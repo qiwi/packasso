@@ -1,3 +1,11 @@
+## [@packasso/uvu@2.2.2](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.uvu.2.2.1-f0...2023.9.6-packasso.uvu.2.2.2-f0) (2023-09-06)
+
+### Fixes & improvements
+* fix: type exports include (#63) [fd5bfa9](https://github.com/qiwi/packasso/commit/fd5bfa9cc3a1a2fb98da1f597b94ec499dfde390)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.5.1
+
 ## [@packasso/uvu@2.2.1](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.uvu.2.2.0-f0...2023.9.5-packasso.uvu.2.2.1-f0) (2023-09-05)
 
 ### Dependencies
