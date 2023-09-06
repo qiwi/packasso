@@ -1,3 +1,8 @@
+## [@packasso/typedoc@2.2.2](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.typedoc.2.2.1-f0...2023.9.6-packasso.typedoc.2.2.2-f0) (2023-09-06)
+
+### Fixes & improvements
+* fix: typedoc auto readme [9c9b512](https://github.com/qiwi/packasso/commit/9c9b5121a5bb7398a40b2ffee6ba7ba4ca616ee8)
+
 ## [@packasso/typedoc@2.2.1](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.typedoc.2.2.0-f0...2023.9.6-packasso.typedoc.2.2.1-f0) (2023-09-06)
 
 ### Fixes & improvements
