@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
+
 import {
   cmd,
   createCommand,
@@ -15,14 +18,8 @@ const install: Install = {
   data: (pkg) => [
     pkg.leaf || pkg.unit
       ? {
-          'typedoc.json': {
-            out: './target/docs',
-            entryPoints: ['./src/main/ts'],
-            excludeExternals: true,
-            excludePrivate: false,
-            hideGenerator: true,
-            readme: 'README.md',
-            theme: 'default',
+          '.releaserc.json': {
+            ghPages: `gh-pages target/docs ${pkg.relPath}`,
           },
         }
       : {},
@@ -32,13 +29,18 @@ const install: Install = {
 program(
   createCommandInstall(install),
   createCommandClean(['target/docs']),
-  createCommandPurge(['typedoc.json']),
+  createCommandPurge(['typedoc.*', '.config/typedoc.*', 'docs']),
   createCommand('build', 'build').action(async (options) => {
     const { cwd, preset } = options
     const { root, queuePackages } = await getTopo({ cwd }, preset)
+    const readme = join(cwd, 'README.md')
     await execute(
       cmd('typedoc', {
-        skipErrorChecking: 'a',
+        out: './target/docs',
+        entryPoints: ['./src/main/ts', './src/main/js'],
+        readme: existsSync(readme) ? readme : 'none',
+        skipErrorChecking: true,
+        hideGenerator: true,
         logLevel: 'Error',
       }),
       root.tree ? queuePackages : preset ? root.absPath : root,
