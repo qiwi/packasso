@@ -17,7 +17,7 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "typedoc": "0.24.7"
+    "typedoc": "0.25.1"
   },
   "type": "module",
   "exports": "./src/main/ts/index.ts",
