@@ -30,7 +30,7 @@ const install: Install = {
               types: ['node'],
               paths: getTypeScriptPaths(pkg, topo),
             },
-            include: ['./src/main/ts'],
+            include: ['./src/main/ts', './src/test/ts'],
             exclude: ['./node_modules'],
           },
         }
