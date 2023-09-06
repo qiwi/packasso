@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import { existsSync } from 'node:fs'
-import { join } from 'node:path'
-
 import {
   cmd,
   createCommand,
@@ -33,12 +30,10 @@ program(
   createCommand('build', 'build').action(async (options) => {
     const { cwd, preset } = options
     const { root, queuePackages } = await getTopo({ cwd }, preset)
-    const readme = join(cwd, 'README.md')
     await execute(
       cmd('typedoc', {
         out: './target/docs',
         entryPoints: ['./src/main/ts', './src/main/js'],
-        readme: existsSync(readme) ? readme : 'none',
         skipErrorChecking: true,
         hideGenerator: true,
         logLevel: 'Error',
