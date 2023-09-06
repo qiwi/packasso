@@ -1,3 +1,8 @@
+## [@packasso/jest-environment-jsdom@2.1.4](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.jest-environment-jsdom.2.1.3-f0...2023.9.6-packasso.jest-environment-jsdom.2.1.4-f0) (2023-09-06)
+
+### Fixes & improvements
+* fix: type exports include (#63) [fd5bfa9](https://github.com/qiwi/packasso/commit/fd5bfa9cc3a1a2fb98da1f597b94ec499dfde390)
+
 ## [@packasso/jest-environment-jsdom@2.1.3](https://github.com/qiwi/packasso/compare/2023.8.29-packasso.jest-environment-jsdom.2.1.2-f0...2023.9.1-packasso.jest-environment-jsdom.2.1.3-f0) (2023-09-01)
 
 ### Fixes & improvements
