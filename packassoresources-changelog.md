@@ -1,3 +1,11 @@
+## [@packasso/resources@2.1.10](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.resources.2.1.9-f0...2023.9.6-packasso.resources.2.1.10-f0) (2023-09-06)
+
+### Fixes & improvements
+* fix: type exports include (#63) [fd5bfa9](https://github.com/qiwi/packasso/commit/fd5bfa9cc3a1a2fb98da1f597b94ec499dfde390)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.5.1
+
 ## [@packasso/resources@2.1.9](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.resources.2.1.8-f0...2023.9.5-packasso.resources.2.1.9-f0) (2023-09-05)
 
 ### Dependencies
