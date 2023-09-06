@@ -84,6 +84,9 @@
     },
     {
       "path": "./packages/node-test/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/lib/tsconfig.cjs.json"
     }
   ]
 }

@@ -3269,7 +3269,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/jest@workspace:packages/jest":
+"@packasso/jest@workspace:*, @packasso/jest@workspace:packages/jest":
   version: 0.0.0-use.local
   resolution: "@packasso/jest@workspace:packages/jest"
   dependencies:
@@ -3282,6 +3282,25 @@ __metadata:
     istanbul-merge: 2.0.0
     jest: 29.5.0
     nyc: 15.1.0
+  languageName: unknown
+  linkType: soft
+
+"@packasso/lib@workspace:packages/lib":
+  version: 0.0.0-use.local
+  resolution: "@packasso/lib@workspace:packages/lib"
+  dependencies:
+    "@packasso/buildstamp": "workspace:*"
+    "@packasso/core": "workspace:*"
+    "@packasso/eslint": "workspace:*"
+    "@packasso/gitignore": "workspace:*"
+    "@packasso/jest": "workspace:*"
+    "@packasso/license": "workspace:*"
+    "@packasso/node-test": "workspace:*"
+    "@packasso/prettier": "workspace:*"
+    "@packasso/semrel": "workspace:*"
+    "@packasso/tsc": "workspace:*"
+    "@packasso/typedoc": "workspace:*"
+    "@packasso/yarn-audit": "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -3419,7 +3438,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/typedoc@workspace:packages/typedoc":
+"@packasso/typedoc@workspace:*, @packasso/typedoc@workspace:packages/typedoc":
   version: 0.0.0-use.local
   resolution: "@packasso/typedoc@workspace:packages/typedoc"
   dependencies:

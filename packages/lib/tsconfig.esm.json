@@ -1,0 +1,52 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "es2022",
+    "module": "es2022",
+    "rootDir": "./src/main/ts",
+    "outDir": "./target/esm",
+    "tsBuildInfoFile": "./target/esm/.tsbuildinfo"
+  },
+  "include": [
+    "./src/main/ts"
+  ],
+  "references": [
+    {
+      "path": "../core/tsconfig.esm.json"
+    },
+    {
+      "path": "../buildstamp/tsconfig.esm.json"
+    },
+    {
+      "path": "../eslint/tsconfig.esm.json"
+    },
+    {
+      "path": "../gitignore/tsconfig.esm.json"
+    },
+    {
+      "path": "../jest/tsconfig.esm.json"
+    },
+    {
+      "path": "../license/tsconfig.esm.json"
+    },
+    {
+      "path": "../node-test/tsconfig.esm.json"
+    },
+    {
+      "path": "../prettier/tsconfig.esm.json"
+    },
+    {
+      "path": "../semrel/tsconfig.esm.json"
+    },
+    {
+      "path": "../tsc/tsconfig.esm.json"
+    },
+    {
+      "path": "../typedoc/tsconfig.esm.json"
+    },
+    {
+      "path": "../yarn-audit/tsconfig.esm.json"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "importHelpers": false,
+    "baseUrl": "./",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@packasso/core": [
+        "../core/src/main/ts"
+      ],
+      "@packasso/buildstamp": [
+        "../buildstamp/src/main/ts"
+      ],
+      "@packasso/eslint": [
+        "../eslint/src/main/ts"
+      ],
+      "@packasso/gitignore": [
+        "../gitignore/src/main/ts"
+      ],
+      "@packasso/jest": [
+        "../jest/src/main/ts"
+      ],
+      "@packasso/license": [
+        "../license/src/main/ts"
+      ],
+      "@packasso/node-test": [
+        "../node-test/src/main/ts"
+      ],
+      "@packasso/prettier": [
+        "../prettier/src/main/ts"
+      ],
+      "@packasso/semrel": [
+        "../semrel/src/main/ts"
+      ],
+      "@packasso/tsc": [
+        "../tsc/src/main/ts"
+      ],
+      "@packasso/typedoc": [
+        "../typedoc/src/main/ts"
+      ],
+      "@packasso/yarn-audit": [
+        "../yarn-audit/src/main/ts"
+      ]
+    }
+  },
+  "include": [
+    "./src/main/ts",
+    "./src/test/ts"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}

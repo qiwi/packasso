@@ -1,0 +1,58 @@
+{
+  "name": "@packasso/lib",
+  "version": "2.0.0",
+  "description": "standard library preset",
+  "keywords": [
+    "preset",
+    "library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "dependencies": {
+    "@packasso/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@packasso/buildstamp": "workspace:*",
+    "@packasso/eslint": "workspace:*",
+    "@packasso/gitignore": "workspace:*",
+    "@packasso/jest": "workspace:*",
+    "@packasso/license": "workspace:*",
+    "@packasso/node-test": "workspace:*",
+    "@packasso/prettier": "workspace:*",
+    "@packasso/semrel": "workspace:*",
+    "@packasso/tsc": "workspace:*",
+    "@packasso/typedoc": "workspace:*",
+    "@packasso/yarn-audit": "workspace:*"
+  },
+  "type": "module",
+  "exports": "./src/main/ts/index.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "bin": {
+      "packasso-lib": "./target/esm/bin.mjs"
+    },
+    "type": "module",
+    "main": "./target/cjs/index.cjs",
+    "module": "./target/esm/index.mjs",
+    "types": "./target/esm/index.d.ts",
+    "exports": {
+      ".": {
+        "require": "./target/cjs/index.cjs",
+        "import": "./target/esm/index.mjs",
+        "types": "./target/esm/index.d.ts"
+      }
+    },
+    "files": [
+      "target/cjs/**/*",
+      "target/esm/**/*",
+      "target/buildstamp.json"
+    ],
+    "access": "public"
+  }
+}
