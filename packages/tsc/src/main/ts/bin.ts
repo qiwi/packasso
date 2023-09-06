@@ -16,6 +16,7 @@ const tsCjs = 'tsconfig.cjs.json'
 const tsEsm = 'tsconfig.esm.json'
 const targetCjs = 'target/cjs'
 const targetEsm = 'target/esm'
+const srcMainTs = 'src/main/ts'
 
 const install: Install = {
   data: (pkg, topo) => [
@@ -29,10 +30,11 @@ const install: Install = {
                 target: 'es5',
                 module: 'commonjs',
                 lib: ['esnext'],
-                rootDir: './src/main/ts',
+                rootDir: `./${srcMainTs}`,
                 outDir: `./${targetCjs}`,
                 tsBuildInfoFile: `./${targetCjs}/.tsbuildinfo`,
               },
+              include: [`./${srcMainTs}`],
             }
           : pkg.tree
           ? {
@@ -54,10 +56,11 @@ const install: Install = {
                 composite: true,
                 target: 'es2022',
                 module: 'es2022',
-                rootDir: './src/main/ts',
+                rootDir: `./${srcMainTs}`,
                 outDir: `./${targetEsm}`,
                 tsBuildInfoFile: `./${targetEsm}/.tsbuildinfo`,
               },
+              include: [`./${srcMainTs}`],
             }
           : pkg.tree
           ? {
@@ -74,8 +77,6 @@ const install: Install = {
       'package.json':
         pkg.leaf || pkg.unit
           ? {
-              type: 'module',
-              exports: './src/main/ts/index.ts',
               publishConfig: {
                 type: 'module',
                 main: `./${targetCjs}/index.cjs`,

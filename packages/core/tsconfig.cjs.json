@@ -11,5 +11,8 @@
     "outDir": "./target/cjs",
     "tsBuildInfoFile": "./target/cjs/.tsbuildinfo"
   },
+  "include": [
+    "./src/main/ts"
+  ],
   "references": []
 }
