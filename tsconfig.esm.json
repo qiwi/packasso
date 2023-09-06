@@ -84,6 +84,9 @@
     },
     {
       "path": "./packages/node-test/tsconfig.esm.json"
+    },
+    {
+      "path": "./packages/lib/tsconfig.esm.json"
     }
   ]
 }
