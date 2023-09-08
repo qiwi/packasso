@@ -1,3 +1,8 @@
+## [@packasso/typedoc@2.2.3](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.typedoc.2.2.2-f0...2023.9.8-packasso.typedoc.2.2.3-f0) (2023-09-08)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.6.0
+
 ## [@packasso/typedoc@2.2.2](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.typedoc.2.2.1-f0...2023.9.6-packasso.typedoc.2.2.2-f0) (2023-09-06)
 
 ### Fixes & improvements
