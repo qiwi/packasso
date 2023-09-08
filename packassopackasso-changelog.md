@@ -1,3 +1,18 @@
+## [@packasso/packasso@2.3.3](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.packasso.2.3.2-f0...2023.9.8-packasso.packasso.2.3.3-f0) (2023-09-08)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.6.0
+* perf: devDependencies @packasso/bin updated to 2.0.11
+* perf: devDependencies @packasso/buildstamp updated to 2.1.11
+* perf: devDependencies @packasso/eslint updated to 2.1.11
+* perf: devDependencies @packasso/gitignore updated to 2.1.11
+* perf: devDependencies @packasso/license updated to 2.1.11
+* perf: devDependencies @packasso/node-test updated to 2.2.0
+* perf: devDependencies @packasso/prettier updated to 2.1.11
+* perf: devDependencies @packasso/semrel updated to 2.1.11
+* perf: devDependencies @packasso/tsc updated to 2.1.11
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.11
+
 ## [@packasso/packasso@2.3.2](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.packasso.2.3.1-f0...2023.9.6-packasso.packasso.2.3.2-f0) (2023-09-06)
 
 ### Fixes & improvements
