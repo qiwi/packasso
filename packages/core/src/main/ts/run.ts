@@ -9,24 +9,23 @@ import { getPackageJson, getRoot } from './helpers'
 import { ExtraPackageEntry } from './types'
 
 export const execute: (
-  commands: string | string[],
+  commands:
+    | string
+    | string[]
+    | ((cwd: string) => string)
+    | ((cwd: string) => string)[],
   packages: (ExtraPackageEntry | string) | (ExtraPackageEntry | string)[],
   options?: Partial<ConcurrentlyOptions>,
 ) => Promise<unknown> = async (commands, packages, options) => {
   await concurrently(
     [commands].flat().flatMap((command) =>
-      [packages].flat().flatMap((pkg) =>
-        lodash.isString(pkg)
-          ? {
-              command,
-              cwd: pkg,
-            }
-          : {
-              command,
-              name: pkg.name,
-              cwd: pkg.absPath,
-            },
-      ),
+      [packages].flat().flatMap((pkg) => ({
+        command: lodash.isString(command)
+          ? command
+          : command(lodash.isString(pkg) ? pkg : pkg.absPath),
+        name: lodash.isString(pkg) ? undefined : pkg.name,
+        cwd: lodash.isString(pkg) ? pkg : pkg.absPath,
+      })),
     ),
     {
       prefixColors: ['auto'],
@@ -34,7 +33,6 @@ export const execute: (
         lodash.isString(packages) || lodash.every(packages, lodash.isString)
           ? 'none'
           : 'name',
-      // timings: true,
       ...options,
     },
   ).result
