@@ -41,7 +41,7 @@ const install: Install = {
                 '<rootDir>/target',
               ],
               coverageProvider: 'v8',
-              coverageReporters: ['json', 'lcov', 'html'],
+              coverageReporters: ['json', 'lcov'],
               snapshotResolver: '@packasso/jest-snapshot-resolver',
               moduleNameMapper: getJestModuleNameMapper(pkg, topo),
               transform: {
@@ -88,15 +88,16 @@ const createCommandTest = (
   name: string,
   description: string,
   types: TestType[],
-  runner?: string,
+  suffix = false,
 ) =>
   createCommand(name, description)
     .addOption(createOption('-u', 'update snapshots and screenshots'))
     .action(async (options) => {
       const { cwd, preset, u } = options
-      const { root } = await getTopo({ cwd }, preset)
-      for (const type of types) {
-        await execute(
+      const topo = await getTopo({ cwd }, preset)
+      const { root, queuePackages } = topo
+      await execute(
+        types.map((type) =>
           cmd(
             'jest',
             {
@@ -109,7 +110,7 @@ const createCommandTest = (
               testMatch: [
                 `'<rootDir>/src/test/[jt]s/**/*.(${testSuffixes[type].join(
                   '|',
-                )})${runner ? '.' : ''}${runner ?? ''}.[jt]s?(x)'`,
+                )})${suffix ? '.jest' : ''}.[jt]s?(x)'`,
               ],
             },
             {
@@ -117,22 +118,22 @@ const createCommandTest = (
               NODE_PATH: getNodeModules(),
             },
           ),
-          preset ? root.absPath : root,
-        )
-      }
-      await testCoverageMergeAndReport(testCoverageDir, root, preset)
+        ),
+        root.tree ? queuePackages : preset ? root.absPath : root,
+      )
+      await testCoverageMergeAndReport(topo, types, 'jest', preset)
     })
 
 program(
   createCommandInstall(install),
-  createCommandClean([`${testCoverageDir}-*-jest`, testCoverageDir]),
+  createCommandClean([`${testCoverageDir}-*`, testCoverageDir]),
   createCommandPurge(['coverage', 'jest.config.*', 'tsconfig.test.json']),
-  createCommandTest('jest:test', 'all tests', ['unit', 'it', 'e2e'], 'jest'),
-  createCommandTest('jest:test:unit', 'unit tests', ['unit'], 'jest'),
-  createCommandTest('jest:test:it', 'integration tests', ['it'], 'jest'),
-  createCommandTest('jest:test:e2e', 'end-to-end tests', ['e2e'], 'jest'),
   createCommandTest('test', 'all tests', ['unit', 'it', 'e2e']),
   createCommandTest('test:unit', 'unit tests', ['unit']),
   createCommandTest('test:it', 'integration tests', ['it']),
   createCommandTest('test:e2e', 'end-to-end tests', ['e2e']),
+  createCommandTest('jest:test', 'all tests', ['unit', 'it', 'e2e'], true),
+  createCommandTest('jest:test:unit', 'unit tests', ['unit'], true),
+  createCommandTest('jest:test:it', 'integration tests', ['it'], true),
+  createCommandTest('jest:test:e2e', 'end-to-end tests', ['e2e'], true),
 )
