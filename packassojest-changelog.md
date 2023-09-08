@@ -1,3 +1,11 @@
+## [@packasso/jest@2.5.0](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.jest.2.4.2-f0...2023.9.8-packasso.jest.2.5.0-f0) (2023-09-08)
+
+### Features
+* feat: coverage is everythere (#65) [16c0905](https://github.com/qiwi/packasso/commit/16c0905e6942b3c8141f833db8ae41de4791ea41)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.6.0
+
 ## [@packasso/jest@2.4.2](https://github.com/qiwi/packasso/compare/2023.9.5-packasso.jest.2.4.1-f0...2023.9.6-packasso.jest.2.4.2-f0) (2023-09-06)
 
 ### Fixes & improvements
