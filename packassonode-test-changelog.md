@@ -1,3 +1,8 @@
+## [@packasso/node-test@2.2.2](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.node-test.2.2.1-f0...2023.9.11-packasso.node-test.2.2.2-f0) (2023-09-11)
+
+### Fixes & improvements
+* fix: node-test tsconfig (#67) [258fd728](https://github.com/qiwi/packasso/commit/258fd72856025d8d678062afc18993d8eb5a65a3)
+
 ## [@packasso/node-test@2.2.1](https://github.com/qiwi/packasso/compare/2023.9.8-packasso.node-test.2.2.0-f0...2023.9.11-packasso.node-test.2.2.1-f0) (2023-09-11)
 
 ### Fixes & improvements
