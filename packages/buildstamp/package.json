@@ -17,7 +17,7 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "buildstamp": "3.3.0"
+    "buildstamp": "3.3.1"
   },
   "type": "module",
   "exports": "./src/main/ts/index.ts",
