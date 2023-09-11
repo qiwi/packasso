@@ -3,9 +3,11 @@ import {
   cmd,
   createCommand,
   createCommandClean,
+  createCommandInstall,
   createCommandPurge,
   execute,
   getTopo,
+  Install,
   program,
   testCoverageDir,
   testCoverageMergeAndReport,
@@ -13,6 +15,23 @@ import {
   TestType,
 } from '@packasso/core'
 import fg from 'fast-glob'
+import { findUpSync } from 'find-up'
+
+const tsConfigTest = 'tsconfig.node-test.json'
+
+const install: Install = {
+  data: (pkg) => [
+    pkg.tree
+      ? {
+          [tsConfigTest]: {
+            compilerOptions: {
+              experimentalDecorators: true,
+            },
+          },
+        }
+      : {},
+  ],
+}
 
 const createCommandTest = (
   name: string,
@@ -40,6 +59,7 @@ const createCommandTest = (
           _:
             files.length > 0
               ? cmd('tsx', {
+                  tsconfig: findUpSync(tsConfigTest, { cwd }),
                   test: true,
                   _: files,
                 })
@@ -52,6 +72,7 @@ const createCommandTest = (
   })
 
 program(
+  createCommandInstall(install),
   createCommandClean([`${testCoverageDir}-*`, testCoverageDir]),
   createCommandPurge(['coverage', 'tsconfig.test.json']),
   createCommandTest('test', 'all tests', ['unit', 'it', 'e2e']),
