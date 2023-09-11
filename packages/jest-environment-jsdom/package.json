@@ -15,7 +15,7 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
-    "jest-environment-jsdom": "29.5.0"
+    "jest-environment-jsdom": "29.6.4"
   },
   "type": "module",
   "exports": "./src/main/ts/index.ts",

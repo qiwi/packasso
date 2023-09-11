@@ -15,10 +15,10 @@
   },
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
-    "@nestjs/cli": "9.4.0",
+    "@nestjs/cli": "10.1.17",
     "@packasso/core": "workspace:*",
     "nestjs-esm-fix": "1.6.1",
-    "tsc-esm-fix": "2.20.14"
+    "tsc-esm-fix": "2.20.15"
   },
   "devDependencies": {
     "@packasso/tsconfig": "workspace:*"
