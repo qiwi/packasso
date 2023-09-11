@@ -1,3 +1,8 @@
+## [@packasso/lib@2.0.4](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.lib.2.0.3-f0...2023.9.11-packasso.lib.2.0.4-f0) (2023-09-11)
+
+### Fixes & improvements
+* fix: lib node-test install [3a2be6c2](https://github.com/qiwi/packasso/commit/3a2be6c21a37d6abd1e811a100138dda037b8820)
+
 ## [@packasso/lib@2.0.3](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.lib.2.0.2-f0...2023.9.11-packasso.lib.2.0.3-f0) (2023-09-11)
 
 ### Dependencies
