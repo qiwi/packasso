@@ -34,11 +34,10 @@ program(
     const { root, queuePackages } = await getTopo({ cwd }, preset)
     await execute(
       cmd('buildstamp', {
-        'out.path': buildStampJson,
-        'out.jsonSeparator': 'double-space',
+        o: buildStampJson,
         git: true,
-        'docker.imageTag': '${IMAGE_TAG:-none}',
-        'date.format': 'iso',
+        ci: true,
+        date: true,
       }),
       root.tree ? queuePackages : preset ? root.absPath : root,
     )
