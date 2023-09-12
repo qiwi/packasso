@@ -1,3 +1,12 @@
+## [@packasso/tsc@2.1.13](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.tsc.2.1.12-f0...2023.9.12-packasso.tsc.2.1.13-f0) (2023-09-12)
+
+### Fixes & improvements
+* fix: downlevel and helpers (#68) [de3731d8](https://github.com/qiwi/packasso/commit/de3731d88f7cbf0dddda90bf12bac8a25e0c5204)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.6.2
+* perf: devDependencies @packasso/tsconfig updated to 2.1.13
+
 ## [@packasso/tsc@2.1.12](https://github.com/qiwi/packasso/compare/2023.9.8-packasso.tsc.2.1.11-f0...2023.9.11-packasso.tsc.2.1.12-f0) (2023-09-11)
 
 ### Fixes & improvements
