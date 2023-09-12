@@ -1,3 +1,8 @@
+## [@packasso/jest-snapshot-resolver@2.1.5](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.jest-snapshot-resolver.2.1.4-f0...2023.9.12-packasso.jest-snapshot-resolver.2.1.5-f0) (2023-09-12)
+
+### Fixes & improvements
+* fix: downlevel and helpers (#68) [de3731d8](https://github.com/qiwi/packasso/commit/de3731d88f7cbf0dddda90bf12bac8a25e0c5204)
+
 ## [@packasso/jest-snapshot-resolver@2.1.4](https://github.com/qiwi/packasso/compare/2023.9.1-packasso.jest-snapshot-resolver.2.1.3-f0...2023.9.6-packasso.jest-snapshot-resolver.2.1.4-f0) (2023-09-06)
 
 ### Fixes & improvements
