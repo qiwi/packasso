@@ -25,7 +25,8 @@ const install: Install = {
               isolatedModules: true,
               resolveJsonModule: true,
               removeComments: true,
-              importHelpers: false,
+              downlevelIteration: true,
+              importHelpers: true,
               baseUrl: './',
               types: ['node'],
               paths: getTypeScriptPaths(pkg, topo),
@@ -36,7 +37,7 @@ const install: Install = {
         }
       : {},
   ],
-  deps: ['typescript'],
+  deps: ['typescript', 'tslib'],
 }
 
 program(createCommandInstall(install), createCommandPurge(['tsconfig.json']))
