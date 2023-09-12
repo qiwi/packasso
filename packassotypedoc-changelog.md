@@ -1,3 +1,11 @@
+## [@packasso/typedoc@2.2.5](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.typedoc.2.2.4-f0...2023.9.12-packasso.typedoc.2.2.5-f0) (2023-09-12)
+
+### Fixes & improvements
+* fix: downlevel and helpers (#68) [de3731d8](https://github.com/qiwi/packasso/commit/de3731d88f7cbf0dddda90bf12bac8a25e0c5204)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.6.2
+
 ## [@packasso/typedoc@2.2.4](https://github.com/qiwi/packasso/compare/2023.9.8-packasso.typedoc.2.2.3-f0...2023.9.11-packasso.typedoc.2.2.4-f0) (2023-09-11)
 
 ### Dependencies
