@@ -1,3 +1,13 @@
+## [@packasso/jest@2.5.2](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.jest.2.5.1-f0...2023.9.12-packasso.jest.2.5.2-f0) (2023-09-12)
+
+### Fixes & improvements
+* fix: downlevel and helpers (#68) [de3731d8](https://github.com/qiwi/packasso/commit/de3731d88f7cbf0dddda90bf12bac8a25e0c5204)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.6.2
+* perf: dependencies @packasso/jest-snapshot-resolver updated to 2.1.5
+* perf: dependencies @packasso/jest-svgr-transformer updated to 2.1.6
+
 ## [@packasso/jest@2.5.1](https://github.com/qiwi/packasso/compare/2023.9.8-packasso.jest.2.5.0-f0...2023.9.11-packasso.jest.2.5.1-f0) (2023-09-11)
 
 ### Fixes & improvements
