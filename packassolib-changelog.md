@@ -1,3 +1,22 @@
+## [@packasso/lib@2.0.5](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.lib.2.0.4-f0...2023.9.12-packasso.lib.2.0.5-f0) (2023-09-12)
+
+### Fixes & improvements
+* fix: downlevel and helpers (#68) [de3731d8](https://github.com/qiwi/packasso/commit/de3731d88f7cbf0dddda90bf12bac8a25e0c5204)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.6.2
+* perf: devDependencies @packasso/buildstamp updated to 2.1.13
+* perf: devDependencies @packasso/eslint updated to 2.1.13
+* perf: devDependencies @packasso/gitignore updated to 2.1.13
+* perf: devDependencies @packasso/jest updated to 2.5.2
+* perf: devDependencies @packasso/license updated to 2.1.13
+* perf: devDependencies @packasso/node-test updated to 2.2.3
+* perf: devDependencies @packasso/prettier updated to 2.1.13
+* perf: devDependencies @packasso/semrel updated to 2.1.13
+* perf: devDependencies @packasso/tsc updated to 2.1.13
+* perf: devDependencies @packasso/typedoc updated to 2.2.5
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.13
+
 ## [@packasso/lib@2.0.4](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.lib.2.0.3-f0...2023.9.11-packasso.lib.2.0.4-f0) (2023-09-11)
 
 ### Fixes & improvements
