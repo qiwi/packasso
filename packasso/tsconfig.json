@@ -12,7 +12,8 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "removeComments": true,
-    "importHelpers": false,
+    "downlevelIteration": true,
+    "importHelpers": true,
     "baseUrl": "./",
     "types": [
       "node"
