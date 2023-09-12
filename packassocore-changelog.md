@@ -1,3 +1,8 @@
+## [@packasso/core@2.6.2](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.core.2.6.1-f0...2023.9.12-packasso.core.2.6.2-f0) (2023-09-12)
+
+### Fixes & improvements
+* fix: downlevel and helpers (#68) [de3731d8](https://github.com/qiwi/packasso/commit/de3731d88f7cbf0dddda90bf12bac8a25e0c5204)
+
 ## [@packasso/core@2.6.1](https://github.com/qiwi/packasso/compare/2023.9.8-packasso.core.2.6.0-f0...2023.9.11-packasso.core.2.6.1-f0) (2023-09-11)
 
 ### Fixes & improvements
