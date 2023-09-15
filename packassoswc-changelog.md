@@ -1,3 +1,9 @@
+## [@packasso/swc@2.1.15](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.swc.2.1.14-f0...2023.9.15-packasso.swc.2.1.15-f0) (2023-09-15)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.7.0
+* perf: devDependencies @packasso/tsconfig updated to 2.1.14
+
 ## [@packasso/swc@2.1.14](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.swc.2.1.13-f0...2023.9.12-packasso.swc.2.1.14-f0) (2023-09-12)
 
 ### Fixes & improvements
