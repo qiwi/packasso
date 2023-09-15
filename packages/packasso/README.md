@@ -12,7 +12,8 @@ Packasso development presets:
 - [@packasso/buildstamp](https://www.npmjs.com/package/@packasso/buildstamp)
 - [@packasso/eslint](https://www.npmjs.com/package/@packasso/eslint)
 - [@packasso/prettier](https://www.npmjs.com/package/@packasso/prettier)
-- [@packasso/uvu](https://www.npmjs.com/package/@packasso/uvu)
+- [@packasso/node-test](https://www.npmjs.com/package/@packasso/node-test)
+- [@packasso/coverage](https://www.npmjs.com/package/@packasso/coverage)
 - [@packasso/semrel](https://www.npmjs.com/package/@packasso/semrel)
 
 ## Usage

@@ -28,6 +28,9 @@
       "@packasso/buildstamp": [
         "../buildstamp/src/main/ts"
       ],
+      "@packasso/coverage": [
+        "../coverage/src/main/ts"
+      ],
       "@packasso/eslint": [
         "../eslint/src/main/ts"
       ],

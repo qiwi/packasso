@@ -14,7 +14,7 @@ export const getConfig: (cwd: string) => Promise<string[]> = async (cwd) => {
 
 export const getTopo: (
   options?: ITopoOptions,
-  from?: string,
+  preset?: string,
 ) => Promise<ExtraTopoContext> = async (options, preset) => {
   const context = await topo(options)
   const packages = Object.fromEntries(

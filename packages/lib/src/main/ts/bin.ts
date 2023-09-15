@@ -11,6 +11,7 @@ const ESLINT = '@packasso/eslint'
 const PRETTIER = '@packasso/prettier'
 const NODE_TEST = '@packasso/node-test'
 const JEST = '@packasso/jest'
+const COVERAGE = '@packasso/coverage'
 const SEMREL = '@packasso/semrel'
 
 const modules: Record<string, string[]> = {
@@ -41,26 +42,20 @@ const modules: Record<string, string[]> = {
   build: [BUILD_STAMP, TSC, TYPEDOC],
   lint: [ESLINT, PRETTIER],
   audit: [YARN_AUDIT],
-  test: [NODE_TEST],
-  'test:unit': [NODE_TEST],
-  'test:it': [NODE_TEST],
-  'test:e2e': [NODE_TEST],
-  'jest:test': [JEST],
-  'jest:test:unit': [JEST],
-  'jest:test:it': [JEST],
-  'jest:test:e2e': [JEST],
+  test: [NODE_TEST, JEST, COVERAGE],
   release: [SEMREL],
-  clean: [BUILD_STAMP, TSC, NODE_TEST, JEST, TYPEDOC],
+  clean: [BUILD_STAMP, TSC, NODE_TEST, JEST, COVERAGE, TYPEDOC],
   purge: [
-    GIT_IGNORE,
-    LICENSE,
-    TSC,
-    ESLINT,
-    PRETTIER,
+    SEMREL,
+    COVERAGE,
     NODE_TEST,
     JEST,
+    TSC,
     TYPEDOC,
-    SEMREL,
+    ESLINT,
+    PRETTIER,
+    LICENSE,
+    GIT_IGNORE,
   ],
 }
 

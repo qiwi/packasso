@@ -15,6 +15,7 @@ Standard library preset:
 - [@packasso/prettier](https://www.npmjs.com/package/@packasso/prettier)
 - [@packasso/node-test](https://www.npmjs.com/package/@packasso/node-test)
 - [@packasso/jest](https://www.npmjs.com/package/@packasso/node-test)
+- [@packasso/coverage](https://www.npmjs.com/package/@packasso/coverage)
 - [@packasso/semrel](https://www.npmjs.com/package/@packasso/semrel)
 
 ## Usage

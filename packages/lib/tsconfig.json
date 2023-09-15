@@ -54,6 +54,9 @@
       ],
       "@packasso/yarn-audit": [
         "../yarn-audit/src/main/ts"
+      ],
+      "@packasso/coverage": [
+        "../coverage/src/main/ts"
       ]
     }
   },

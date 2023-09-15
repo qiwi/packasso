@@ -8,9 +8,6 @@
       "path": "./packasso/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/bin/tsconfig.cjs.json"
-    },
-    {
       "path": "./packages/buildstamp/tsconfig.cjs.json"
     },
     {
@@ -20,13 +17,16 @@
       "path": "./packages/cli/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/bin/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/core/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/eslint/tsconfig.cjs.json"
+      "path": "./packages/coverage/tsconfig.cjs.json"
     },
     {
-      "path": "./packages/jest/tsconfig.cjs.json"
+      "path": "./packages/eslint/tsconfig.cjs.json"
     },
     {
       "path": "./packages/gitignore/tsconfig.cjs.json"
@@ -35,13 +35,25 @@
       "path": "./packages/jest-environment-jsdom/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/jest/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/jest-snapshot-resolver/tsconfig.cjs.json"
     },
     {
       "path": "./packages/jest-svgr-transformer/tsconfig.cjs.json"
     },
     {
+      "path": "./packages/lib/tsconfig.cjs.json"
+    },
+    {
       "path": "./packages/license/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/nest/tsconfig.cjs.json"
+    },
+    {
+      "path": "./packages/node-test/tsconfig.cjs.json"
     },
     {
       "path": "./packages/packasso/tsconfig.cjs.json"
@@ -78,15 +90,6 @@
     },
     {
       "path": "./packages/yarn-audit/tsconfig.cjs.json"
-    },
-    {
-      "path": "./packages/nest/tsconfig.cjs.json"
-    },
-    {
-      "path": "./packages/node-test/tsconfig.cjs.json"
-    },
-    {
-      "path": "./packages/lib/tsconfig.cjs.json"
     }
   ]
 }
