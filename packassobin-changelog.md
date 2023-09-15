@@ -1,3 +1,8 @@
+## [@packasso/bin@2.0.14](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.bin.2.0.13-f0...2023.9.15-packasso.bin.2.0.14-f0) (2023-09-15)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.7.0
+
 ## [@packasso/bin@2.0.13](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.bin.2.0.12-f0...2023.9.12-packasso.bin.2.0.13-f0) (2023-09-12)
 
 ### Fixes & improvements
