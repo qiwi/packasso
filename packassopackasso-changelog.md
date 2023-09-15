@@ -1,3 +1,22 @@
+## [@packasso/packasso@2.4.0](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.packasso.2.3.6-f0...2023.9.15-packasso.packasso.2.4.0-f0) (2023-09-15)
+
+### Features
+* feat: one test command (#69) [95b35028](https://github.com/qiwi/packasso/commit/95b350282d6e46e352cd19d6e3f545a5ba031ec0)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.7.0
+* perf: devDependencies @packasso/bin updated to 2.0.14
+* perf: devDependencies @packasso/buildstamp updated to 2.1.14
+* perf: devDependencies @packasso/coverage updated to 2.0.0
+* perf: devDependencies @packasso/eslint updated to 2.1.14
+* perf: devDependencies @packasso/gitignore updated to 2.1.14
+* perf: devDependencies @packasso/license updated to 2.1.14
+* perf: devDependencies @packasso/node-test updated to 2.3.0
+* perf: devDependencies @packasso/prettier updated to 2.1.14
+* perf: devDependencies @packasso/semrel updated to 2.1.14
+* perf: devDependencies @packasso/tsc updated to 2.1.14
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.14
+
 ## [@packasso/packasso@2.3.6](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.packasso.2.3.5-f0...2023.9.12-packasso.packasso.2.3.6-f0) (2023-09-12)
 
 ### Fixes & improvements
