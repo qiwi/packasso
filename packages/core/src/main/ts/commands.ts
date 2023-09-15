@@ -15,11 +15,19 @@ export const createOption = commander.createOption
 export const createOptionCwd = () =>
   createOption('--cwd <cwd>', 'working directory')
     .default(cwd())
+    .argParser<string>(String)
     .makeOptionMandatory(true)
 
 export const createOptionPreset = () =>
   createOption('--preset <preset>', 'root preset')
     .default(getPackageJson().name)
+    .argParser<string>(String)
+    .makeOptionMandatory(false)
+
+export const createOptionIndex = () =>
+  createOption('--index <number>', 'preset index')
+    .default(0)
+    .argParser<number>(Number.parseInt)
     .makeOptionMandatory(false)
 
 export const createCommandInstall = (
@@ -81,6 +89,13 @@ export const createCommandClean = (files: string[], modules: string[] = []) =>
 export const createCommandPurge = (files: string[], modules: string[] = []) =>
   createCommandRimraf('purge', 'purge configs', files, modules)
 
+export const createCommandTest = () =>
+  createCommand('test', 'test')
+    .addOption(createOption('--unit', 'unit tests'))
+    .addOption(createOption('--it', 'integration tests'))
+    .addOption(createOption('--e2e', 'end-to-end tests'))
+    .addOption(createOption('-u', 'update snapshots and screenshots'))
+
 export const createCommandModules = (modules: Record<string, string[]>) =>
   Object.keys(modules).map((command) =>
     createCommand(command, command).action(async (options, context) => {
@@ -96,6 +111,7 @@ export const createCommand = (name: string, description: string) =>
     .allowUnknownOption()
     .addOption(createOptionCwd())
     .addOption(createOptionPreset())
+    .addOption(createOptionIndex())
 
 export const createProgram = () => {
   const { name, description = '' } = getPackageJson()

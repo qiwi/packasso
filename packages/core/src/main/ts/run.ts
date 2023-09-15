@@ -95,18 +95,19 @@ export const run = async (
   preset: string | undefined,
   context: Command<unknown[]>,
 ) => {
-  for (const module of modules) {
+  for (const index in modules) {
     try {
       await execute(
         cmd(
           [
-            npx(module, lodash.isString(pkg) ? pkg : pkg.absPath),
+            npx(modules[index], lodash.isString(pkg) ? pkg : pkg.absPath),
             command,
             ...lodash.difference(context.args, context.processedArgs),
           ].join(' '),
           {
             cwd: lodash.isString(pkg) ? pkg : pkg.absPath,
-            preset: preset || module,
+            preset: preset || modules[index],
+            index,
           },
         ),
         pkg,

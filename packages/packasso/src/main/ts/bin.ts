@@ -10,6 +10,7 @@ const BUILD_STAMP = '@packasso/buildstamp'
 const ESLINT = '@packasso/eslint'
 const PRETTIER = '@packasso/prettier'
 const NODE_TEST = '@packasso/node-test'
+const COVERAGE = '@packasso/coverage'
 const SEMREL = '@packasso/semrel'
 
 const modules: Record<string, string[]> = {
@@ -36,13 +37,19 @@ const modules: Record<string, string[]> = {
   build: [BUILD_STAMP, TSC],
   lint: [ESLINT, PRETTIER],
   audit: [YARN_AUDIT],
-  test: [NODE_TEST],
-  'test:unit': [NODE_TEST],
-  'test:it': [NODE_TEST],
-  'test:e2e': [NODE_TEST],
+  test: [NODE_TEST, COVERAGE],
   release: [SEMREL],
-  clean: [BUILD_STAMP, TSC, NODE_TEST],
-  purge: [GIT_IGNORE, LICENSE, TSC, ESLINT, PRETTIER, NODE_TEST, SEMREL],
+  clean: [BUILD_STAMP, TSC, NODE_TEST, COVERAGE],
+  purge: [
+    SEMREL,
+    NODE_TEST,
+    COVERAGE,
+    TSC,
+    LICENSE,
+    ESLINT,
+    PRETTIER,
+    GIT_IGNORE,
+  ],
 }
 
 program(createCommandModules(modules))

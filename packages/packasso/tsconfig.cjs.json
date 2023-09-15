@@ -25,6 +25,9 @@
       "path": "../buildstamp/tsconfig.cjs.json"
     },
     {
+      "path": "../coverage/tsconfig.cjs.json"
+    },
+    {
       "path": "../eslint/tsconfig.cjs.json"
     },
     {

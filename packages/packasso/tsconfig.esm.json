@@ -22,6 +22,9 @@
       "path": "../buildstamp/tsconfig.esm.json"
     },
     {
+      "path": "../coverage/tsconfig.esm.json"
+    },
+    {
       "path": "../eslint/tsconfig.esm.json"
     },
     {

@@ -1,9 +1,10 @@
 {
-  "name": "@packasso/uvu",
+  "name": "@packasso/coverage",
   "version": "2.0.0",
-  "description": "uvu",
+  "description": "coverage preset",
   "keywords": [
-    "uvu",
+    "coverage",
+    "test",
     "preset"
   ],
   "repository": {
@@ -16,17 +17,15 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "c8": "8.0.1",
-    "earljs": "0.2.3",
-    "tsm": "2.3.0",
-    "uvu": "0.5.6"
+    "istanbul-merge": "2.0.0",
+    "nyc": "15.1.0"
   },
   "type": "module",
   "exports": "./src/main/ts/index.ts",
   "license": "MIT",
   "publishConfig": {
     "bin": {
-      "packasso-uvu": "./target/esm/bin.mjs"
+      "packasso-coverage": "./target/esm/bin.mjs"
     },
     "type": "module",
     "main": "./target/cjs/index.cjs",

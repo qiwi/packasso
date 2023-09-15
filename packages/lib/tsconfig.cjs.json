@@ -50,6 +50,9 @@
     },
     {
       "path": "../yarn-audit/tsconfig.cjs.json"
+    },
+    {
+      "path": "../coverage/tsconfig.cjs.json"
     }
   ]
 }

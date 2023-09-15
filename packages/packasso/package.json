@@ -19,6 +19,7 @@
   "devDependencies": {
     "@packasso/bin": "workspace:*",
     "@packasso/buildstamp": "workspace:*",
+    "@packasso/coverage": "workspace:*",
     "@packasso/eslint": "workspace:*",
     "@packasso/gitignore": "workspace:*",
     "@packasso/license": "workspace:*",

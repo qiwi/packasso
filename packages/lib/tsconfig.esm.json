@@ -47,6 +47,9 @@
     },
     {
       "path": "../yarn-audit/tsconfig.esm.json"
+    },
+    {
+      "path": "../coverage/tsconfig.esm.json"
     }
   ]
 }

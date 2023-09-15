@@ -1,18 +1,17 @@
 #!/usr/bin/env node
 import {
   cmd,
-  createCommand,
   createCommandClean,
   createCommandInstall,
   createCommandPurge,
+  createCommandTest,
   execute,
   getTopo,
   Install,
   program,
   testCoverageDir,
-  testCoverageMergeAndReport,
   testSuffixes,
-  TestType,
+  testTypes,
 } from '@packasso/core'
 import fg from 'fast-glob'
 import { findUpSync } from 'find-up'
@@ -33,21 +32,22 @@ const install: Install = {
   ],
 }
 
-const createCommandTest = (
-  name: string,
-  description: string,
-  types: TestType[],
-  suffix = false,
-) =>
-  createCommand(name, description).action(async (options) => {
-    const { cwd, preset } = options
-    const topo = await getTopo({ cwd }, preset)
-    const { root, queuePackages } = topo
+program(
+  createCommandInstall(install),
+  createCommandClean([
+    `${testCoverageDir}-unit-node`,
+    `${testCoverageDir}-it-node`,
+    `${testCoverageDir}-e2e-node`,
+  ]),
+  createCommandPurge(['tsconfig.test.json']),
+  createCommandTest().action(async (options) => {
+    const { cwd, preset, index, unit, it, e2e } = options
+    const { root, queuePackages } = await getTopo({ cwd }, preset)
     await execute(
-      types.map((type) => (cwd) => {
+      testTypes(unit, it, e2e).map((type) => (cwd) => {
         const files = fg.globSync(
           `src/test/{ts,js}/**/*.{${testSuffixes[type].join(',')}}${
-            suffix ? '.node' : ''
+            index ? '.node' : ''
           }.{ts,js,tsx,jsx}`,
           { cwd },
         )
@@ -68,19 +68,5 @@ const createCommandTest = (
       }),
       root.tree ? queuePackages : preset ? root.absPath : root,
     )
-    await testCoverageMergeAndReport(topo, types, 'node', preset)
-  })
-
-program(
-  createCommandInstall(install),
-  createCommandClean([`${testCoverageDir}-*`, testCoverageDir]),
-  createCommandPurge(['coverage', 'tsconfig.test.json']),
-  createCommandTest('test', 'all tests', ['unit', 'it', 'e2e']),
-  createCommandTest('test:unit', 'unit tests', ['unit']),
-  createCommandTest('test:it', 'integration tests', ['it']),
-  createCommandTest('test:e2e', 'end-to-end tests', ['e2e']),
-  createCommandTest('node:test', 'all tests', ['unit', 'it', 'e2e'], true),
-  createCommandTest('node:test:unit', 'unit tests', ['unit'], true),
-  createCommandTest('node:test:it', 'integration tests', ['it'], true),
-  createCommandTest('node:test:e2e', 'end-to-end tests', ['e2e'], true),
+  }),
 )
