@@ -1,0 +1,11 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/jest",
+  "hash": "95b350282d6e46e352cd19d6e3f545a5ba031ec0",
+  "version": "2.6.0",
+  "dependencies": {
+    "@packasso/core": "2.7.0",
+    "@packasso/jest-snapshot-resolver": "2.1.5",
+    "@packasso/jest-svgr-transformer": "2.1.6"
+  }
+}
