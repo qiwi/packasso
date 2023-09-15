@@ -1,3 +1,11 @@
+## [@packasso/jest@2.6.0](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.jest.2.5.2-f0...2023.9.15-packasso.jest.2.6.0-f0) (2023-09-15)
+
+### Features
+* feat: one test command (#69) [95b35028](https://github.com/qiwi/packasso/commit/95b350282d6e46e352cd19d6e3f545a5ba031ec0)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.7.0
+
 ## [@packasso/jest@2.5.2](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.jest.2.5.1-f0...2023.9.12-packasso.jest.2.5.2-f0) (2023-09-12)
 
 ### Fixes & improvements
