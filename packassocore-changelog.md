@@ -1,3 +1,8 @@
+## [@packasso/core@2.7.0](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.core.2.6.2-f0...2023.9.15-packasso.core.2.7.0-f0) (2023-09-15)
+
+### Features
+* feat: one test command (#69) [95b35028](https://github.com/qiwi/packasso/commit/95b350282d6e46e352cd19d6e3f545a5ba031ec0)
+
 ## [@packasso/core@2.6.2](https://github.com/qiwi/packasso/compare/2023.9.11-packasso.core.2.6.1-f0...2023.9.12-packasso.core.2.6.2-f0) (2023-09-12)
 
 ### Fixes & improvements
