@@ -24,7 +24,7 @@ const install: Install = {
               emitDecoratorMetadata: true,
               isolatedModules: true,
               resolveJsonModule: true,
-              removeComments: true,
+              removeComments: false,
               downlevelIteration: true,
               importHelpers: true,
               baseUrl: './',
