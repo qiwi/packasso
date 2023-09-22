@@ -1,3 +1,8 @@
+## [@packasso/node-test@2.3.2](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.node-test.2.3.1-f0...2023.9.22-packasso.node-test.2.3.2-f0) (2023-09-22)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.8.0
+
 ## [@packasso/node-test@2.3.1](https://github.com/qiwi/packasso/compare/2023.9.15-packasso.node-test.2.3.0-f0...2023.9.22-packasso.node-test.2.3.1-f0) (2023-09-22)
 
 ### Fixes & improvements
