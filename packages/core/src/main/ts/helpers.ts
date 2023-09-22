@@ -1,6 +1,6 @@
 import { realpathSync } from 'node:fs'
 import { dirname, join, sep } from 'node:path'
-import { argv } from 'node:process'
+import { argv, env } from 'node:process'
 
 import { gitRoot } from '@antongolub/git-root'
 import { findUpSync } from 'find-up'
@@ -8,6 +8,13 @@ import { NormalizedPackageJson, readPackageUpSync } from 'read-pkg-up'
 
 import { getDependencies } from './topo'
 import { ExtraPackageEntry, ExtraTopoContext } from './types'
+
+export const feature = (feature: string) => {
+  return (env.PACKASSO || '')
+    .toLowerCase()
+    .split(':')
+    .includes(feature.toLowerCase())
+}
 
 export const getPackageJson: () => NormalizedPackageJson = () => {
   const pkg = readPackageUpSync({
