@@ -1,0 +1,23 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/lib",
+  "hash": "8a0e13527b55d491371939d438a628530f3a53c8",
+  "version": "2.1.1",
+  "dependencies": {
+    "@packasso/core": "2.7.1"
+  },
+  "devDependencies": {
+    "@packasso/buildstamp": "2.1.15",
+    "@packasso/coverage": "2.0.1",
+    "@packasso/eslint": "2.1.15",
+    "@packasso/gitignore": "2.1.15",
+    "@packasso/jest": "2.6.1",
+    "@packasso/license": "2.1.15",
+    "@packasso/node-test": "2.3.1",
+    "@packasso/prettier": "2.1.15",
+    "@packasso/semrel": "2.1.15",
+    "@packasso/tsc": "2.1.15",
+    "@packasso/typedoc": "2.2.7",
+    "@packasso/yarn-audit": "2.1.15"
+  }
+}
