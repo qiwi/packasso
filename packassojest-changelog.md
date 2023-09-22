@@ -1,3 +1,13 @@
+## [@packasso/jest@2.6.1](https://github.com/qiwi/packasso/compare/2023.9.15-packasso.jest.2.6.0-f0...2023.9.22-packasso.jest.2.6.1-f0) (2023-09-22)
+
+### Fixes & improvements
+* fix: keep comments (#70) [8a0e1352](https://github.com/qiwi/packasso/commit/8a0e13527b55d491371939d438a628530f3a53c8)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.7.1
+* perf: dependencies @packasso/jest-snapshot-resolver updated to 2.1.6
+* perf: dependencies @packasso/jest-svgr-transformer updated to 2.1.7
+
 ## [@packasso/jest@2.6.0](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.jest.2.5.2-f0...2023.9.15-packasso.jest.2.6.0-f0) (2023-09-15)
 
 ### Features
