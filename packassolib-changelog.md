@@ -1,3 +1,8 @@
+## [@packasso/lib@2.2.0](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.lib.2.1.2-f0...2023.9.22-packasso.lib.2.2.0-f0) (2023-09-22)
+
+### Features
+* feat: default node test is a feature (#72) [975a786b](https://github.com/qiwi/packasso/commit/975a786b3e55a96e6b794bb2c316aefa3508f785)
+
 ## [@packasso/lib@2.1.2](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.lib.2.1.1-f0...2023.9.22-packasso.lib.2.1.2-f0) (2023-09-22)
 
 ### Dependencies
