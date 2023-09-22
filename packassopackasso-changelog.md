@@ -1,3 +1,22 @@
+## [@packasso/packasso@2.4.1](https://github.com/qiwi/packasso/compare/2023.9.15-packasso.packasso.2.4.0-f0...2023.9.22-packasso.packasso.2.4.1-f0) (2023-09-22)
+
+### Fixes & improvements
+* fix: keep comments (#70) [8a0e1352](https://github.com/qiwi/packasso/commit/8a0e13527b55d491371939d438a628530f3a53c8)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.7.1
+* perf: devDependencies @packasso/bin updated to 2.0.15
+* perf: devDependencies @packasso/buildstamp updated to 2.1.15
+* perf: devDependencies @packasso/coverage updated to 2.0.1
+* perf: devDependencies @packasso/eslint updated to 2.1.15
+* perf: devDependencies @packasso/gitignore updated to 2.1.15
+* perf: devDependencies @packasso/license updated to 2.1.15
+* perf: devDependencies @packasso/node-test updated to 2.3.1
+* perf: devDependencies @packasso/prettier updated to 2.1.15
+* perf: devDependencies @packasso/semrel updated to 2.1.15
+* perf: devDependencies @packasso/tsc updated to 2.1.15
+* perf: devDependencies @packasso/yarn-audit updated to 2.1.15
+
 ## [@packasso/packasso@2.4.0](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.packasso.2.3.6-f0...2023.9.15-packasso.packasso.2.4.0-f0) (2023-09-15)
 
 ### Features
