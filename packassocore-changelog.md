@@ -1,3 +1,8 @@
+## [@packasso/core@2.8.0](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.core.2.7.1-f0...2023.9.22-packasso.core.2.8.0-f0) (2023-09-22)
+
+### Features
+* feat: simple feature toggle (#71) [39726bd2](https://github.com/qiwi/packasso/commit/39726bd2c34b64cb911c41c0ef249168fbd9f60e)
+
 ## [@packasso/core@2.7.1](https://github.com/qiwi/packasso/compare/2023.9.15-packasso.core.2.7.0-f0...2023.9.22-packasso.core.2.7.1-f0) (2023-09-22)
 
 ### Fixes & improvements
