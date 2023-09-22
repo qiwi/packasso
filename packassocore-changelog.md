@@ -1,3 +1,8 @@
+## [@packasso/core@2.7.1](https://github.com/qiwi/packasso/compare/2023.9.15-packasso.core.2.7.0-f0...2023.9.22-packasso.core.2.7.1-f0) (2023-09-22)
+
+### Fixes & improvements
+* fix: keep comments (#70) [8a0e1352](https://github.com/qiwi/packasso/commit/8a0e13527b55d491371939d438a628530f3a53c8)
+
 ## [@packasso/core@2.7.0](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.core.2.6.2-f0...2023.9.15-packasso.core.2.7.0-f0) (2023-09-15)
 
 ### Features
