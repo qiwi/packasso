@@ -1,3 +1,8 @@
+## [@packasso/jest-snapshot-resolver@2.1.6](https://github.com/qiwi/packasso/compare/2023.9.12-packasso.jest-snapshot-resolver.2.1.5-f0...2023.9.22-packasso.jest-snapshot-resolver.2.1.6-f0) (2023-09-22)
+
+### Fixes & improvements
+* fix: keep comments (#70) [8a0e1352](https://github.com/qiwi/packasso/commit/8a0e13527b55d491371939d438a628530f3a53c8)
+
 ## [@packasso/jest-snapshot-resolver@2.1.5](https://github.com/qiwi/packasso/compare/2023.9.6-packasso.jest-snapshot-resolver.2.1.4-f0...2023.9.12-packasso.jest-snapshot-resolver.2.1.5-f0) (2023-09-12)
 
 ### Fixes & improvements
