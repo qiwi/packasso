@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { createCommandModules, program } from '@packasso/core'
+import { createCommandModules, feature, program } from '@packasso/core'
 
 const GIT_IGNORE = '@packasso/gitignore'
 const LICENSE = '@packasso/license'
@@ -42,7 +42,9 @@ const modules: Record<string, string[]> = {
   build: [BUILD_STAMP, TSC, TYPEDOC],
   lint: [ESLINT, PRETTIER],
   audit: [YARN_AUDIT],
-  test: [NODE_TEST, JEST, COVERAGE],
+  test: feature('node_test')
+    ? [NODE_TEST, JEST, COVERAGE]
+    : [JEST, NODE_TEST, COVERAGE],
   release: [SEMREL],
   clean: [BUILD_STAMP, TSC, NODE_TEST, JEST, COVERAGE, TYPEDOC],
   purge: [
