@@ -1,3 +1,8 @@
+## [@packasso/nest@2.0.14](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.nest.2.0.13-f0...2023.9.26-packasso.nest.2.0.14-f0) (2023-09-26)
+
+### Dependencies
+* perf: devDependencies @packasso/tsconfig updated to 2.1.17
+
 ## [@packasso/nest@2.0.13](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.nest.2.0.12-f0...2023.9.22-packasso.nest.2.0.13-f0) (2023-09-22)
 
 ### Dependencies
