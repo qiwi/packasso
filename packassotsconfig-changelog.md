@@ -1,3 +1,8 @@
+## [@packasso/tsconfig@2.1.17](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.tsconfig.2.1.16-f0...2023.9.26-packasso.tsconfig.2.1.17-f0) (2023-09-26)
+
+### Fixes & improvements
+* fix: module and exports (#73) [41aecfc2](https://github.com/qiwi/packasso/commit/41aecfc2024358235078bdce214047114d013cb8)
+
 ## [@packasso/tsconfig@2.1.16](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.tsconfig.2.1.15-f0...2023.9.22-packasso.tsconfig.2.1.16-f0) (2023-09-22)
 
 ### Dependencies
