@@ -11,6 +11,10 @@ const install: Install = {
   data: (pkg, topo) => [
     pkg.leaf || pkg.unit
       ? {
+          'package.json': {
+            type: 'module',
+            exports: './src/main/ts/index.ts',
+          },
           'tsconfig.json': {
             compilerOptions: {
               module: 'es2022',
