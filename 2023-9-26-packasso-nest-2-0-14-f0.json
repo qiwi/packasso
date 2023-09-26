@@ -1,0 +1,12 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/nest",
+  "hash": "41aecfc2024358235078bdce214047114d013cb8",
+  "version": "2.0.14",
+  "dependencies": {
+    "@packasso/core": "2.8.0"
+  },
+  "devDependencies": {
+    "@packasso/tsconfig": "2.1.17"
+  }
+}
