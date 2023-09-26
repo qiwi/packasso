@@ -1,3 +1,8 @@
+## [@packasso/lib@2.2.1](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.lib.2.2.0-f0...2023.9.26-packasso.lib.2.2.1-f0) (2023-09-26)
+
+### Dependencies
+* perf: devDependencies @packasso/tsc updated to 2.1.17
+
 ## [@packasso/lib@2.2.0](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.lib.2.1.2-f0...2023.9.22-packasso.lib.2.2.0-f0) (2023-09-22)
 
 ### Features
