@@ -1,3 +1,8 @@
+## [@packasso/coverage@2.0.3](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.coverage.2.0.2-f0...2023.10.2-packasso.coverage.2.0.3-f0) (2023-10-02)
+
+### Fixes & improvements
+* fix: coverage merge (#74) [aad1995c](https://github.com/qiwi/packasso/commit/aad1995c226c7970d3cd73944ea2a294e4f6ed6b)
+
 ## [@packasso/coverage@2.0.2](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.coverage.2.0.1-f0...2023.9.22-packasso.coverage.2.0.2-f0) (2023-09-22)
 
 ### Dependencies
