@@ -28,18 +28,19 @@ program(
     const { cwd, preset } = options
     const { root, queuePackages } = await getTopo({ cwd }, preset)
     await execute(
-      [
-        ...types.map((type) =>
-          cmd(mergeCmd, {
-            _: `${testCoverageDir}-${type}-*/${coverageJson}`,
-            out: `${testCoverageDir}-${type}/${coverageJson}`,
-          }),
-        ),
+      types.map((type) =>
         cmd(mergeCmd, {
-          _: `${testCoverageDir}-*/${coverageJson}`,
-          out: `${testCoverageDir}/${coverageJson}`,
+          _: `'${testCoverageDir}-${type}-*/${coverageJson}'`,
+          out: `${testCoverageDir}-${type}/${coverageJson}`,
         }),
-      ],
+      ),
+      root.tree ? queuePackages : preset ? root.absPath : root,
+    )
+    await execute(
+      cmd(mergeCmd, {
+        _: types.map((type) => `${testCoverageDir}-${type}/${coverageJson}`),
+        out: `${testCoverageDir}/${coverageJson}`,
+      }),
       root.tree ? queuePackages : preset ? root.absPath : root,
     )
     await execute(
