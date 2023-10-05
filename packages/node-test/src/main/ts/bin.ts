@@ -46,9 +46,11 @@ program(
     await execute(
       testTypes(unit, it, e2e).map((type) => (cwd) => {
         const files = fg.globSync(
-          `src/test/{ts,js}/**/*.{${testSuffixes[type].join(',')}}${
-            index ? '.node' : ''
-          }.{ts,js,tsx,jsx}`,
+          `src/test/{ts,js}/**/*.${
+            testSuffixes[type].length > 1 ? '{' : ''
+          }${testSuffixes[type].join(',')}${
+            testSuffixes[type].length > 1 ? '}' : ''
+          }${index ? '.node' : ''}.{ts,js,tsx,jsx}`,
           { cwd },
         )
         return cmd('c8', {
