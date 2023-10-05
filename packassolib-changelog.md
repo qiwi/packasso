@@ -1,3 +1,8 @@
+## [@packasso/lib@2.2.4](https://github.com/qiwi/packasso/compare/2023.10.5-packasso.lib.2.2.3-f0...2023.10.5-packasso.lib.2.2.4-f0) (2023-10-05)
+
+### Dependencies
+* perf: devDependencies @packasso/node-test updated to 2.3.3
+
 ## [@packasso/lib@2.2.3](https://github.com/qiwi/packasso/compare/2023.10.2-packasso.lib.2.2.2-f0...2023.10.5-packasso.lib.2.2.3-f0) (2023-10-05)
 
 ### Fixes & improvements
