@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@packasso/node-test",
+  "hash": "b191748873fad854dffe4516d0bc75bdcd5c953a",
+  "version": "2.3.3",
+  "dependencies": {
+    "@packasso/core": "2.8.0"
+  }
+}
