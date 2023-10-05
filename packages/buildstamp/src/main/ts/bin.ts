@@ -4,6 +4,7 @@ import {
   createCommand,
   createCommandClean,
   createCommandInstall,
+  createCommandPurge,
   execute,
   getTopo,
   Install,
@@ -29,6 +30,7 @@ const install: Install = {
 program(
   createCommandInstall(install),
   createCommandClean([buildStampJson]),
+  createCommandPurge(['buildstamp.json']),
   createCommand('build', 'build').action(async (options) => {
     const { cwd, preset } = options
     const { root, queuePackages } = await getTopo({ cwd }, preset)

@@ -54,6 +54,7 @@ const modules: Record<string, string[]> = {
     JEST,
     TSC,
     TYPEDOC,
+    BUILD_STAMP,
     ESLINT,
     PRETTIER,
     LICENSE,
