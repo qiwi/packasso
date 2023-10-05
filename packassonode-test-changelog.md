@@ -1,3 +1,8 @@
+## [@packasso/node-test@2.3.3](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.node-test.2.3.2-f0...2023.10.5-packasso.node-test.2.3.3-f0) (2023-10-05)
+
+### Fixes & improvements
+* fix: node test glob (#76) [b1917488](https://github.com/qiwi/packasso/commit/b191748873fad854dffe4516d0bc75bdcd5c953a)
+
 ## [@packasso/node-test@2.3.2](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.node-test.2.3.1-f0...2023.9.22-packasso.node-test.2.3.2-f0) (2023-09-22)
 
 ### Dependencies
