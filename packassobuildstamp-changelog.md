@@ -1,3 +1,8 @@
+## [@packasso/buildstamp@2.1.17](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.buildstamp.2.1.16-f0...2023.10.5-packasso.buildstamp.2.1.17-f0) (2023-10-05)
+
+### Fixes & improvements
+* fix: buildstamp purge (#75) [bcd710e2](https://github.com/qiwi/packasso/commit/bcd710e23355925b6b4e40724c5f2c3eb99f9577)
+
 ## [@packasso/buildstamp@2.1.16](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.buildstamp.2.1.15-f0...2023.9.22-packasso.buildstamp.2.1.16-f0) (2023-09-22)
 
 ### Dependencies
