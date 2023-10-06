@@ -1,3 +1,8 @@
+## [@packasso/packasso@2.4.7](https://github.com/qiwi/packasso/compare/2023.10.5-packasso.packasso.2.4.6-f0...2023.10.6-packasso.packasso.2.4.7-f0) (2023-10-06)
+
+### Dependencies
+* perf: devDependencies @packasso/buildstamp updated to 2.1.18
+
 ## [@packasso/packasso@2.4.6](https://github.com/qiwi/packasso/compare/2023.10.5-packasso.packasso.2.4.5-f0...2023.10.5-packasso.packasso.2.4.6-f0) (2023-10-05)
 
 ### Dependencies
