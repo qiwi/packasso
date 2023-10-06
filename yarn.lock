@@ -3071,7 +3071,7 @@ __metadata:
   resolution: "@packasso/buildstamp@workspace:packages/buildstamp"
   dependencies:
     "@packasso/core": "workspace:*"
-    buildstamp: 3.3.1
+    buildstamp: 3.3.2
   languageName: unknown
   linkType: soft
 
@@ -5886,14 +5886,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buildstamp@npm:3.3.1":
-  version: 3.3.1
-  resolution: "buildstamp@npm:3.3.1"
+"buildstamp@npm:3.3.2":
+  version: 3.3.2
+  resolution: "buildstamp@npm:3.3.2"
   dependencies:
     minimist: ^1.2.8
   bin:
     buildstamp: target/esm/cli.mjs
-  checksum: 7ae3e18f20e1fe122544254c2c6b8d1cd99a1b5646debd81848e8991d2a362107e896029575815961a1d8b61924dce27e117dae8b748d7adda60df111af0d6e1
+  checksum: 25eb731d143af27749a968866a26adc78ab12f9b5bc3040a4606b3873aade4eb2d3a556e39cfce3bdb166d58829a9ca9b87297365857766343b7990116cd3a47
   languageName: node
   linkType: hard
 
