@@ -1,3 +1,8 @@
+## [@packasso/buildstamp@2.1.18](https://github.com/qiwi/packasso/compare/2023.10.5-packasso.buildstamp.2.1.17-f0...2023.10.6-packasso.buildstamp.2.1.18-f0) (2023-10-06)
+
+### Fixes & improvements
+* perf: up buildstamp (#77) [091c65e8](https://github.com/qiwi/packasso/commit/091c65e87017ee3e010d15d025838bb12feddf63)
+
 ## [@packasso/buildstamp@2.1.17](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.buildstamp.2.1.16-f0...2023.10.5-packasso.buildstamp.2.1.17-f0) (2023-10-05)
 
 ### Fixes & improvements
