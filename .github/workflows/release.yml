@@ -19,6 +19,8 @@ jobs:
           cache: 'yarn'
       - name: Install
         run: yarn install --immutable
+      - name: Install
+        run: yarn packasso install
       - name: Build
         run: yarn packasso build
       - name: Test

@@ -1,4 +1,4 @@
-import { cwd, exit } from 'node:process'
+import { cwd, env, exit } from 'node:process'
 
 import * as commander from '@commander-js/extra-typings'
 import lodash from 'lodash'
@@ -41,11 +41,13 @@ export const createCommandInstall = (
     await run(cwd, modules, 'install', preset, context)
     const { data = [], deps = [] } = install
     for (const pkg of pkgs) {
-      await installData(
-        lodash.isFunction(data) ? data(pkg, topo) : data,
-        pkg.absPath,
-        false,
-      )
+      if (!env.CI) {
+        await installData(
+          lodash.isFunction(data) ? data(pkg, topo) : data,
+          pkg.absPath,
+          false,
+        )
+      }
       if (!pkg.leaf) {
         await installDeps(deps, pkg.absPath, false)
       }
