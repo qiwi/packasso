@@ -1,3 +1,8 @@
+## [@packasso/coverage@2.0.4](https://github.com/qiwi/packasso/compare/2023.10.2-packasso.coverage.2.0.3-f0...2023.10.9-packasso.coverage.2.0.4-f0) (2023-10-09)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.8.1
+
 ## [@packasso/coverage@2.0.3](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.coverage.2.0.2-f0...2023.10.2-packasso.coverage.2.0.3-f0) (2023-10-02)
 
 ### Fixes & improvements
