@@ -1,3 +1,8 @@
+## [@packasso/core@2.8.1](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.core.2.8.0-f0...2023.10.9-packasso.core.2.8.1-f0) (2023-10-09)
+
+### Fixes & improvements
+* fix: ci install deps only (#78) [6715bf39](https://github.com/qiwi/packasso/commit/6715bf39f532f531bd53df8347289c4cdec9f3c7)
+
 ## [@packasso/core@2.8.0](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.core.2.7.1-f0...2023.9.22-packasso.core.2.8.0-f0) (2023-09-22)
 
 ### Features
