@@ -1,3 +1,8 @@
+## [@packasso/buildstamp@2.1.19](https://github.com/qiwi/packasso/compare/2023.10.6-packasso.buildstamp.2.1.18-f0...2023.10.9-packasso.buildstamp.2.1.19-f0) (2023-10-09)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.8.1
+
 ## [@packasso/buildstamp@2.1.18](https://github.com/qiwi/packasso/compare/2023.10.5-packasso.buildstamp.2.1.17-f0...2023.10.6-packasso.buildstamp.2.1.18-f0) (2023-10-06)
 
 ### Fixes & improvements
