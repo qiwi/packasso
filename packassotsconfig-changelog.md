@@ -1,3 +1,8 @@
+## [@packasso/tsconfig@2.1.18](https://github.com/qiwi/packasso/compare/2023.9.26-packasso.tsconfig.2.1.17-f0...2023.10.9-packasso.tsconfig.2.1.18-f0) (2023-10-09)
+
+### Dependencies
+* perf: dependencies @packasso/core updated to 2.8.1
+
 ## [@packasso/tsconfig@2.1.17](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.tsconfig.2.1.16-f0...2023.9.26-packasso.tsconfig.2.1.17-f0) (2023-09-26)
 
 ### Fixes & improvements
