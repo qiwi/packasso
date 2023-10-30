@@ -4,6 +4,8 @@ import { createCommandModules, feature, program } from '@packasso/core'
 const GIT_IGNORE = '@packasso/gitignore'
 const LICENSE = '@packasso/license'
 const YARN_AUDIT = '@packasso/yarn-audit'
+const BIN = '@packasso/bin'
+const RESOURCES = '@packasso/resources'
 const TSC = '@packasso/tsc'
 const BUILD_STAMP = '@packasso/buildstamp'
 const TYPEDOC = '@packasso/typedoc'
@@ -18,6 +20,8 @@ const modules: Record<string, string[]> = {
   install: [
     GIT_IGNORE,
     LICENSE,
+    BIN,
+    RESOURCES,
     TSC,
     BUILD_STAMP,
     TYPEDOC,
@@ -36,17 +40,19 @@ const modules: Record<string, string[]> = {
     TYPEDOC,
     BUILD_STAMP,
     TSC,
+    RESOURCES,
+    BIN,
     LICENSE,
     GIT_IGNORE,
   ],
-  build: [BUILD_STAMP, TSC, TYPEDOC],
+  build: [BUILD_STAMP, RESOURCES, TSC, TYPEDOC],
   lint: [ESLINT, PRETTIER],
   audit: [YARN_AUDIT],
   test: feature('node_test')
     ? [NODE_TEST, JEST, COVERAGE]
     : [JEST, NODE_TEST, COVERAGE],
   release: [SEMREL],
-  clean: [BUILD_STAMP, TSC, NODE_TEST, JEST, COVERAGE, TYPEDOC],
+  clean: [BUILD_STAMP, RESOURCES, TSC, NODE_TEST, JEST, COVERAGE, TYPEDOC],
   purge: [
     SEMREL,
     COVERAGE,

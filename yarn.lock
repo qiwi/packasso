@@ -3171,6 +3171,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packasso/lib@workspace:packages/lib"
   dependencies:
+    "@packasso/bin": "workspace:*"
     "@packasso/buildstamp": "workspace:*"
     "@packasso/core": "workspace:*"
     "@packasso/coverage": "workspace:*"
@@ -3180,6 +3181,7 @@ __metadata:
     "@packasso/license": "workspace:*"
     "@packasso/node-test": "workspace:*"
     "@packasso/prettier": "workspace:*"
+    "@packasso/resources": "workspace:*"
     "@packasso/semrel": "workspace:*"
     "@packasso/tsc": "workspace:*"
     "@packasso/typedoc": "workspace:*"
@@ -3268,7 +3270,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@packasso/resources@workspace:packages/resources":
+"@packasso/resources@workspace:*, @packasso/resources@workspace:packages/resources":
   version: 0.0.0-use.local
   resolution: "@packasso/resources@workspace:packages/resources"
   dependencies:

@@ -18,6 +18,7 @@
     "@packasso/core": "workspace:*"
   },
   "devDependencies": {
+    "@packasso/bin": "workspace:*",
     "@packasso/buildstamp": "workspace:*",
     "@packasso/coverage": "workspace:*",
     "@packasso/eslint": "workspace:*",
@@ -26,6 +27,7 @@
     "@packasso/license": "workspace:*",
     "@packasso/node-test": "workspace:*",
     "@packasso/prettier": "workspace:*",
+    "@packasso/resources": "workspace:*",
     "@packasso/semrel": "workspace:*",
     "@packasso/tsc": "workspace:*",
     "@packasso/typedoc": "workspace:*",
