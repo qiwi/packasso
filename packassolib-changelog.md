@@ -1,3 +1,12 @@
+## [@packasso/lib@2.2.7](https://github.com/qiwi/packasso/compare/2023.10.9-packasso.lib.2.2.6-f0...2023.10.30-packasso.lib.2.2.7-f0) (2023-10-30)
+
+### Fixes & improvements
+* fix: add bin and resources to lib [a5ab1ff6](https://github.com/qiwi/packasso/commit/a5ab1ff6a0f0d7349562417d21ae3580447f5b88)
+
+### Dependencies
+* perf: devDependencies @packasso/bin updated to 2.0.18
+* perf: devDependencies @packasso/resources updated to 2.1.17
+
 ## [@packasso/lib@2.2.6](https://github.com/qiwi/packasso/compare/2023.10.6-packasso.lib.2.2.5-f0...2023.10.9-packasso.lib.2.2.6-f0) (2023-10-09)
 
 ### Dependencies
