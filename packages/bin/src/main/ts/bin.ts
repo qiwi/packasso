@@ -6,7 +6,7 @@ import { createCommandInstall, Install, program } from '@packasso/core'
 
 const install: Install = {
   data: (pkg) => [
-    pkg.leaf && existsSync(resolve(pkg.absPath, 'src', 'main', 'ts', 'bin.ts'))
+    !pkg.tree && existsSync(resolve(pkg.absPath, 'src', 'main', 'ts', 'bin.ts'))
       ? {
           'package.json': {
             publishConfig: {
