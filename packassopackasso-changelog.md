@@ -1,3 +1,8 @@
+## [@packasso/packasso@2.4.9](https://github.com/qiwi/packasso/compare/2023.10.9-packasso.packasso.2.4.8-f0...2023.10.30-packasso.packasso.2.4.9-f0) (2023-10-30)
+
+### Dependencies
+* perf: devDependencies @packasso/bin updated to 2.0.18
+
 ## [@packasso/packasso@2.4.8](https://github.com/qiwi/packasso/compare/2023.10.6-packasso.packasso.2.4.7-f0...2023.10.9-packasso.packasso.2.4.8-f0) (2023-10-09)
 
 ### Dependencies
