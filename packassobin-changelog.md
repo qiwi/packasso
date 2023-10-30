@@ -1,3 +1,8 @@
+## [@packasso/bin@2.0.18](https://github.com/qiwi/packasso/compare/2023.10.9-packasso.bin.2.0.17-f0...2023.10.30-packasso.bin.2.0.18-f0) (2023-10-30)
+
+### Fixes & improvements
+* fix: bin [6790f9e9](https://github.com/qiwi/packasso/commit/6790f9e96ac0ff8bb923eba08be1914637a64532)
+
 ## [@packasso/bin@2.0.17](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.bin.2.0.16-f0...2023.10.9-packasso.bin.2.0.17-f0) (2023-10-09)
 
 ### Dependencies
