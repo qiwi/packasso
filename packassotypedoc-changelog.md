@@ -1,3 +1,8 @@
+## [@packasso/typedoc@2.2.10](https://github.com/qiwi/packasso/compare/2023.10.9-packasso.typedoc.2.2.9-f0...2023.10.31-packasso.typedoc.2.2.10-f0) (2023-10-31)
+
+### Fixes & improvements
+* fix: typedoc release config [656a1421](https://github.com/qiwi/packasso/commit/656a14216d6d3b3ba79504fef337da09e1e84fd9)
+
 ## [@packasso/typedoc@2.2.9](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.typedoc.2.2.8-f0...2023.10.9-packasso.typedoc.2.2.9-f0) (2023-10-09)
 
 ### Dependencies
