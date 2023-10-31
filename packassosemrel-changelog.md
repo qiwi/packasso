@@ -1,3 +1,8 @@
+## [@packasso/semrel@2.1.18](https://github.com/qiwi/packasso/compare/2023.10.9-packasso.semrel.2.1.17-f0...2023.10.31-packasso.semrel.2.1.18-f0) (2023-10-31)
+
+### Fixes & improvements
+* fix: add zx-semrel [a9a28051](https://github.com/qiwi/packasso/commit/a9a280515eb7c720547afc1ef841a3fb17043083)
+
 ## [@packasso/semrel@2.1.17](https://github.com/qiwi/packasso/compare/2023.9.22-packasso.semrel.2.1.16-f0...2023.10.9-packasso.semrel.2.1.17-f0) (2023-10-09)
 
 ### Dependencies
