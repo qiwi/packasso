@@ -3285,6 +3285,7 @@ __metadata:
   dependencies:
     "@packasso/core": "workspace:*"
     zx-bulk-release: 2.11.5
+    zx-semrel: 1.21.3
   languageName: unknown
   linkType: soft
 
@@ -19608,6 +19609,17 @@ __metadata:
   bin:
     zx-extra: src/main/js/cli.mjs
   checksum: 3e836123f41e97e78345551982eb2813c108fbce29cc5a915eaf6f748ca66c6f2587db0789b6287decb99e16ec18c9166f87a9413c3922c00a87eff2a622108d
+  languageName: node
+  linkType: hard
+
+"zx-semrel@npm:1.21.3":
+  version: 1.21.3
+  resolution: "zx-semrel@npm:1.21.3"
+  dependencies:
+    zx: ^7.1.1
+  bin:
+    zx-semrel: cli.mjs
+  checksum: 191047fea2ebf9507719c5a0d6383d649a423fc4c492e4605e2c77d81fc9b8cafd2e6b8a8ceb52324ec88e58b2687dbe4efdfe4c1582fa5b9cae01b5f8591219
   languageName: node
   linkType: hard
 

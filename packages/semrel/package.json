@@ -16,7 +16,8 @@
   "homepage": "https://qiwi.github.io/packasso",
   "dependencies": {
     "@packasso/core": "workspace:*",
-    "zx-bulk-release": "2.11.5"
+    "zx-bulk-release": "2.11.5",
+    "zx-semrel": "1.21.3"
   },
   "type": "module",
   "exports": "./src/main/ts/index.ts",

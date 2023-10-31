@@ -21,6 +21,10 @@ const install: Install = {
               access: 'public',
             },
           },
+        }
+      : {},
+    pkg.leaf
+      ? {
           '.releaserc.json': {
             changelog: 'changelog',
             npmFetch: true,
@@ -46,6 +50,14 @@ program(
       if (root.tree) {
         await execute(
           cmd('zx-bulk-release', {
+            'dry-run': dryRun,
+          }),
+          preset ? root.absPath : root,
+        )
+      }
+      if (root.unit) {
+        await execute(
+          cmd('zx-semrel', {
             'dry-run': dryRun,
           }),
           preset ? root.absPath : root,
