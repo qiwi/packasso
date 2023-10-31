@@ -13,7 +13,7 @@ import {
 
 const install: Install = {
   data: (pkg) => [
-    pkg.leaf || pkg.unit
+    pkg.leaf
       ? {
           '.releaserc.json': {
             ghPages: `gh-pages target/docs ${pkg.relPath}`,
