@@ -1,3 +1,8 @@
+## [@packasso/lib@2.2.9](https://github.com/qiwi/packasso/compare/2023.10.31-packasso.lib.2.2.8-f0...2023.10.31-packasso.lib.2.2.9-f0) (2023-10-31)
+
+### Dependencies
+* perf: devDependencies @packasso/typedoc updated to 2.2.10
+
 ## [@packasso/lib@2.2.8](https://github.com/qiwi/packasso/compare/2023.10.30-packasso.lib.2.2.7-f0...2023.10.31-packasso.lib.2.2.8-f0) (2023-10-31)
 
 ### Dependencies
